@@ -1,0 +1,5489 @@
+{
+ "results": {
+  "entities": [
+   {
+    "disambiguation": "Carrer d'\u00c0vila, 135 Sant Mart\u00ed 08018 Barcelona Spain",
+    "entity_id": "0CC3C23E-5B22-4485-A61E-1C1487F90561",
+    "location": {
+     "geohash": "sp3e9bekvt0h",
+     "lat": 41.400072099999996,
+     "lon": 2.1909785999999998
+    },
+    "name": "ZT The Golden Hotel Barcelona",
+    "popularity": 0.8977421352319248,
+    "query": {
+     "affinity": 0.9423525470173761,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:amenity:qloo:wi_fi",
+      "name": "Wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:elevator",
+      "name": "Elevator",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:smoke_free",
+      "name": "Smoke free",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:eco_friendly_design",
+      "name": "Eco friendly design",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:luggage_storage",
+      "name": "Luggage storage",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:commitment_to_sustainability",
+      "name": "Commitment to sustainability",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:place_page_attributes:place:hotel_class",
+      "name": "Hotel class",
+      "type": "urn:tag:place_page_attributes:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:electric_vehicle_charging",
+      "name": "Electric vehicle charging",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:sundeck",
+      "name": "Sundeck",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hair_dryer",
+      "name": "Hair dryer",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:air_conditioning",
+      "name": "Air conditioning",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:accessible",
+      "name": "Accessible",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:hotel_rating:place:four_star",
+      "name": "Four star",
+      "type": "urn:tag:hotel_rating:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:terrace",
+      "name": "Terrace",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:rooftop_terrace",
+      "name": "Rooftop terrace",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:outdoor_pool",
+      "name": "Outdoor pool",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:airport_shuttle",
+      "name": "Airport shuttle",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:tea_and_coffee_maker",
+      "name": "Tea and coffee maker",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_breakfast",
+      "name": "Paid breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:bar",
+      "name": "Bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:electric_vehicle_charging",
+      "name": "Electric vehicle charging",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:concierge",
+      "name": "Concierge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:heating",
+      "name": "Heating",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:private_bathroom",
+      "name": "Private bathroom",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:bar",
+      "name": "Bar",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:collection:place:amex_travel",
+      "name": "Amex travel",
+      "type": "urn:tag:collection:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:minibar",
+      "name": "Minibar",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:desk",
+      "name": "Desk",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:hot_tub",
+      "name": "Hot tub",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:standard",
+      "name": "Standard",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:bathrobe",
+      "name": "Bathrobe",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:safe",
+      "name": "Safe",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_parking",
+      "name": "Paid parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:sofabed",
+      "name": "Sofabed",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:outdoor_pool",
+      "name": "Outdoor pool",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:slippers",
+      "name": "Slippers",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:air_conditioned",
+      "name": "Air conditioned",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:kettle",
+      "name": "Kettle",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:eco_friendly_toiletries",
+      "name": "Eco friendly toiletries",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:environmental_management_system",
+      "name": "Environmental management system",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:front_desk_24_7",
+      "name": "Front desk 247",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hot_tub",
+      "name": "Hot tub",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:suite",
+      "name": "Suite",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:cafe",
+      "name": "Cafe",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:airport_shuttle",
+      "name": "Airport shuttle",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:telephone",
+      "name": "Telephone",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:meeting_rooms",
+      "name": "Meeting rooms",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:breakfast_available",
+      "name": "Breakfast available",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:parking",
+      "name": "Parking",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kid_friendly",
+      "name": "Kid friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "C/ de Proven\u00e7a, 131 L'Eixample 08036 Barcelona Spain",
+    "entity_id": "62118980-2EA5-448D-A775-5C1E86BAA306",
+    "location": {
+     "geohash": "sp3e2yrnnd0h",
+     "lat": 41.387912899999996,
+     "lon": 2.1522259999999998
+    },
+    "name": "Mercedes Heritage Apartments Barcelona",
+    "popularity": 0.27431864554858826,
+    "query": {
+     "affinity": 0.9389725440634531,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:ambience:qloo:welcoming",
+      "name": "Welcoming",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:airport_shuttle",
+      "name": "Airport shuttle",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel:holiday_apartment_rental",
+      "name": "Holiday apartment rental",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:street_view",
+      "name": "Street view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:rambla_de_catalunya",
+      "name": "Rambla de catalunya",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:holiday_apartment_rental",
+      "name": "Holiday apartment rental",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:security_24_7",
+      "name": "Security 247",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:self_catering",
+      "name": "Self catering",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:dining_drinking",
+      "name": "Dining drinking",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_parking",
+      "name": "Paid parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:functional",
+      "name": "Functional",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:sagrada_familia",
+      "name": "Sagrada familia",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:city_center",
+      "name": "City center",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:hospital_clinic",
+      "name": "Hospital clinic",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:sightseeing",
+      "name": "Sightseeing",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:passeig_de_gracia",
+      "name": "Passeig de gracia",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:full_kitchen",
+      "name": "Full kitchen",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:comfortable",
+      "name": "Comfortable",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:group_trips",
+      "name": "Group trips",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:destination",
+      "name": "Destination",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:hotel_rating:place:four_star",
+      "name": "Four star",
+      "type": "urn:tag:hotel_rating:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:local_gastronomy",
+      "name": "Local gastronomy",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel:furnished_apartment_building",
+      "name": "Furnished apartment building",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:air_conditioned",
+      "name": "Air conditioned",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:urban_residential",
+      "name": "Urban residential",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:collection:place:amex_travel",
+      "name": "Amex travel",
+      "type": "urn:tag:collection:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:air_conditioning",
+      "name": "Air conditioning",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:wi_fi",
+      "name": "Wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:apartment_building",
+      "name": "Apartment building",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:family_room",
+      "name": "Family room",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kid_friendly",
+      "name": "Kid friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:airport_shuttle",
+      "name": "Airport shuttle",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:apartment",
+      "name": "Apartment",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:boutique",
+      "name": "Boutique",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:accessible",
+      "name": "Accessible",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:all_day",
+      "name": "All day",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:serviced_apartments",
+      "name": "Serviced apartments",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:walkable",
+      "name": "Walkable",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:holiday_apartment",
+      "name": "Holiday apartment",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:residential",
+      "name": "Residential",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:safe",
+      "name": "Safe",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:furnished_apartment_building",
+      "name": "Furnished apartment building",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:central",
+      "name": "Central",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:contemporary",
+      "name": "Contemporary",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:quiet",
+      "name": "Quiet",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel:holiday_apartment",
+      "name": "Holiday apartment",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:placa_de_catalunya",
+      "name": "Placa de catalunya",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel:serviced_accommodation",
+      "name": "Serviced accommodation",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:serviced_accommodation",
+      "name": "Serviced accommodation",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:clean",
+      "name": "Clean",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:balcony",
+      "name": "Balcony",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:front_desk_24_7",
+      "name": "Front desk 247",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:home_like",
+      "name": "Home like",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:urban_exploration",
+      "name": "Urban exploration",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:architecture_appreciation",
+      "name": "Architecture appreciation",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:family_travel",
+      "name": "Family travel",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:tours",
+      "name": "Tours",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kitchen_in_all_rooms",
+      "name": "Kitchen in all rooms",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:casa_mila",
+      "name": "Casa mila",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:local_vibe",
+      "name": "Local vibe",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:parking",
+      "name": "Parking",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "3 Bd de Neuilly 92400 Courbevoie France",
+    "entity_id": "BA88E39E-81F5-403E-933D-403B1A72426D",
+    "location": {
+     "geohash": "u09w55yurkn4",
+     "lat": 48.888537,
+     "lon": 2.2508
+    },
+    "name": "Meli\u00e1 Paris La D\u00e9fense",
+    "popularity": 0.9929499301846402,
+    "query": {
+     "affinity": 0.9387765010871101,
+     "measurements": {
+      "audience_growth": -0.7947194142390264
+     }
+    },
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:dining_option:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:business_networking",
+      "name": "Business networking",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kid_friendly",
+      "name": "Kid friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:culinary_experiences",
+      "name": "Culinary experiences",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_parking",
+      "name": "Paid parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:central",
+      "name": "Central",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:walkable",
+      "name": "Walkable",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:high_rise_building",
+      "name": "High rise building",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:convenient",
+      "name": "Convenient",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:lively",
+      "name": "Lively",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:business_meetings",
+      "name": "Business meetings",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:business",
+      "name": "Business",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:business_center",
+      "name": "Business center",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:heating",
+      "name": "Heating",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:metropolitan_architecture",
+      "name": "Metropolitan architecture",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:waste_reduction",
+      "name": "Waste reduction",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:convenience_stop",
+      "name": "Convenience stop",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:rooftop_bar",
+      "name": "Rooftop bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:smoke_free",
+      "name": "Smoke free",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:corporate_minimalism",
+      "name": "Corporate minimalism",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:accessible",
+      "name": "Accessible",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:bar",
+      "name": "Bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:wi_fi",
+      "name": "Wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:modern_corporate_hub",
+      "name": "Modern corporate hub",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:tours",
+      "name": "Tours",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:meeting_rooms",
+      "name": "Meeting rooms",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:lounge",
+      "name": "Lounge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:concierge",
+      "name": "Concierge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:elevator",
+      "name": "Elevator",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:convenient",
+      "name": "Convenient",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:welcoming",
+      "name": "Welcoming",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:evening",
+      "name": "Evening",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:breakfast_available",
+      "name": "Breakfast available",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:urban",
+      "name": "Urban",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:arc_de_triomphe",
+      "name": "Arc de triomphe",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:city_center",
+      "name": "City center",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hair_dryer",
+      "name": "Hair dryer",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:air_conditioning",
+      "name": "Air conditioning",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:destination",
+      "name": "Destination",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:sophisticated",
+      "name": "Sophisticated",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:business_center",
+      "name": "Business center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:business_district",
+      "name": "Business district",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:bar",
+      "name": "Bar",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:safe",
+      "name": "Safe",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:grande_arche_de_la_defense",
+      "name": "Grande arche de la defense",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:housekeeping",
+      "name": "Housekeeping",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:contemporary",
+      "name": "Contemporary",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:standard",
+      "name": "Standard",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:place_page_attributes:place:hotel_class",
+      "name": "Hotel class",
+      "type": "urn:tag:place_page_attributes:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:dining_drinking",
+      "name": "Dining drinking",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:corporate_chic",
+      "name": "Corporate chic",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:urban_exploration",
+      "name": "Urban exploration",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:towels",
+      "name": "Towels",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:flat_screen_tv",
+      "name": "Flat screen tv",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:premium",
+      "name": "Premium",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:afternoon",
+      "name": "Afternoon",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:telephone",
+      "name": "Telephone",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:paris_city_centre",
+      "name": "Paris city centre",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_breakfast",
+      "name": "Paid breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:pet_friendly",
+      "name": "Pet friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:eiffel_tower_view",
+      "name": "Eiffel tower view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:morning",
+      "name": "Morning",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:sightseeing",
+      "name": "Sightseeing",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:eiffel_tower",
+      "name": "Eiffel tower",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:fitness",
+      "name": "Fitness",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:desk",
+      "name": "Desk",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:rooftop_lounging",
+      "name": "Rooftop lounging",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:air_conditioned",
+      "name": "Air conditioned",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:parking",
+      "name": "Parking",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:panoramic_city_views",
+      "name": "Panoramic city views",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:late_night",
+      "name": "Late night",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "20 Rue Berthollet 75005 Paris France",
+    "entity_id": "AC530A85-9B42-43B4-BC9B-5CECE483B25B",
+    "location": {
+     "geohash": "u09tv6ggy1xg",
+     "lat": 48.838999,
+     "lon": 2.3455056
+    },
+    "name": "Seven Hotel",
+    "popularity": 0.9492026859319171,
+    "query": {
+     "affinity": 0.9362683100709767,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:nearby_attraction:qloo:pantheon",
+      "name": "Pantheon",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:luggage_storage",
+      "name": "Luggage storage",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:all_day",
+      "name": "All day",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:chic",
+      "name": "Chic",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:pet_friendly",
+      "name": "Pet friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:parking",
+      "name": "Parking",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:spa_and_health_club",
+      "name": "Spa and health club",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:relaxation",
+      "name": "Relaxation",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:quiet",
+      "name": "Quiet",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:literary_history",
+      "name": "Literary history",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:air_conditioning",
+      "name": "Air conditioning",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:bar",
+      "name": "Bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:terrace",
+      "name": "Terrace",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:garden_view",
+      "name": "Garden view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:interior_design",
+      "name": "Interior design",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:hot_tub",
+      "name": "Hot tub",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:accessible",
+      "name": "Accessible",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:place_de_l_estrapade",
+      "name": "Place de lestrapade",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:confidential",
+      "name": "Confidential",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:themed",
+      "name": "Themed",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:sightseeing",
+      "name": "Sightseeing",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:cultural",
+      "name": "Cultural",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:concierge",
+      "name": "Concierge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:boutique",
+      "name": "Boutique",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:romantic",
+      "name": "Romantic",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:rue_mouffetard",
+      "name": "Rue mouffetard",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:poetic",
+      "name": "Poetic",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_parking",
+      "name": "Paid parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:urban_streetscape",
+      "name": "Urban streetscape",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:historic",
+      "name": "Historic",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:bar",
+      "name": "Bar",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:elegant",
+      "name": "Elegant",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hot_tub",
+      "name": "Hot tub",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:historic_district",
+      "name": "Historic district",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:boutique",
+      "name": "Boutique",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:literary",
+      "name": "Literary",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:smoke_free",
+      "name": "Smoke free",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:central",
+      "name": "Central",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:wellness_practices",
+      "name": "Wellness practices",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:other_environmental_certifications",
+      "name": "Other environmental certifications",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:collection:place:amex_travel",
+      "name": "Amex travel",
+      "type": "urn:tag:collection:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:romantic",
+      "name": "Romantic",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:city_center",
+      "name": "City center",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:high_tech",
+      "name": "High tech",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:unique",
+      "name": "Unique",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:destination",
+      "name": "Destination",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:scenic",
+      "name": "Scenic",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:spa",
+      "name": "Spa",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:quiet",
+      "name": "Quiet",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:urban_exploration",
+      "name": "Urban exploration",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:air_conditioned",
+      "name": "Air conditioned",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:wellness",
+      "name": "Wellness",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:special_occasion",
+      "name": "Special occasion",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_breakfast",
+      "name": "Paid breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:breakfast_available",
+      "name": "Breakfast available",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:culture_arts",
+      "name": "Culture arts",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:boutique_travel",
+      "name": "Boutique travel",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:suite",
+      "name": "Suite",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:walkable",
+      "name": "Walkable",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:place_page_attributes:place:hotel_class",
+      "name": "Hotel class",
+      "type": "urn:tag:place_page_attributes:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:high_tech",
+      "name": "High tech",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:spa_and_health_club",
+      "name": "Spa and health club",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:charming",
+      "name": "Charming",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:personal_care",
+      "name": "Personal care",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:dining_drinking",
+      "name": "Dining drinking",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:pet_friendly",
+      "name": "Pet friendly",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Carrer de Badajoz, 148, 154 Sant Mart\u00ed 08018 Barcelona Spain",
+    "entity_id": "557E9F52-61C4-42BD-A0C3-F797124E4FFD",
+    "location": {
+     "geohash": "sp3e9c58br3c",
+     "lat": 41.4021444,
+     "lon": 2.191099
+    },
+    "name": "Hotel SB Glow",
+    "popularity": 0.9874072332353058,
+    "query": {
+     "affinity": 0.9350479947320841,
+     "measurements": {
+      "audience_growth": -1.386750490563073
+     }
+    },
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:midday",
+      "name": "Midday",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:urban",
+      "name": "Urban",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:business_friendly",
+      "name": "Business friendly",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:wi_fi",
+      "name": "Wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:business_center",
+      "name": "Business center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:standard",
+      "name": "Standard",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:special_occasion",
+      "name": "Special occasion",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:culture_arts",
+      "name": "Culture arts",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:air_conditioning",
+      "name": "Air conditioning",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:kettle",
+      "name": "Kettle",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:fitness",
+      "name": "Fitness",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:minibar",
+      "name": "Minibar",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:inclusivity:place:lgbtq_friendly",
+      "name": "Lgbtq+ friendly",
+      "type": "urn:tag:inclusivity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_breakfast",
+      "name": "Paid breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_parking",
+      "name": "Paid parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:electric_vehicle_charging",
+      "name": "Electric vehicle charging",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:desk",
+      "name": "Desk",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:buffet",
+      "name": "Buffet",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:lunch_service",
+      "name": "Lunch service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:bar",
+      "name": "Bar",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:business_networking",
+      "name": "Business networking",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:front_desk_24_7",
+      "name": "Front desk 247",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:locally_sourced_ingredients",
+      "name": "Locally sourced ingredients",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:safe",
+      "name": "Safe",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:rooftop_terrace",
+      "name": "Rooftop terrace",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:contemporary",
+      "name": "Contemporary",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:outdoor_pool",
+      "name": "Outdoor pool",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:parking",
+      "name": "Parking",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:luggage_storage",
+      "name": "Luggage storage",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:business_district",
+      "name": "Business district",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:daily_housekeeping",
+      "name": "Daily housekeeping",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kid_friendly",
+      "name": "Kid friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:poolside_bar",
+      "name": "Poolside bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:professional_meetings",
+      "name": "Professional meetings",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:digital_nomadism",
+      "name": "Digital nomadism",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:evening",
+      "name": "Evening",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:terrace",
+      "name": "Terrace",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:business",
+      "name": "Business",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:smoke_free",
+      "name": "Smoke free",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:breakfast_available",
+      "name": "Breakfast available",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:deluxe",
+      "name": "Deluxe",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:balcony",
+      "name": "Balcony",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:urban_minimalist",
+      "name": "Urban minimalist",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:outdoor_dining",
+      "name": "Outdoor dining",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:suite",
+      "name": "Suite",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:skyline_view",
+      "name": "Skyline view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:pool",
+      "name": "Pool",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:air_conditioned",
+      "name": "Air conditioned",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:collection:place:amex_travel",
+      "name": "Amex travel",
+      "type": "urn:tag:collection:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:passeig_de_gracia",
+      "name": "Passeig de gracia",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hdtv",
+      "name": "Hdtv",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:electric_vehicle_charging",
+      "name": "Electric vehicle charging",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:urban_architecture",
+      "name": "Urban architecture",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:chilled",
+      "name": "Chilled",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:event_hosting",
+      "name": "Event hosting",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:commercial",
+      "name": "Commercial",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:convenient",
+      "name": "Convenient",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:trendy",
+      "name": "Trendy",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:mediterranean_gastronomy",
+      "name": "Mediterranean gastronomy",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hair_dryer",
+      "name": "Hair dryer",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:destination",
+      "name": "Destination",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:tours",
+      "name": "Tours",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:sauna",
+      "name": "Sauna",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:steam_room",
+      "name": "Steam room",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:convenient",
+      "name": "Convenient",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:concierge",
+      "name": "Concierge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:garden",
+      "name": "Garden",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:hotel_rating:place:four_star",
+      "name": "Four star",
+      "type": "urn:tag:hotel_rating:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:private_bathroom",
+      "name": "Private bathroom",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:sophisticated",
+      "name": "Sophisticated",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:central",
+      "name": "Central",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:afternoon",
+      "name": "Afternoon",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:poblenou",
+      "name": "Poblenou",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:elegant",
+      "name": "Elegant",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:tea_and_coffee_maker",
+      "name": "Tea and coffee maker",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hot_tub",
+      "name": "Hot tub",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:sagrada_familia",
+      "name": "Sagrada familia",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:social_community",
+      "name": "Social community",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:housekeeping",
+      "name": "Housekeeping",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:walkable",
+      "name": "Walkable",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:telephone",
+      "name": "Telephone",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:accessible",
+      "name": "Accessible",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:innovation_district",
+      "name": "Innovation district",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:bar",
+      "name": "Bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:dinner_service",
+      "name": "Dinner service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:use_of_local_seasonal_products",
+      "name": "Use of local seasonal products",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:place_page_attributes:place:hotel_class",
+      "name": "Hotel class",
+      "type": "urn:tag:place_page_attributes:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:torre_glories",
+      "name": "Torre glories",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:upscale",
+      "name": "Upscale",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:elevator",
+      "name": "Elevator",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:city_center",
+      "name": "City center",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:security_24_7",
+      "name": "Security 247",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:dining_drinking",
+      "name": "Dining drinking",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:rooftop_lounging",
+      "name": "Rooftop lounging",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:outdoor_pool",
+      "name": "Outdoor pool",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:lively",
+      "name": "Lively",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:meeting_rooms",
+      "name": "Meeting rooms",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:morning",
+      "name": "Morning",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:innovation_hub",
+      "name": "Innovation hub",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Pl. d'Europa, 50-52 08902 L'Hospitalet de Llobregat Barcelona Spain",
+    "entity_id": "C24CEB78-C703-42E0-B129-254BB7706632",
+    "location": {
+     "geohash": "sp3e22f5044s",
+     "lat": 41.3571861,
+     "lon": 2.1231114
+    },
+    "name": "Renaissance Barcelona Fira Hotel",
+    "popularity": 0.9946564040502195,
+    "query": {
+     "affinity": 0.9341199902426823,
+     "measurements": {
+      "audience_growth": -0.7184212081070996
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:room_type:qloo:accessible_room",
+      "name": "Accessible room",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:desk",
+      "name": "Desk",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:collection:place:amex_travel",
+      "name": "Amex travel",
+      "type": "urn:tag:collection:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:slippers",
+      "name": "Slippers",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:central",
+      "name": "Central",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:refrigerator",
+      "name": "Refrigerator",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:gran_via_2_shopping_center",
+      "name": "Gran via 2 shopping center",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:urban",
+      "name": "Urban",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:bathtub",
+      "name": "Bathtub",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:evening",
+      "name": "Evening",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:designer_toiletries",
+      "name": "Designer toiletries",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:business_travel",
+      "name": "Business travel",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:daily_housekeeping",
+      "name": "Daily housekeeping",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:smoke_free",
+      "name": "Smoke free",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:near_convention_center",
+      "name": "Near convention center",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:water_saving_fixtures",
+      "name": "Water saving fixtures",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:wi_fi",
+      "name": "Wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:quiet",
+      "name": "Quiet",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:contemporary",
+      "name": "Contemporary",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:sophisticated",
+      "name": "Sophisticated",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:bathrobe",
+      "name": "Bathrobe",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:afternoon",
+      "name": "Afternoon",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:architectural",
+      "name": "Architectural",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:lounge",
+      "name": "Lounge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:sightseeing",
+      "name": "Sightseeing",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:accessible",
+      "name": "Accessible",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:event_space",
+      "name": "Event space",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:wedding_venue",
+      "name": "Wedding venue",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:gastronomy",
+      "name": "Gastronomy",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:well_connected",
+      "name": "Well connected",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:destination",
+      "name": "Destination",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:banquet_hall",
+      "name": "Banquet hall",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:energy_efficient_lighting",
+      "name": "Energy efficient lighting",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:nature_inspired",
+      "name": "Nature inspired",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:buffet",
+      "name": "Buffet",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:lluis_companys_olympic_stadium",
+      "name": "Lluis companys olympic stadium",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:morning",
+      "name": "Morning",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_parking",
+      "name": "Paid parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:indoor_pool",
+      "name": "Indoor pool",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:vegetarian_vegan_options",
+      "name": "Vegetarian vegan options",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:culture_arts",
+      "name": "Culture arts",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:all_day",
+      "name": "All day",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:hotel_rating:place:four_star",
+      "name": "Four star",
+      "type": "urn:tag:hotel_rating:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:air_conditioned",
+      "name": "Air conditioned",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:air_conditioning",
+      "name": "Air conditioning",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:urban_photography",
+      "name": "Urban photography",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:wellness",
+      "name": "Wellness",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:business_friendly",
+      "name": "Business friendly",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:dinner_service",
+      "name": "Dinner service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:outdoor_pool",
+      "name": "Outdoor pool",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:convenient",
+      "name": "Convenient",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:telephone",
+      "name": "Telephone",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:panoramic_skyline_view",
+      "name": "Panoramic skyline view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:relaxing_by_the_pool",
+      "name": "Relaxing by the pool",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:skyline_view",
+      "name": "Skyline view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:concierge",
+      "name": "Concierge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:financial_district",
+      "name": "Financial district",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:convention_district",
+      "name": "Convention district",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:architecture",
+      "name": "Architecture",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:business_events",
+      "name": "Business events",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:whirlpool_tub",
+      "name": "Whirlpool tub",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:meeting_rooms",
+      "name": "Meeting rooms",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:flat_screen_tv",
+      "name": "Flat screen tv",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kid_friendly",
+      "name": "Kid friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:front_desk_24_7",
+      "name": "Front desk 247",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:lunch_service",
+      "name": "Lunch service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:breakfast_available",
+      "name": "Breakfast available",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:meeting_planning_service",
+      "name": "Meeting planning service",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:kettle",
+      "name": "Kettle",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:fira_de_barcelona",
+      "name": "Fira de barcelona",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:elevator",
+      "name": "Elevator",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:fitness",
+      "name": "Fitness",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:mini_fridge",
+      "name": "Mini fridge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:standard",
+      "name": "Standard",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:rooftop_bar",
+      "name": "Rooftop bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:parking",
+      "name": "Parking",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:walkable",
+      "name": "Walkable",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:bar",
+      "name": "Bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:junior_suite",
+      "name": "Junior suite",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:botanical",
+      "name": "Botanical",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:elegant",
+      "name": "Elegant",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:minibar",
+      "name": "Minibar",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_breakfast",
+      "name": "Paid breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:clean",
+      "name": "Clean",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hot_tub",
+      "name": "Hot tub",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:tours",
+      "name": "Tours",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:sophisticated",
+      "name": "Sophisticated",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:wedding_venue",
+      "name": "Wedding venue",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:tourist_attraction",
+      "name": "Tourist attraction",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:energy_saving_measures",
+      "name": "Energy saving measures",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:place_page_attributes:place:hotel_class",
+      "name": "Hotel class",
+      "type": "urn:tag:place_page_attributes:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:city_center",
+      "name": "City center",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:unique",
+      "name": "Unique",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:relaxing",
+      "name": "Relaxing",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:business",
+      "name": "Business",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:business_networking",
+      "name": "Business networking",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:nature_inspired",
+      "name": "Nature inspired",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:hot_tub",
+      "name": "Hot tub",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:locally_sourced_ingredients",
+      "name": "Locally sourced ingredients",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:coffee_maker",
+      "name": "Coffee maker",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hdtv",
+      "name": "Hdtv",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hair_dryer",
+      "name": "Hair dryer",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:convenience_stop",
+      "name": "Convenience stop",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:industrial_chic",
+      "name": "Industrial chic",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:europa_fira_station",
+      "name": "Europa fira station",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:tea_and_coffee_maker",
+      "name": "Tea and coffee maker",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:indoor_and_outdoor_pool",
+      "name": "Indoor and outdoor pool",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:avant_garde",
+      "name": "Avant garde",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:gran_via_2",
+      "name": "Gran via 2",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:towels",
+      "name": "Towels",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:private_bathroom",
+      "name": "Private bathroom",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:avant_garde",
+      "name": "Avant garde",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:trade_shows",
+      "name": "Trade shows",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:business_district",
+      "name": "Business district",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:safe",
+      "name": "Safe",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:luggage_storage",
+      "name": "Luggage storage",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:interior_design",
+      "name": "Interior design",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:city_views",
+      "name": "City views",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:dining_drinking",
+      "name": "Dining drinking",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:bar",
+      "name": "Bar",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:suite",
+      "name": "Suite",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:functional",
+      "name": "Functional",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:fira_barcelona_gran_via",
+      "name": "Fira barcelona gran via",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Olympic Village Av. del Bogatell, 64, 68 Sant Mart\u00ed 08005 Barcelona, Spain",
+    "entity_id": "C73FB1CE-7674-4D1A-B750-9BCACBB3CBE9",
+    "location": {
+     "geohash": "sp3e3zk6ze8p",
+     "lat": 41.3928569,
+     "lon": 2.1924376
+    },
+    "name": "H10 Marina Barcelona hotel",
+    "popularity": 0.9932103216038328,
+    "query": {
+     "affinity": 0.9334032138160716,
+     "measurements": {
+      "audience_growth": -1.3516906706687488
+     }
+    },
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:activity_type:qloo:sightseeing",
+      "name": "Sightseeing",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:sophisticated",
+      "name": "Sophisticated",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:front_desk_24_7",
+      "name": "Front desk 247",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:concierge",
+      "name": "Concierge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:dining_drinking",
+      "name": "Dining drinking",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:day_trip",
+      "name": "Day trip",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:welcoming",
+      "name": "Welcoming",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:outdoor_pool",
+      "name": "Outdoor pool",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:waterfront",
+      "name": "Waterfront",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:junior_suite",
+      "name": "Junior suite",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:parking",
+      "name": "Parking",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:la_sagrada_familia",
+      "name": "La sagrada familia",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:deluxe",
+      "name": "Deluxe",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:buffet",
+      "name": "Buffet",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:skyline_view",
+      "name": "Skyline view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:resort_like",
+      "name": "Resort like",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:walkable",
+      "name": "Walkable",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:central",
+      "name": "Central",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:city_center",
+      "name": "City center",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:telephone",
+      "name": "Telephone",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:spa",
+      "name": "Spa",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:airport_shuttle",
+      "name": "Airport shuttle",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:flat_screen_tv",
+      "name": "Flat screen tv",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:standard",
+      "name": "Standard",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:bar",
+      "name": "Bar",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:olympic_marina",
+      "name": "Olympic marina",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:afternoon",
+      "name": "Afternoon",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:accessible",
+      "name": "Accessible",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:towels",
+      "name": "Towels",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kid_friendly",
+      "name": "Kid friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:bathtub",
+      "name": "Bathtub",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:air_conditioned",
+      "name": "Air conditioned",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:gothic_district",
+      "name": "Gothic district",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:contemporary",
+      "name": "Contemporary",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:minibar",
+      "name": "Minibar",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:hair_dryer",
+      "name": "Hair dryer",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:safe",
+      "name": "Safe",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:wellness",
+      "name": "Wellness",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:quiet",
+      "name": "Quiet",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:air_conditioning",
+      "name": "Air conditioning",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:urban_walking",
+      "name": "Urban walking",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:collection:place:amex_travel",
+      "name": "Amex travel",
+      "type": "urn:tag:collection:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:sightseeing",
+      "name": "Sightseeing",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:smoke_free",
+      "name": "Smoke free",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:coastal",
+      "name": "Coastal",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:slippers",
+      "name": "Slippers",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:desk",
+      "name": "Desk",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:rooftop_terrace",
+      "name": "Rooftop terrace",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:destination",
+      "name": "Destination",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:polished",
+      "name": "Polished",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:luggage_storage",
+      "name": "Luggage storage",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:scenic",
+      "name": "Scenic",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:urban_chic",
+      "name": "Urban chic",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:refined",
+      "name": "Refined",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:barcelona_beach",
+      "name": "Barcelona beach",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:fitness",
+      "name": "Fitness",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:ocean_view",
+      "name": "Ocean view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:evening",
+      "name": "Evening",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:eco_friendly_initiatives",
+      "name": "Eco friendly initiatives",
+      "type": "urn:tag:sustainability_initiative:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:spa",
+      "name": "Spa",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:urban_residential",
+      "name": "Urban residential",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:sauna",
+      "name": "Sauna",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:residential",
+      "name": "Residential",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:hotel_rating:place:four_star",
+      "name": "Four star",
+      "type": "urn:tag:hotel_rating:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:bathrobe",
+      "name": "Bathrobe",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:private_bathroom",
+      "name": "Private bathroom",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_parking",
+      "name": "Paid parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:elevator",
+      "name": "Elevator",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:outdoor_pool",
+      "name": "Outdoor pool",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:olympic_village_context",
+      "name": "Olympic village context",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:sunbathing",
+      "name": "Sunbathing",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:bar",
+      "name": "Bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:beach_activities",
+      "name": "Beach activities",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:morning",
+      "name": "Morning",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:meeting_rooms",
+      "name": "Meeting rooms",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:breakfast_available",
+      "name": "Breakfast available",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:comfortable",
+      "name": "Comfortable",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_breakfast",
+      "name": "Paid breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:fine_dining",
+      "name": "Fine dining",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:zoo_de_barcelona",
+      "name": "Zoo de barcelona",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:spa_and_wellness",
+      "name": "Spa and wellness",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:olympic_village",
+      "name": "Olympic village",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:resort",
+      "name": "Resort",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:wi_fi",
+      "name": "Wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Carrer de Roger de Ll\u00faria, 16, 18 Eixample 08010 Barcelona Spain",
+    "entity_id": "3FBD72D1-0610-4EFB-9B96-4D4AC8ED3290",
+    "location": {
+     "geohash": "sp3e3qyj4m8n",
+     "lat": 41.390505399999995,
+     "lon": 2.1726433
+    },
+    "name": "Negresco Princess",
+    "popularity": 0.9856229391096396,
+    "query": {
+     "affinity": 0.933191183251539,
+     "measurements": {
+      "audience_growth": -1.7320508075688774
+     }
+    },
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:interests:qloo:sightseeing",
+      "name": "Sightseeing",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:contemporary",
+      "name": "Contemporary",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:lively",
+      "name": "Lively",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:airport_shuttle",
+      "name": "Airport shuttle",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:urban",
+      "name": "Urban",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:rooftop_dining",
+      "name": "Rooftop dining",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:gothic_quarter",
+      "name": "Gothic quarter",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:high_pedestrian_traffic",
+      "name": "High pedestrian traffic",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:city_center",
+      "name": "City center",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:pool",
+      "name": "Pool",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:business",
+      "name": "Business",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:breakfast",
+      "name": "Breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:cocktail_culture",
+      "name": "Cocktail culture",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:smoke_free",
+      "name": "Smoke free",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:convenience_stop",
+      "name": "Convenience stop",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:urquinaona_metro_station",
+      "name": "Urquinaona metro station",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:clean",
+      "name": "Clean",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:convenient",
+      "name": "Convenient",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:architecture",
+      "name": "Architecture",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:dining_drinking",
+      "name": "Dining drinking",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:comfortable",
+      "name": "Comfortable",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:afternoon",
+      "name": "Afternoon",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kid_friendly",
+      "name": "Kid friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:spa",
+      "name": "Spa",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:la_rambla",
+      "name": "La rambla",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:hotel_rating:place:four_star",
+      "name": "Four star",
+      "type": "urn:tag:hotel_rating:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:air_conditioned",
+      "name": "Air conditioned",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_parking",
+      "name": "Paid parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_breakfast",
+      "name": "Paid breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:modern_architectural_building",
+      "name": "Modern architectural building",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:morning",
+      "name": "Morning",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:bar",
+      "name": "Bar",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:panoramic_skyline",
+      "name": "Panoramic skyline",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:central",
+      "name": "Central",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:sightseeing",
+      "name": "Sightseeing",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:parking",
+      "name": "Parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:fitness",
+      "name": "Fitness",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:vibrant",
+      "name": "Vibrant",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:collection:place:amex_travel",
+      "name": "Amex travel",
+      "type": "urn:tag:collection:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:outdoor_pool",
+      "name": "Outdoor pool",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:urban_exploration",
+      "name": "Urban exploration",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:walkable",
+      "name": "Walkable",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:destination",
+      "name": "Destination",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:commercial",
+      "name": "Commercial",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:social",
+      "name": "Social",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:poolside_relaxation",
+      "name": "Poolside relaxation",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:urban_industrial",
+      "name": "Urban industrial",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:accessible",
+      "name": "Accessible",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:evening",
+      "name": "Evening",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Old Trafford 99 Sir Matt Busby Way Stretford Manchester M16 0SZ, United Kingdom",
+    "entity_id": "FEC73650-EB17-44C4-9C6D-A54EAC372687",
+    "location": {
+     "geohash": "gcw25uvhk89c",
+     "lat": 53.4643235,
+     "lon": -2.2890805999999997
+    },
+    "name": "Hotel Football, Old Trafford, a Tribute Portfolio Hotel",
+    "popularity": 0.9952535213203368,
+    "query": {
+     "affinity": 0.9326487771209718,
+     "measurements": {
+      "audience_growth": -1.7320508075688774
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:resort",
+      "name": "Resort",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:match_day_experience",
+      "name": "Match day experience",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:air_conditioning",
+      "name": "Air conditioning",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:central",
+      "name": "Central",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:accessible",
+      "name": "Accessible",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:flat_screen_tv",
+      "name": "Flat screen tv",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:stadium_adjacent",
+      "name": "Stadium adjacent",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:old_trafford_stadium",
+      "name": "Old trafford stadium",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:special_occasion",
+      "name": "Special occasion",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:breakfast_available",
+      "name": "Breakfast available",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:urban",
+      "name": "Urban",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:evening",
+      "name": "Evening",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:hotel_rating:place:four_star",
+      "name": "Four star",
+      "type": "urn:tag:hotel_rating:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:event_space",
+      "name": "Event space",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:sports_culture",
+      "name": "Sports culture",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:safe",
+      "name": "Safe",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:front_desk_24_7",
+      "name": "Front desk 247",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:football_themed",
+      "name": "Football themed",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:salford_quays",
+      "name": "Salford quays",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:place_page_attributes:place:hotel_class",
+      "name": "Hotel class",
+      "type": "urn:tag:place_page_attributes:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:wedding_venue",
+      "name": "Wedding venue",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:comfortable",
+      "name": "Comfortable",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:tourist_attraction",
+      "name": "Tourist attraction",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:room_service",
+      "name": "Room service",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:concierge",
+      "name": "Concierge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:parking",
+      "name": "Parking",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:stadium_view",
+      "name": "Stadium view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:city_view",
+      "name": "City view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:destination",
+      "name": "Destination",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:welcoming",
+      "name": "Welcoming",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:inclusivity:place:lgbtq_friendly",
+      "name": "Lgbtq+ friendly",
+      "type": "urn:tag:inclusivity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:afternoon",
+      "name": "Afternoon",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:manchester_city_centre",
+      "name": "Manchester city centre",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:stadium_district",
+      "name": "Stadium district",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:smoke_free",
+      "name": "Smoke free",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:air_conditioned",
+      "name": "Air conditioned",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:dining_drinking",
+      "name": "Dining drinking",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:tours",
+      "name": "Tours",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:paid_breakfast",
+      "name": "Paid breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:local_tourism",
+      "name": "Local tourism",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:lively",
+      "name": "Lively",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:themed",
+      "name": "Themed",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:sports_recreation",
+      "name": "Sports recreation",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:walkable",
+      "name": "Walkable",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:wi_fi",
+      "name": "Wi fi",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:sporting_hub",
+      "name": "Sporting hub",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:room_type:qloo:standard",
+      "name": "Standard",
+      "type": "urn:tag:room_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kid_friendly",
+      "name": "Kid friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:casual_dining",
+      "name": "Casual dining",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:morning",
+      "name": "Morning",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:dining_option:qloo:bar",
+      "name": "Bar",
+      "type": "urn:tag:dining_option:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:city_center",
+      "name": "City center",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:touristic",
+      "name": "Touristic",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:wedding_venue",
+      "name": "Wedding venue",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:elevator",
+      "name": "Elevator",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:meeting_planning_service",
+      "name": "Meeting planning service",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:mini_fridge",
+      "name": "Mini fridge",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:sightseeing",
+      "name": "Sightseeing",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:convenient",
+      "name": "Convenient",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:family_friendly",
+      "name": "Family friendly",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:qloo:meeting_rooms",
+      "name": "Meeting rooms",
+      "type": "urn:tag:amenity:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:football",
+      "name": "Football",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:football_inspired",
+      "name": "Football inspired",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:business_center",
+      "name": "Business center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:stadium_tours",
+      "name": "Stadium tours",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "CG-2 AD100 Canillo Andorra",
+    "entity_id": "307B4816-D03F-4F8E-A1B5-7CFFD8DC5C41",
+    "location": {
+     "geohash": "sp94jyzb5ex9",
+     "lat": 42.5761623,
+     "lon": 1.6697391
+    },
+    "name": "Sport Hotels Resort & Spa",
+    "popularity": 0.6907238992890683,
+    "query": {
+     "affinity": 0.932393619255256,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:place",
+    "tags": [
+     {
+      "id": "urn:tag:place_page_attributes:place:hotel_class",
+      "name": "Hotel class",
+      "type": "urn:tag:place_page_attributes:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:fitness_center",
+      "name": "Fitness center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:luxurious",
+      "name": "Luxurious",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:soldeu_village",
+      "name": "Soldeu village",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_wi_fi",
+      "name": "Free wi fi",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place",
+      "name": "Place",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:resort_hotel",
+      "name": "Resort hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:tours",
+      "name": "Tours",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:wellness_and_spa",
+      "name": "Wellness and spa",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:resort",
+      "name": "Resort",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:alpine_village",
+      "name": "Alpine village",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:ski_in_ski_out",
+      "name": "Ski in ski out",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:indoor_and_outdoor_pool",
+      "name": "Indoor and outdoor pool",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:breakfast",
+      "name": "Breakfast",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:hot_tub",
+      "name": "Hot tub",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:mountain",
+      "name": "Mountain",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:snowboarding",
+      "name": "Snowboarding",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:mountain_view",
+      "name": "Mountain view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:free_parking",
+      "name": "Free parking",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:time_of_day_fit:qloo:all_day",
+      "name": "All day",
+      "type": "urn:tag:time_of_day_fit:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:nature_outdoors",
+      "name": "Nature outdoors",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:spa",
+      "name": "Spa",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:destination",
+      "name": "Destination",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:comfortable",
+      "name": "Comfortable",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:scenic",
+      "name": "Scenic",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:nature",
+      "name": "Nature",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:elegant",
+      "name": "Elegant",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:airport_shuttle",
+      "name": "Airport shuttle",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:mountain_biking",
+      "name": "Mountain biking",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:alpine_skiing",
+      "name": "Alpine skiing",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:visit_intent:qloo:special_occasion",
+      "name": "Special occasion",
+      "type": "urn:tag:visit_intent:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:dining_drinking",
+      "name": "Dining drinking",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:indoor_pool",
+      "name": "Indoor pool",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:charming",
+      "name": "Charming",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:quiet",
+      "name": "Quiet",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:incles_valley",
+      "name": "Incles valley",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:genre:place:hotel:resort",
+      "name": "Resort hotel",
+      "type": "urn:tag:genre:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:relaxing",
+      "name": "Relaxing",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:setting:qloo:high_altitude",
+      "name": "High altitude",
+      "type": "urn:tag:setting:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:interests:qloo:fine_dining",
+      "name": "Fine dining",
+      "type": "urn:tag:interests:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:elegant",
+      "name": "Elegant",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:upscale",
+      "name": "Upscale",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:high_mountain_style",
+      "name": "High mountain style",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:hotel_rating:place:four_star",
+      "name": "Four star",
+      "type": "urn:tag:hotel_rating:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:upscale",
+      "name": "Upscale",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:kid_friendly",
+      "name": "Kid friendly",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:decor:qloo:rustic",
+      "name": "Rustic",
+      "type": "urn:tag:decor:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:sports_recreation",
+      "name": "Sports recreation",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:nearby_attraction:qloo:grandvalira_ski_resort",
+      "name": "Grandvalira ski resort",
+      "type": "urn:tag:nearby_attraction:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:room_service",
+      "name": "Room service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:laundry_service",
+      "name": "Laundry service",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:category:place:hotel",
+      "name": "Hotel",
+      "type": "urn:tag:category:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:skiing",
+      "name": "Skiing",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:bar",
+      "name": "Bar",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:neighborhood_characteristic:qloo:central",
+      "name": "Central",
+      "type": "urn:tag:neighborhood_characteristic:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:view:qloo:slope_view",
+      "name": "Slope view",
+      "type": "urn:tag:view:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:ambience:qloo:cozy_mountain_style",
+      "name": "Cozy mountain style",
+      "type": "urn:tag:ambience:qloo",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:business_center",
+      "name": "Business center",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:amenity:place:restaurant",
+      "name": "Restaurant",
+      "type": "urn:tag:amenity:place",
+      "weight": null
+     },
+     {
+      "id": "urn:tag:activity_type:qloo:wellness",
+      "name": "Wellness",
+      "type": "urn:tag:activity_type:qloo",
+      "weight": null
+     }
+    ],
+    "type": "urn:entity"
+   }
+  ]
+ },
+ "success": true
+}

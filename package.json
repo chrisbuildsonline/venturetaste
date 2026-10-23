@@ -4,6 +4,9 @@
   "scripts": {
     "setup": "uv sync && cd web && bun install",
     "test": "uv run pytest -q api/tests",
+    "test:live": "uv run --env-file .env pytest -q -m live api/tests",
+    "record": "uv run --env-file .env python -m api.record_fixtures",
+    "e2e:ci": "CI=1 bun run e2e",
     "typecheck": "cd web && bun run typecheck && cd .. && uv run mypy",
     "build": "cd web && bun run build",
     "e2e": "bun run build && cd web && bun run e2e",

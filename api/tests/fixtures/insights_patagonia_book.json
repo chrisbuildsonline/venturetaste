@@ -1,0 +1,117 @@
+{
+ "results": {
+  "entities": [
+   {
+    "disambiguation": "2018, Jon Krakauer",
+    "entity_id": "7468CDC5-E025-4E71-9CB5-865FAEC5EEF6",
+    "name": "Classic Krakauer: After the Fall, Mark Foo's Last Ride and Other Essays from the Vault",
+    "popularity": 0.9680772212324389,
+    "query": {
+     "affinity": 0.9281469948672117
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2021, John Branch",
+    "entity_id": "8FE1693F-A61E-4AD7-87E7-57484FF507F2",
+    "name": "Sidecountry: Tales of Death and Life from the Back Roads of Sports",
+    "popularity": 0.8034584993675965,
+    "query": {
+     "affinity": 0.923312525201916
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2022, Harley Rustad",
+    "entity_id": "94C7F071-3721-405F-BB04-D78CE775D043",
+    "name": "Lost in the Valley of Death: A Story of Obsession and Danger in the Himalayas",
+    "popularity": 0.8557711923186769,
+    "query": {
+     "affinity": 0.9187177850209926
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2019, Ian Urbina",
+    "entity_id": "C2E5D842-0472-42A2-97F3-4B4201789472",
+    "name": "The Outlaw Ocean: Journeys Across the Last Untamed Frontier",
+    "popularity": 0.8423411171102558,
+    "query": {
+     "affinity": 0.9118577141722056
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2018, Outside Magazine",
+    "entity_id": "AF3C62C3-0C31-45B1-AA45-27517D48FCE4",
+    "name": "Out There: The Wildest Stories from Outside Magazine",
+    "popularity": 0.45886996967183014,
+    "query": {
+     "affinity": 0.9053222485823038
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2019, Tucker Malarkey",
+    "entity_id": "F2FA1BCB-3FC3-478C-A54F-7D686D195AA5",
+    "name": "Stronghold: One Man's Quest to Save the World's Wild Salmon",
+    "popularity": 0.6582674862979233,
+    "query": {
+     "affinity": 0.9034665733363446
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2022, Ben McGrath",
+    "entity_id": "65FA3DDB-D4DD-42AE-B684-F54A681DF7C9",
+    "name": "Riverman: An American Odyssey",
+    "popularity": 0.7794883651348448,
+    "query": {
+     "affinity": 0.9029027745105718
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2021, Andrea Pitzer",
+    "entity_id": "4D4AFFC7-50AE-484B-BA39-35E7061187E7",
+    "name": "Icebound: Shipwrecked at the Edge of the World",
+    "popularity": 0.6617321056997919,
+    "query": {
+     "affinity": 0.9003251894937336
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2019, Jill Heinerth",
+    "entity_id": "FB9D80B5-01E3-4BA0-9C14-01AE128BA2C1",
+    "name": "Into the Planet: My Life as a Cave Diver",
+    "popularity": 0.8093303322498606,
+    "query": {
+     "affinity": 0.900247677340263
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2018, Edward J. Larson",
+    "entity_id": "56C9836F-63A8-419F-88AE-4AD41853170B",
+    "name": "To the Edges of the Earth: 1909, the Race for the Three Poles, and the Climax of the Age of Exploration",
+    "popularity": 0.5126684709434373,
+    "query": {
+     "affinity": 0.8995301649797962
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   }
+  ]
+ },
+ "success": true
+}

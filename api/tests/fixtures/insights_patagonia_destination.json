@@ -1,0 +1,297 @@
+{
+ "results": {
+  "entities": [
+   {
+    "disambiguation": "",
+    "entity_id": "81EDEE08-8E24-4F48-910B-9BBF61F3E756",
+    "location": {
+     "geohash": "9wf57jum46ze",
+     "lat": 38.5725,
+     "lon": -109.54972
+    },
+    "name": "Moab",
+    "popularity": 0.8735267452402539,
+    "query": {
+     "affinity": 0.9835463415829624
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:nature",
+      "name": "Nature",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:scenic_picturesque",
+      "name": "Scenic & Picturesque",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "116B6DB8-79D5-4A83-AD81-865B10DF886D",
+    "location": {
+     "geohash": "9wgvjkjbs14f",
+     "lat": 38.86972,
+     "lon": -106.98778
+    },
+    "name": "Crested Butte",
+    "popularity": 0.5543970988213962,
+    "query": {
+     "affinity": 0.9748552693578002
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:snow_ski",
+      "name": "Snow and Ski",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "1C2045B0-5EA2-477A-A87E-424A7FF5EDA5",
+    "location": {
+     "geohash": "9xhn30dbn7sc",
+     "lat": 40.4764,
+     "lon": -106.827
+    },
+    "name": "Steamboat Springs",
+    "popularity": 0.7379873073436083,
+    "query": {
+     "affinity": 0.9686487170602958
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:snow_ski",
+      "name": "Snow and Ski",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "538C9ED0-1F09-41D5-81AB-F297CC761348",
+    "location": {
+     "geohash": "9werfdde9f2z",
+     "lat": 37.93915,
+     "lon": -107.816315
+    },
+    "name": "Telluride",
+    "popularity": 0.6436990027198549,
+    "query": {
+     "affinity": 0.9659790078300611
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:scenic_picturesque",
+      "name": "Scenic & Picturesque",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:nature",
+      "name": "Nature",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:snow_ski",
+      "name": "Snow and Ski",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "019D4BEF-84C0-4611-A30D-0A39F419A0BB",
+    "location": {
+     "geohash": "9x58vtvqugxr",
+     "lat": 39.5396,
+     "lon": -107.329
+    },
+    "name": "Glenwood Springs",
+    "popularity": 0.4528558476881233,
+    "query": {
+     "affinity": 0.9549595432742527
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "40502952-770C-4B56-845E-56D350018E22",
+    "location": {
+     "geohash": "9wg2mcgtu8gu",
+     "lat": 38.0233,
+     "lon": -107.672
+    },
+    "name": "Ouray",
+    "popularity": 0.37805983680870353,
+    "query": {
+     "affinity": 0.9543535547877737
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:nature",
+      "name": "Nature",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:scenic_picturesque",
+      "name": "Scenic & Picturesque",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "80CEBCBD-CD36-452C-9C0F-885DCE13682D",
+    "location": {
+     "geohash": "9xj5sv29zmnu",
+     "lat": 40.0194,
+     "lon": -105.259
+    },
+    "name": "Boulder",
+    "popularity": 0.914324569356301,
+    "query": {
+     "affinity": 0.9494071562195887
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:nature",
+      "name": "Nature",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "332F104D-7244-4551-AFC0-A070F981B251",
+    "location": {
+     "geohash": "9wek166spmwy",
+     "lat": 37.2787,
+     "lon": -107.871
+    },
+    "name": "Durango",
+    "popularity": 0.529011786038078,
+    "query": {
+     "affinity": 0.9466919651102474
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:romantic_getaways",
+      "name": "Romantic Getaways",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "F04397CF-3590-4E53-A722-00AFB99C046C",
+    "location": {
+     "geohash": "9xh37xkz62x9",
+     "lat": 39.6358,
+     "lon": -106.363
+    },
+    "name": "Vail",
+    "popularity": 0.8608340888485947,
+    "query": {
+     "affinity": 0.9450878532806054
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:snow_ski",
+      "name": "Snow and Ski",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "35681245-B845-46D6-9B06-2042CDF8B3FE",
+    "location": {
+     "geohash": "9xhg0bq44xj7",
+     "lat": 39.9041,
+     "lon": -105.779
+    },
+    "name": "Winter Park",
+    "popularity": 0.6128739800543971,
+    "query": {
+     "affinity": 0.9449522935494288
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:snow_ski",
+      "name": "Snow and Ski",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   }
+  ]
+ },
+ "success": true
+}

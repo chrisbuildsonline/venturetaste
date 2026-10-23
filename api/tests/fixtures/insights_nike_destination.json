@@ -1,0 +1,322 @@
+{
+ "results": {
+  "entities": [
+   {
+    "disambiguation": "",
+    "entity_id": "68DD62E5-255D-40EE-92C4-A7C1D02994DA",
+    "location": {
+     "geohash": "tk1w16fn3n4p",
+     "lat": 23.5709,
+     "lon": 58.4171
+    },
+    "name": "Muscat",
+    "popularity": 0.49365367180417047,
+    "query": {
+     "affinity": 0.9401674785828557
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:history",
+      "name": "For the History",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:nature",
+      "name": "Nature",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:scenic_picturesque",
+      "name": "Scenic & Picturesque",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:beaches",
+      "name": "Beaches",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "5D27CA79-5539-4D0E-8697-12AC1BF1CA30",
+    "location": {
+     "geohash": "thevpj6g1x7n",
+     "lat": 26.2208,
+     "lon": 50.5849
+    },
+    "name": "Manama",
+    "popularity": 0.5339981867633726,
+    "query": {
+     "affinity": 0.9362982288918362
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:urban_destinations",
+      "name": "Urban Destinations",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "C6C2CF2F-0ADB-4FD9-8E72-98161B58CD4C",
+    "location": {
+     "geohash": "tj4p5f8dzku1",
+     "lat": 29.3697,
+     "lon": 47.9783
+    },
+    "name": "Kuwait City",
+    "popularity": 0.5965548504079783,
+    "query": {
+     "affinity": 0.9355219181202126
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:urban_destinations",
+      "name": "Urban Destinations",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "208C8181-5D7E-447D-8834-89EFE1935961",
+    "location": {
+     "geohash": "thqejnh8ggmh",
+     "lat": 24.4667,
+     "lon": 54.3667
+    },
+    "name": "Abu Dhabi",
+    "popularity": 0.9587488667271079,
+    "query": {
+     "affinity": 0.9344111123275276
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:urban_destinations",
+      "name": "Urban Destinations",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:great_nightlife",
+      "name": "Great Nightlife",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:great_architecture",
+      "name": "Great Architecture",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:great_shopping",
+      "name": "Great Shopping",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:beaches",
+      "name": "Beaches",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "82FF7A2D-BC04-437E-B2CE-333815B747F7",
+    "location": {
+     "geohash": "thrr3g3m5ut5",
+     "lat": 25.1994,
+     "lon": 55.2741
+    },
+    "name": "Dubai",
+    "popularity": 0.9913871260199456,
+    "query": {
+     "affinity": 0.9278671112748461
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:foodie_destination",
+      "name": "Foodie Destination",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:entertainment_performing_arts",
+      "name": "Entertainment & Performing Arts",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:outdoor_activities",
+      "name": "Outdoor Activities",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:kids",
+      "name": "With Kids",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:great_shopping",
+      "name": "Great Shopping",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:great_architecture",
+      "name": "Great Architecture",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:great_nightlife",
+      "name": "Great Nightlife",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:beaches",
+      "name": "Beaches",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "E5077442-7449-4BB8-896F-64CCBCB07553",
+    "location": {
+     "geohash": "stq4yzer63xe",
+     "lat": 30.0571,
+     "lon": 31.2387
+    },
+    "name": "Cairo",
+    "popularity": 0.885766092475068,
+    "query": {
+     "affinity": 0.9217677210162578
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:urban_destinations",
+      "name": "Urban Destinations",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:art_culture",
+      "name": "Art & Culture",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:great_nightlife",
+      "name": "Great Nightlife",
+      "type": "urn:tag:genre:destination"
+     },
+     {
+      "id": "urn:tag:genre:destination:history",
+      "name": "For the History",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "E72A54CD-9BE0-4765-A0AA-D06D27B63555",
+    "location": {
+     "geohash": "sggf5xnmjd0k",
+     "lat": 21.484634,
+     "lon": 39.186066
+    },
+    "name": "Jeddah",
+    "popularity": 0.7497733454215775,
+    "query": {
+     "affinity": 0.9178733399538322
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:urban_destinations",
+      "name": "Urban Destinations",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "1AFA25AC-3017-4D91-B929-05FD4AA879B4",
+    "location": {
+     "geohash": "thx2xy04k8ch",
+     "lat": 25.43374,
+     "lon": 55.536083
+    },
+    "name": "Ajman",
+    "popularity": 0.025838621940163193,
+    "query": {
+     "affinity": 0.9156588206538121
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:beaches",
+      "name": "Beaches",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "5A0115D3-D102-4030-9DE0-1FAF7FBB0ACE",
+    "location": {
+     "geohash": "tk2ncvx8wvmf",
+     "lat": 25.1231,
+     "lon": 56.3375
+    },
+    "name": "Fujairah",
+    "popularity": 0.3413417951042611,
+    "query": {
+     "affinity": 0.9139169482833696
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:beaches",
+      "name": "Beaches",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "42B304BE-7993-44D1-85FA-FB2C4210E2C1",
+    "location": {
+     "geohash": "th3k0mdzj4pu",
+     "lat": 24.6408,
+     "lon": 46.7728
+    },
+    "name": "Riyadh",
+    "popularity": 0.7669990933816863,
+    "query": {
+     "affinity": 0.9074563941111309
+    },
+    "subtype": "urn:entity:destination",
+    "tags": [
+     {
+      "id": "urn:tag:genre:destination:urban_destinations",
+      "name": "Urban Destinations",
+      "type": "urn:tag:genre:destination"
+     }
+    ],
+    "type": "urn:entity"
+   }
+  ]
+ },
+ "success": true
+}
