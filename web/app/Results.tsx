@@ -26,7 +26,7 @@ const CHURN_STYLE = { low: "text-emerald-300", medium: "text-amber-300", high: "
 
 function Card({ title, children, className = "", testId }: { title: string; children: React.ReactNode; className?: string; testId?: string }) {
   return (
-    <section data-testid={testId} className={`rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6 ${className}`}>
+    <section data-testid={testId} className={`min-w-0 rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6 ${className}`}>
       <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400">{title}</h2>
       <div className="mt-4">{children}</div>
     </section>
@@ -58,11 +58,14 @@ function TasteList({ title, items, empty, testId }: { title: string; items: { ke
 const clashItems = (list: Clashing[]) =>
   list.map((c) => ({ key: `${c.domain}-${c.name}`, name: c.name, domain: c.domain, note: `affinity ${c.affinity.toFixed(2)}` }));
 
+// Diverging bar: the track centre is zero, negative affinities grow left, positive grow right.
 function Bar({ value, tone }: { value: number; tone: string }) {
-  const width = `${Math.round(((Math.max(-1, Math.min(1, value)) + 1) / 2) * 100)}%`;
+  const v = Math.max(-1, Math.min(1, value));
+  const style = v < 0 ? { right: "50%", width: `${-v * 50}%` } : { left: "50%", width: `${v * 50}%` };
   return (
-    <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
-      <div className={`h-full rounded-full ${tone}`} style={{ width }} />
+    <div className="relative h-2 flex-1 rounded-full bg-white/10">
+      <div className="absolute inset-y-[-3px] left-1/2 w-px bg-zinc-400" aria-hidden />
+      <div data-testid="demo-bar" data-sign={v < 0 ? "negative" : "positive"} className={`absolute inset-y-0 ${v < 0 ? "rounded-l-full" : "rounded-r-full"} ${tone}`} style={style} />
     </div>
   );
 }
@@ -102,6 +105,7 @@ function DemographicsCard({ a, b, nameA, nameB, distance }: { a: Demographics; b
         <span className="flex items-center gap-2"><span className="size-2.5 rounded-full bg-indigo-400" />{nameA}</span>
         <span className="flex items-center gap-2"><span className="size-2.5 rounded-full bg-fuchsia-400" />{nameB}</span>
         <span className="text-zinc-400">Distance {distance.toFixed(2)} (0 = identical audiences)</span>
+        <span className="w-full text-zinc-400">← under-indexed · over-indexed →</span>
       </div>
       {empty ? (
         <p className="text-sm text-zinc-400">Qloo has no audience data for these brands.</p>
@@ -153,9 +157,9 @@ export default function Results({ data }: { data: Diligence }) {
       </section>
 
       <div className="grid gap-5 lg:grid-cols-2">
-        <Card title="Taste overlap by domain">
+        <Card title={`${nameA} × ${nameB} taste overlap`}>
           {noOverlap ? (
-            <div data-testid="no-shared-taste" className="flex h-72 flex-col items-center justify-center rounded-xl border border-dashed border-rose-400/40 bg-rose-400/5 px-6 text-center">
+            <div data-testid="no-shared-taste" className="flex h-80 flex-col lg:h-[28rem] items-center justify-center rounded-xl border border-dashed border-rose-400/40 bg-rose-400/5 px-6 text-center">
               <p className="text-xl font-semibold text-rose-200">No shared taste</p>
               <p className="mt-2 max-w-sm text-sm text-zinc-300">
                 Qloo finds no taste entity that both {nameA} and {nameB} audiences love, in any of the seven domains. The two customer bases barely
@@ -163,7 +167,7 @@ export default function Results({ data }: { data: Diligence }) {
               </p>
             </div>
           ) : (
-            <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="h-72 w-full">
+            <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="h-80 w-full lg:h-[28rem]">
               <ResponsiveContainer width="100%" height="100%">
                 <RadarChart data={radarData} outerRadius="58%">
                   <PolarGrid stroke="rgba(255,255,255,0.18)" />
