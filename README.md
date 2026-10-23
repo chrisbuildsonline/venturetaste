@@ -27,6 +27,25 @@ bun run typecheck                 # tsc + mypy
 bun run e2e                       # build, then Playwright against FastAPI on :8765
 ```
 
+## Diligence pipeline
+
+`POST /api/diligence` with `{"acquirer": "Nike", "target": "Adidas"}` runs four agents as a LangGraph `StateGraph` (`api/pipeline.py`, no LLM) and returns one report: resolved brands, scores, `domain_overlap` for all 7 domains (no data = 0), top shared and clashing tastes, demographics for both brands, the memo, and a per-agent `trace` (agent, status, ms, Qloo calls).
+
+1. **Scout** resolves both brand names to Qloo entities.
+2. **Cartographer** fetches insights for all 7 domains plus demographics for both brands (16 calls, in parallel threads; 18 Qloo calls per run with the two searches). Insights use `take=50`, the most Qloo allows.
+3. **Analyst** scores the pair with `api/scoring.py`.
+4. **Partner** writes the deal memo from templates: a verdict (`Proceed`, `Proceed with conditions`, `Pass`), rationale and risks that name real Qloo entities from the data.
+
+Errors: unknown brand or a brand with no taste data is 422 with a message naming the brand, missing `QLOO_API_KEY` is 503, a Qloo failure is 502. Qloo rate limits (HTTP 429) are retried with backoff.
+
+`GET /api/presets` lists the demo pairs (verified live, `api/presets.py`):
+
+- **Nike + Adidas**: high synergy.
+- **Patagonia + The North Face**: mixed, shared outdoor tastes.
+- **Patagonia + Gucci**: culture clash.
+
+`bun run record` re-records the fixtures for the preset brands; `bun run probe` scores candidate pairs live.
+
 ## Scoring
 
 `api/scoring.py` is pure (no I/O, no LLM). `score(a, b)` compares two brand profiles:
