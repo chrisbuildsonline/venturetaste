@@ -190,7 +190,18 @@ class QlooClient:
         parsed = parse(raw)  # only well-formed successful responses reach the cache
         self._cache_dir.mkdir(parents=True, exist_ok=True)
         cache_file.write_text(json.dumps(raw))
+        self._prune_cache()
         return parsed
+
+    def _prune_cache(self) -> None:
+        """Keep the cache dir to VENTURETASTE_CACHE_MAX_FILES files by deleting the oldest."""
+        cap = int(os.environ.get("VENTURETASTE_CACHE_MAX_FILES") or 2000)
+        try:
+            files = [(p.stat().st_mtime, p) for p in self._cache_dir.glob("*.json")]
+            for _, old in sorted(files, key=lambda f: f[0])[: max(0, len(files) - cap)]:
+                old.unlink(missing_ok=True)
+        except OSError:
+            pass  # a concurrent run raced us on a file; the next write prunes again
 
     def _fetch(self, path: str, params: dict[str, str]) -> object:
         for delay in (*RETRY_DELAYS, None):
