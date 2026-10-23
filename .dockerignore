@@ -1,0 +1,15 @@
+.env
+.env.*
+.cache
+.git
+.omc
+.venv
+docs
+node_modules
+test-results
+web/node_modules
+web/.next
+web/out
+web/test-results
+api/tests
+**/__pycache__
