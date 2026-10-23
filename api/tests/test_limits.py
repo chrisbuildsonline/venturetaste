@@ -58,7 +58,25 @@ def test_other_ip_is_not_limited(tmp_path: Path) -> None:
         app.dependency_overrides.clear()
 
 
-TRUSTED = "127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"  # keep in step with the Dockerfile
+def test_ipv6_keyed_by_64_and_mapped_ipv4_by_ipv4(tmp_path: Path) -> None:
+    app.dependency_overrides[get_qloo] = lambda: make_client(tmp_path, fixture_handler([]))
+    try:
+
+        def post(host: str) -> int:
+            return TestClient(app, client=(host, 5000)).post("/api/diligence", json=BODY).status_code
+
+        for i in range(3):
+            assert post(f"2001:db8:1:2::{i + 1}") == 200  # same /64, different addresses
+        assert post("2001:db8:1:2:ffff::9") == 429
+        assert post("2001:db8:1:3::1") == 200  # different /64
+        for _ in range(3):
+            assert post("1.2.3.4") == 200
+        assert post("::ffff:1.2.3.4") == 429  # same client as 1.2.3.4
+    finally:
+        app.dependency_overrides.clear()
+
+
+TRUSTED ="127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"  # keep in step with the Dockerfile
 
 
 def test_limit_is_per_real_client_behind_a_trusted_proxy(tmp_path: Path) -> None:
