@@ -2,7 +2,7 @@
 
 import operator
 import time
-from collections.abc import Callable
+from collections.abc import Callable, Iterator
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict
 from functools import partial
@@ -13,6 +13,7 @@ from langgraph.graph import END, START, StateGraph
 from api.qloo import DOMAINS, Demographics, Entity, QlooClient, QlooError, QlooParseError
 from api.scoring import BrandProfile, Scores, score
 
+AGENTS = ("Scout", "Cartographer", "Analyst", "Partner")
 SIDES = ("acquirer", "target")
 MAX_WORKERS = 6
 PROCEED_BCI = 50  # synergy deals at or above this BCI get a clean "Proceed"
@@ -179,8 +180,25 @@ def build_graph(client: QlooClient) -> Any:
     return graph.compile()
 
 
+def stream_diligence(client: QlooClient, acquirer: str, target: str) -> Iterator[tuple[str, dict[str, Any]]]:
+    """Lazily yield ("agent", {...}) as each agent starts and finishes, then ("result", report). QlooErrors propagate."""
+    yield "agent", {"agent": AGENTS[0], "status": "running"}
+    state: dict[str, Any] = {"acquirer": acquirer, "target": target, "trace": []}
+    for chunk in build_graph(client).stream(state, stream_mode="updates"):
+        for update in chunk.values():
+            state |= {**update, "trace": state["trace"] + update["trace"]}
+            item = update["trace"][0]
+            yield "agent", item
+            if item["agent"] != AGENTS[-1]:
+                yield "agent", {"agent": AGENTS[AGENTS.index(item["agent"]) + 1], "status": "running"}
+    yield "result", _report(state, acquirer, target)
+
+
 def run_diligence(client: QlooClient, acquirer: str, target: str) -> dict[str, Any]:
-    state: State = build_graph(client).invoke({"acquirer": acquirer, "target": target, "trace": []})
+    return next(data for event, data in stream_diligence(client, acquirer, target) if event == "result")
+
+
+def _report(state: dict[str, Any], acquirer: str, target: str) -> dict[str, Any]:
     s = state["scores"]
     return {
         "brands": {
