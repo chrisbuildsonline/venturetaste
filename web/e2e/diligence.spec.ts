@@ -33,6 +33,26 @@ test("demo: Nike + Adidas preset runs the whole diligence", async ({ page }) => 
   await expect(page.getByTestId("memo")).toContainText("Nike + Adidas");
   await expect(page.getByTestId("shared-tastes")).toBeVisible();
   await expect(page.getByTestId("demographics")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Nike × Adidas taste overlap" })).toBeVisible();
+  await expect(page.getByTestId("demographics")).toContainText("under-indexed");
+  const radarBox = await page.getByTestId("radar").boundingBox();
+  expect(radarBox?.height ?? 0).toBeGreaterThanOrEqual(400);
+
+  // signed affinities: negative bars sit left of the zero line, positive bars right of it
+  const bars = page.getByTestId("demo-bar");
+  const count = await bars.count();
+  const signs = new Set<string | null>();
+  for (let i = 0; i < count; i++) {
+    const bar = bars.nth(i);
+    const sign = await bar.getAttribute("data-sign");
+    signs.add(sign);
+    const box = await bar.boundingBox();
+    const track = await bar.locator("xpath=..").boundingBox();
+    const centre = track!.x + track!.width / 2;
+    if (sign === "negative") expect(box!.x + box!.width).toBeLessThanOrEqual(centre + 1);
+    else expect(box!.x).toBeGreaterThanOrEqual(centre - 1);
+  }
+  expect(signs).toEqual(new Set(["negative", "positive"]));
   for (const agent of AGENTS) {
     const row = page.getByTestId(`agent-${agent}`);
     await expect(row).toHaveAttribute("data-state", "done");
@@ -45,10 +65,10 @@ test("demo: Nike + Adidas preset runs the whole diligence", async ({ page }) => 
 
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(page.getByTestId("bci-value")).toBeVisible();
-  const overflow = await page.evaluate(
-    () => document.documentElement.scrollWidth - document.documentElement.clientWidth,
-  );
-  expect(overflow).toBeLessThanOrEqual(0);
+  // the chart re-measures asynchronously after the resize, so poll
+  await expect
+    .poll(() => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth))
+    .toBeLessThanOrEqual(0);
   await page.screenshot({ path: "e2e/screenshots/mobile.png", fullPage: true });
 
   expect(errors).toEqual([]);
@@ -99,12 +119,17 @@ test("unknown brand shows the API error inline", async ({ page }) => {
 test("same brand twice shows an inline alert", async ({ page }) => {
   const errors = watchErrors(page);
   await page.goto("/");
+  let diligenceRequests = 0;
+  page.on("request", (req) => {
+    if (req.url().includes("/api/diligence")) diligenceRequests++;
+  });
   await page.getByLabel("Acquirer").fill("Nike");
-  await page.getByLabel("Target").fill("Nike");
+  await page.getByLabel("Target").fill("  nIKE ");
   await page.getByRole("button", { name: "Run diligence" }).click();
 
   await expect(inlineAlert(page)).toContainText(/different brands/i);
-  expect(errors.filter((e) => !e.includes("422"))).toEqual([]);
+  expect(diligenceRequests).toBe(0);
+  expect(errors).toEqual([]);
 });
 
 test("empty inputs are rejected client side", async ({ page }) => {

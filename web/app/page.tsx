@@ -46,6 +46,10 @@ export default function Home() {
       setError("Enter both an acquirer and a target brand.");
       return;
     }
+    if (body.acquirer.toLowerCase() === body.target.toLowerCase()) {
+      setError(`Pick two different brands: ${body.acquirer} and ${body.target} are the same.`);
+      return;
+    }
     setData(null);
     setRunning(true);
     try {
