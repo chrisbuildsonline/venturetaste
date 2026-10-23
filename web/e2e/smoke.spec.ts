@@ -12,7 +12,7 @@ test("home page loads with no console or page errors", async ({ page }) => {
     page.getByRole("heading", { name: "VentureTaste" }),
   ).toBeVisible();
   await expect(
-    page.getByText("Taste-graph due diligence for consumer brand deals"),
+    page.getByText("Taste-graph due diligence for consumer brand deals").first(),
   ).toBeVisible();
   await page.screenshot({ path: "e2e/screenshots/smoke.png" });
 
