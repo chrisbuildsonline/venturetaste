@@ -1,3 +1,5 @@
+import os
+import tempfile
 from dataclasses import asdict
 from pathlib import Path
 from typing import Annotated, Any
@@ -40,6 +42,10 @@ class DiligenceRequest(BaseModel):
 
 def get_qloo() -> QlooClient:
     """Built per request (never at import) so a missing key is a 503, not a crash."""
+    if os.environ.get("VENTURETASTE_FIXTURES") == "1":  # e2e runs: recorded Qloo answers, no key, no network
+        from api.tests.qloo_fake import fixture_handler, make_client
+
+        return make_client(Path(tempfile.mkdtemp(prefix="venturetaste-fixtures-")), fixture_handler([]))
     return QlooClient()
 
 
