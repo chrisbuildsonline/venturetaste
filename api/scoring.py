@@ -1,6 +1,7 @@
 """Pure scoring of two brands from their Qloo taste profiles (no I/O, no LLM)."""
 
 import math
+from collections.abc import Callable
 from dataclasses import dataclass
 
 from api.qloo import Affinity, Demographics
@@ -79,6 +80,18 @@ def demographic_distance(a: Demographics, b: Demographics) -> float:
     return _clamp(sum(abs(val(va, k) - val(vb, k)) for k in keys) / len(keys) / 2, 1.0)
 
 
+def _clean[T: (SharedTaste, ClashingTaste)](items: list[T], brands: set[str], strength: Callable[[T], float]) -> list[T]:
+    """Drop the two brands themselves, rank by strength, keep the strongest of each (domain, name)."""
+    ranked = sorted(
+        (t for t in items if t.name.casefold() not in brands),
+        key=lambda t: (-strength(t), t.domain, t.name),
+    )
+    kept: dict[tuple[str, str], T] = {}
+    for t in ranked:
+        kept.setdefault((t.domain, t.name.casefold()), t)
+    return list(kept.values())
+
+
 def _band(clash: float) -> str:
     return "low" if clash < 33 else "medium" if clash < 66 else "high"
 
@@ -103,12 +116,10 @@ def score(a: BrandProfile, b: BrandProfile) -> Scores:
                 clash_a.append(ClashingTaste(d, x.name, round(wa[x.id], 4)))
         clash_b += [ClashingTaste(d, y.name, round(wb[y.id], 4)) for y in lb if y.id not in wa and wb[y.id] > 0]
 
-    shared = list({(t.domain, t.name): t for t in shared}.values())
-    shared.sort(key=lambda t: (-min(t.affinity_a, t.affinity_b), t.domain, t.name))
-    clash_a = list(dict.fromkeys(clash_a))
-    clash_b = list(dict.fromkeys(clash_b))
-    clash_a.sort(key=lambda t: (-t.affinity, t.domain, t.name))
-    clash_b.sort(key=lambda t: (-t.affinity, t.domain, t.name))
+    brands = {a.name.casefold(), b.name.casefold()}
+    shared = _clean(shared, brands, lambda t: min(t.affinity_a, t.affinity_b))
+    clash_a = _clean(clash_a, brands, lambda t: t.affinity)
+    clash_b = _clean(clash_b, brands, lambda t: t.affinity)
 
     clash = round(100 * _clamp(OVERLAP_WEIGHT * (1 - mean_overlap) + DEMO_WEIGHT * dist, 1.0), 1)
     bci = round(100 * _clamp(OVERLAP_WEIGHT * mean_overlap + DEMO_WEIGHT * (1 - dist), 1.0), 1)

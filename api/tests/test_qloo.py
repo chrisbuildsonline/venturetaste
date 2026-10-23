@@ -1,7 +1,5 @@
-import json
 from collections.abc import Callable
 from pathlib import Path
-from typing import Any
 
 import httpx
 import pytest
@@ -19,43 +17,7 @@ from api.qloo import (
     parse_insights,
     parse_search,
 )
-
-FIXTURES = Path(__file__).parent / "fixtures"
-BASE = "https://qloo.test"
-
-
-def load(name: str) -> Any:
-    return json.loads((FIXTURES / f"{name}.json").read_text())
-
-
-BRAND_IDS = {
-    load(f"search_{slug}")["results"][0]["entity_id"]: slug for slug in ("nike", "patagonia")
-}
-
-
-def fixture_handler(calls: list[httpx.Request]) -> Callable[[httpx.Request], httpx.Response]:
-    def handler(request: httpx.Request) -> httpx.Response:
-        calls.append(request)
-        params = request.url.params
-        if request.url.path == "/search":
-            slug = params["query"].lower()
-            if (FIXTURES / f"search_{slug}.json").exists():
-                return httpx.Response(200, json=load(f"search_{slug}"))
-            return httpx.Response(200, json={"results": []})
-        slug = BRAND_IDS[params["signal.interests.entities"]]
-        kind = params["filter.type"]
-        if kind == "urn:demographics":
-            return httpx.Response(200, json=load(f"demographics_{slug}"))
-        return httpx.Response(200, json=load(f"insights_{slug}_{kind.split(':')[-1]}"))
-
-    return handler
-
-
-def make_client(
-    tmp_path: Path, handler: Callable[[httpx.Request], httpx.Response]
-) -> QlooClient:
-    http = httpx.Client(transport=httpx.MockTransport(handler))
-    return QlooClient(api_key="test-key", base_url=BASE, cache_dir=tmp_path, http=http)
+from api.tests.qloo_fake import BASE, BRAND_IDS, fixture_handler, make_client
 
 
 @pytest.fixture
@@ -155,6 +117,30 @@ def test_timeout_is_api_error(tmp_path: Path) -> None:
 
     with pytest.raises(QlooAPIError):
         make_client(tmp_path, handler).search("Nike")
+
+
+def test_rate_limit_is_retried(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path, calls: list[httpx.Request]
+) -> None:
+    naps: list[float] = []
+    monkeypatch.setattr("api.qloo.time.sleep", naps.append)
+    ok = fixture_handler(calls)
+    state = {"left": 2}
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if state["left"]:
+            state["left"] -= 1
+            return httpx.Response(429)
+        return ok(request)
+
+    assert make_client(tmp_path, handler).search("Nike").name == "Nike"
+    assert len(naps) == 2
+
+
+def test_rate_limit_gives_up_as_api_error(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    monkeypatch.setattr("api.qloo.time.sleep", lambda s: None)
+    with pytest.raises(QlooAPIError, match="429"):
+        make_client(tmp_path, lambda r: httpx.Response(429)).search("Nike")
 
 
 def test_failures_are_not_cached(tmp_path: Path, calls: list[httpx.Request]) -> None:
