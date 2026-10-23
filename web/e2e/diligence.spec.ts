@@ -126,8 +126,57 @@ test("unknown brand shows the API error inline", async ({ page }) => {
   await expect(page.getByTestId("bci-value")).toHaveCount(0);
   await expect(page.getByRole("button", { name: "Run diligence" })).toBeEnabled();
 
-  // 422 is an expected API answer; the browser logs the failed resource as a console error.
-  expect(errors.filter((e) => !e.includes("422"))).toEqual([]);
+  expect(errors).toEqual([]);
+});
+
+test("agent cards go live: waiting, running, done in order", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.addInitScript(() => {
+    const w = window as unknown as { __states: string[] };
+    w.__states = [];
+    const seen = new Map<Element, string>();
+    new MutationObserver(() => {
+      for (const el of document.querySelectorAll("[data-testid^=agent-]")) {
+        const state = el.getAttribute("data-state");
+        if (state && seen.get(el) !== state) {
+          seen.set(el, state);
+          w.__states.push(`${el.getAttribute("data-testid")}:${state}`);
+        }
+      }
+    }).observe(document, { subtree: true, attributes: true, childList: true });
+  });
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+  await expect(page.getByTestId("bci-value")).toHaveText("53.9");
+  for (const agent of AGENTS) await expect(page.getByTestId(`agent-${agent}`)).toHaveAttribute("data-state", "done");
+
+  const states = await page.evaluate(() => (window as unknown as { __states: string[] }).__states);
+  const done = states.filter((s) => s.endsWith(":done")).map((s) => s.slice(6, -5));
+  expect(done).toEqual(AGENTS);
+  expect(states).toContain("agent-Scout:running");
+  expect(states).toContain("agent-Partner:waiting");
+  expect(states.indexOf("agent-Scout:done")).toBeLessThan(states.indexOf("agent-Cartographer:done"));
+  expect(errors).toEqual([]);
+});
+
+test("falls back to the plain POST when the stream is unavailable", async ({ page }) => {
+  const errors = watchErrors(page);
+  let streamTries = 0;
+  await page.route("**/api/diligence/stream", (r) => {
+    streamTries++;
+    return r.abort();
+  });
+  await page.route("**/api/diligence", async (r) => {
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    await r.continue();
+  });
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+  await expect(page.getByTestId("agent-Scout")).toHaveAttribute("data-state", "running");
+  await expect(page.getByTestId("bci-value")).toHaveText("53.9");
+  expect(streamTries).toBe(1);
+  for (const agent of AGENTS) await expect(page.getByTestId(`agent-${agent}`)).toHaveAttribute("data-state", "done");
+  expect(errors.filter((e) => !e.includes("net::ERR_FAILED"))).toEqual([]); // the aborted stream request itself
 });
 
 test("same brand twice shows an inline alert", async ({ page }) => {

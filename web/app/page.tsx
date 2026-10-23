@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Results from "./Results";
-import { AGENTS, type Diligence, type Preset } from "./types";
+import { AGENTS, type Diligence, type Preset, type TraceStep } from "./types";
 
 const AGENT_ROLES: Record<(typeof AGENTS)[number], string> = {
   Scout: "Resolves both brands in the Qloo taste graph",
@@ -31,6 +31,8 @@ export default function Home() {
   const [running, setRunning] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<Diligence | null>(null);
+  const [trace, setTrace] = useState<TraceStep[]>([]);
+  const [active, setActive] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/api/presets")
@@ -38,6 +40,57 @@ export default function Home() {
       .then(setPresets)
       .catch(() => setPresets([]));
   }, []);
+
+  function show(d: Diligence) {
+    setData(d);
+    setTrace(d.trace);
+    setActive(null);
+  }
+
+  /** Reads the SSE body, updating the agent cards live. Returns "fallback" if there is nothing usable to read. */
+  async function streamRun(res: Response | null): Promise<"handled" | "fallback"> {
+    if (!res?.body) return "fallback";
+    if (!res.ok) {
+      setError(errorText(await res.json().catch(() => null), res.status));
+      return "handled";
+    }
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    let finished = false;
+    const handle = (frame: string) => {
+      let event = "message";
+      let payload = "";
+      for (const line of frame.split("\n")) {
+        if (line.startsWith("event:")) event = line.slice(6).trim();
+        else if (line.startsWith("data:")) payload += line.slice(5).trim();
+      }
+      if (!payload) return;
+      const data: unknown = JSON.parse(payload);
+      if (event === "agent") {
+        const step = data as TraceStep;
+        if (step.status === "running") setActive(step.agent);
+        else setTrace((prev) => [...prev, step]);
+      } else if (event === "result") {
+        show(data as Diligence);
+        finished = true;
+      } else if (event === "error") {
+        setError(errorText(data, (data as { status?: number }).status ?? 0));
+        setActive(null);
+        finished = true;
+      }
+    };
+    for (;;) {
+      const { done, value } = await reader.read();
+      buffer += decoder.decode(value, { stream: !done });
+      const frames = buffer.split("\n\n");
+      buffer = frames.pop() ?? "";
+      frames.forEach(handle);
+      if (done) break;
+    }
+    if (buffer.trim()) handle(buffer);
+    return finished ? "handled" : "fallback";
+  }
 
   async function run(a: string, t: string) {
     const body = { acquirer: a.trim(), target: t.trim() };
@@ -51,16 +104,19 @@ export default function Home() {
       return;
     }
     setData(null);
+    setTrace([]);
+    setActive(AGENTS[0]);
     setRunning(true);
+    const post = (path: string) =>
+      fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
     try {
-      const res = await fetch("/api/diligence", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-      });
-      const json: unknown = await res.json().catch(() => null);
-      if (!res.ok) setError(errorText(json, res.status));
-      else setData(json as Diligence);
+      const outcome = await streamRun(await post("/api/diligence/stream").catch(() => null));
+      if (outcome === "fallback") {
+        const res = await post("/api/diligence");
+        const json: unknown = await res.json().catch(() => null);
+        if (!res.ok) setError(errorText(json, res.status));
+        else show(json as Diligence);
+      }
     } catch {
       setError("Could not reach the VentureTaste API. Check your connection and try again.");
     } finally {
@@ -139,17 +195,18 @@ export default function Home() {
           <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400">Diligence agents</h2>
           <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {AGENTS.map((name) => {
-              const step = data?.trace.find((t) => t.agent === name);
+              const step = trace.find((t) => t.agent === name);
               const done = Boolean(step);
+              const waiting = !done && active !== name && !data;
               return (
-                <li key={name} data-testid={`agent-${name}`} data-state={done ? "done" : "running"} className="rounded-xl border border-white/10 bg-black/20 p-4">
+                <li key={name} data-testid={`agent-${name}`} data-state={done ? "done" : waiting ? "waiting" : "running"} className={`rounded-xl border border-white/10 bg-black/20 p-4 ${waiting ? "opacity-60" : ""}`}>
                   <div className="flex items-center gap-2 text-sm font-semibold text-white">
-                    <span aria-hidden className={done ? "text-emerald-300" : "inline-block size-2.5 animate-pulse rounded-full bg-indigo-400"}>{done ? "✓" : ""}</span>
+                    <span aria-hidden className={done ? "text-emerald-300" : waiting ? "inline-block size-2.5 rounded-full bg-zinc-600" : "inline-block size-2.5 animate-pulse rounded-full bg-indigo-400"}>{done ? "✓" : ""}</span>
                     {name}
                   </div>
                   <p className="mt-1 text-xs text-zinc-400">{AGENT_ROLES[name]}</p>
                   <p className="mt-2 text-xs tabular-nums text-zinc-300">
-                    {step ? `Done · ${step.ms} ms · ${step.qloo_calls} Qloo ${step.qloo_calls === 1 ? "call" : "calls"}` : "Running…"}
+                    {step ? `Done · ${step.ms} ms · ${step.qloo_calls} Qloo ${step.qloo_calls === 1 ? "call" : "calls"}` : waiting ? "Waiting" : "Running…"}
                   </p>
                 </li>
               );
