@@ -122,7 +122,60 @@ def test_top_lists_capped_and_ordered() -> None:
     assert [t.name for t in s.top_clashing_b] == ["name-z"]
 
 
+def named(id: str, name: str, a: float) -> Affinity:
+    return Affinity(id=id, name=name, affinity=a, popularity=None)
+
+
+def test_brands_themselves_are_left_out_of_every_list() -> None:
+    a = BrandProfile(
+        "Nike", {"brand": [named("1", "Adidas", 0.9), named("2", "nike", 0.8), named("3", "Puma", 0.7)]}, demo(0, 0)
+    )
+    b = BrandProfile(
+        "Adidas", {"brand": [named("1", "Adidas", 0.9), named("2", "Nike", 0.8), named("4", "Reebok", 0.6)]}, demo(0, 0)
+    )
+    s = score(a, b)
+    assert s.top_shared == ()
+    assert [t.name for t in s.top_clashing_a] == ["Puma"]
+    assert [t.name for t in s.top_clashing_b] == ["Reebok"]
+
+
+def test_duplicate_names_keep_the_highest_affinity() -> None:
+    a = BrandProfile(
+        "A",
+        {"place": [named("1", "Rio de Janeiro", 0.4), named("2", "rio de janeiro", 0.9), named("3", "Lima", 0.5)]},
+        demo(0, 0),
+    )
+    b = BrandProfile(
+        "B", {"place": [named("7", "Oslo", 0.5), named("8", "Oslo", 0.2), named("9", "Lima", 0.3)]}, demo(0, 0)
+    )
+    s = score(a, b)
+    assert [(t.name, t.affinity) for t in s.top_clashing_a] == [("rio de janeiro", 0.9), ("Lima", 0.5)]
+    assert [(t.name, t.affinity) for t in s.top_clashing_b] == [("Oslo", 0.5), ("Lima", 0.3)]
+
+
 # ---- property ----
+
+NAMES = st.sampled_from(["P", "p", "Q", "x", "X", "y"])
+NAMED_AFFS = st.lists(
+    st.builds(named, st.sampled_from(list("abcdefgh")), NAMES, st.floats(-1, 1, allow_nan=False)),
+    max_size=8,
+)
+NAMED_PROFILES = st.builds(
+    BrandProfile,
+    st.sampled_from(["P", "Q"]),
+    st.dictionaries(st.sampled_from(DOMAINS), NAMED_AFFS, max_size=7),
+    st.just(Demographics({}, {})),
+)
+
+
+@given(a=NAMED_PROFILES, b=NAMED_PROFILES)
+def test_lists_have_no_duplicates_or_brand_self_reference(a: BrandProfile, b: BrandProfile) -> None:
+    s = score(a, b)
+    brands = {a.name.casefold(), b.name.casefold()}
+    for items in (s.top_shared, s.top_clashing_a, s.top_clashing_b):
+        keys = [(t.domain, t.name.casefold()) for t in items]
+        assert len(keys) == len(set(keys))
+        assert not brands & {name for _, name in keys}
 
 FINITE = st.floats(min_value=-1, max_value=1, allow_nan=False)
 AFFS = st.lists(
@@ -195,11 +248,11 @@ def test_nike_vs_patagonia() -> None:
     assert all(math.isfinite(x) for x in all_numbers(s))
     assert 0 <= s.bci <= 100 and 0 <= s.culture_clash <= 100
     assert set(s.domain_overlap) <= set(DOMAINS)
-    assert (s.bci, s.culture_clash, s.churn_risk) == (24.4, 75.6, "high")  # snapshot
-    # the recorded top-10 lists share no entity in any domain
-    assert s.domain_overlap == dict.fromkeys(DOMAINS, 0.0)
+    assert (s.bci, s.culture_clash, s.churn_risk) == (24.5, 75.5, "high")  # snapshot
+    # at take=50 the two brands share only one brand entity
+    assert s.domain_overlap == {**dict.fromkeys(DOMAINS, 0.0), "brand": 0.0099}
     assert s.demographic_distance == 0.1881
-    assert s.top_shared == ()
+    assert [(t.domain, t.name) for t in s.top_shared] == [("brand", "GoPro")]
 
     nike_names = {a.name for d in DOMAINS for a in nike.insights[d]}
     pata_names = {a.name for d in DOMAINS for a in pata.insights[d]}

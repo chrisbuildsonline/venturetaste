@@ -4,6 +4,7 @@ import hashlib
 import json
 import math
 import os
+import time
 from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
@@ -14,6 +15,8 @@ import httpx
 DEFAULT_URL = "https://hackathon.api.qloo.com"
 DEFAULT_CACHE_DIR = Path(".cache/qloo")
 DOMAINS = ("brand", "artist", "movie", "tv_show", "place", "destination", "book")
+DEFAULT_TAKE = 50  # Qloo rejects take > 50 with HTTP 400
+RETRY_DELAYS = (0.5, 1.0, 2.0, 4.0)  # seconds to wait after an HTTP 429
 
 T = TypeVar("T")
 
@@ -159,7 +162,7 @@ class QlooClient:
             raise BrandNotFoundError(f"Qloo has no brand named {name!r}")
         return next((e for e in found if e.name.casefold() == name.casefold()), found[0])
 
-    def insights(self, entity_id: str, domain: str, take: int = 10) -> list[Affinity]:
+    def insights(self, entity_id: str, domain: str, take: int = DEFAULT_TAKE) -> list[Affinity]:
         if domain not in DOMAINS:
             raise ValueError(f"unknown domain {domain!r}, expected one of {DOMAINS}")
         params = {
@@ -190,12 +193,16 @@ class QlooClient:
         return parsed
 
     def _fetch(self, path: str, params: dict[str, str]) -> object:
-        try:
-            resp = self._http.get(
-                self._base + path, params=params, headers={"X-Api-Key": str(self._key)}
-            )
-        except httpx.HTTPError as exc:
-            raise QlooAPIError(f"Qloo request to {path} failed: {exc!r}") from exc
+        for delay in (*RETRY_DELAYS, None):
+            try:
+                resp = self._http.get(
+                    self._base + path, params=params, headers={"X-Api-Key": str(self._key)}
+                )
+            except httpx.HTTPError as exc:
+                raise QlooAPIError(f"Qloo request to {path} failed: {exc!r}") from exc
+            if resp.status_code != 429 or delay is None:
+                break
+            time.sleep(delay)
         if not resp.is_success:
             raise QlooAPIError(f"Qloo {path} returned HTTP {resp.status_code}")
         try:
