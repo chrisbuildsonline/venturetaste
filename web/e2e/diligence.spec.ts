@@ -179,6 +179,36 @@ test("falls back to the plain POST when the stream is unavailable", async ({ pag
   expect(errors.filter((e) => !e.includes("net::ERR_FAILED"))).toEqual([]); // the aborted stream request itself
 });
 
+const TOO_MANY = "Too many diligence runs from your network. Try again in a minute.";
+const tooMany = { status: 429, headers: { "Retry-After": "42" }, json: { detail: TOO_MANY } };
+
+test("a 429 from the stream shows the message and does not fall back", async ({ page }) => {
+  const errors = watchErrors(page);
+  let posts = 0;
+  await page.route("**/api/diligence/stream", (r) => r.fulfill(tooMany));
+  await page.route("**/api/diligence", (r) => {
+    posts++;
+    return r.continue();
+  });
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+  await expect(inlineAlert(page)).toHaveText(TOO_MANY);
+  await expect(page.getByRole("button", { name: "Run diligence" })).toBeEnabled();
+  expect(posts).toBe(0);
+  // the browser logs a failed-resource console error for any 4xx fetch; only that one is expected
+  expect(errors.filter((e) => !e.includes("429"))).toEqual([]);
+});
+
+test("a 429 from the plain POST shows the message", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.route("**/api/diligence/stream", (r) => r.abort());
+  await page.route("**/api/diligence", (r) => r.fulfill(tooMany));
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+  await expect(inlineAlert(page)).toHaveText(TOO_MANY);
+  expect(errors.filter((e) => !e.includes("429") && !e.includes("net::ERR_FAILED"))).toEqual([]);
+});
+
 test("same brand twice shows an inline alert", async ({ page }) => {
   const errors = watchErrors(page);
   await page.goto("/");
