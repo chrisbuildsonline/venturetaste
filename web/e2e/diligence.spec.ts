@@ -69,6 +69,20 @@ test("demo: Nike + Adidas preset runs the whole diligence", async ({ page }) => 
   await expect
     .poll(() => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth))
     .toBeLessThanOrEqual(0);
+  // every radar axis label must sit inside the radar container (no clipped "estinations")
+  await expect
+    .poll(async () => {
+      const container = await page.getByTestId("radar").boundingBox();
+      const labels = page.locator("[data-testid=radar] .recharts-polar-angle-axis-tick text");
+      const n = await labels.count();
+      let outside = n === 0 ? 1 : 0;
+      for (let i = 0; i < n; i++) {
+        const b = await labels.nth(i).boundingBox();
+        if (!b || !container || b.x < container.x || b.x + b.width > container.x + container.width) outside++;
+      }
+      return outside;
+    })
+    .toBe(0);
   await page.screenshot({ path: "e2e/screenshots/mobile.png", fullPage: true });
 
   expect(errors).toEqual([]);

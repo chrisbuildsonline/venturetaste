@@ -169,7 +169,7 @@ export default function Results({ data }: { data: Diligence }) {
           ) : (
             <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="h-80 w-full lg:h-[28rem]">
               <ResponsiveContainer width="100%" height="100%">
-                <RadarChart data={radarData} outerRadius="58%">
+                <RadarChart data={radarData} outerRadius="58%" margin={{ top: 20, right: 40, bottom: 20, left: 40 }}>
                   <PolarGrid stroke="rgba(255,255,255,0.18)" />
                   <PolarAngleAxis dataKey="domain" tick={{ fill: "#d4d4d8", fontSize: 12 }} />
                   <PolarRadiusAxis angle={90} domain={[0, 100]} tick={false} axisLine={false} />
