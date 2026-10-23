@@ -1,15 +1,17 @@
+import json
 import os
 import tempfile
+from collections.abc import Iterator
 from dataclasses import asdict
 from pathlib import Path
 from typing import Annotated, Any
 
 from fastapi import Depends, FastAPI, Request
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, StringConstraints
 
-from api.pipeline import NoTasteDataError, SameBrandError, run_diligence
+from api.pipeline import NoTasteDataError, SameBrandError, run_diligence, stream_diligence
 from api.presets import PRESETS
 from api.qloo import (
     BrandNotFoundError,
@@ -67,6 +69,24 @@ def presets() -> list[dict[str, str]]:
 @app.post("/api/diligence")
 def diligence(body: DiligenceRequest, client: Annotated[QlooClient, Depends(get_qloo)]) -> dict[str, Any]:
     return run_diligence(client, body.acquirer, body.target)
+
+
+def sse(event: str, data: Any) -> str:
+    return f"event: {event}\ndata: {json.dumps(data)}\n\n"
+
+
+@app.post("/api/diligence/stream")
+def diligence_stream(body: DiligenceRequest, client: Annotated[QlooClient, Depends(get_qloo)]) -> StreamingResponse:
+    """Same run as /api/diligence, as server-sent events: agent start/finish, then result (or error)."""
+
+    def events() -> Iterator[str]:
+        try:
+            for event, data in stream_diligence(client, body.acquirer, body.target):
+                yield sse(event, data)
+        except QlooError as exc:
+            yield sse("error", {"status": ERROR_STATUS.get(type(exc), 502), "detail": str(exc)})
+
+    return StreamingResponse(events(), media_type="text/event-stream", headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
 WEB_OUT = Path(__file__).resolve().parent.parent / "web" / "out"
