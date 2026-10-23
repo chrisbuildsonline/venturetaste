@@ -1,0 +1,30 @@
+[project]
+name = "venturetaste"
+version = "0.1.0"
+description = "Taste-graph due diligence for consumer brand deals"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "langgraph",
+    "httpx",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "mypy",
+    "hypothesis",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["api/tests"]
+
+[tool.mypy]
+strict = true
+files = ["api"]
+
+[tool.uv]
+package = false
