@@ -106,6 +106,27 @@ Dev mode: `bun run dev` starts the API with reload on :8765 and `next dev` for t
 
 **Fixture mode:** with `VENTURETASTE_FIXTURES=1` the API answers from recorded Qloo responses, with no key and no network. The e2e tests use it. Do not use it in production.
 
+## Deploy
+
+```
+docker build -t venturetaste .
+docker run -d -p 8765:8765 --env-file .env venturetaste    # http://127.0.0.1:8765
+```
+
+The image builds the web app, installs the API with uv and runs uvicorn as a non-root user with `--proxy-headers`. Never set `VENTURETASTE_FIXTURES` in production.
+
+| Variable | Default | What it does |
+| --- | --- | --- |
+| `QLOO_API_KEY` | none, required | Qloo hackathon API key |
+| `QLOO_API_URL` | `https://hackathon.api.qloo.com` | Qloo base URL |
+| `VENTURETASTE_RATE_LIMIT` | `30` | diligence runs per client IP per 60 s, over it the API answers 429 with `Retry-After` |
+| `VENTURETASTE_CACHE_MAX_FILES` | `2000` | most files kept in `.cache/qloo`, the oldest are deleted first |
+| `FORWARDED_ALLOW_IPS` | `127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16` (in the image) | proxies uvicorn trusts for `X-Forwarded-For`, CIDR ranges allowed. The default covers a Docker network proxy such as Traefik on Coolify, so the rate limit is per visitor. Never `*`: a client could then spoof its IP to dodge the limit |
+
+The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffering: no`, so nginx style proxies do not buffer it.
+
+`bun run docker:smoke` builds the image, runs it on port 8799 with your `.env`, waits for `/api/health`, runs the Playwright spec `web/e2e/live.spec.ts` (Nike + Adidas against real Qloo) and removes the container. Set `BASE_URL` and run `cd web && bunx playwright test` to run that spec against any other deployment.
+
 ## How to test
 
 - `bun run test`: pytest over `api/tests` (offline).
