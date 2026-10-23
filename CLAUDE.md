@@ -26,8 +26,12 @@ For each feature in TODO.md, in order:
 
 A failing test, a skipped test (.skip or .only), a stub or a TODO in the code means the feature is not done. If a feature cannot go green, log a blocker; do not move on and leave it broken.
 
-## Hard stop: Needs fix
-If a key or vital information is missing so a feature cannot be fully tested (an API key, an account, a model or data you cannot get or work out): stop that feature. Ask for the key with request_secret, or log_progress a blocker that starts with "Needs fix:" and says exactly what is missing. Do not fake it with a mock and call it done, do not tick it, do not judge. get_project lists the open items in needs_fix; judge_project refuses while any are open. Carry on with features that do not depend on it, and log_progress done once it is fixed.
+## Hard stop: Needs fix (keys and accounts only)
+Stop a feature only for what needs the user's own accounts: an API key (request_secret), or a login, paid plan or 2FA (log_progress a blocker that starts with "Needs fix:" and says exactly what is missing). Everything else you get yourself, so it is never a blocker:
+- **Images and sample data: generate them.** Synthetic people (thispersondoesnotexist.com faces, adults only), bodies, products and scenes from the sponsor's own generation APIs or other generators, procedural/SVG/canvas art, or CC0 sources (Wikimedia Commons, Met Open Access). Note the source and license in a LICENSE.txt next to them.
+- **Anything that needs the web or a browser** (rules pages, API docs, downloads, examples): `bun /home/chris/projects/hackathons/web.js "<task>" --out <dir in this repo>`. It runs cursor-agent, which has a browser, in a scratch dir and copies the files it saves into --out. Only if it says cursor-agent is logged out is that a Needs fix ("run cursor-agent login").
+- **A tool your shell may not run:** wrap it in a package.json script and use bun run.
+Do not fake it with a mock and call it done, do not tick it, do not judge. get_project lists the open items in needs_fix; judge_project refuses while any are open. Carry on with features that do not depend on it, and log_progress done once it is fixed.
 
 ## Before submitting
 Smoke-test a fresh clone by following the README; full suite green; Playwright run through the whole demo script; re-read the updates page; every RULES.md box ticked. Then the jury loop.
