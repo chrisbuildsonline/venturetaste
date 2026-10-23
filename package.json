@@ -10,8 +10,10 @@
     "e2e:ci": "CI=1 bun run e2e",
     "typecheck": "cd web && bun run typecheck && cd .. && uv run mypy",
     "build": "cd web && bun run build",
+    "screenshots": "bun run build && cd web && SCREENSHOTS=1 CI=1 bunx playwright test e2e/screenshots.spec.ts",
+    "fresh-clone": "bash scripts/fresh-clone.sh",
     "e2e": "bun run build && cd web && bun run e2e",
-    "start": "uv run uvicorn api.main:app --port 8765",
+    "start": "uv run --env-file .env uvicorn api.main:app --port 8765",
     "dev": "uv run uvicorn api.main:app --reload --port 8765 & cd web && bun run dev"
   }
 }
