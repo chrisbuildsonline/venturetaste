@@ -1,3 +1,4 @@
+import ipaddress
 import json
 import math
 import os
@@ -86,6 +87,12 @@ def reset_rate_limit() -> None:
 def rate_limit(request: Request) -> None:
     limit = int(os.environ.get("VENTURETASTE_RATE_LIMIT") or 30)
     ip = request.client.host if request.client else "unknown"
+    try:
+        addr = ipaddress.ip_address(ip)
+        if isinstance(addr, ipaddress.IPv6Address):  # one client owns a whole /64, so key on that
+            ip = str(addr.ipv4_mapped or ipaddress.ip_network(f"{addr}/64", strict=False))
+    except ValueError:
+        pass  # not an IP (e.g. "testclient"): use it as is
     now = _clock()
     with _hits_lock:
         for key in [k for k, q in _hits.items() if not q or q[-1] <= now - RATE_WINDOW]:
