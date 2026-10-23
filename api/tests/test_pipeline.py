@@ -180,9 +180,18 @@ def test_bad_request_body_is_422(api: TestClient, body: dict[str, str]) -> None:
 def test_memo_does_not_list_the_brands_or_repeats_as_clashing_tastes(api: TestClient) -> None:
     memo = diligence(api, "Nike", "Adidas")["memo"]
     for line in (r for r in memo["risks"] if "favours" in r):
-        assert "Nike (brand)" not in line and "Adidas (brand)" not in line
+        assert "Nike (Brand)" not in line and "Adidas (Brand)" not in line
         listed = line.split("favours ")[1].split(", which")[0].split("), ")
         assert len(listed) == len(set(listed)), line
+
+
+@pytest.mark.parametrize("preset", PRESETS, ids=lambda p: p.id)
+def test_memo_uses_human_domain_labels(api: TestClient, preset: Any) -> None:
+    memo = diligence(api, preset.acquirer, preset.target)["memo"]
+    text = [memo["headline"], *memo["rationale"], *memo["risks"]]
+    for line in text:
+        assert "_" not in line, line
+        assert not any(f"({d})" in line for d in DOMAINS), line
 
 
 # ---- acceptance: the demo contrast ----

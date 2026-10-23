@@ -100,8 +100,28 @@ def analyst(state: State) -> tuple[dict[str, Any], int]:
     return {"scores": score(profiles["acquirer"], profiles["target"])}, 0
 
 
+SINGULAR = {
+    "brand": "Brand",
+    "artist": "Artist",
+    "movie": "Movie",
+    "tv_show": "TV show",
+    "place": "Place",
+    "destination": "Destination",
+    "book": "Book",
+}
+PLURAL = {
+    "brand": "brands",
+    "artist": "artists",
+    "movie": "movies",
+    "tv_show": "TV shows",
+    "place": "places",
+    "destination": "destinations",
+    "book": "books",
+}
+
+
 def _names(items: Any) -> str:
-    return ", ".join(f"{i.name} ({i.domain})" for i in items[:NAMED])
+    return ", ".join(f"{i.name} ({SINGULAR[i.domain]})" for i in items[:NAMED])
 
 
 def full_overlap(s: Scores) -> dict[str, float]:
@@ -118,7 +138,7 @@ def build_memo(acquirer: str, target: str, s: Scores) -> dict[str, Any]:
     overlap = full_overlap(s)
     best = max(DOMAINS, key=lambda d: overlap[d])
     if overlap[best] > 0:
-        rationale.append(f"Strongest taste overlap is in {best} ({overlap[best]:.0%} weighted overlap).")
+        rationale.append(f"Strongest taste overlap is in {PLURAL[best]} ({overlap[best]:.0%} weighted overlap).")
     else:
         rationale.append("Qloo finds no shared taste entities in any domain.")
     rationale.append(f"Audience demographic distance is {s.demographic_distance:.2f} (0 means identical).")
@@ -131,7 +151,7 @@ def build_memo(acquirer: str, target: str, s: Scores) -> dict[str, Any]:
             risks.append(f"{name}'s audience favours {_names(clashing)}, which {other}'s audience does not.")
     cold = [d for d in DOMAINS if overlap[d] == 0]
     if cold:
-        risks.append(f"No shared taste in {', '.join(cold)}, so cross-selling there starts from scratch.")
+        risks.append(f"No shared taste in {', '.join(PLURAL[d] for d in cold)}, so cross-selling there starts from scratch.")
     headline = f"{verdict}: {acquirer} + {target} scores BCI {s.bci} with {s.churn_risk} churn risk."
     return {"verdict": verdict, "headline": headline, "rationale": rationale, "risks": risks}
 
