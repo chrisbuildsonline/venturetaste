@@ -3,3 +3,16 @@ dist/
 .env
 .env.*
 .DS_Store
+.claude/settings.local.json
+web/e2e/screenshots/
+web/.next/
+web/out/
+web/next-env.d.ts
+test-results/
+playwright-report/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+*.tsbuildinfo
