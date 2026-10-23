@@ -1,0 +1,3105 @@
+{
+ "results": {
+  "entities": [
+   {
+    "disambiguation": "Bahamas",
+    "entity_id": "C8543090-A342-4C40-80F9-1577454B9FF4",
+    "name": "Bahamas",
+    "popularity": 0.9875384202006697,
+    "query": {
+     "affinity": 0.9704500410061961,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:genre:qloo:indie_rock",
+      "name": "Indie Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:piano",
+      "name": "Piano",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:alternative_indie",
+      "name": "Alternative Indie",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:singer_songwriter",
+      "name": "Singer-Songwriter",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:soulful",
+      "name": "Soulful",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:laid_back",
+      "name": "Laid Back",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:acoustic_soul",
+      "name": "Acoustic Soul",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:joni_mitchell",
+      "name": "Joni Mitchell",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:neil_young",
+      "name": "Neil Young",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:smooth",
+      "name": "Smooth",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:relaxed",
+      "name": "Relaxed",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:personal_growth",
+      "name": "Personal Growth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:life",
+      "name": "Life",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:nick_drake",
+      "name": "Nick Drake",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:introspection",
+      "name": "Introspection",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:singer_songwriter",
+      "name": "Singer-Songwriter",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:canada",
+      "name": "Canada",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influence:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:relationships",
+      "name": "Relationships",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:appreciative",
+      "name": "Appreciative",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie",
+      "name": "Indie",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:paul_simon",
+      "name": "Paul Simon",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:laid_back",
+      "name": "Laid Back",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:alternative",
+      "name": "Alternative",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:guitar",
+      "name": "Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:singer_songwriter",
+      "name": "Singer-Songwriter",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:3",
+      "name": "3",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:canadian",
+      "name": "Canadian",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:music:rock",
+      "name": "Rock",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:music:qloo:soulful",
+      "name": "Soulful",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:singer_songwriter",
+      "name": "Singer & Songwriter",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:audience:qloo:laid_back",
+      "name": "Laid-Back",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:warm",
+      "name": "Warm",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:laid_back",
+      "name": "Laid-Back",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:laid_back",
+      "name": "Laid-Back",
+      "type": "urn:tag:artist:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "The Head and the Heart",
+    "entity_id": "F91F4E13-923B-4DD9-AB11-CCF6FA6BCE03",
+    "name": "The Head and the Heart",
+    "popularity": 0.9959564581981664,
+    "query": {
+     "affinity": 0.9670531356781848,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:instrument:qloo:electric_guitar",
+      "name": "Electric Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:harmonious",
+      "name": "Harmonious",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_dylan",
+      "name": "Bob Dylan",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:simon_garfunkel",
+      "name": "Simon & Garfunkel",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:nature",
+      "name": "Nature",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie_folk",
+      "name": "Indie - Folk",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:emotive",
+      "name": "Emotive",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:fleetwood_mac",
+      "name": "Fleetwood Mac",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:loss",
+      "name": "Loss",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie",
+      "name": "Indie",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_beatles",
+      "name": "The Beatles",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:harmonic",
+      "name": "Harmonic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:hope",
+      "name": "Hope",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drums",
+      "name": "Drums",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:engaged",
+      "name": "Engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:supportive",
+      "name": "Supportive",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:artist:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:acoustic_guitar",
+      "name": "Acoustic Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:3",
+      "name": "3",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:piano",
+      "name": "Piano",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:bass_guitar",
+      "name": "Bass Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_rock",
+      "name": "Indie Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:violin",
+      "name": "Violin",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:alternative_folk",
+      "name": "Alternative Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:seattle",
+      "name": "Seattle",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:theme:qloo:self_discovery",
+      "name": "Self Discovery",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:soulful",
+      "name": "Soulful",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:harmonic",
+      "name": "Harmonic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:alternative_folk",
+      "name": "Alternative Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:emotive",
+      "name": "Emotive",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:warm",
+      "name": "Warm",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:inviting",
+      "name": "Inviting",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:self_discovery",
+      "name": "Self-Discovery",
+      "type": "urn:tag:theme:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Houndmouth",
+    "entity_id": "5DFD7065-7552-4946-839A-FC319A472E28",
+    "name": "Houndmouth",
+    "popularity": 0.9746475827222145,
+    "query": {
+     "affinity": 0.9653675443374148,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:theme:qloo:american_life",
+      "name": "American Life",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:american",
+      "name": "American",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:artist:qloo:vintage",
+      "name": "Vintage",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:harmonic",
+      "name": "Harmonic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie",
+      "name": "Indie",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_rock",
+      "name": "Indie Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_dylan",
+      "name": "Bob Dylan",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:nostalgia",
+      "name": "Nostalgia",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:roots_rock",
+      "name": "Roots Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:keyboard",
+      "name": "Keyboard",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:engaged",
+      "name": "Engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:roots_oriented",
+      "name": "Roots-Oriented",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:neil_young",
+      "name": "Neil Young",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:vintage",
+      "name": "Vintage",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie_folk",
+      "name": "Indie - Folk",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:4",
+      "name": "4",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:harmonic",
+      "name": "Harmonic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:guitar",
+      "name": "Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:indie_rock",
+      "name": "Indie Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:roots_rock",
+      "name": "Roots Rock",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drums",
+      "name": "Drums",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:life_struggles",
+      "name": "Life Struggles",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_band",
+      "name": "The Band",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:tom_petty",
+      "name": "Tom Petty",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:indie",
+      "name": "Indie",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:bass",
+      "name": "Bass",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:roots_influenced",
+      "name": "Roots-Influenced",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:rootsy",
+      "name": "Rootsy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:expressive",
+      "name": "Expressive",
+      "type": "urn:tag:music:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Lord Huron",
+    "entity_id": "5C8FCE87-124F-44DE-A195-112F36A7CAB6",
+    "name": "Lord Huron",
+    "popularity": 0.994491739247259,
+    "query": {
+     "affinity": 0.9638898480256125,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drums",
+      "name": "Drums",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:guitar",
+      "name": "Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:keyboards",
+      "name": "Keyboards",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:nostalgic",
+      "name": "Nostalgic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie",
+      "name": "Indie",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:audience:qloo:nostalgic",
+      "name": "Nostalgic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_beatles",
+      "name": "The Beatles",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:cinematic",
+      "name": "Cinematic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:dreamy",
+      "name": "Dreamy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:neil_young",
+      "name": "Neil Young",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:nature",
+      "name": "Nature",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:psychedelic",
+      "name": "Psychedelic",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:theme:qloo:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_dylan",
+      "name": "Bob Dylan",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie_folk",
+      "name": "Indie - Folk",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:bass",
+      "name": "Bass",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:narrative_folk",
+      "name": "Narrative Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:dream_pop",
+      "name": "Dream Pop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:fleetwood_mac",
+      "name": "Fleetwood Mac",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:loss",
+      "name": "Loss",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric_indie",
+      "name": "Atmospheric Indie",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:cinematic_folk_rock",
+      "name": "Cinematic Folk Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_rock",
+      "name": "Indie Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dream_pop",
+      "name": "Dream Pop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:3",
+      "name": "3",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:dream_pop",
+      "name": "Dream Pop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:synthesizer",
+      "name": "Synthesizer",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:cinematic",
+      "name": "Cinematic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:nostalgia",
+      "name": "Nostalgia",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:devoted",
+      "name": "Devoted",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:festival_going",
+      "name": "Festival-Going",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:story_driven",
+      "name": "Story-Driven",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:nostalgic",
+      "name": "Nostalgic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:lush",
+      "name": "Lush",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:reverb_soaked",
+      "name": "Reverb-Soaked",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:lyrical",
+      "name": "Lyrical",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:story_driven",
+      "name": "Story-Driven",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:immersive",
+      "name": "Immersive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:cinematic",
+      "name": "Cinematic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:lyrical",
+      "name": "Lyrical",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:dreamy",
+      "name": "Dreamy",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:mournful",
+      "name": "Mournful",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:expansive",
+      "name": "Expansive",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:complexity_scale:qloo:5",
+      "name": "5",
+      "type": "urn:tag:complexity_scale:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:cinematic_indie_folk",
+      "name": "Cinematic Indie Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:psychedelic_folk_rock",
+      "name": "Psychedelic Folk-Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dreamy_americana",
+      "name": "Dreamy Americana",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:reverb_soaked_indie_pop",
+      "name": "Reverb-Soaked Indie Pop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:story_driven_alt_folk",
+      "name": "Story-Driven Alt-Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:cinematic_folk",
+      "name": "Cinematic Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:alt_folk",
+      "name": "Alt-Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:ennio_morricone",
+      "name": "Ennio Morricone",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_band",
+      "name": "The Band",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:fleet_foxes",
+      "name": "Fleet Foxes",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:acoustic_guitar",
+      "name": "Acoustic Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:electric_guitar",
+      "name": "Electric Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:lap_steel",
+      "name": "Lap Steel",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:harmonica",
+      "name": "Harmonica",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:memory",
+      "name": "Memory",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wanderlust",
+      "name": "Wanderlust",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:ghosts",
+      "name": "Ghosts",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:myth",
+      "name": "Myth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:heartache",
+      "name": "Heartache",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_pop",
+      "name": "Indie Pop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:psychedelic_folk",
+      "name": "Psychedelic Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:dream_pop",
+      "name": "Dream Pop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:chamber_pop",
+      "name": "Chamber Pop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:singer_songwriter",
+      "name": "Singer-Songwriter",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:ambient",
+      "name": "Ambient",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:neo_psychedelia",
+      "name": "Neo-Psychedelia",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:voice_type:qloo:baritone",
+      "name": "Baritone",
+      "type": "urn:tag:voice_type:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Gregory Alan Isakov",
+    "entity_id": "02DF2599-CE52-40C1-98F3-6825DDB971F5",
+    "name": "Gregory Alan Isakov",
+    "popularity": 0.9922307636854557,
+    "query": {
+     "affinity": 0.9632860140349626,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:audience:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:emotional",
+      "name": "Emotional",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:calm",
+      "name": "Calm",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:nick_drake",
+      "name": "Nick Drake",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:americana_influenced",
+      "name": "Americana Influenced",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie",
+      "name": "Indie",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:style:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:contemporary_folk",
+      "name": "Contemporary Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:thoughtful",
+      "name": "Thoughtful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_dylan",
+      "name": "Bob Dylan",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:appreciative",
+      "name": "Appreciative",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:acoustic_guitar",
+      "name": "Acoustic Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:leonard_cohen",
+      "name": "Leonard Cohen",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:piano",
+      "name": "Piano",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:contemplative_folk",
+      "name": "Contemplative Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:americana",
+      "name": "Americana",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influence:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:banjo",
+      "name": "Banjo",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:gentle",
+      "name": "Gentle",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:alternative_country",
+      "name": "Alternative Country",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:3",
+      "name": "3",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:reflective",
+      "name": "Reflective",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk",
+      "name": "Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:human_condition",
+      "name": "Human Condition",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:existentialism",
+      "name": "Existentialism",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:melancholic",
+      "name": "Melancholic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:nature",
+      "name": "Nature",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melancholic",
+      "name": "Melancholic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:singer_songwriter",
+      "name": "Singer Songwriter",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:singer_songwriter",
+      "name": "Singer & Songwriter",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:loss",
+      "name": "Loss",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:acoustic_singer_songwriter",
+      "name": "Acoustic Singer-Songwriter",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:poetic_folk",
+      "name": "Poetic Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:poetic",
+      "name": "Poetic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:poetic",
+      "name": "Poetic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:gentle",
+      "name": "Gentle",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:americana_influenced",
+      "name": "Americana-Influenced",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:singer_songwriter",
+      "name": "Singer-Songwriter",
+      "type": "urn:tag:genre:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "The Milk Carton Kids",
+    "entity_id": "88E644E8-FE21-4D9A-8861-CF54254C8238",
+    "name": "The Milk Carton Kids",
+    "popularity": 0.9729502126627738,
+    "query": {
+     "affinity": 0.9594771253339683,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:style:qloo:minimalist_guitar",
+      "name": "Minimalist Guitar",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:contemporary_folk",
+      "name": "Contemporary Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk",
+      "name": "Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:reflection",
+      "name": "Reflection",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:expressive",
+      "name": "Expressive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:singer_songwriter",
+      "name": "Singer-Songwriter",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:simon_garfunkel",
+      "name": "Simon & Garfunkel",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:harmonic",
+      "name": "Harmonic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:alt_country",
+      "name": "Alt Country",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:americana_storytelling",
+      "name": "Americana Storytelling",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:acoustic_guitar",
+      "name": "Acoustic Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:singer_songwriter",
+      "name": "Singer & Songwriter",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:theme:qloo:nostalgia",
+      "name": "Nostalgia",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:harmonic",
+      "name": "Harmonic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:acoustic_harmony",
+      "name": "Acoustic Harmony",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_dylan",
+      "name": "Bob Dylan",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_everly_brothers",
+      "name": "The Everly Brothers",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:loss",
+      "name": "Loss",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:thoughtful",
+      "name": "Thoughtful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:nick_drake",
+      "name": "Nick Drake",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:harmonic",
+      "name": "Harmonic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:3",
+      "name": "3",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:melodic_introspection",
+      "name": "Melodic Introspection",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie_folk",
+      "name": "Indie - Folk",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:music:qloo:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie",
+      "name": "Indie",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:audience:qloo:appreciative",
+      "name": "Appreciative",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:music:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "The Lumineers",
+    "entity_id": "24E70404-379A-4D46-8A7B-6E33F666CAC5",
+    "name": "The Lumineers",
+    "popularity": 0.9985549417061518,
+    "query": {
+     "affinity": 0.9591666291068691,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:influence:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:nostalgia",
+      "name": "Nostalgia",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:mandolin",
+      "name": "Mandolin",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:roots_rock",
+      "name": "Roots Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:heartfelt",
+      "name": "Heartfelt",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:cello",
+      "name": "Cello",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:storytelling_folk",
+      "name": "Storytelling Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:acoustic_balladry",
+      "name": "Acoustic Balladry",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drums",
+      "name": "Drums",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:roots_rock",
+      "name": "Roots Rock",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:neil_young",
+      "name": "Neil Young",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:american",
+      "name": "American",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:theme:qloo:heartbreak",
+      "name": "Heartbreak",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:acoustic",
+      "name": "Acoustic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:acoustic_guitar",
+      "name": "Acoustic Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:rustic",
+      "name": "Rustic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rock",
+      "name": "Rock",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:engaged",
+      "name": "Engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie",
+      "name": "Indie",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:music:qloo:organic",
+      "name": "Organic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:life_struggles",
+      "name": "Life Struggles",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:2",
+      "name": "2",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:diverse",
+      "name": "Diverse",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_band",
+      "name": "The Band",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_dylan",
+      "name": "Bob Dylan",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:piano",
+      "name": "Piano",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:organic",
+      "name": "Organic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:simon_garfunkel",
+      "name": "Simon & Garfunkel",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:folk_rock",
+      "name": "Folk - Rock",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:theme:qloo:hope",
+      "name": "Hope",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:devoted",
+      "name": "Devoted",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:singalong",
+      "name": "Singalong",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:nostalgic",
+      "name": "Nostalgic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:community_minded",
+      "name": "Community-Minded",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:intergenerational",
+      "name": "Intergenerational",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:rustic",
+      "name": "Rustic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:anthemic",
+      "name": "Anthemic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:emotive",
+      "name": "Emotive",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:nostalgic",
+      "name": "Nostalgic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:communal",
+      "name": "Communal",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:raw",
+      "name": "Raw",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:anthemic",
+      "name": "Anthemic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:anthemic",
+      "name": "Anthemic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:nostalgic",
+      "name": "Nostalgic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:complexity_scale:qloo:4",
+      "name": "4",
+      "type": "urn:tag:complexity_scale:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:rustic_indie_folk",
+      "name": "Rustic Indie-Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:stripped_down_roots_rock",
+      "name": "Stripped-Down Roots-Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:piano_infused_americana",
+      "name": "Piano-Infused Americana",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:cello_driven_folk_pop",
+      "name": "Cello-Driven Folk-Pop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:anthemic_singalong_folk",
+      "name": "Anthemic Singalong Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:roots_rock",
+      "name": "Roots Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bruce_springsteen",
+      "name": "Bruce Springsteen",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:woody_guthrie",
+      "name": "Woody Guthrie",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:leonard_cohen",
+      "name": "Leonard Cohen",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:townes_van_zandt",
+      "name": "Townes Van Zandt",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:electric_guitar",
+      "name": "Electric Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:bass",
+      "name": "Bass",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:upright_bass",
+      "name": "Upright Bass",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:banjo",
+      "name": "Banjo",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:loss",
+      "name": "Loss",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:home",
+      "name": "Home",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:family",
+      "name": "Family",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:resilience",
+      "name": "Resilience",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:working_class",
+      "name": "Working Class",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:mortality",
+      "name": "Mortality",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:journey",
+      "name": "Journey",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:heartache",
+      "name": "Heartache",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:roots_rock",
+      "name": "Roots Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:singer_songwriter",
+      "name": "Singer-Songwriter",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:indie_rock",
+      "name": "Indie Rock",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:folk_pop",
+      "name": "Folk Pop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:acoustic_pop",
+      "name": "Acoustic Pop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:adult_contemporary",
+      "name": "Adult Contemporary",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "type": "urn:tag:voice_type:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Shakey Graves",
+    "entity_id": "461D94F8-77B3-4544-9796-D888A899048E",
+    "name": "Shakey Graves",
+    "popularity": 0.9787959813616971,
+    "query": {
+     "affinity": 0.9564660399557318,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:style:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:alternative_country",
+      "name": "Alternative Country",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:harmonica",
+      "name": "Harmonica",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:alternative_country",
+      "name": "Alternative Country",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:loss",
+      "name": "Loss",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_dylan",
+      "name": "Bob Dylan",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:3",
+      "name": "3",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:appreciative",
+      "name": "Appreciative",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:hope",
+      "name": "Hope",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drums",
+      "name": "Drums",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:soulful",
+      "name": "Soulful",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:life_struggles",
+      "name": "Life Struggles",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:soulful",
+      "name": "Soulful",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:johnny_cash",
+      "name": "Johnny Cash",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:loop_pedal",
+      "name": "Loop Pedal",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:engaged",
+      "name": "Engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie_folk",
+      "name": "Indie - Folk",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:artist:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:family",
+      "name": "Family",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:guitar",
+      "name": "Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:one_man_band",
+      "name": "One-Man Band",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:foot_percussion",
+      "name": "Foot Percussion",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:alternative_country",
+      "name": "Alternative Country",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:tom_waits",
+      "name": "Tom Waits",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:lo_fi",
+      "name": "Lo - Fi",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:artist:qloo:innovative",
+      "name": "Innovative",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:americana_blues",
+      "name": "Americana Blues",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:americana",
+      "name": "Americana",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:music:singer_songwriter",
+      "name": "Singer & Songwriter",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk",
+      "name": "Folk",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:storytelling_folk",
+      "name": "Storytelling Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:blues",
+      "name": "Blues",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:lead_belly",
+      "name": "Lead Belly",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:raw",
+      "name": "Raw",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:raw",
+      "name": "Raw",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:music:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "The New Basement Tapes",
+    "entity_id": "682BE92E-C61E-41D1-91A6-62013DE7E275",
+    "name": "The New Basement Tapes",
+    "popularity": 0.94834162357706,
+    "query": {
+     "affinity": 0.9557174500194797,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:folk_rock",
+      "name": "Folk - Rock",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:bass",
+      "name": "Bass",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:folk_traditions",
+      "name": "Folk Traditions",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:roots_oriented",
+      "name": "Roots-Oriented",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:banjo",
+      "name": "Banjo",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:folk",
+      "name": "Folk",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:appreciative",
+      "name": "Appreciative",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:expressive",
+      "name": "Expressive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:contemporary_folk",
+      "name": "Contemporary Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:roots_oriented",
+      "name": "Roots-Oriented",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:mandolin",
+      "name": "Mandolin",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:folk_enthusiasts",
+      "name": "Folk Enthusiasts",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:piano",
+      "name": "Piano",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:4",
+      "name": "4",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:eclectic",
+      "name": "Eclectic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_dylan",
+      "name": "Bob Dylan",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:american_life",
+      "name": "American Life",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:social_commentary",
+      "name": "Social Commentary",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:eclectic",
+      "name": "Eclectic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:innovative",
+      "name": "Innovative",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:rock",
+      "name": "Rock",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:roots_rock",
+      "name": "Roots Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:collaborative",
+      "name": "Collaborative",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:roots_rock",
+      "name": "Roots Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:guitar",
+      "name": "Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drums",
+      "name": "Drums",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:collaborative",
+      "name": "Collaborative",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rock",
+      "name": "Rock",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influence:qloo:roots_rock",
+      "name": "Roots Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:americana",
+      "name": "Americana",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influence:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:psychedelic_rock",
+      "name": "Psychedelic Rock",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:nostalgia",
+      "name": "Nostalgia",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:americana",
+      "name": "Americana",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:eclectic",
+      "name": "Eclectic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_band",
+      "name": "The Band",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:rootsy",
+      "name": "Rootsy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:folk_music_traditions",
+      "name": "Folk Music Traditions",
+      "type": "urn:tag:influenced_by:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "The Barr Brothers",
+    "entity_id": "59445A60-9F23-4B8D-9355-185113E69822",
+    "name": "The Barr Brothers",
+    "popularity": 0.9748572963975123,
+    "query": {
+     "affinity": 0.955105127478785,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:theme:qloo:nature",
+      "name": "Nature",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:guitar",
+      "name": "Guitar",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:eclectic",
+      "name": "Eclectic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:indie_rock",
+      "name": "Indie Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:expressive",
+      "name": "Expressive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:thoughtful",
+      "name": "Thoughtful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:bass",
+      "name": "Bass",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:introspection",
+      "name": "Introspection",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:canadian",
+      "name": "Canadian",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:qloo:alternative_rock",
+      "name": "Alternative Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_dylan",
+      "name": "Bob Dylan",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie",
+      "name": "Indie",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:tom_waits",
+      "name": "Tom Waits",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:harp",
+      "name": "Harp",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:experimental_rock",
+      "name": "Experimental Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:eclectic",
+      "name": "Eclectic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:neil_young",
+      "name": "Neil Young",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:percussion",
+      "name": "Percussion",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:folk_rock",
+      "name": "Folk Rock",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:emotive",
+      "name": "Emotive",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_band",
+      "name": "The Band",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:innovative",
+      "name": "Innovative",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:blues_infused",
+      "name": "Blues-Infused",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:indie_folk",
+      "name": "Indie - Folk",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:artist:qloo:rich",
+      "name": "Rich",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:blues",
+      "name": "Blues",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:4",
+      "name": "4",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:indie_folk",
+      "name": "Indie Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:montreal",
+      "name": "Montreal",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:style:qloo:chamber_folk",
+      "name": "Chamber Folk",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drums",
+      "name": "Drums",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:experimental",
+      "name": "Experimental",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:eclectic",
+      "name": "Eclectic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:emotional_struggle",
+      "name": "Emotional Struggle",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:human_experience",
+      "name": "Human Experience",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:emotive",
+      "name": "Emotive",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:rich",
+      "name": "Rich",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:innovative",
+      "name": "Innovative",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:music:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   }
+  ]
+ },
+ "success": true
+}

@@ -1,0 +1,3581 @@
+{
+ "results": {
+  "entities": [
+   {
+    "disambiguation": "Wiz Khalifa",
+    "entity_id": "BBAC622A-8236-4976-8E8C-4FE3E3C47803",
+    "name": "Wiz Khalifa",
+    "popularity": 0.9986532449914476,
+    "query": {
+     "affinity": 0.9789124253791885,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:genre:music:pittsburgh",
+      "name": "Pittsburgh",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:2",
+      "name": "2",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:pop_influenced_hip_hop",
+      "name": "Pop-Influenced Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:versatile",
+      "name": "Versatile",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:marijuana_themed",
+      "name": "Marijuana-Themed",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:bob_marley",
+      "name": "Bob Marley",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:laid_back",
+      "name": "Laid Back",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:melodic_rap",
+      "name": "Melodic Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:laid_back",
+      "name": "Laid Back",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:lifestyle",
+      "name": "Lifestyle",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:smooth",
+      "name": "Smooth",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:marijuana",
+      "name": "Marijuana",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:three_6_mafia",
+      "name": "Three 6 Mafia",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wealth",
+      "name": "Wealth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:smooth",
+      "name": "Smooth",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:laid_back_flow",
+      "name": "Laid-Back Flow",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:underground_hip_hop",
+      "name": "Underground Hip Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:snoop_dogg",
+      "name": "Snoop Dogg",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_infused",
+      "name": "Trap Infused",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:laid_back",
+      "name": "Laid Back",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:artist:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:youthful",
+      "name": "Youthful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:party",
+      "name": "Party",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:contemporary_hip_hop",
+      "name": "Contemporary Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:hip_hop",
+      "name": "Hip - Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:music:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:laid_back",
+      "name": "Laid-Back",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:laid_back",
+      "name": "Laid-Back",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:versatile",
+      "name": "Versatile",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:laid_back",
+      "name": "Laid-Back",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:laid_back",
+      "name": "Laid-Back",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_infused",
+      "name": "Trap-Infused",
+      "type": "urn:tag:style:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Jay-Z",
+    "entity_id": "1894930C-9D08-485C-8F0F-0E0AC4DFB447",
+    "name": "Jay-Z",
+    "popularity": 0.9996067868588169,
+    "query": {
+     "affinity": 0.9766692852135209,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:influenced_by:qloo:nas",
+      "name": "Nas",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:ambition",
+      "name": "Ambition",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wealth",
+      "name": "Wealth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:lyrical",
+      "name": "Lyrical",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:street_life",
+      "name": "Street Life",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:diverse",
+      "name": "Diverse",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:krs_one",
+      "name": "KRS One",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:rakim",
+      "name": "Rakim",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:gangsta_rap",
+      "name": "Gangsta Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:1",
+      "name": "1",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:east_coast_hip_hop",
+      "name": "East Coast Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:boom_bap",
+      "name": "Boom Bap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:influential",
+      "name": "Influential",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:struggle",
+      "name": "Struggle",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:entrepreneurial",
+      "name": "Entrepreneurial",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:east_coast_hip_hop",
+      "name": "East Coast Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:streetwise",
+      "name": "Streetwise",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:conscious_rap",
+      "name": "Conscious Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:smooth",
+      "name": "Smooth",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_notorious_b_i_g",
+      "name": "The Notorious B.I.G",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:urban",
+      "name": "Urban",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:big_daddy_kane",
+      "name": "Big Daddy Kane",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:confident",
+      "name": "Confident",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:global",
+      "name": "Global",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:contemporary_r_b",
+      "name": "Contemporary R&B",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:conscious_hip_hop",
+      "name": "Conscious Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:rhythmic",
+      "name": "Rhythmic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:gangsta_rap",
+      "name": "Gangsta Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:innovative",
+      "name": "Innovative",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:devoted",
+      "name": "Devoted",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:engaged",
+      "name": "Engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:lyrical",
+      "name": "Lyrical",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:metaphorical",
+      "name": "Metaphorical",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:polished",
+      "name": "Polished",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:ambitious",
+      "name": "Ambitious",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:soulful",
+      "name": "Soulful",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:commercial",
+      "name": "Commercial",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:commanding",
+      "name": "Commanding",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:polished",
+      "name": "Polished",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:metaphorical",
+      "name": "Metaphorical",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:prolific",
+      "name": "Prolific",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:respected",
+      "name": "Respected",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:business_minded",
+      "name": "Business-Minded",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:strategic",
+      "name": "Strategic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:complexity_scale:qloo:7",
+      "name": "7",
+      "type": "urn:tag:complexity_scale:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:sample_based_east_coast_rap",
+      "name": "Sample-Based East Coast Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:metaphor_driven_lyricism",
+      "name": "Metaphor-Driven Lyricism",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:soul_inflected_boom_bap",
+      "name": "Soul-Inflected Boom Bap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:arena_ready_pop_rap",
+      "name": "Arena-Ready Pop Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:corporate_mogul_hip_hop",
+      "name": "Corporate-Mogul Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:east_coast_rap",
+      "name": "East Coast Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:conscious_hip_hop",
+      "name": "Conscious Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:commercial_hip_hop",
+      "name": "Commercial Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jaz_o",
+      "name": "Jaz-O",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_notorious_b_i_g_",
+      "name": "The Notorious B.I.G.",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:krs_one",
+      "name": "KRS-One",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:sampling_production_programming_",
+      "name": "Sampling/Production (programming)",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:hustle",
+      "name": "Hustle",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:fame",
+      "name": "Fame",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:loyalty",
+      "name": "Loyalty",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:family",
+      "name": "Family",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:legacy",
+      "name": "Legacy",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:business",
+      "name": "Business",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:0",
+      "name": "0",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:east_coast_rap",
+      "name": "East Coast Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:commercial_hip_hop",
+      "name": "Commercial Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:experimental_hip_hop",
+      "name": "Experimental Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "type": "urn:tag:voice_type:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "DJ Khaled",
+    "entity_id": "7FA4CB13-B7CB-49BA-8AA7-14964EDF2BD9",
+    "name": "DJ Khaled",
+    "popularity": 0.9966445811952369,
+    "query": {
+     "affinity": 0.9764786784079703,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:subgenre:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:diverse",
+      "name": "Diverse",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:influential",
+      "name": "Influential",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:party",
+      "name": "Party",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:swizz_beatz",
+      "name": "Swizz Beatz",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:showmanlike",
+      "name": "Showmanlike",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_neptunes",
+      "name": "The Neptunes",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:anthemic",
+      "name": "Anthemic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:hip_hop",
+      "name": "Hip - Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influence:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:2",
+      "name": "2",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drum_machine",
+      "name": "Drum Machine",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:radio_friendly",
+      "name": "Radio Friendly",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:motivated",
+      "name": "Motivated",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:sampler",
+      "name": "Sampler",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:turntables",
+      "name": "Turntables",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:collaborative",
+      "name": "Collaborative",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:dj_clue",
+      "name": "DJ Clue",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:upbeat",
+      "name": "Upbeat",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:motivation",
+      "name": "Motivation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wealth",
+      "name": "Wealth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:celebration",
+      "name": "Celebration",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:collaborative",
+      "name": "Collaborative",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:entertaining",
+      "name": "Entertaining",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_infused",
+      "name": "Trap Infused",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:r_b",
+      "name": "R&B",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:motivational",
+      "name": "Motivational",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:collaborative",
+      "name": "Collaborative",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:polished",
+      "name": "Polished",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_infused",
+      "name": "Trap-Infused",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:radio_friendly",
+      "name": "Radio-Friendly",
+      "type": "urn:tag:style:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Tyga",
+    "entity_id": "03CDEDEC-AC05-44E7-8CFA-B3446F6F2363",
+    "name": "Tyga",
+    "popularity": 0.9957106999849268,
+    "query": {
+     "affinity": 0.9750585521266742,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:subgenre:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:snoop_dogg",
+      "name": "Snoop Dogg",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_rap",
+      "name": "Trap Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:confident",
+      "name": "Confident",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:dr_dre",
+      "name": "Dr Dre",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:3",
+      "name": "3",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:west_coast_hip_hop",
+      "name": "West Coast Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:relationships",
+      "name": "Relationships",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:contemporary_hip_hop",
+      "name": "Contemporary Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:versatile",
+      "name": "Versatile",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:west_coast_hip_hop",
+      "name": "West Coast Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:youthful",
+      "name": "Youthful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:rhythmic",
+      "name": "Rhythmic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:tyga",
+      "name": "Tyga",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:lil_wayne",
+      "name": "Lil Wayne",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wealth",
+      "name": "Wealth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:club_anthem",
+      "name": "Club Anthem",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:trendy",
+      "name": "Trendy",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:west_coast_hip_hop",
+      "name": "West Coast Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:street_life",
+      "name": "Street Life",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:partying",
+      "name": "Partying",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:contemporary_hip_hop",
+      "name": "Contemporary Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:confident",
+      "name": "Confident",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:style:qloo:melodic_rap",
+      "name": "Melodic Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:hip_hop",
+      "name": "Hip - Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:club_ready",
+      "name": "Club-Ready",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:dr_dre",
+      "name": "Dr. Dre",
+      "type": "urn:tag:influenced_by:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Lil' Wayne",
+    "entity_id": "3A93A0FF-E9CF-42BD-94E9-253A99C176C8",
+    "name": "Lil' Wayne",
+    "popularity": 0.9990464581326308,
+    "query": {
+     "affinity": 0.9747899986860309,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:artist:qloo:innovative",
+      "name": "Innovative",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:birdman",
+      "name": "Birdman",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:southern_hip_hop",
+      "name": "Southern Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:street_life",
+      "name": "Street Life",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:diverse",
+      "name": "Diverse",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:versatile",
+      "name": "Versatile",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jay_z",
+      "name": "Jay Z",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:violence",
+      "name": "Violence",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:mixtape_driven",
+      "name": "Mixtape-Driven",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:dedicated",
+      "name": "Dedicated",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:master_p",
+      "name": "Master P",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:southern_hip_hop",
+      "name": "Southern Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:juvenile",
+      "name": "Juvenile",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:party",
+      "name": "Party",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:mainstream_hip_hop",
+      "name": "Mainstream Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:2",
+      "name": "2",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_rap",
+      "name": "Trap Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:struggle",
+      "name": "Struggle",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:influential",
+      "name": "Influential",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:lyrical",
+      "name": "Lyrical",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:southern_hip_hop",
+      "name": "Southern Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:lyrical_wordplay",
+      "name": "Lyrical Wordplay",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:gangsta_rap",
+      "name": "Gangsta Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:autotune_enhanced",
+      "name": "Autotune Enhanced",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:prolific",
+      "name": "Prolific",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:nas",
+      "name": "Nas",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wealth",
+      "name": "Wealth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:devoted",
+      "name": "Devoted",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:young",
+      "name": "Young",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:eclectic",
+      "name": "Eclectic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:raspy",
+      "name": "Raspy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:punchline_driven",
+      "name": "Punchline-Driven",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:inventive",
+      "name": "Inventive",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:hard_hitting",
+      "name": "Hard-Hitting",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:streetwise",
+      "name": "Streetwise",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:raw",
+      "name": "Raw",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:spontaneous",
+      "name": "Spontaneous",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:freestyle_oriented",
+      "name": "Freestyle-Oriented",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:inventive",
+      "name": "Inventive",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:raspy",
+      "name": "Raspy",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:witty",
+      "name": "Witty",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:complexity_scale:qloo:7",
+      "name": "7",
+      "type": "urn:tag:complexity_scale:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:mixtape_era_southern_rap",
+      "name": "Mixtape-Era Southern Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:punchline_driven_lyricism",
+      "name": "Punchline-Driven Lyricism",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:melodic_hip_hop",
+      "name": "Melodic-Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:auto_tuned_hip_hop",
+      "name": "Auto-Tuned Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:new_orleans_bounce_inflected",
+      "name": "New Orleans Bounce-Inflected",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:contemporary_hip_hop",
+      "name": "Contemporary Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:melodic_rap",
+      "name": "Melodic Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:mixtape_rap",
+      "name": "Mixtape Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:tupac_shakur",
+      "name": "Tupac Shakur",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_notorious_b_i_g_",
+      "name": "The Notorious B.I.G.",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jay_z",
+      "name": "Jay-Z",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:outkast",
+      "name": "OutKast",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:braggadocio",
+      "name": "Braggadocio",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:fame",
+      "name": "Fame",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:relationships",
+      "name": "Relationships",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:addiction",
+      "name": "Addiction",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:introspection",
+      "name": "Introspection",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:1",
+      "name": "1",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:southern_hip_hop",
+      "name": "Southern Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:dirty_south",
+      "name": "Dirty South",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:gangsta_rap",
+      "name": "Gangsta Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:mixtape_rap",
+      "name": "Mixtape Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:melodic_hip_hop",
+      "name": "Melodic Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:r_b_influenced_hip_hop",
+      "name": "R&B-Influenced Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "type": "urn:tag:voice_type:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2 Chainz",
+    "entity_id": "D6CBF036-3F62-4395-8FBF-B428A4D5CDD4",
+    "name": "2 Chainz",
+    "popularity": 0.9935381973798898,
+    "query": {
+     "affinity": 0.9745987963400965,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:distinctive",
+      "name": "Distinctive",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:bass_heavy",
+      "name": "Bass Heavy",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:southern_hip_hop",
+      "name": "Southern Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jay_z",
+      "name": "Jay Z",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:southern_style",
+      "name": "Southern-Style",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:confident",
+      "name": "Confident",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:outkast",
+      "name": "OutKast",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:diverse",
+      "name": "Diverse",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:hook_oriented",
+      "name": "Hook-Oriented",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:confident",
+      "name": "Confident",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:2",
+      "name": "2",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:mainstream_hip_hop",
+      "name": "Mainstream Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:gangsta_rap",
+      "name": "Gangsta Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wealth",
+      "name": "Wealth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:street_life",
+      "name": "Street Life",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:t_i",
+      "name": "T.I.",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:lil_wayne",
+      "name": "Lil Wayne",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:trap",
+      "name": "Trap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:artist:qloo:witty",
+      "name": "Witty",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:hip_hop",
+      "name": "Hip - Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:music:dirty_south",
+      "name": "Dirty South",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:music:qloo:southern",
+      "name": "Southern",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:luxury",
+      "name": "Luxury",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:party",
+      "name": "Party",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:southern_hip_hop",
+      "name": "Southern Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_infused",
+      "name": "Trap Infused",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:lyric_driven",
+      "name": "Lyric Driven",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:southern_rap",
+      "name": "Southern Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:music:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:music:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:trap_influenced",
+      "name": "Trap-Influenced",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:witty",
+      "name": "Witty",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_infused",
+      "name": "Trap-Infused",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:lyric_driven",
+      "name": "Lyric-Driven",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:bass_heavy",
+      "name": "Bass-Heavy",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:outkast",
+      "name": "Outkast",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jay_z",
+      "name": "Jay-Z",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:t_i_",
+      "name": "T.I.",
+      "type": "urn:tag:influenced_by:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "50 Cent",
+    "entity_id": "5C59ADC4-2720-4381-8B17-E1F44F6C53FE",
+    "name": "50 Cent",
+    "popularity": 0.9991611452988092,
+    "query": {
+     "affinity": 0.9744247215957281,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:artist:qloo:entrepreneurial",
+      "name": "Entrepreneurial",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:east_coast_hip_hop",
+      "name": "East Coast Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:n_w_a",
+      "name": "N.W.A",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:gangsta_rap",
+      "name": "Gangsta Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:tupac_shakur",
+      "name": "Tupac Shakur",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:g_funk",
+      "name": "G-Funk",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:resilient",
+      "name": "Resilient",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:street_life",
+      "name": "Street Life",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_notorious_b_i_g",
+      "name": "The Notorious B.I.G",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:rakim",
+      "name": "Rakim",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:gangsta_rap",
+      "name": "Gangsta Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:audience:qloo:youthful",
+      "name": "Youthful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:confident",
+      "name": "Confident",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:hip_hop",
+      "name": "Hip - Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:artist:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:influential",
+      "name": "Influential",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:hardcore_hip_hop",
+      "name": "Hardcore Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:urban",
+      "name": "Urban",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:street_rap",
+      "name": "Street Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:resilience",
+      "name": "Resilience",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:violence",
+      "name": "Violence",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:gangsta_rap",
+      "name": "Gangsta Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:survival",
+      "name": "Survival",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:gangsta_rap",
+      "name": "Gangsta Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:rhythmic",
+      "name": "Rhythmic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wealth",
+      "name": "Wealth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:2",
+      "name": "2",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:commanding",
+      "name": "Commanding",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:diverse",
+      "name": "Diverse",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:east_coast_hip_hop",
+      "name": "East Coast Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:voice_type:qloo:baritone",
+      "name": "Baritone",
+      "type": "urn:tag:voice_type:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:contemporary_hip_hop",
+      "name": "Contemporary Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:commercial_hip_hop",
+      "name": "Commercial Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:hardcore",
+      "name": "Hardcore",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:streetwise",
+      "name": "Streetwise",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:devoted",
+      "name": "Devoted",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:aggressive",
+      "name": "Aggressive",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:streetwise",
+      "name": "Streetwise",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:anthemic",
+      "name": "Anthemic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:high_energy",
+      "name": "High-Energy",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intense",
+      "name": "Intense",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:direct",
+      "name": "Direct",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:aggressive",
+      "name": "Aggressive",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:streetwise",
+      "name": "Streetwise",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:controversial",
+      "name": "Controversial",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:business_minded",
+      "name": "Business-Minded",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:gravelly_voiced",
+      "name": "Gravelly-Voiced",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:complexity_scale:qloo:4",
+      "name": "4",
+      "type": "urn:tag:complexity_scale:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:gritty_east_coast_gangsta",
+      "name": "Gritty East Coast Gangsta",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:mixtape_hardened_street_rap",
+      "name": "Mixtape-Hardened Street Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:hook_driven_commercial_hip_hop",
+      "name": "Hook-Driven Commercial Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:club_ready_rap_anthems",
+      "name": "Club-Ready Rap Anthems",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:business_minded_crossover_rap",
+      "name": "Business-Minded Crossover Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:mainstream_hip_hop",
+      "name": "Mainstream Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:commercial_gangsta_rap",
+      "name": "Commercial Gangsta Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:mixtape_driven_rap",
+      "name": "Mixtape-Driven Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:street_rap",
+      "name": "Street Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_notorious_b_i_g_",
+      "name": "The Notorious B.I.G.",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:ll_cool_j",
+      "name": "LL Cool J",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:betrayal",
+      "name": "Betrayal",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:hustling",
+      "name": "Hustling",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:loyalty",
+      "name": "Loyalty",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:revenge",
+      "name": "Revenge",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:relationships",
+      "name": "Relationships",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:1",
+      "name": "1",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:east_coast_hip_hop",
+      "name": "East Coast Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:commercial_rap",
+      "name": "Commercial Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:hardcore_hip_hop",
+      "name": "Hardcore Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:trap_influenced_hip_hop",
+      "name": "Trap-Influenced Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:mixtape_rap",
+      "name": "Mixtape Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "type": "urn:tag:voice_type:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "J. Cole",
+    "entity_id": "75422648-F55C-4620-91C8-C9CF153E28C0",
+    "name": "J. Cole",
+    "popularity": 0.9980535949511433,
+    "query": {
+     "affinity": 0.9725388165408556,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:storytelling_lyricism",
+      "name": "Storytelling Lyricism",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:soulful",
+      "name": "Soulful",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:introspective_rap",
+      "name": "Introspective Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:underground_hip_hop",
+      "name": "Underground Hip Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:lyrical",
+      "name": "Lyrical",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:genre:music:hip_hop",
+      "name": "Hip - Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influence:qloo:alternative_hip_hop",
+      "name": "Alternative Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:alternative_hip_hop",
+      "name": "Alternative Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jay_z",
+      "name": "Jay Z",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:conscious_hip_hop",
+      "name": "Conscious Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:kanye_west",
+      "name": "Kanye West",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:ambition",
+      "name": "Ambition",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:soulful_rap",
+      "name": "Soulful Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:self_reflection",
+      "name": "Self Reflection",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:soulful",
+      "name": "Soulful",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drum_machine",
+      "name": "Drum Machine",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:nas",
+      "name": "Nas",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:piano",
+      "name": "Piano",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:2",
+      "name": "2",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:thoughtful",
+      "name": "Thoughtful",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:conscious_hip_hop",
+      "name": "Conscious Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:storyteller",
+      "name": "Storyteller",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_notorious_b_i_g",
+      "name": "The Notorious B.I.G",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:north_carolina",
+      "name": "North Carolina",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:thoughtful",
+      "name": "Thoughtful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:conscious_hip_hop",
+      "name": "Conscious Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:personal_struggle",
+      "name": "Personal Struggle",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:social_issues",
+      "name": "Social Issues",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:east_coast_hip_hop",
+      "name": "East Coast Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:engaged",
+      "name": "Engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:diverse",
+      "name": "Diverse",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:dedicated",
+      "name": "Dedicated",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:introspective",
+      "name": "Introspective",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:lyrical",
+      "name": "Lyrical",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:narrative",
+      "name": "Narrative",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:moody",
+      "name": "Moody",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:thoughtful",
+      "name": "Thoughtful",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:reserved",
+      "name": "Reserved",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:focused",
+      "name": "Focused",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:emotive",
+      "name": "Emotive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:laid_back",
+      "name": "Laid-Back",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:confessional",
+      "name": "Confessional",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:storytelling",
+      "name": "Storytelling",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:confessional",
+      "name": "Confessional",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:measured",
+      "name": "Measured",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:complexity_scale:qloo:6",
+      "name": "6",
+      "type": "urn:tag:complexity_scale:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:conscious_boom_bap",
+      "name": "Conscious Boom-Bap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:soul_sampled_lyrical",
+      "name": "Soul-Sampled Lyrical",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:piano_driven_introspective_hip_hop",
+      "name": "Piano-Driven Introspective Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:melodic_singer_rap",
+      "name": "Melodic Singer-Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:narrative_concept_album_focused",
+      "name": "Narrative Concept-Album Focused",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:boom_bap_revival",
+      "name": "Boom Bap Revival",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:singer_rap",
+      "name": "Singer-Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:lyrical_hip_hop",
+      "name": "Lyrical Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jay_z",
+      "name": "Jay-Z",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:tupac_shakur",
+      "name": "Tupac Shakur",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:common",
+      "name": "Common",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:the_fugees",
+      "name": "The Fugees",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:sampler",
+      "name": "Sampler",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:synthesizer",
+      "name": "Synthesizer",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:introspection",
+      "name": "Introspection",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:coming_of_age",
+      "name": "Coming Of Age",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:social_commentary",
+      "name": "Social Commentary",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:mental_health",
+      "name": "Mental Health",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:race",
+      "name": "Race",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:fatherhood",
+      "name": "Fatherhood",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:relationships",
+      "name": "Relationships",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:1",
+      "name": "1",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:conscious_hip_hop",
+      "name": "Conscious Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:boom_bap",
+      "name": "Boom Bap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:alternative_hip_hop",
+      "name": "Alternative Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:jazz_hop",
+      "name": "Jazz Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:underground_hip_hop",
+      "name": "Underground Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:soul",
+      "name": "Soul",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:r_b",
+      "name": "R&B",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:voice_type:qloo:baritone",
+      "name": "Baritone",
+      "type": "urn:tag:voice_type:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Drake&Orson",
+    "entity_id": "FAA55DC8-6030-4CC8-9BA6-4668295C3FA7",
+    "name": "Drake&Orson",
+    "popularity": 0.999439671273814,
+    "query": {
+     "affinity": 0.9710959289840858,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:influence:qloo:contemporary_r_b",
+      "name": "Contemporary R&B",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jay_z",
+      "name": "Jay Z",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:keyboard",
+      "name": "Keyboard",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:pop",
+      "name": "Pop",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:youthful",
+      "name": "Youthful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:dancehall",
+      "name": "Dancehall",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:hip_hop",
+      "name": "Hip - Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:influence:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:emotional_r_b",
+      "name": "Emotional R&B",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:love",
+      "name": "Love",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:smooth",
+      "name": "Smooth",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:voice_type:qloo:baritone",
+      "name": "Baritone",
+      "type": "urn:tag:voice_type:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:emotional",
+      "name": "Emotional",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:innovative",
+      "name": "Innovative",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:emotional_struggle",
+      "name": "Emotional Struggle",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_influenced_pop",
+      "name": "Trap-Influenced Pop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:michael_jackson",
+      "name": "Michael Jackson",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:versatile",
+      "name": "Versatile",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rhythm_blues",
+      "name": "Rhythm & Blues",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:style:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:diverse",
+      "name": "Diverse",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:r_b",
+      "name": "R & B",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drum_machine",
+      "name": "Drum Machine",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:melodic_rap",
+      "name": "Melodic Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:canadian",
+      "name": "Canadian",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:theme:qloo:fame",
+      "name": "Fame",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:emotional",
+      "name": "Emotional",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:kanye_west",
+      "name": "Kanye West",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:aaliyah",
+      "name": "Aaliyah",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wealth",
+      "name": "Wealth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:toronto_hip_hop",
+      "name": "Toronto Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:relationships",
+      "name": "Relationships",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:melodic",
+      "name": "Melodic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:lil_wayne",
+      "name": "Lil Wayne",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:1",
+      "name": "1",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:urban_contemporary",
+      "name": "Urban Contemporary",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:devoted",
+      "name": "Devoted",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:young",
+      "name": "Young",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:social_media_savvy",
+      "name": "Social Media-Savvy",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:fashion_conscious",
+      "name": "Fashion-Conscious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:confessional",
+      "name": "Confessional",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:lush",
+      "name": "Lush",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:streamlined",
+      "name": "Streamlined",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:hypnotic",
+      "name": "Hypnotic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:polished",
+      "name": "Polished",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:theatrical",
+      "name": "Theatrical",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:interactive",
+      "name": "Interactive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:high_production",
+      "name": "High-Production",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:confessional",
+      "name": "Confessional",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:commercial",
+      "name": "Commercial",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:influential",
+      "name": "Influential",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:chart_topping",
+      "name": "Chart-Topping",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:emotionally_honest",
+      "name": "Emotionally Honest",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:ambitious",
+      "name": "Ambitious",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:entrepreneurial",
+      "name": "Entrepreneurial",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:stylish",
+      "name": "Stylish",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:complexity_scale:qloo:6",
+      "name": "6",
+      "type": "urn:tag:complexity_scale:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:melodic_trap_pop",
+      "name": "Melodic Trap-Pop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric_alternative_r_b",
+      "name": "Atmospheric Alternative R&B",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:toronto_informed_hip_hop",
+      "name": "Toronto-Informed Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dancehall_infused_pop",
+      "name": "Dancehall-Infused Pop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:hyper_reality_rap",
+      "name": "Hyper-Reality Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:melodic_rap",
+      "name": "Melodic Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap_pop",
+      "name": "Trap-Pop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:dancehall_infused_pop",
+      "name": "Dancehall-Infused Pop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:toronto_sound",
+      "name": "Toronto Sound",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:usher",
+      "name": "Usher",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:vybz_kartel",
+      "name": "Vybz Kartel",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:clipse",
+      "name": "Clipse",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:keyboards",
+      "name": "Keyboards",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:sampler",
+      "name": "Sampler",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:drum_programming",
+      "name": "Drum Programming",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:heartbreak",
+      "name": "Heartbreak",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:ambition",
+      "name": "Ambition",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:vulnerability",
+      "name": "Vulnerability",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:celebrity",
+      "name": "Celebrity",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:introspection",
+      "name": "Introspection",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:0",
+      "name": "0",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rhythm_blues",
+      "name": "Rhythm & Blues",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:contemporary_r_b",
+      "name": "Contemporary R&B",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:alternative_r_b",
+      "name": "Alternative R&B",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:drill",
+      "name": "Drill",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:toronto_hip_hop",
+      "name": "Toronto Hip Hop",
+      "type": "urn:tag:subgenre:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "Big Sean",
+    "entity_id": "F7087C3F-8141-4E07-B2F6-31C8076E53AA",
+    "name": "Big Sean",
+    "popularity": 0.9966675186284726,
+    "query": {
+     "affinity": 0.9692483976276535,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:artist",
+    "tags": [
+     {
+      "id": "urn:tag:audience:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:self_confidence",
+      "name": "Self Confidence",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:modern",
+      "name": "Modern",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:hip_hop",
+      "name": "Hip - Hop",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:theme:qloo:ambition",
+      "name": "Ambition",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:kanye_west",
+      "name": "Kanye West",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:relationships",
+      "name": "Relationships",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:instrument:qloo:vocals",
+      "name": "Vocals",
+      "type": "urn:tag:instrument:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:mainstream_rap",
+      "name": "Mainstream Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:lyrical_hip_hop",
+      "name": "Lyrical Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:hip_hop",
+      "name": "Hip Hop",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:smooth",
+      "name": "Smooth",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:confident",
+      "name": "Confident",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:obscurity:qloo:2",
+      "name": "2",
+      "type": "urn:tag:obscurity:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:detroit_hip_hop",
+      "name": "Detroit Hip Hop",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:eminem",
+      "name": "Eminem",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:struggle",
+      "name": "Struggle",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jay_z",
+      "name": "Jay Z",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:clever",
+      "name": "Clever",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:trap_influenced_rap",
+      "name": "Trap-Influenced Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:youthful",
+      "name": "Youthful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:rap",
+      "name": "Rap",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:artist:qloo:confident",
+      "name": "Confident",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:trap",
+      "name": "Trap",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:smooth",
+      "name": "Smooth",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:influence:qloo:pop_rap",
+      "name": "Pop Rap",
+      "type": "urn:tag:influence:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:catchy",
+      "name": "Catchy",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:artist:qloo:lyrical",
+      "name": "Lyrical",
+      "type": "urn:tag:artist:qloo"
+     },
+     {
+      "id": "urn:tag:genre:music:big_sean",
+      "name": "Big Sean",
+      "type": "urn:tag:genre:music"
+     },
+     {
+      "id": "urn:tag:music:qloo:lyrical",
+      "name": "Lyrical",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:music:qloo:energetic",
+      "name": "Energetic",
+      "type": "urn:tag:music:qloo"
+     },
+     {
+      "id": "urn:tag:influenced_by:qloo:jay_z",
+      "name": "Jay-Z",
+      "type": "urn:tag:influenced_by:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:self_confidence",
+      "name": "Self-Confidence",
+      "type": "urn:tag:theme:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   }
+  ]
+ },
+ "success": true
+}

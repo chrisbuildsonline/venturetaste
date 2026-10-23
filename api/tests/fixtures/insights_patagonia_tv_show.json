@@ -1,0 +1,3878 @@
+{
+ "results": {
+  "entities": [
+   {
+    "disambiguation": "2015",
+    "entity_id": "64F10391-C4C4-4C1B-9CA4-F03260DDD965",
+    "name": "Expedition Unknown",
+    "popularity": 0.7044744365401236,
+    "query": {
+     "affinity": 0.9792787705830871,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:style:qloo:immersive",
+      "name": "Immersive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:archaeology",
+      "name": "Archaeology",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_explorer",
+      "name": "The explorer",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:witty",
+      "name": "Witty",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:adventure_travel",
+      "name": "Adventure travel",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:educational",
+      "name": "Educational",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:travel_oriented",
+      "name": "Travel oriented",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:intellectually_curious",
+      "name": "Intellectually curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:investigation",
+      "name": "Investigation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:documentary_style",
+      "name": "Documentary style",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:investigative_travel",
+      "name": "Investigative travel",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:investigative",
+      "name": "Investigative",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:fieldwork",
+      "name": "Fieldwork",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:exploratory",
+      "name": "Exploratory",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:history_loving",
+      "name": "History loving",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:history",
+      "name": "History",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:armchair_explorer",
+      "name": "Armchair explorer",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:discovery",
+      "name": "Discovery",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:reality",
+      "name": "Reality",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_treasure",
+      "name": "The treasure",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:emotionally_engaged",
+      "name": "Emotionally engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:reality_tv",
+      "name": "Reality tv",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:cinematic",
+      "name": "Cinematic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:host_driven_expeditionary_framing",
+      "name": "Host driven expeditionary framing",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:archaeology",
+      "name": "Archaeology",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:history",
+      "name": "History",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:history",
+      "name": "History",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:on_location_immersion",
+      "name": "On location immersion",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_unknown",
+      "name": "The unknown",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:docu_series",
+      "name": "Docu series",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:determined",
+      "name": "Determined",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:character_driven",
+      "name": "Character driven",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:cultural_heritage",
+      "name": "Cultural heritage",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:underwater_exploration",
+      "name": "Underwater exploration",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:cinematic_expedition_vignettes",
+      "name": "Cinematic expedition vignettes",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:scuba_diving",
+      "name": "Scuba diving",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:cultural_heritage",
+      "name": "Cultural heritage",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:archaeological_documentary",
+      "name": "Archaeological documentary",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:travel",
+      "name": "Travel",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:archaeology",
+      "name": "Archaeology",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:research_driven_interstitials",
+      "name": "Research driven interstitials",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:exploration",
+      "name": "Exploration",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_quest",
+      "name": "The quest",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:brave",
+      "name": "Brave",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:travel_reality_tv",
+      "name": "Travel reality tv",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:interests:qloo:treasure_hunting",
+      "name": "Treasure hunting",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:playful_storytelling_beats",
+      "name": "Playful storytelling beats",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:artifacts",
+      "name": "Artifacts",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:santa_claus",
+      "name": "Santa claus",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:investigation",
+      "name": "Investigation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:exploration",
+      "name": "Exploration",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:archaeologist",
+      "name": "Archaeologist",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:research",
+      "name": "Research",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:humorous",
+      "name": "Humorous",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:expeditions",
+      "name": "Expeditions",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:expedition",
+      "name": "Expedition",
+      "type": "urn:tag:subgenre:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2014,2027",
+    "entity_id": "57D843CE-A3FF-4097-B32D-375E4C4D4872",
+    "name": "The Curse of Oak Island",
+    "popularity": 0.8521374908583206,
+    "query": {
+     "affinity": 0.9670580419734884,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:genre:qloo:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_island",
+      "name": "The island",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:determined",
+      "name": "Determined",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:emotionally_engaged",
+      "name": "Emotionally engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:excavation",
+      "name": "Excavation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:layered_evidence_framing",
+      "name": "Layered evidence framing",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:swamp",
+      "name": "Swamp",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:maritime_history",
+      "name": "Maritime history",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:slow_burn",
+      "name": "Slow burn",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:field_expeditions",
+      "name": "Field expeditions",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:exploration",
+      "name": "Exploration",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:dig_site",
+      "name": "Dig site",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:loyal",
+      "name": "Loyal",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:island",
+      "name": "Island",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:suspenseful",
+      "name": "Suspenseful",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:historical_investigation",
+      "name": "Historical investigation",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:artifact",
+      "name": "Artifact",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:docuseries_documentary",
+      "name": "Docuseries documentary",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:expedition",
+      "name": "Expedition",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_quest",
+      "name": "The quest",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:persevering",
+      "name": "Persevering",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:weathered_object_focus",
+      "name": "Weathered object focus",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:21st_century",
+      "name": "21st century",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:interests:qloo:archaeology",
+      "name": "Archaeology",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:character_driven",
+      "name": "Character driven",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:family",
+      "name": "Family",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:2020s",
+      "name": "2020s",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:investigative",
+      "name": "Investigative",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:elapsed_time_montage",
+      "name": "Elapsed time montage",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:historical_research",
+      "name": "Historical research",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:archive_driven_juxtaposition",
+      "name": "Archive driven juxtaposition",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:narration",
+      "name": "Narration",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:historical_mystery",
+      "name": "Historical mystery",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:realistic",
+      "name": "Realistic",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_curse",
+      "name": "The curse",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:2010s",
+      "name": "2010s",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:treasure_hunting",
+      "name": "Treasure hunting",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:field_camp_intimacy",
+      "name": "Field camp intimacy",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:treasure_hunt",
+      "name": "Treasure hunt",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:legacy",
+      "name": "Legacy",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:archaeological_investigation",
+      "name": "Archaeological investigation",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:treasure_hunting",
+      "name": "Treasure hunting",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_treasure",
+      "name": "The treasure",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:drama_loving",
+      "name": "Drama loving",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:obsessive",
+      "name": "Obsessive",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:nostalgic",
+      "name": "Nostalgic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:history_documentary",
+      "name": "History documentary",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:obsession",
+      "name": "Obsession",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_family",
+      "name": "The family",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:reenactment",
+      "name": "Reenactment",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:metal_detecting",
+      "name": "Metal detecting",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:metal_detecting",
+      "name": "Metal detecting",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:realistic",
+      "name": "Realistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:place_name_in_title",
+      "name": "Place name in title",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:island",
+      "name": "Island",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:treasure",
+      "name": "Treasure",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:reality",
+      "name": "Reality",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:reality_tv",
+      "name": "Reality tv",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:audience:qloo:patient",
+      "name": "Patient",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:archaeology",
+      "name": "Archaeology",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:expedition",
+      "name": "Expedition",
+      "type": "urn:tag:subgenre:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2007,2012",
+    "entity_id": "8BB44181-6979-49DF-82DD-06D7D9C3A333",
+    "name": "Destination Truth",
+    "popularity": 0.5694435210424839,
+    "query": {
+     "affinity": 0.9615471752396942,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:style:qloo:moody",
+      "name": "Moody",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:humor_loving",
+      "name": "Humor loving",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:adventure_tourism",
+      "name": "Adventure tourism",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:witty",
+      "name": "Witty",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:local_interviews",
+      "name": "Local interviews",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:reality",
+      "name": "Reality",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:supernatural",
+      "name": "Supernatural",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:humorously_skeptical",
+      "name": "Humorously skeptical",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:inquisitive",
+      "name": "Inquisitive",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:travel",
+      "name": "Travel",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:investigative",
+      "name": "Investigative",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:skepticism_vs_belief",
+      "name": "Skepticism vs belief",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:cryptozoology",
+      "name": "Cryptozoology",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:field_based",
+      "name": "Field based",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:folklore",
+      "name": "Folklore",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:travelogue_driven",
+      "name": "Travelogue driven",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:field_research",
+      "name": "Field research",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:reality_tv",
+      "name": "Reality tv",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:expeditionary",
+      "name": "Expeditionary",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:travel",
+      "name": "Travel",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:night_operative",
+      "name": "Night operative",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:cryptozoology",
+      "name": "Cryptozoology",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:cryptozoology",
+      "name": "Cryptozoology",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:paranormal_investigation",
+      "name": "Paranormal investigation",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:cryptids",
+      "name": "Cryptids",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:expedition",
+      "name": "Expedition",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:outdoor_exploration",
+      "name": "Outdoor exploration",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:evidence",
+      "name": "Evidence",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:folklore",
+      "name": "Folklore",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:humorous",
+      "name": "Humorous",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:thrill_seeking",
+      "name": "Thrill seeking",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:paranormal_investigation",
+      "name": "Paranormal investigation",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_explorer",
+      "name": "The explorer",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:folklore",
+      "name": "Folklore",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_monster",
+      "name": "The monster",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:folklore_studies",
+      "name": "Folklore studies",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:paranormal_phenomenon",
+      "name": "Paranormal phenomenon",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:genre:qloo:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:brave",
+      "name": "Brave",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:skeptical",
+      "name": "Skeptical",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:field_recorded",
+      "name": "Field recorded",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:cultural_exploration",
+      "name": "Cultural exploration",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:suspenseful",
+      "name": "Suspenseful",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:supernatural_power",
+      "name": "Supernatural power",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_skeptic",
+      "name": "The skeptic",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:night_investigation",
+      "name": "Night investigation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:non_fiction",
+      "name": "Non fiction",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:expedition",
+      "name": "Expedition",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:psychotronic_series",
+      "name": "Psychotronic series",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:interests:qloo:cryptozoology",
+      "name": "Cryptozoology",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:travelogue",
+      "name": "Travelogue",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:emotionally_engaged",
+      "name": "Emotionally engaged",
+      "type": "urn:tag:audience:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2009,2017",
+    "entity_id": "D138CBE7-808A-4458-B9DB-CFF2272825BA",
+    "name": "River Monsters",
+    "popularity": 0.7391130908849146,
+    "query": {
+     "affinity": 0.9599829576011438,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:subgenre:qloo:field_investigation",
+      "name": "Field investigation",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:exploration",
+      "name": "Exploration",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:fishing_rod",
+      "name": "Fishing rod",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:biodiversity",
+      "name": "Biodiversity",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:bait",
+      "name": "Bait",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:style:qloo:immersive_expedition_cinema",
+      "name": "Immersive expedition cinema",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:freshwater_fish",
+      "name": "Freshwater fish",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:nature_documentary",
+      "name": "Nature documentary",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:tenacious",
+      "name": "Tenacious",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:angler",
+      "name": "Angler",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:field_research",
+      "name": "Field research",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:fieldwork",
+      "name": "Fieldwork",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:close_up_underwater_cinematography",
+      "name": "Close up underwater cinematography",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:river_ecology",
+      "name": "River ecology",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_monster",
+      "name": "The monster",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:nature_as_unknown",
+      "name": "Nature as unknown",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:nature_loving",
+      "name": "Nature loving",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:respectful",
+      "name": "Respectful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:science_focused",
+      "name": "Science focused",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:natural_history",
+      "name": "Natural history",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:two_word_title",
+      "name": "Two word title",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:biologist",
+      "name": "Biologist",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:audience:qloo:outdoorsy",
+      "name": "Outdoorsy",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:folklore",
+      "name": "Folklore",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:expedition",
+      "name": "Expedition",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:killer_fish",
+      "name": "Killer fish",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:fish_hook",
+      "name": "Fish hook",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:rod_and_reel_fishing",
+      "name": "Rod and reel fishing",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:lake",
+      "name": "Lake",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:fishing",
+      "name": "Fishing",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:determined",
+      "name": "Determined",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:rod_and_reel",
+      "name": "Rod and reel",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:audience:qloo:thrill_seeking",
+      "name": "Thrill seeking",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:fisherman",
+      "name": "Fisherman",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:interests:qloo:fishing",
+      "name": "Fishing",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:educational",
+      "name": "Educational",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:conservation",
+      "name": "Conservation",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:fishing",
+      "name": "Fishing",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:animal",
+      "name": "Animal",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:knowledgeable",
+      "name": "Knowledgeable",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:culturally_curious",
+      "name": "Culturally curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:outdoor_adventure",
+      "name": "Outdoor adventure",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:underwater_scene",
+      "name": "Underwater scene",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:tense",
+      "name": "Tense",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:fishing_line",
+      "name": "Fishing line",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:investigative",
+      "name": "Investigative",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:human_animal_interaction",
+      "name": "Human animal interaction",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:interviews",
+      "name": "Interviews",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:wildlife_expedition",
+      "name": "Wildlife expedition",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:compassionate",
+      "name": "Compassionate",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:long_running_tv",
+      "name": "Long running tv",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:local_legends",
+      "name": "Local legends",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:brave",
+      "name": "Brave",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_explorer",
+      "name": "The explorer",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:hands_on_scientific_demonstration",
+      "name": "Hands on scientific demonstration",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_investigator",
+      "name": "The investigator",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:wildlife_photography",
+      "name": "Wildlife photography",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:river",
+      "name": "River",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:genre:media:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:giant_fish",
+      "name": "Giant fish",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:style:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:fishing_lure",
+      "name": "Fishing lure",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:biodiversity",
+      "name": "Biodiversity",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:multilingual",
+      "name": "Multilingual",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:conservation",
+      "name": "Conservation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:fishing_pole",
+      "name": "Fishing pole",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:style:qloo:observational",
+      "name": "Observational",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:fish",
+      "name": "Fish",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:style:qloo:tense_field_capture_footage",
+      "name": "Tense field capture footage",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:conservation",
+      "name": "Conservation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:myth_versus_science",
+      "name": "Myth versus science",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:science_oriented",
+      "name": "Science oriented",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:nature_documentary",
+      "name": "Nature documentary",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:angling",
+      "name": "Angling",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:interview_driven_localism",
+      "name": "Interview driven localism",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:wildlife_documentary",
+      "name": "Wildlife documentary",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:suspenseful",
+      "name": "Suspenseful",
+      "type": "urn:tag:plot:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2019",
+    "entity_id": "CB338208-9DEC-4D6A-809F-889044D88B9A",
+    "name": "Expedition Bigfoot",
+    "popularity": 0.3091549763978459,
+    "query": {
+     "affinity": 0.9565746569627989,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:keyword:qloo:overturned_trees",
+      "name": "Overturned trees",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:evidence_by_accretion_editing",
+      "name": "Evidence by accretion editing",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:survival",
+      "name": "Survival",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:amateur_filmmaking",
+      "name": "Amateur filmmaking",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:expedition",
+      "name": "Expedition",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:folklore",
+      "name": "Folklore",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:primatology",
+      "name": "Primatology",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:field_research",
+      "name": "Field research",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:thriller",
+      "name": "Thriller",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:style:qloo:trail_cam_footage_aesthetic",
+      "name": "Trail cam footage aesthetic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:thrill_seeking",
+      "name": "Thrill seeking",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:moody",
+      "name": "Moody",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:footprints",
+      "name": "Footprints",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:suspenseful",
+      "name": "Suspenseful",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wilderness",
+      "name": "Wilderness",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:outdoor_survival",
+      "name": "Outdoor survival",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_quest",
+      "name": "The quest",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:trail_cameras",
+      "name": "Trail cameras",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:wilderness_as_other",
+      "name": "Wilderness as other",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:determined",
+      "name": "Determined",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:belief_versus_skepticism",
+      "name": "Belief versus skepticism",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:character_driven",
+      "name": "Character driven",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:wildlife_biology",
+      "name": "Wildlife biology",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:field_research",
+      "name": "Field research",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:bigfoot",
+      "name": "Bigfoot",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:campfire_interrogation_beats",
+      "name": "Campfire interrogation beats",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:folklore_enthusiasts",
+      "name": "Folklore enthusiasts",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_skeptic",
+      "name": "The skeptic",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:thriller",
+      "name": "Thriller",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_unknown",
+      "name": "The unknown",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:genre_savvy",
+      "name": "Genre savvy",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:survival",
+      "name": "Survival",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:emotionally_engaged",
+      "name": "Emotionally engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:paranormal_investigation",
+      "name": "Paranormal investigation",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:obsessive",
+      "name": "Obsessive",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:reality_style_documentary",
+      "name": "Reality style documentary",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:skeptical",
+      "name": "Skeptical",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:folklore_and_myth",
+      "name": "Folklore and myth",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:night_time_stakeout_intimacy",
+      "name": "Night time stakeout intimacy",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:tense",
+      "name": "Tense",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:sasquatch",
+      "name": "Sasquatch",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:scientific_inquiry",
+      "name": "Scientific inquiry",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:rough_hewn_expedition_cinematography",
+      "name": "Rough hewn expedition cinematography",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:cryptozoology",
+      "name": "Cryptozoology",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:cryptozoology",
+      "name": "Cryptozoology",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:reenactment",
+      "name": "Reenactment",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:interests:qloo:cryptozoology",
+      "name": "Cryptozoology",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:investigative",
+      "name": "Investigative",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:man_versus_wilderness",
+      "name": "Man versus wilderness",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_explorer",
+      "name": "The explorer",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:land",
+      "name": "Land",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_believer",
+      "name": "The believer",
+      "type": "urn:tag:archetype:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2013,2025",
+    "entity_id": "B8B9D692-256D-4816-BCCE-2F2EBA257D40",
+    "name": "Life Below Zero",
+    "popularity": 0.6615916494913902,
+    "query": {
+     "affinity": 0.9557926458788765,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:keyword:media:alaska",
+      "name": "Alaska",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:isolation",
+      "name": "Isolation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wilderness",
+      "name": "Wilderness",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:outdoor_photography",
+      "name": "Outdoor photography",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:self_reliance",
+      "name": "Self reliance",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:rite_of_passage",
+      "name": "Rite of passage",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:long_observational_takes",
+      "name": "Long observational takes",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:fishing",
+      "name": "Fishing",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:survival_skills",
+      "name": "Survival skills",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:backcountry_camping",
+      "name": "Backcountry camping",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:humble",
+      "name": "Humble",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_homesteader",
+      "name": "The homesteader",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:survivor_minded",
+      "name": "Survivor minded",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:subsistence_living",
+      "name": "Subsistence living",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:realistic",
+      "name": "Realistic",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:documentary_fans",
+      "name": "Documentary fans",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:subsistence",
+      "name": "Subsistence",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:audience:qloo:survival_enthusiasts",
+      "name": "Survival enthusiasts",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:human_vs_nature",
+      "name": "Human vs nature",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:brave",
+      "name": "Brave",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:survival",
+      "name": "Survival",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:close_foraging_and_gear_detail",
+      "name": "Close foraging and gear detail",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:stoic",
+      "name": "Stoic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:outdoors_oriented",
+      "name": "Outdoors oriented",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:resourcefulness",
+      "name": "Resourcefulness",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:realistic",
+      "name": "Realistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:community",
+      "name": "Community",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:bushcraft",
+      "name": "Bushcraft",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:practical",
+      "name": "Practical",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:protective",
+      "name": "Protective",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:character_driven",
+      "name": "Character driven",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:documentary_style",
+      "name": "Documentary style",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:emotionally_engaged",
+      "name": "Emotionally engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:ambient_environmental_soundscapes",
+      "name": "Ambient environmental soundscapes",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:dog_sledding",
+      "name": "Dog sledding",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:observational",
+      "name": "Observational",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:suspenseful",
+      "name": "Suspenseful",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:homesteading",
+      "name": "Homesteading",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:intense",
+      "name": "Intense",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:cold_weather",
+      "name": "Cold weather",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:reality_tv",
+      "name": "Reality tv",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:hunting",
+      "name": "Hunting",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:determined",
+      "name": "Determined",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:survival",
+      "name": "Survival",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:nature_documentary",
+      "name": "Nature documentary",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:wildlife_conservation",
+      "name": "Wildlife conservation",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:mature",
+      "name": "Mature",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:man_vs_nature",
+      "name": "Man vs nature",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:reality",
+      "name": "Reality",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:observational_documentary",
+      "name": "Observational documentary",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_frontier",
+      "name": "The frontier",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:survival_documentary",
+      "name": "Survival documentary",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resilient",
+      "name": "Resilient",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:seasonal_progression_focus",
+      "name": "Seasonal progression focus",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:hunting",
+      "name": "Hunting",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:unvarnished_portraiture",
+      "name": "Unvarnished portraiture",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:isolation",
+      "name": "Isolation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:self_reliant",
+      "name": "Self reliant",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:audience:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_survivor",
+      "name": "The survivor",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:hunting",
+      "name": "Hunting",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:remote",
+      "name": "Remote",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:nature",
+      "name": "Nature",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:bush",
+      "name": "Bush",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:genre:media:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:survival_oriented",
+      "name": "Survival oriented",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:resilience",
+      "name": "Resilience",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:subsistence_living",
+      "name": "Subsistence living",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wildlife",
+      "name": "Wildlife",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:thoughtful",
+      "name": "Thoughtful",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:tense",
+      "name": "Tense",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:survival_adventure",
+      "name": "Survival adventure",
+      "type": "urn:tag:keyword:media"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2004",
+    "entity_id": "0E327D84-B272-4FCB-ACB7-56EDD9DC39AE",
+    "name": "Survivorman",
+    "popularity": 0.7261485273585533,
+    "query": {
+     "affinity": 0.9542745912123022,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:keyword:media:arizona",
+      "name": "Arizona",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wilderness",
+      "name": "Wilderness",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:instructive",
+      "name": "Instructive",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:arizona_territory",
+      "name": "Arizona territory",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:style:qloo:self_filmed",
+      "name": "Self filmed",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:navigation",
+      "name": "Navigation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:wilderness_medicine",
+      "name": "Wilderness medicine",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:brave",
+      "name": "Brave",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:reality",
+      "name": "Reality",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:determined",
+      "name": "Determined",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:raw",
+      "name": "Raw",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:wilderness_survival",
+      "name": "Wilderness survival",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:survival_adventure",
+      "name": "Survival adventure",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:interests:qloo:camping",
+      "name": "Camping",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:tense",
+      "name": "Tense",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:foraging",
+      "name": "Foraging",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:handheld",
+      "name": "Handheld",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_everyman",
+      "name": "The everyman",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:intellectually_curious",
+      "name": "Intellectually curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:adaptation",
+      "name": "Adaptation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:stoic",
+      "name": "Stoic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:survival_focused",
+      "name": "Survival focused",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:mature",
+      "name": "Mature",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_mentor",
+      "name": "The mentor",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:man_versus_nature",
+      "name": "Man versus nature",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:instructional",
+      "name": "Instructional",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:shelter_building",
+      "name": "Shelter building",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:pragmatic",
+      "name": "Pragmatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:solo_camera",
+      "name": "Solo camera",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:trial_by_ordeal",
+      "name": "Trial by ordeal",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:hands_on",
+      "name": "Hands on",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:outdoor_oriented",
+      "name": "Outdoor oriented",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:arizona_desert",
+      "name": "Arizona desert",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:resilience",
+      "name": "Resilience",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:isolation",
+      "name": "Isolation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:skill_transmission",
+      "name": "Skill transmission",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:unvarnished",
+      "name": "Unvarnished",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:solo_survival",
+      "name": "Solo survival",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:isolation",
+      "name": "Isolation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:self_reliant",
+      "name": "Self reliant",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:self_reliance",
+      "name": "Self reliance",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:diy_cinematography",
+      "name": "Diy cinematography",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resilient",
+      "name": "Resilient",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:fire_starting",
+      "name": "Fire starting",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:field_filmmaking",
+      "name": "Field filmmaking",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:desert",
+      "name": "Desert",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:character_driven",
+      "name": "Character driven",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:analytical",
+      "name": "Analytical",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:realistic",
+      "name": "Realistic",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:survival_techniques",
+      "name": "Survival techniques",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:wilderness_survival",
+      "name": "Wilderness survival",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:diy_minded",
+      "name": "Diy minded",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:suspenseful",
+      "name": "Suspenseful",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:survival",
+      "name": "Survival",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:expedition_documentary",
+      "name": "Expedition documentary",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:foraging",
+      "name": "Foraging",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:outdoor_skills",
+      "name": "Outdoor skills",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:human_versus_nature",
+      "name": "Human versus nature",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:self_reliance",
+      "name": "Self reliance",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:instructional",
+      "name": "Instructional",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:bushcraft",
+      "name": "Bushcraft",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:survival_instruction",
+      "name": "Survival instruction",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_survivor",
+      "name": "The survivor",
+      "type": "urn:tag:archetype:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2018",
+    "entity_id": "9979958E-9E29-4C4C-8CAD-B3C4B6965C41",
+    "name": "Extinct or Alive",
+    "popularity": null,
+    "query": {
+     "affinity": 0.9512097207957784,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:style:qloo:real_time_encounter_footage",
+      "name": "Real time encounter footage",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:nature_loving",
+      "name": "Nature loving",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:educated",
+      "name": "Educated",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:investigation",
+      "name": "Investigation",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:rediscovery",
+      "name": "Rediscovery",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:conservation",
+      "name": "Conservation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:investigative",
+      "name": "Investigative",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:compassionate",
+      "name": "Compassionate",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:wildlife_documentary",
+      "name": "Wildlife documentary",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:empathetic",
+      "name": "Empathetic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:socially_conscious",
+      "name": "Socially conscious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:observational",
+      "name": "Observational",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:expeditions",
+      "name": "Expeditions",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:extinction",
+      "name": "Extinction",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:close_up_field_study",
+      "name": "Close up field study",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:conservation_focused_framing",
+      "name": "Conservation focused framing",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_scientist",
+      "name": "The scientist",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_explorer",
+      "name": "The explorer",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:conservation",
+      "name": "Conservation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:habitats",
+      "name": "Habitats",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:endangered_species",
+      "name": "Endangered species",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:field_research",
+      "name": "Field research",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wildlife_footage",
+      "name": "Wildlife footage",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:conservation",
+      "name": "Conservation",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:determined",
+      "name": "Determined",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:wildlife_conservation",
+      "name": "Wildlife conservation",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:human_impact",
+      "name": "Human impact",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:educational",
+      "name": "Educational",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:handheld_expedition_footage",
+      "name": "Handheld expedition footage",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:expedition",
+      "name": "Expedition",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:passionate",
+      "name": "Passionate",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:extinct_animal",
+      "name": "Extinct animal",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:plot:qloo:uplifting",
+      "name": "Uplifting",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:mystery",
+      "name": "Mystery",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:conservation_minded",
+      "name": "Conservation minded",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:biologist",
+      "name": "Biologist",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:cinematic",
+      "name": "Cinematic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:field_biology",
+      "name": "Field biology",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_conservationist",
+      "name": "The conservationist",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:three_word_series_title",
+      "name": "Three word series title",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:character:qloo:enthusiastic",
+      "name": "Enthusiastic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:immersive",
+      "name": "Immersive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:audience:qloo:analytical",
+      "name": "Analytical",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:biodiversity",
+      "name": "Biodiversity",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:environmental_activism",
+      "name": "Environmental activism",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:rediscovery",
+      "name": "Rediscovery",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:travel_and_exploration",
+      "name": "Travel and exploration",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:thought_provoking",
+      "name": "Thought provoking",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:charismatic",
+      "name": "Charismatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_quest",
+      "name": "The quest",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:thought_extinct",
+      "name": "Thought extinct",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:style:qloo:on_location_immersion",
+      "name": "On location immersion",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:nature_photography",
+      "name": "Nature photography",
+      "type": "urn:tag:interests:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2015",
+    "entity_id": "C76F79FF-C34E-484F-962B-187E531B22BA",
+    "name": "Alone",
+    "popularity": 0.8536001595638588,
+    "query": {
+     "affinity": 0.950371878890586,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "references": null,
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:audience:qloo:outdoorsy",
+      "name": "Outdoorsy",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:realistic",
+      "name": "Realistic",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:visceral",
+      "name": "Visceral",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:shelter",
+      "name": "Shelter",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:tense",
+      "name": "Tense",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:empathetic",
+      "name": "Empathetic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resilient",
+      "name": "Resilient",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:cameras",
+      "name": "Cameras",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:21st_century",
+      "name": "21st century",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:bushcraft",
+      "name": "Bushcraft",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:hunting",
+      "name": "Hunting",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_survivor",
+      "name": "The survivor",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:determined",
+      "name": "Determined",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:wilderness",
+      "name": "Wilderness",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:genre:media:game_show",
+      "name": "Game show",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:interests:qloo:bushcraft",
+      "name": "Bushcraft",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:nature_conservation",
+      "name": "Nature conservation",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:minimal_intervention",
+      "name": "Minimal intervention",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:character_driven",
+      "name": "Character driven",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:resilience",
+      "name": "Resilience",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:outdoor_photography",
+      "name": "Outdoor photography",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:vulnerable",
+      "name": "Vulnerable",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:competition",
+      "name": "Competition",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:self_recorded_intimacy",
+      "name": "Self recorded intimacy",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:reflective",
+      "name": "Reflective",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:reality_tv",
+      "name": "Reality tv",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:survival",
+      "name": "Survival",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:human_versus_nature",
+      "name": "Human versus nature",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wilderness",
+      "name": "Wilderness",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:brave",
+      "name": "Brave",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:game_show",
+      "name": "Game show",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:survival_game_show",
+      "name": "Survival game show",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:keyword:media:2020s",
+      "name": "2020s",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:genre:media:documentary",
+      "name": "Documentary",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:audience:qloo:emotionally_engaged",
+      "name": "Emotionally engaged",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:survivalist",
+      "name": "Survivalist",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:self_sufficient",
+      "name": "Self sufficient",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:foraging",
+      "name": "Foraging",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:primitive_skills",
+      "name": "Primitive skills",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:intimate",
+      "name": "Intimate",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:suspenseful",
+      "name": "Suspenseful",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:intelligent",
+      "name": "Intelligent",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:2010s",
+      "name": "2010s",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:audience:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:survival",
+      "name": "Survival",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:style:qloo:raw",
+      "name": "Raw",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:unvarnished_footage",
+      "name": "Unvarnished footage",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:slow_burn",
+      "name": "Slow burn",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:remote_wilderness_realism",
+      "name": "Remote wilderness realism",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:survival_minded",
+      "name": "Survival minded",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:survival_focused",
+      "name": "Survival focused",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:outdoor",
+      "name": "Outdoor",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_everyman",
+      "name": "The everyman",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:emotional",
+      "name": "Emotional",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:isolation_as_trial",
+      "name": "Isolation as trial",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:self_discovery",
+      "name": "Self discovery",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:reflective",
+      "name": "Reflective",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:moody",
+      "name": "Moody",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:reality",
+      "name": "Reality",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:psychological",
+      "name": "Psychological",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:competition_reality_tv",
+      "name": "Competition reality tv",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:theme:qloo:isolation",
+      "name": "Isolation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:self_reliance",
+      "name": "Self reliance",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:intense",
+      "name": "Intense",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_hero_s_journey",
+      "name": "The heros journey",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:loneliness",
+      "name": "Loneliness",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:single_participant_framing",
+      "name": "Single participant framing",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:nature",
+      "name": "Nature",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:nature_as_antagonist",
+      "name": "Nature as antagonist",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:haunted",
+      "name": "Haunted",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:survival_reality",
+      "name": "Survival reality",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2012",
+    "entity_id": "0C2B9B1B-AA80-4DCA-BD2A-891A18AAC0BE",
+    "name": "Mountain Men",
+    "popularity": 0.6371916760853666,
+    "query": {
+     "affinity": 0.950071262613079,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:tv_show",
+    "tags": [
+     {
+      "id": "urn:tag:style:qloo:observational",
+      "name": "Observational",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:isolation",
+      "name": "Isolation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:media:non_fiction",
+      "name": "Non fiction",
+      "type": "urn:tag:keyword:media"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:survival_reality",
+      "name": "Survival reality",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:protective",
+      "name": "Protective",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:man_vs_nature",
+      "name": "Man vs nature",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:heritage_oriented",
+      "name": "Heritage oriented",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:brave",
+      "name": "Brave",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:sparse_narrative_focus",
+      "name": "Sparse narrative focus",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wilderness",
+      "name": "Wilderness",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:naturalistic",
+      "name": "Naturalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:trapping",
+      "name": "Trapping",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:realistic",
+      "name": "Realistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:survival",
+      "name": "Survival",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:homesteading",
+      "name": "Homesteading",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:outdoor",
+      "name": "Outdoor",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:determined",
+      "name": "Determined",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:mountains",
+      "name": "Mountains",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:documentary_like",
+      "name": "Documentary like",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:reality",
+      "name": "Reality",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:hardy",
+      "name": "Hardy",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:shelter_building",
+      "name": "Shelter building",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:reality_tv",
+      "name": "Reality tv",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:man_versus_nature",
+      "name": "Man versus nature",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_rugged_individual",
+      "name": "The rugged individual",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:isolation",
+      "name": "Isolation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:frontier_myth",
+      "name": "Frontier myth",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:character_driven",
+      "name": "Character driven",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:wilderness_survival",
+      "name": "Wilderness survival",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:the_pioneer",
+      "name": "The pioneer",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:long_form_observational",
+      "name": "Long form observational",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:hunting",
+      "name": "Hunting",
+      "type": "urn:tag:interests:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resilient",
+      "name": "Resilient",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:self_reliance",
+      "name": "Self reliance",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:trapping",
+      "name": "Trapping",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:tense",
+      "name": "Tense",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:tradition",
+      "name": "Tradition",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:stoic",
+      "name": "Stoic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:independence",
+      "name": "Independence",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:intense",
+      "name": "Intense",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:reflective",
+      "name": "Reflective",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:textured_natural_lighting",
+      "name": "Textured natural lighting",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:genre:media:western",
+      "name": "Western",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:homesteading",
+      "name": "Homesteading",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:outdoorsy",
+      "name": "Outdoorsy",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:subsistence",
+      "name": "Subsistence",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:resourceful",
+      "name": "Resourceful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wildlife",
+      "name": "Wildlife",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:docu_series",
+      "name": "Docu series",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:suspenseful",
+      "name": "Suspenseful",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:wilderness",
+      "name": "Wilderness",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:pragmatic",
+      "name": "Pragmatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:archetype:qloo:survivalist",
+      "name": "Survivalist",
+      "type": "urn:tag:archetype:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:mature",
+      "name": "Mature",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:survival_skills",
+      "name": "Survival skills",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:survival_ethnography",
+      "name": "Survival ethnography",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:hunting",
+      "name": "Hunting",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:self_reliant",
+      "name": "Self reliant",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:empathetic",
+      "name": "Empathetic",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:western",
+      "name": "Western",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:realistic",
+      "name": "Realistic",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:rugged",
+      "name": "Rugged",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:audience:qloo:survival_enthusiast",
+      "name": "Survival enthusiast",
+      "type": "urn:tag:audience:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:immersive_handheld_footage",
+      "name": "Immersive handheld footage",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:plot:qloo:atmospheric",
+      "name": "Atmospheric",
+      "type": "urn:tag:plot:qloo"
+     },
+     {
+      "id": "urn:tag:interests:qloo:bushcraft",
+      "name": "Bushcraft",
+      "type": "urn:tag:interests:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   }
+  ]
+ },
+ "success": true
+}

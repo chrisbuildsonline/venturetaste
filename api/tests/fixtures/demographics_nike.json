@@ -1,0 +1,24 @@
+{
+ "results": {
+  "demographics": [
+   {
+    "entity_id": "C70CE2B8-0AD1-4150-BF18-5A6347F2E860",
+    "query": {
+     "age": {
+      "24_and_younger": 0.29,
+      "25_to_29": 0.18,
+      "30_to_34": 0.12,
+      "35_to_44": 0.07,
+      "45_to_54": -0.51,
+      "55_and_older": -0.59
+     },
+     "gender": {
+      "female": -0.32,
+      "male": 0.32
+     }
+    }
+   }
+  ]
+ },
+ "success": true
+}

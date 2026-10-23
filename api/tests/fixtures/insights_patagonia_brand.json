@@ -1,0 +1,5617 @@
+{
+ "results": {
+  "entities": [
+   {
+    "disambiguation": "",
+    "entity_id": "205AF33F-118E-4C49-9721-6BDBAF981DA0",
+    "name": "Recreational Equipment Inc",
+    "popularity": 0.9928039870488718,
+    "query": {
+     "affinity": 0.9706037605494069,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:genre:brand:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:casual",
+      "name": "Casual",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:functionalist",
+      "name": "Functionalist",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:earth_toned_palette",
+      "name": "Earth-Toned Palette",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:clean_minimalist_typography",
+      "name": "Clean Minimalist Typography",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:nature_focused_photography",
+      "name": "Nature-Focused Photography",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:rugged_industrial_elements",
+      "name": "Rugged Industrial Elements",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:thru_hiking",
+      "name": "Thru-Hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:international_mountaineering",
+      "name": "International Mountaineering",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:off_grid_living",
+      "name": "Off-Grid Living",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:conservation_leadership",
+      "name": "Conservation Leadership",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:mastering_wilderness_survival",
+      "name": "Mastering Wilderness Survival",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:other",
+      "name": "Other",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:retail_brand",
+      "name": "Retail Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2c",
+      "name": "B2C",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:subscription",
+      "name": "Subscription",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:patagonia",
+      "name": "Patagonia",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:backcountry",
+      "name": "Backcountry",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:the_north_face",
+      "name": "The North Face",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:dick_s_sporting_goods",
+      "name": "Dick's Sporting Goods",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:sierra",
+      "name": "Sierra",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:sustainability",
+      "name": "Sustainability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:stewardship",
+      "name": "Stewardship",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:cooperation",
+      "name": "Cooperation",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:accessibility",
+      "name": "Accessibility",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:expertise",
+      "name": "Expertise",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:environmentalism",
+      "name": "Environmentalism",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:slow_travel",
+      "name": "Slow Travel",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:leave_no_trace_movement",
+      "name": "Leave No Trace Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:public_land_advocacy",
+      "name": "Public Land Advocacy",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:outdoor_enthusiasts",
+      "name": "Outdoor Enthusiasts",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:backpackers",
+      "name": "Backpackers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:weekend_hikers",
+      "name": "Weekend Hikers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:active_families",
+      "name": "Active Families",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:adventure_travelers",
+      "name": "Adventure Travelers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:empowering",
+      "name": "Empowering",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:inclusive",
+      "name": "Inclusive",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:community_oriented",
+      "name": "Community-Oriented",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:retail",
+      "name": "Retail",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:sports_fitness",
+      "name": "Sports & Fitness",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_recreation",
+      "name": "Outdoor Recreation",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:consumer_cooperative",
+      "name": "Consumer Cooperative",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:environmental_educators",
+      "name": "Environmental Educators",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:long_distance_hikers",
+      "name": "Long-Distance Hikers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:adventure_photographers",
+      "name": "Adventure Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:professional_climbers",
+      "name": "Professional Climbers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:sustainability_advocates",
+      "name": "Sustainability Advocates",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:environmental_conservation",
+      "name": "Environmental Conservation",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:physical_fitness",
+      "name": "Physical Fitness",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:travel",
+      "name": "Travel",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:sustainable_living",
+      "name": "Sustainable Living",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:skill_development",
+      "name": "Skill Development",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:conservation",
+      "name": "Conservation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:cooperative",
+      "name": "Cooperative",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wilderness",
+      "name": "Wilderness",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:sustainability",
+      "name": "Sustainability",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:outdoor_education",
+      "name": "Outdoor Education",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:rei_co_op_mastercard",
+      "name": "REI Co-op Mastercard",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:national_park_foundation",
+      "name": "National Park Foundation",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:leave_no_trace",
+      "name": "Leave No Trace",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:weekend_hiking",
+      "name": "Weekend Hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:car_camping",
+      "name": "Car Camping",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:commuter_cycling",
+      "name": "Commuter Cycling",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:backcountry_exploration",
+      "name": "Backcountry Exploration",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:local_trail_running",
+      "name": "Local Trail Running",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:mainstream",
+      "name": "Mainstream",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:casual",
+      "name": "casual",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:functional",
+      "name": "functional",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:athleisure",
+      "name": "athleisure",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:outdoor_ready",
+      "name": "outdoor-ready",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:layered",
+      "name": "layered",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:performance_oriented",
+      "name": "performance-oriented",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:price_level:qloo:_",
+      "name": "$$$",
+      "type": "urn:tag:price_level:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:hiking_gear",
+      "name": "Hiking Gear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:camping_equipment",
+      "name": "Camping Equipment",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:cycling_gear",
+      "name": "Cycling Gear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:climbing_apparel",
+      "name": "Climbing Apparel",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:kayaks",
+      "name": "Kayaks",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:outdoor_footwear",
+      "name": "Outdoor Footwear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:travel_services",
+      "name": "Travel Services",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:outdoor_skills_classes",
+      "name": "Outdoor Skills Classes",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:bike_maintenance",
+      "name": "Bike Maintenance",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:used_gear",
+      "name": "Used Gear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:arc_teryx",
+      "name": "Arc'teryx",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:black_diamond",
+      "name": "Black Diamond",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:osprey",
+      "name": "Osprey",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:marmot",
+      "name": "Marmot",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:mountain_hardwear",
+      "name": "Mountain Hardwear",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:subsidiary:qloo:rei_outlet",
+      "name": "REI Outlet",
+      "type": "urn:tag:subsidiary:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:climate_action_plan",
+      "name": "Climate Action Plan",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:used_gear_program",
+      "name": "Used Gear Program",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:public_land_grants",
+      "name": "Public Land Grants",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:carbon_neutral",
+      "name": "Carbon Neutral",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:eco_friendly_packaging",
+      "name": "Eco-Friendly Packaging",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:ethical_sourcing",
+      "name": "Ethical Sourcing",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:fair_trade",
+      "name": "Fair Trade",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:recycled_materials",
+      "name": "Recycled Materials",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:supply_chain_transparency",
+      "name": "Supply Chain Transparency",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:take_back_program",
+      "name": "Take-Back Program",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:water_conservation",
+      "name": "Water Conservation",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium",
+      "name": "Medium",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "DB03F250-64F3-47AB-8756-BC1C4E13EBFD",
+    "name": "The North Face",
+    "popularity": 0.9972453425098744,
+    "query": {
+     "affinity": 0.9566991631255227,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:wikipedia_category:2010s_fashion",
+      "name": "2010s fashion",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:clothing_brands_of_the_united_states",
+      "name": "Clothing brands of the United States",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:mountaineering_equipment_manufacturers",
+      "name": "Mountaineering equipment manufacturers",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:footwear:sneakers",
+      "name": "Sneakers",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:clothing_companies_established_in_1966",
+      "name": "Clothing companies established in 1966",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:footwear",
+      "name": "Footwear",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:casual",
+      "name": "Casual",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:companies_based_in_san_leandro",
+      "name": "Companies based in San Leandro",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:companies_based_in_san_francisco",
+      "name": "Companies based in San Francisco",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:camping_equipment_manufacturers",
+      "name": "Camping equipment manufacturers",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:2000s_fashion",
+      "name": "2000s fashion",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:shoe_companies_of_the_united_states",
+      "name": "Shoe companies of the United States",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:1968_establishments_in_california",
+      "name": "1968 establishments in California",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:american_companies_established_in_1968",
+      "name": "American companies established in 1968",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:accessories:bags_and_leather",
+      "name": "Bags & Leather",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:outdoor_clothing_brands",
+      "name": "Outdoor clothing brands",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:accessories",
+      "name": "Accessories",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:vf_corporation",
+      "name": "VF Corporation",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:sportswear_brands",
+      "name": "Sportswear brands",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:technical_fabrics",
+      "name": "Technical Fabrics",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:durable_construction",
+      "name": "Durable Construction",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:functional_design",
+      "name": "Functional Design",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:bold_branding",
+      "name": "Bold Branding",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:earthy_and_high_visibility_tones",
+      "name": "Earthy and High-Visibility Tones",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:high_altitude_mountaineering",
+      "name": "High-Altitude Mountaineering",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:global_travel",
+      "name": "Global Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:off_grid_exploration",
+      "name": "Off-Grid Exploration",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:peak_performance",
+      "name": "Peak Performance",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:environmental_stewardship",
+      "name": "Environmental Stewardship",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:product_brand",
+      "name": "Product Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2c",
+      "name": "B2C",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2b",
+      "name": "B2B",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:seasonal",
+      "name": "Seasonal",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:permanent",
+      "name": "Permanent",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:capsule",
+      "name": "Capsule",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:drops",
+      "name": "Drops",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:patagonia",
+      "name": "Patagonia",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:columbia_sportswear",
+      "name": "Columbia Sportswear",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:arc_teryx",
+      "name": "Arc'teryx",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:mammut",
+      "name": "Mammut",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:mountain_hardwear",
+      "name": "Mountain Hardwear",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:exploration",
+      "name": "Exploration",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:innovation",
+      "name": "Innovation",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:durability",
+      "name": "Durability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:performance",
+      "name": "Performance",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:sustainability",
+      "name": "Sustainability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:outdoor_culture",
+      "name": "Outdoor Culture",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:streetwear",
+      "name": "Streetwear",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:hiking_community",
+      "name": "Hiking Community",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:sustainable_design_movement",
+      "name": "Sustainable Design Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:outdoor_enthusiasts",
+      "name": "Outdoor Enthusiasts",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:urban_commuters",
+      "name": "Urban Commuters",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:adventure_travelers",
+      "name": "Adventure Travelers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:students",
+      "name": "Students",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:athletes",
+      "name": "Athletes",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:alpinism",
+      "name": "Alpinism",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:expedition_gear",
+      "name": "Expedition Gear",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:mountain_landscapes",
+      "name": "Mountain Landscapes",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:utility_wear",
+      "name": "Utility Wear",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:rugged",
+      "name": "Rugged",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:capable",
+      "name": "Capable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:ambitious",
+      "name": "Ambitious",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:outdoor",
+      "name": "Outdoor",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:sportswear",
+      "name": "Sportswear",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:streetwear",
+      "name": "Streetwear",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:sustainable_fashion",
+      "name": "Sustainable Fashion",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:fashion_apparel",
+      "name": "Fashion & Apparel",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:retail",
+      "name": "Retail",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:sports_fitness",
+      "name": "Sports & Fitness",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_recreation",
+      "name": "Outdoor Recreation",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:professional_mountaineers",
+      "name": "Professional Mountaineers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:adventure_photographers",
+      "name": "Adventure Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:urban_explorers",
+      "name": "Urban Explorers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:environmental_activists",
+      "name": "Environmental Activists",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:streetwear_fashion_influencers",
+      "name": "Streetwear Fashion Influencers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:climbing",
+      "name": "Climbing",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:camping",
+      "name": "Camping",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:canada",
+      "name": "Canada",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:europe",
+      "name": "Europe",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:china",
+      "name": "China",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:japan",
+      "name": "Japan",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:exploration",
+      "name": "Exploration",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:outdoor",
+      "name": "Outdoor",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:performance",
+      "name": "Performance",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:technical",
+      "name": "Technical",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:gucci",
+      "name": "Gucci",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:kaws",
+      "name": "Kaws",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:supreme",
+      "name": "Supreme",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:brain_dead",
+      "name": "Brain Dead",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:jil_sander",
+      "name": "Jil Sander",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:camping",
+      "name": "Camping",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:urban_commuting",
+      "name": "Urban Commuting",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:traveling",
+      "name": "Traveling",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:winter_sports",
+      "name": "Winter Sports",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:mainstream",
+      "name": "Mainstream",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:gore_tex",
+      "name": "Gore-Tex",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:recycled_polyester",
+      "name": "Recycled Polyester",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:down_insulation",
+      "name": "Down Insulation",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:nylon",
+      "name": "Nylon",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:fleece",
+      "name": "Fleece",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:gorpcore",
+      "name": "Gorpcore",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:functional_minimalist",
+      "name": "Functional Minimalist",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:rugged",
+      "name": "Rugged",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:athleisure",
+      "name": "Athleisure",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:sporty",
+      "name": "Sporty",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:price_level:qloo:_",
+      "name": "$$$",
+      "type": "urn:tag:price_level:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:outerwear",
+      "name": "Outerwear",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:footwear",
+      "name": "Footwear",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:apparel",
+      "name": "Apparel",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:equipment",
+      "name": "Equipment",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:accessories",
+      "name": "Accessories",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:outerwear",
+      "name": "Outerwear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:backpacks",
+      "name": "Backpacks",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:tents",
+      "name": "Tents",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:sleeping_bags",
+      "name": "Sleeping Bags",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:sports_equipment",
+      "name": "Sports Equipment",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:clothing",
+      "name": "Clothing",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:outdoor_gear",
+      "name": "Outdoor Gear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:travel_gear",
+      "name": "Travel Gear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:direct_to_consumer",
+      "name": "Direct-to-Consumer",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:department_store",
+      "name": "Department Store",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:wholesale",
+      "name": "Wholesale",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:online_marketplace",
+      "name": "Online Marketplace",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:concession",
+      "name": "Concession",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:nuptse_jacket",
+      "name": "Nuptse Jacket",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:denali_fleece",
+      "name": "Denali Fleece",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:base_camp_duffel",
+      "name": "Base Camp Duffel",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:salomon",
+      "name": "Salomon",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:fjallraven",
+      "name": "Fj\u00e4llr\u00e4ven",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:eddie_bauer",
+      "name": "Eddie Bauer",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:black_diamond",
+      "name": "Black Diamond",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:helly_hansen",
+      "name": "Helly Hansen",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:renewable_energy_usage",
+      "name": "Renewable Energy Usage",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:lifetime_warranty_repair_program",
+      "name": "Lifetime Warranty Repair Program",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:eco_friendly_packaging",
+      "name": "Eco-Friendly Packaging",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:ethical_sourcing",
+      "name": "Ethical Sourcing",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:recycled_materials",
+      "name": "Recycled Materials",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:supply_chain_transparency",
+      "name": "Supply Chain Transparency",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:reduced_carbon_emissions",
+      "name": "Reduced Carbon Emissions",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:teens",
+      "name": "Teens",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:young_adults",
+      "name": "Young Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:male",
+      "name": "Male",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:female",
+      "name": "Female",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:non_binary",
+      "name": "Non-Binary",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium",
+      "name": "Medium",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:high",
+      "name": "High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "11540186-905B-4FF4-8B1A-B1C05AC68DA3",
+    "name": "Backcountry",
+    "popularity": 0.9799460934718855,
+    "query": {
+     "affinity": 0.9542531295279105,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:wikipedia_category:online_retailers_of_the_united_states",
+      "name": "Online retailers of the United States",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:sporting_goods_retailers_of_the_united_states",
+      "name": "Sporting goods retailers of the United States",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:retail_companies_established_in_1996",
+      "name": "Retail companies established in 1996",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:companies_based_in_salt_lake_county",
+      "name": "Companies based in Salt Lake County",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:retail",
+      "name": "Retail",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:1996_establishments_in_utah",
+      "name": "1996 establishments in Utah",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:internet_properties_established_in_1996",
+      "name": "Internet properties established in 1996",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:minimalist_design",
+      "name": "Minimalist Design",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:high_visibility_color_accents",
+      "name": "High-Visibility Color Accents",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:functional_utility_focus",
+      "name": "Functional Utility Focus",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:rugged_texture",
+      "name": "Rugged Texture",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:nature_inspired_imagery",
+      "name": "Nature-Inspired Imagery",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:alpine_mountaineering",
+      "name": "Alpine Mountaineering",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:expeditionary_travel",
+      "name": "Expeditionary Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:professional_athletics",
+      "name": "Professional Athletics",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:sustainable_exploration",
+      "name": "Sustainable Exploration",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:other",
+      "name": "Other",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:retail_brand",
+      "name": "Retail Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2c",
+      "name": "B2C",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:rei",
+      "name": "REI",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:moosejaw",
+      "name": "Moosejaw",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:sierra",
+      "name": "Sierra",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:outdoor_research",
+      "name": "Outdoor Research",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:technical_excellence",
+      "name": "Technical Excellence",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:expertise",
+      "name": "Expertise",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:authenticity",
+      "name": "Authenticity",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:outdoor_lifestyle_movement",
+      "name": "Outdoor Lifestyle Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:conservation",
+      "name": "Conservation",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:adventure_sports_community",
+      "name": "Adventure Sports Community",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:outdoor_enthusiasts",
+      "name": "Outdoor Enthusiasts",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:serious_mountaineers",
+      "name": "Serious Mountaineers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:weekend_warriors",
+      "name": "Weekend Warriors",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:adventure_travelers",
+      "name": "Adventure Travelers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:expert",
+      "name": "Expert",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:ambitious",
+      "name": "Ambitious",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:retail",
+      "name": "Retail",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:sports_fitness",
+      "name": "Sports & Fitness",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_equipment",
+      "name": "Outdoor Equipment",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:e_commerce",
+      "name": "E-commerce",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:professional_climbers",
+      "name": "Professional Climbers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:ski_mountaineers",
+      "name": "Ski Mountaineers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:outdoor_photographers",
+      "name": "Outdoor Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:backpacking_guides",
+      "name": "Backpacking Guides",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:trail_runners",
+      "name": "Trail Runners",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:trail_running",
+      "name": "Trail Running",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:rock_climbing",
+      "name": "Rock Climbing",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:skiing",
+      "name": "Skiing",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wilderness",
+      "name": "Wilderness",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:technical_gear",
+      "name": "Technical Gear",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:adventure",
+      "name": "Adventure",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:outdoor_sport",
+      "name": "Outdoor Sport",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:the_north_face",
+      "name": "The North Face",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:patagonia",
+      "name": "Patagonia",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:black_diamond",
+      "name": "Black Diamond",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:arc_teryx",
+      "name": "Arc'teryx",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:weekend_hiking",
+      "name": "Weekend Hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:backcountry_skiing",
+      "name": "Backcountry Skiing",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:climbing_excursions",
+      "name": "Climbing Excursions",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:wilderness_camping",
+      "name": "Wilderness Camping",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:technical_training",
+      "name": "Technical Training",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:mainstream",
+      "name": "Mainstream",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:niche",
+      "name": "Niche",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:price_level:qloo:_",
+      "name": "$$$",
+      "type": "urn:tag:price_level:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:technical_outerwear",
+      "name": "Technical Outerwear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:hiking_boots",
+      "name": "Hiking Boots",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:climbing_gear",
+      "name": "Climbing Gear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:camping_tents",
+      "name": "Camping Tents",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:ski_equipment",
+      "name": "Ski Equipment",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:backpacks",
+      "name": "Backpacks",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:mountain_bikes",
+      "name": "Mountain Bikes",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:sleeping_bags",
+      "name": "Sleeping Bags",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:patagonia",
+      "name": "Patagonia",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:arc_teryx",
+      "name": "Arc'teryx",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:mammut",
+      "name": "Mammut",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:black_diamond",
+      "name": "Black Diamond",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:subsidiary:qloo:competitive_cyclist",
+      "name": "Competitive Cyclist",
+      "type": "urn:tag:subsidiary:qloo"
+     },
+     {
+      "id": "urn:tag:subsidiary:qloo:motosport",
+      "name": "MotoSport",
+      "type": "urn:tag:subsidiary:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:environmental_stewardship_partners",
+      "name": "Environmental Stewardship Partners",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:ethical_sourcing",
+      "name": "Ethical Sourcing",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:supply_chain_transparency",
+      "name": "Supply Chain Transparency",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:young_adults",
+      "name": "Young Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:male",
+      "name": "Male",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:female",
+      "name": "Female",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium",
+      "name": "Medium",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:high",
+      "name": "High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "7A016C85-D68B-446B-9D97-2B2D96ACF6F6",
+    "name": "Backpacker Magazine",
+    "popularity": 0.9661982336288586,
+    "query": {
+     "affinity": 0.9514064218789732,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:genre:brand:entertainment",
+      "name": "Entertainment",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:entertainment:media",
+      "name": "Media",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:platform_feature:qloo:advertising_enabled",
+      "name": "Advertising Enabled",
+      "type": "urn:tag:platform_feature:qloo"
+     },
+     {
+      "id": "urn:tag:genre:brand:travel",
+      "name": "Travel",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:website",
+      "name": "Website",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:entertainment:media:travel",
+      "name": "Travel",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:authentic_photography",
+      "name": "Authentic Photography",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:rugged_imagery",
+      "name": "Rugged Imagery",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:technical_documentation",
+      "name": "Technical Documentation",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:clean_layouts",
+      "name": "Clean Layouts",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:informative_maps",
+      "name": "Informative Maps",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:thru_hiking",
+      "name": "Thru-Hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:remote_expeditionary_travel",
+      "name": "Remote Expeditionary Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:wilderness_immersion",
+      "name": "Wilderness Immersion",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:other",
+      "name": "Other",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:media_brand",
+      "name": "Media Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2c",
+      "name": "B2C",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:advertising",
+      "name": "Advertising",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:subscription",
+      "name": "Subscription",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:outside",
+      "name": "Outside",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:trail_runner",
+      "name": "Trail Runner",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:climbing",
+      "name": "Climbing",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:sierra",
+      "name": "Sierra",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:adventure_journal",
+      "name": "Adventure Journal",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:stewardship",
+      "name": "Stewardship",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:competence",
+      "name": "Competence",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:exploration",
+      "name": "Exploration",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:environmental_responsibility",
+      "name": "Environmental Responsibility",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:conservation_movement",
+      "name": "Conservation Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:outdoor_lifestyle_movement",
+      "name": "Outdoor Lifestyle Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:leave_no_trace_ethics",
+      "name": "Leave No Trace Ethics",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:experienced_hikers",
+      "name": "Experienced Hikers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:weekend_warriors",
+      "name": "Weekend Warriors",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:long_distance_trekkers",
+      "name": "Long Distance Trekkers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:outdoor_enthusiasts",
+      "name": "Outdoor Enthusiasts",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:empowering",
+      "name": "Empowering",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:technical",
+      "name": "Technical",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:inspirational",
+      "name": "Inspirational",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:media_entertainment",
+      "name": "Media & Entertainment",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_recreation",
+      "name": "Outdoor Recreation",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:publishing",
+      "name": "Publishing",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:professional_mountaineers",
+      "name": "Professional Mountaineers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:thru_hikers",
+      "name": "Thru-Hikers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:outdoor_survival_instructors",
+      "name": "Outdoor Survival Instructors",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:wilderness_photographers",
+      "name": "Wilderness Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:environmental_advocates",
+      "name": "Environmental Advocates",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:wilderness_navigation",
+      "name": "Wilderness Navigation",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:backcountry_cooking",
+      "name": "Backcountry Cooking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:leave_no_trace_principles",
+      "name": "Leave No Trace Principles",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:wildlife_photography",
+      "name": "Wildlife Photography",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:gear_maintenance",
+      "name": "Gear Maintenance",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:canada",
+      "name": "Canada",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:wilderness_survival",
+      "name": "Wilderness Survival",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:camping_gear",
+      "name": "Camping Gear",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:trail_guides",
+      "name": "Trail Guides",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:outside",
+      "name": "Outside",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:american_hiking_society",
+      "name": "American Hiking Society",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:weekend_camping",
+      "name": "Weekend Camping",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:trail_hiking",
+      "name": "Trail Hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:gear_researching",
+      "name": "Gear Researching",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:outdoor_trip_planning",
+      "name": "Outdoor Trip Planning",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:mainstream",
+      "name": "Mainstream",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:print_magazine",
+      "name": "Print Magazine",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:digital_articles",
+      "name": "Digital Articles",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:gear_reviews",
+      "name": "Gear Reviews",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:skills_tutorials",
+      "name": "Skills Tutorials",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:trip_planning_guides",
+      "name": "Trip Planning Guides",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:podcasts",
+      "name": "Podcasts",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:newsletters",
+      "name": "Newsletters",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:national_geographic",
+      "name": "National Geographic",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:rei_co_op_journal",
+      "name": "REI Co-op Journal",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:the_trek",
+      "name": "The Trek",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:alpinist",
+      "name": "Alpinist",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:sidetracked",
+      "name": "Sidetracked",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:outdoor_stewardship",
+      "name": "Outdoor Stewardship",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:conservation_advocacy",
+      "name": "Conservation Advocacy",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:social_impact",
+      "name": "Social Impact",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:young_adults",
+      "name": "Young Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium",
+      "name": "Medium",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "18D5DBF4-9CD8-4F4D-8E20-704DE975C93C",
+    "name": "Osprey",
+    "popularity": 0.9598921869437711,
+    "query": {
+     "affinity": 0.941727169948367,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:genre:brand:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:accessories:bags_and_leather",
+      "name": "Bags & Leather",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:accessories",
+      "name": "Accessories",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:technical_design",
+      "name": "Technical Design",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:ergonomic_shapes",
+      "name": "Ergonomic Shapes",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:utility_focused",
+      "name": "Utility-Focused",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:earth_tone_palettes",
+      "name": "Earth-Tone Palettes",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:high_visibility_accents",
+      "name": "High-Visibility Accents",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:thru_hiking",
+      "name": "Thru-hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:alpine_exploration",
+      "name": "Alpine Exploration",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:global_adventure_travel",
+      "name": "Global Adventure Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:remote_wilderness_expeditions",
+      "name": "Remote Wilderness Expeditions",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:other",
+      "name": "Other",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:corporate_brand",
+      "name": "Corporate Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2c",
+      "name": "B2C",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:gregory_mountain_products",
+      "name": "Gregory Mountain Products",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:deuter",
+      "name": "Deuter",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:mystery_ranch",
+      "name": "Mystery Ranch",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:arc_teryx",
+      "name": "Arc'teryx",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:patagonia",
+      "name": "Patagonia",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:sustainability",
+      "name": "Sustainability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:quality",
+      "name": "Quality",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:innovation",
+      "name": "Innovation",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:durability",
+      "name": "Durability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:outdoor_culture",
+      "name": "Outdoor Culture",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:sustainability_movement",
+      "name": "Sustainability Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:leave_no_trace_ethic",
+      "name": "Leave No Trace Ethic",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:backpackers",
+      "name": "Backpackers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:outdoor_enthusiasts",
+      "name": "Outdoor Enthusiasts",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:frequent_travelers",
+      "name": "Frequent Travelers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:day_hikers",
+      "name": "Day Hikers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:practical",
+      "name": "Practical",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:capable",
+      "name": "Capable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:rugged",
+      "name": "Rugged",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:sports_fitness",
+      "name": "Sports & Fitness",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_equipment",
+      "name": "Outdoor Equipment",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:adventure_photographers",
+      "name": "Adventure Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:professional_mountaineers",
+      "name": "Professional Mountaineers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:thru_hikers",
+      "name": "Thru-hikers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:travel_bloggers",
+      "name": "Travel Bloggers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:outdoor_educators",
+      "name": "Outdoor Educators",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:travel",
+      "name": "Travel",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:outdoor_photography",
+      "name": "Outdoor Photography",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:canada",
+      "name": "Canada",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:europe",
+      "name": "Europe",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:ergonomics",
+      "name": "Ergonomics",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:outdoor_gear",
+      "name": "Outdoor Gear",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:durability",
+      "name": "Durability",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:hydration",
+      "name": "Hydration",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:leave_no_trace",
+      "name": "Leave No Trace",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:european_outdoor_conservation_association",
+      "name": "European Outdoor Conservation Association",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:weekend_hiking",
+      "name": "Weekend Hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:travel",
+      "name": "Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:camping",
+      "name": "Camping",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:active_commuting",
+      "name": "Active Commuting",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:mainstream",
+      "name": "Mainstream",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:outdoor_technical",
+      "name": "outdoor technical",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:functional_casual",
+      "name": "functional casual",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:athleisure",
+      "name": "athleisure",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:price_level:qloo:_",
+      "name": "$$$",
+      "type": "urn:tag:price_level:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:backpacks",
+      "name": "Backpacks",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:travel_packs",
+      "name": "Travel Packs",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:hydration_packs",
+      "name": "Hydration Packs",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:daypacks",
+      "name": "Daypacks",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:hiking_gear",
+      "name": "Hiking Gear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:technical_packs",
+      "name": "Technical Packs",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:duffle_bags",
+      "name": "Duffle Bags",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:luggage",
+      "name": "Luggage",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:black_diamond",
+      "name": "Black Diamond",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:the_north_face",
+      "name": "The North Face",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:kelty",
+      "name": "Kelty",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:eddie_bauer",
+      "name": "Eddie Bauer",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:hyperlite_mountain_gear",
+      "name": "Hyperlite Mountain Gear",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:lifetime_repair_guarantee",
+      "name": "Lifetime Repair Guarantee",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:bluesign_certified",
+      "name": "Bluesign Certified",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:eco_friendly_packaging",
+      "name": "Eco-Friendly Packaging",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:supply_chain_transparency",
+      "name": "Supply Chain Transparency",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:social_impact",
+      "name": "Social Impact",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:young_adults",
+      "name": "Young Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium",
+      "name": "Medium",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "B2A2238B-5FDC-46CD-B6F9-A32DB1474C70",
+    "name": "Arc'teryx",
+    "popularity": 0.9824888542320015,
+    "query": {
+     "affinity": 0.9405066656647758,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:wikipedia_category:camping_equipment_manufacturers",
+      "name": "Camping equipment manufacturers",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:mountaineering_equipment_manufacturers",
+      "name": "Mountaineering equipment manufacturers",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:clothing_companies_of_canada",
+      "name": "Clothing companies of Canada",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:athletic",
+      "name": "Athletic",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:2010s_fashion",
+      "name": "2010s fashion",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:retail_companies_established_in_1989",
+      "name": "Retail companies established in 1989",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:clothing_brands_of_canada",
+      "name": "Clothing brands of Canada",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:clothing_companies_established_in_1989",
+      "name": "Clothing companies established in 1989",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:casual",
+      "name": "Casual",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:canadian_companies_established_in_1989",
+      "name": "Canadian companies established in 1989",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:1989_establishments_in_british_columbia",
+      "name": "1989 establishments in British Columbia",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:outdoor_clothing_brands",
+      "name": "Outdoor clothing brands",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:companies_based_in_vancouver",
+      "name": "Companies based in Vancouver",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:minimalist_design",
+      "name": "Minimalist Design",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:ergonomic_cut",
+      "name": "Ergonomic Cut",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:technical_fabrics",
+      "name": "Technical Fabrics",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:clean_lines",
+      "name": "Clean Lines",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:functional_detailing",
+      "name": "Functional Detailing",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:first_ascent_expeditions",
+      "name": "First Ascent Expeditions",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:high_altitude_mountaineering",
+      "name": "High-Altitude Mountaineering",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:backcountry_exploration",
+      "name": "Backcountry Exploration",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:product_brand",
+      "name": "Product Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2c",
+      "name": "B2C",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2b",
+      "name": "B2B",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:seasonal",
+      "name": "Seasonal",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:permanent",
+      "name": "Permanent",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:patagonia",
+      "name": "Patagonia",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:mammut",
+      "name": "Mammut",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:the_north_face",
+      "name": "The North Face",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:norrona",
+      "name": "Norrona",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:black_diamond",
+      "name": "Black Diamond",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:craftsmanship",
+      "name": "Craftsmanship",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:innovation",
+      "name": "Innovation",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:performance",
+      "name": "Performance",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:durability",
+      "name": "Durability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:technical_mountaineering_culture",
+      "name": "Technical Mountaineering Culture",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:outdoor_utility_movement",
+      "name": "Outdoor Utility Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:alpinists",
+      "name": "Alpinists",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:backcountry_skiers",
+      "name": "Backcountry Skiers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:technical_hikers",
+      "name": "Technical Hikers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:urban_explorers",
+      "name": "Urban Explorers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:alpine_conditions",
+      "name": "Alpine Conditions",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:human_ergonomics",
+      "name": "Human Ergonomics",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:technical_utility",
+      "name": "Technical Utility",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:technical",
+      "name": "Technical",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:precise",
+      "name": "Precise",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:outdoor",
+      "name": "Outdoor",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:sportswear",
+      "name": "Sportswear",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:premium",
+      "name": "Premium",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:sustainable_fashion",
+      "name": "Sustainable Fashion",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:fashion_apparel",
+      "name": "Fashion & Apparel",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:sports_fitness",
+      "name": "Sports & Fitness",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_equipment",
+      "name": "Outdoor Equipment",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:professional_alpinists",
+      "name": "Professional Alpinists",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:outdoor_photographers",
+      "name": "Outdoor Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:mountain_guides",
+      "name": "Mountain Guides",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:technical_athletes",
+      "name": "Technical Athletes",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:backcountry_skiing",
+      "name": "Backcountry Skiing",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:trail_running",
+      "name": "Trail Running",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:rock_climbing",
+      "name": "Rock Climbing",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:technical_design",
+      "name": "Technical Design",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:canada",
+      "name": "Canada",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:europe",
+      "name": "Europe",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:china",
+      "name": "China",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:gore_tex",
+      "name": "Gore-Tex",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:technical_outerwear",
+      "name": "Technical Outerwear",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:mountain_performance",
+      "name": "Mountain Performance",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:alpinism",
+      "name": "Alpinism",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:veilance",
+      "name": "Veilance",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:arc_teryx_academy",
+      "name": "Arc'teryx Academy",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:mountain_living",
+      "name": "Mountain Living",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:adventure_travel",
+      "name": "Adventure Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:alpine_training",
+      "name": "Alpine Training",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:outdoor_expeditions",
+      "name": "Outdoor Expeditions",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:niche",
+      "name": "Niche",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:gore_tex",
+      "name": "Gore-Tex",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:ripstop_nylon",
+      "name": "Ripstop Nylon",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:synthetic_insulation",
+      "name": "Synthetic Insulation",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:merino_wool",
+      "name": "Merino Wool",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:utility",
+      "name": "Utility",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:functional",
+      "name": "Functional",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:price_level:qloo:_",
+      "name": "$$$",
+      "type": "urn:tag:price_level:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:outerwear",
+      "name": "Outerwear",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:technical_apparel",
+      "name": "Technical Apparel",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:climbing_equipment",
+      "name": "Climbing Equipment",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:backpacks",
+      "name": "Backpacks",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:footwear",
+      "name": "Footwear",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:technical_shells",
+      "name": "Technical Shells",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:insulated_jackets",
+      "name": "Insulated Jackets",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:climbing_harnesses",
+      "name": "Climbing Harnesses",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:backpacks",
+      "name": "Backpacks",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:base_layers",
+      "name": "Base Layers",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:technical_pants",
+      "name": "Technical Pants",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:footwear",
+      "name": "Footwear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:accessories",
+      "name": "Accessories",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:direct_to_consumer",
+      "name": "Direct-to-Consumer",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:wholesale",
+      "name": "Wholesale",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:online_marketplace",
+      "name": "Online Marketplace",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:alpha_sv_jacket",
+      "name": "Alpha SV Jacket",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:beta_ar_jacket",
+      "name": "Beta AR Jacket",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:atom_lt_hoody",
+      "name": "Atom LT Hoody",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:salomon",
+      "name": "Salomon",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:houdini",
+      "name": "Houdini",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:peak_performance",
+      "name": "Peak Performance",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:klattermusen",
+      "name": "Klattermusen",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:subsidiary:qloo:veilance",
+      "name": "Veilance",
+      "type": "urn:tag:subsidiary:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:rebird_upcycling_program",
+      "name": "Rebird Upcycling Program",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:ethical_sourcing",
+      "name": "Ethical Sourcing",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:supply_chain_transparency",
+      "name": "Supply Chain Transparency",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:take_back_program",
+      "name": "Take-Back Program",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:young_adults",
+      "name": "Young Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:male",
+      "name": "Male",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:female",
+      "name": "Female",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:high",
+      "name": "High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "F5EA6E51-2F04-4714-AAB1-779387D6F2EE",
+    "name": "Smartwool",
+    "popularity": 0.8981200522113543,
+    "query": {
+     "affinity": 0.9393390521237498,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:genre:brand:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:lingerie_and_sleepwear",
+      "name": "Lingerie & Sleepwear",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:athletic",
+      "name": "Athletic",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:functional",
+      "name": "Functional",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:technical",
+      "name": "Technical",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:earth_toned",
+      "name": "Earth-Toned",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:mountain_expeditions",
+      "name": "Mountain Expeditions",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:summiting_peaks",
+      "name": "Summiting Peaks",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:wilderness_exploration",
+      "name": "Wilderness Exploration",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:off_grid_living",
+      "name": "Off-Grid Living",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:product_brand",
+      "name": "Product Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2c",
+      "name": "B2C",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2b",
+      "name": "B2B",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:seasonal",
+      "name": "Seasonal",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:darn_tough",
+      "name": "Darn Tough",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:icebreaker",
+      "name": "Icebreaker",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:patagonia",
+      "name": "Patagonia",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:arc_teryx",
+      "name": "Arc'teryx",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:fits",
+      "name": "FITS",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:performance",
+      "name": "Performance",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:sustainability",
+      "name": "Sustainability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:comfort",
+      "name": "Comfort",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:durability",
+      "name": "Durability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:outdoor_lifestyle_movement",
+      "name": "Outdoor Lifestyle Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:sustainability_movement",
+      "name": "Sustainability Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:outdoor_enthusiasts",
+      "name": "Outdoor Enthusiasts",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:hikers",
+      "name": "Hikers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:trail_runners",
+      "name": "Trail Runners",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:backcountry_skiers",
+      "name": "Backcountry Skiers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:adventure_travelers",
+      "name": "Adventure Travelers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:natural_performance",
+      "name": "Natural Performance",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:alpine_lifestyle",
+      "name": "Alpine Lifestyle",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:comfortable",
+      "name": "Comfortable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:outdoor",
+      "name": "Outdoor",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:activewear",
+      "name": "Activewear",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:sustainable_fashion",
+      "name": "Sustainable Fashion",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:fashion_apparel",
+      "name": "Fashion & Apparel",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_gear",
+      "name": "Outdoor Gear",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:professional_guides",
+      "name": "Professional Guides",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:outdoor_athletes",
+      "name": "Outdoor Athletes",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:adventure_photographers",
+      "name": "Adventure Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:ski_patrollers",
+      "name": "Ski Patrollers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:wildland_firefighters",
+      "name": "Wildland Firefighters",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:trail_running",
+      "name": "Trail Running",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:backcountry_skiing",
+      "name": "Backcountry Skiing",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:camping",
+      "name": "Camping",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:canada",
+      "name": "Canada",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:europe",
+      "name": "Europe",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:merino_wool",
+      "name": "Merino Wool",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:temperature_regulation",
+      "name": "Temperature Regulation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:moisture_wicking",
+      "name": "Moisture Wicking",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:outdoor_performance",
+      "name": "Outdoor Performance",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:technical_apparel",
+      "name": "Technical Apparel",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:rei",
+      "name": "REI",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:alterra_mountain_company",
+      "name": "Alterra Mountain Company",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:camping",
+      "name": "Camping",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:trail_running",
+      "name": "Trail Running",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:skiing",
+      "name": "Skiing",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:travel",
+      "name": "Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:mainstream",
+      "name": "Mainstream",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:merino_wool",
+      "name": "Merino Wool",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:recycled_polyester",
+      "name": "Recycled Polyester",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:nylon",
+      "name": "Nylon",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:elastane",
+      "name": "Elastane",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:functional",
+      "name": "Functional",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:utility",
+      "name": "Utility",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:casual",
+      "name": "Casual",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:price_level:qloo:_",
+      "name": "$$$",
+      "type": "urn:tag:price_level:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:apparel",
+      "name": "Apparel",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:socks",
+      "name": "Socks",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:base_layers",
+      "name": "Base Layers",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:outerwear",
+      "name": "Outerwear",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:accessories",
+      "name": "Accessories",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:merino_wool_socks",
+      "name": "Merino Wool Socks",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:base_layers",
+      "name": "Base Layers",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:mid_layers",
+      "name": "Mid Layers",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:outerwear",
+      "name": "Outerwear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:hiking_apparel",
+      "name": "Hiking Apparel",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:running_apparel",
+      "name": "Running Apparel",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:accessories",
+      "name": "Accessories",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:underwear",
+      "name": "Underwear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:direct_to_consumer",
+      "name": "Direct-to-Consumer",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:department_store",
+      "name": "Department Store",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:wholesale",
+      "name": "Wholesale",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:hike_classic_edition_crew_socks",
+      "name": "Hike Classic Edition Crew Socks",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:merino_250_base_layers",
+      "name": "Merino 250 Base Layers",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:ibex",
+      "name": "Ibex",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:devold",
+      "name": "Devold",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:mons_royale",
+      "name": "Mons Royale",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:minus33",
+      "name": "Minus33",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:bridgedale",
+      "name": "Bridgedale",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:responsible_wool_standard",
+      "name": "Responsible Wool Standard",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:ethical_sourcing",
+      "name": "Ethical Sourcing",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:recycled_materials",
+      "name": "Recycled Materials",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:zero_waste",
+      "name": "Zero Waste",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:young_adults",
+      "name": "Young Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:male",
+      "name": "Male",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:female",
+      "name": "Female",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium",
+      "name": "Medium",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "B88738CC-8415-4F18-9095-2955EC094B0C",
+    "name": "Icebreaker",
+    "popularity": 0.8168703700564492,
+    "query": {
+     "affinity": 0.9352271363603957,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:wikipedia_category:outdoor_clothing_brands",
+      "name": "Outdoor clothing brands",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:clothing_companies_of_new_zealand",
+      "name": "Clothing companies of New Zealand",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:vf_corporation",
+      "name": "VF Corporation",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:2018_mergers_and_acquisitions",
+      "name": "2018 mergers and acquisitions",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:new_zealand_companies_established_in_1995",
+      "name": "New Zealand companies established in 1995",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion:athletic",
+      "name": "Athletic",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:companies_based_in_wellington",
+      "name": "Companies based in Wellington",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:genre:brand:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:wikipedia_category:clothing_companies_established_in_1995",
+      "name": "Clothing companies established in 1995",
+      "type": "urn:tag:wikipedia_category"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:minimalist_design",
+      "name": "Minimalist Design",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:functional_utility",
+      "name": "Functional Utility",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:natural_textures",
+      "name": "Natural Textures",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:earth_toned_palette",
+      "name": "Earth-Toned Palette",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:mountain_expeditions",
+      "name": "Mountain Expeditions",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:wilderness_exploration",
+      "name": "Wilderness Exploration",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:minimalist_living",
+      "name": "Minimalist Living",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:environmentally_conscious_stewardship",
+      "name": "Environmentally Conscious Stewardship",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:product_brand",
+      "name": "Product Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2c",
+      "name": "B2C",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:seasonal",
+      "name": "Seasonal",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:patagonia",
+      "name": "Patagonia",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:smartwool",
+      "name": "Smartwool",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:arc_teryx",
+      "name": "Arc'teryx",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:ortovox",
+      "name": "Ortovox",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:ibex",
+      "name": "Ibex",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:sustainability",
+      "name": "Sustainability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:transparency",
+      "name": "Transparency",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:quality",
+      "name": "Quality",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:innovation",
+      "name": "Innovation",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:nature_based",
+      "name": "Nature-Based",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:sustainability_movement",
+      "name": "Sustainability Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:outdoor_culture",
+      "name": "Outdoor Culture",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:slow_fashion",
+      "name": "Slow Fashion",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:outdoor_enthusiasts",
+      "name": "Outdoor Enthusiasts",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:eco_conscious_consumers",
+      "name": "Eco-Conscious Consumers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:active_professionals",
+      "name": "Active Professionals",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:travelers",
+      "name": "Travelers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:natural_environment",
+      "name": "Natural Environment",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:mountain_performance_requirements",
+      "name": "Mountain Performance Requirements",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:natural",
+      "name": "Natural",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:technical",
+      "name": "Technical",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:outdoor",
+      "name": "Outdoor",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:activewear",
+      "name": "Activewear",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:sustainable_fashion",
+      "name": "Sustainable Fashion",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:sportswear",
+      "name": "Sportswear",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:fashion_apparel",
+      "name": "Fashion & Apparel",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_gear",
+      "name": "Outdoor Gear",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:mountain_guides",
+      "name": "Mountain Guides",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:trail_runners",
+      "name": "Trail Runners",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:nature_photographers",
+      "name": "Nature Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:environmental_advocates",
+      "name": "Environmental Advocates",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:adventure_travelers",
+      "name": "Adventure Travelers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:trail_running",
+      "name": "Trail Running",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:environmental_conservation",
+      "name": "Environmental Conservation",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:sustainable_living",
+      "name": "Sustainable Living",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:new_zealand",
+      "name": "New Zealand",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:canada",
+      "name": "Canada",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:europe",
+      "name": "Europe",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:australia",
+      "name": "Australia",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:merino_wool",
+      "name": "Merino Wool",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:natural_fibres",
+      "name": "Natural Fibres",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:breathability",
+      "name": "Breathability",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:sustainability",
+      "name": "Sustainability",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:performance",
+      "name": "Performance",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:camping",
+      "name": "Camping",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:commuting",
+      "name": "Commuting",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:trail_running",
+      "name": "Trail Running",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:travel",
+      "name": "Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:mainstream",
+      "name": "Mainstream",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:merino_wool",
+      "name": "Merino Wool",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:functional",
+      "name": "Functional",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:technical",
+      "name": "Technical",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:casual",
+      "name": "Casual",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:price_level:qloo:_",
+      "name": "$$$",
+      "type": "urn:tag:price_level:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:apparel",
+      "name": "Apparel",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:outerwear",
+      "name": "Outerwear",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:base_layers",
+      "name": "Base Layers",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:underwear",
+      "name": "Underwear",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:socks",
+      "name": "Socks",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:merino_wool_baselayers",
+      "name": "Merino Wool Baselayers",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:outdoor_performance_apparel",
+      "name": "Outdoor Performance Apparel",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:merino_socks",
+      "name": "Merino Socks",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:technical_activewear",
+      "name": "Technical Activewear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:merino_underwear",
+      "name": "Merino Underwear",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:casual_merino_clothing",
+      "name": "Casual Merino Clothing",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:direct_to_consumer",
+      "name": "Direct-to-Consumer",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:wholesale",
+      "name": "Wholesale",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:department_store",
+      "name": "Department Store",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:merino_baselayers",
+      "name": "Merino Baselayers",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:merino_socks",
+      "name": "Merino Socks",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:peak_design",
+      "name": "Peak Design",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:allbirds",
+      "name": "Allbirds",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:nau",
+      "name": "Nau",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:cotopaxi",
+      "name": "Cotopaxi",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:filson",
+      "name": "Filson",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:natural_fibre_focus",
+      "name": "Natural Fibre Focus",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:plastic_free_commitment",
+      "name": "Plastic-Free Commitment",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:ethical_sourcing",
+      "name": "Ethical Sourcing",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:supply_chain_transparency",
+      "name": "Supply Chain Transparency",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:slow_fashion",
+      "name": "Slow Fashion",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:young_adults",
+      "name": "Young Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:male",
+      "name": "Male",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:female",
+      "name": "Female",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium",
+      "name": "Medium",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "43FC7AA8-579E-4588-BC15-51D0B3DCF9DC",
+    "name": "American Alpine Club",
+    "popularity": 0.8777271109152244,
+    "query": {
+     "affinity": 0.9351462119277661,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:genre:brand:ngo:sports",
+      "name": "Sports NGO",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:genre:brand:ngo",
+      "name": "NGO",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:rugged",
+      "name": "Rugged",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:field_inspired",
+      "name": "Field-Inspired",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:summiting_peaks",
+      "name": "Summiting Peaks",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:technical_alpine_mastery",
+      "name": "Technical Alpine Mastery",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:exploring_remote_ranges",
+      "name": "Exploring Remote Ranges",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:protecting_wild_climbs",
+      "name": "Protecting Wild Climbs",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:other",
+      "name": "Other",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:nonprofit_brand",
+      "name": "Nonprofit Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:nonprofit",
+      "name": "Nonprofit",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:community",
+      "name": "Community",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:advocacy",
+      "name": "Advocacy",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:knowledge",
+      "name": "Knowledge",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:inspiration",
+      "name": "Inspiration",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:safety",
+      "name": "Safety",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:environmentalism",
+      "name": "Environmentalism",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:outdoor_culture",
+      "name": "Outdoor Culture",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:alpine_sport_heritage",
+      "name": "Alpine Sport Heritage",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:outdoor_enthusiasts",
+      "name": "Outdoor Enthusiasts",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:active_mountaineers",
+      "name": "Active Mountaineers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:rock_climbers",
+      "name": "Rock Climbers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:adventurous",
+      "name": "Adventurous",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:community_focused",
+      "name": "Community-Focused",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:inspiring",
+      "name": "Inspiring",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:nonprofit",
+      "name": "Nonprofit",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:sports_fitness",
+      "name": "Sports & Fitness",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_recreation",
+      "name": "Outdoor Recreation",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:professional_climbers",
+      "name": "Professional Climbers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:outdoor_guides",
+      "name": "Outdoor Guides",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:expedition_photographers",
+      "name": "Expedition Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:conservation_advocates",
+      "name": "Conservation Advocates",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:alpine_trainers",
+      "name": "Alpine Trainers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:rock_climbing",
+      "name": "Rock Climbing",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:environmental_conservation",
+      "name": "Environmental Conservation",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:wilderness_survival",
+      "name": "Wilderness Survival",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:outdoor_advocacy",
+      "name": "Outdoor Advocacy",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:mountaineering",
+      "name": "Mountaineering",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:climbing_advocacy",
+      "name": "Climbing Advocacy",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:safety_education",
+      "name": "Safety Education",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:alpine_history",
+      "name": "Alpine History",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:outdoor_conservation",
+      "name": "Outdoor Conservation",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:gopro_mountain_games",
+      "name": "GoPro Mountain Games",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:weekend_climbing_trips",
+      "name": "Weekend Climbing Trips",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:outdoor_exploration",
+      "name": "Outdoor Exploration",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:mountain_travel",
+      "name": "Mountain Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:training_regimens",
+      "name": "Training Regimens",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:mainstream",
+      "name": "Mainstream",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:climbing_advocacy",
+      "name": "Climbing Advocacy",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:safety_education",
+      "name": "Safety Education",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:mountaineering_resources",
+      "name": "Mountaineering Resources",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:member_grants",
+      "name": "Member Grants",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:climbing_community_access",
+      "name": "Climbing Community Access",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:access_fund",
+      "name": "Access Fund",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:the_mountaineers",
+      "name": "The Mountaineers",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:alpine_club_of_canada",
+      "name": "Alpine Club Of Canada",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:british_mountaineering_council",
+      "name": "British Mountaineering Council",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:public_land_stewardship",
+      "name": "Public Land Stewardship",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:social_impact",
+      "name": "Social Impact",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:young_adults",
+      "name": "Young Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium",
+      "name": "Medium",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "",
+    "entity_id": "E9A70778-6E65-49A4-8C38-A24D20C05BDA",
+    "name": "Fj\u00e4llr\u00e4ven",
+    "popularity": 0.8794053330169009,
+    "query": {
+     "affinity": 0.932167063819836,
+     "measurements": {
+      "audience_growth": 0
+     }
+    },
+    "subtype": "urn:entity:brand",
+    "tags": [
+     {
+      "id": "urn:tag:genre:brand:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:genre:brand"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:utilitarian",
+      "name": "Utilitarian",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:earth_toned",
+      "name": "Earth-Toned",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:functional",
+      "name": "Functional",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:aesthetic_property:qloo:classic",
+      "name": "Classic",
+      "type": "urn:tag:aesthetic_property:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:arctic_expeditions",
+      "name": "Arctic Expeditions",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:global_travel",
+      "name": "Global Travel",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:off_grid_living",
+      "name": "Off-Grid Living",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:brand_subtype:qloo:fashion",
+      "name": "Fashion",
+      "type": "urn:tag:brand_subtype:qloo"
+     },
+     {
+      "id": "urn:tag:brand_type:qloo:product_brand",
+      "name": "Product Brand",
+      "type": "urn:tag:brand_type:qloo"
+     },
+     {
+      "id": "urn:tag:business_model:qloo:b2c",
+      "name": "B2C",
+      "type": "urn:tag:business_model:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:permanent",
+      "name": "Permanent",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:collection_cadence:qloo:seasonal",
+      "name": "Seasonal",
+      "type": "urn:tag:collection_cadence:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:patagonia",
+      "name": "Patagonia",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:arc_teryx",
+      "name": "Arc'teryx",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:the_north_face",
+      "name": "The North Face",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:mammut",
+      "name": "Mammut",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:competitor_brand:qloo:haglofs",
+      "name": "Hagl\u00f6fs",
+      "type": "urn:tag:competitor_brand:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:sustainability",
+      "name": "Sustainability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:durability",
+      "name": "Durability",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:functionality",
+      "name": "Functionality",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:core_value:qloo:nature_connection",
+      "name": "Nature Connection",
+      "type": "urn:tag:core_value:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:scandinavian_minimalism",
+      "name": "Scandinavian Minimalism",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:sustainable_fashion",
+      "name": "Sustainable Fashion",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:cultural_relevance:qloo:outdoor_movement",
+      "name": "Outdoor Movement",
+      "type": "urn:tag:cultural_relevance:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:outdoor_enthusiasts",
+      "name": "Outdoor Enthusiasts",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:urban_students",
+      "name": "Urban Students",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:customer_segment:qloo:sustainable_travelers",
+      "name": "Sustainable Travelers",
+      "type": "urn:tag:customer_segment:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:scandinavian_nature",
+      "name": "Scandinavian Nature",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:utility_design",
+      "name": "Utility Design",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:design_inspiration:qloo:arctic_exploration",
+      "name": "Arctic Exploration",
+      "type": "urn:tag:design_inspiration:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:reliable",
+      "name": "Reliable",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:grounded",
+      "name": "Grounded",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:practical",
+      "name": "Practical",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:emotional_tone:qloo:authentic",
+      "name": "Authentic",
+      "type": "urn:tag:emotional_tone:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:outdoor",
+      "name": "Outdoor",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:sustainable_fashion",
+      "name": "Sustainable Fashion",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:fashion_segment:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:fashion_segment:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:fashion_apparel",
+      "name": "Fashion & Apparel",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:industry:qloo:outdoor_gear",
+      "name": "Outdoor Gear",
+      "type": "urn:tag:industry:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:outdoor_photographers",
+      "name": "Outdoor Photographers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:travel_bloggers",
+      "name": "Travel Bloggers",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:sustainability_advocates",
+      "name": "Sustainability Advocates",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:adventure_athletes",
+      "name": "Adventure Athletes",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:influencer_appeal:qloo:minimalist_stylists",
+      "name": "Minimalist Stylists",
+      "type": "urn:tag:influencer_appeal:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:hiking",
+      "name": "Hiking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:camping",
+      "name": "Camping",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:backpacking",
+      "name": "Backpacking",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:travel",
+      "name": "Travel",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:interest_adjacency:qloo:nature_conservation",
+      "name": "Nature Conservation",
+      "type": "urn:tag:interest_adjacency:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:sweden",
+      "name": "Sweden",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:united_states",
+      "name": "United States",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:germany",
+      "name": "Germany",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:key_market:qloo:japan",
+      "name": "Japan",
+      "type": "urn:tag:key_market:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:arctic",
+      "name": "Arctic",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:tundra",
+      "name": "Tundra",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:outdoor",
+      "name": "Outdoor",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:sustainability",
+      "name": "Sustainability",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:backpack",
+      "name": "Backpack",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:partnership:qloo:fjallraven_polar",
+      "name": "Fj\u00e4llr\u00e4ven Polar",
+      "type": "urn:tag:partnership:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:trekking",
+      "name": "Trekking",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:camping",
+      "name": "Camping",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:urban_commuting",
+      "name": "Urban Commuting",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:lifestyle:qloo:nature_exploration",
+      "name": "Nature Exploration",
+      "type": "urn:tag:lifestyle:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:mainstream",
+      "name": "Mainstream",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:market_archetype:qloo:heritage",
+      "name": "Heritage",
+      "type": "urn:tag:market_archetype:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:g_1000_fabric",
+      "name": "G-1000 Fabric",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:wool",
+      "name": "Wool",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:material:qloo:recycled_polyester",
+      "name": "Recycled Polyester",
+      "type": "urn:tag:material:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:practical",
+      "name": "Practical",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:minimalist",
+      "name": "Minimalist",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:outdoor_chic",
+      "name": "Outdoor-Chic",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:personal_style:qloo:rugged",
+      "name": "Rugged",
+      "type": "urn:tag:personal_style:qloo"
+     },
+     {
+      "id": "urn:tag:price_level:qloo:_",
+      "name": "$$$",
+      "type": "urn:tag:price_level:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:apparel",
+      "name": "Apparel",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:outerwear",
+      "name": "Outerwear",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:backpacks",
+      "name": "Backpacks",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:tents",
+      "name": "Tents",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_category:qloo:accessories",
+      "name": "Accessories",
+      "type": "urn:tag:product_category:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:backpacks",
+      "name": "Backpacks",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:jackets",
+      "name": "Jackets",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:trousers",
+      "name": "Trousers",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:tents",
+      "name": "Tents",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:product_service:qloo:sleeping_bags",
+      "name": "Sleeping Bags",
+      "type": "urn:tag:product_service:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:direct_to_consumer",
+      "name": "Direct-to-Consumer",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:department_store",
+      "name": "Department Store",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:retail_channel:qloo:wholesale",
+      "name": "Wholesale",
+      "type": "urn:tag:retail_channel:qloo"
+     },
+     {
+      "id": "urn:tag:signature_piece:qloo:kanken",
+      "name": "K\u00e5nken",
+      "type": "urn:tag:signature_piece:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:filson",
+      "name": "Filson",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:barbour",
+      "name": "Barbour",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:eddie_bauer",
+      "name": "Eddie Bauer",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:cotopaxi",
+      "name": "Cotopaxi",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:similar_brand:qloo:black_diamond",
+      "name": "Black Diamond",
+      "type": "urn:tag:similar_brand:qloo"
+     },
+     {
+      "id": "urn:tag:subsidiary:qloo:hanwag",
+      "name": "Hanwag",
+      "type": "urn:tag:subsidiary:qloo"
+     },
+     {
+      "id": "urn:tag:subsidiary:qloo:primus",
+      "name": "Primus",
+      "type": "urn:tag:subsidiary:qloo"
+     },
+     {
+      "id": "urn:tag:subsidiary:qloo:brunton",
+      "name": "Brunton",
+      "type": "urn:tag:subsidiary:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:pfc_free_dwr",
+      "name": "PFC-Free DWR",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:animal_welfare_policy",
+      "name": "Animal Welfare Policy",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:cruelty_free",
+      "name": "Cruelty-Free",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:eco_friendly_packaging",
+      "name": "Eco-Friendly Packaging",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:ethical_sourcing",
+      "name": "Ethical Sourcing",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:recycled_materials",
+      "name": "Recycled Materials",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:sustainability_initiative:qloo:slow_fashion",
+      "name": "Slow Fashion",
+      "type": "urn:tag:sustainability_initiative:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:young_adults",
+      "name": "Young Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:adults",
+      "name": "Adults",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_age_group:qloo:middle_aged",
+      "name": "Middle-Aged",
+      "type": "urn:tag:target_age_group:qloo"
+     },
+     {
+      "id": "urn:tag:target_gender:qloo:gender_neutral",
+      "name": "Gender-Neutral",
+      "type": "urn:tag:target_gender:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium",
+      "name": "Medium",
+      "type": "urn:tag:target_income_level:qloo"
+     },
+     {
+      "id": "urn:tag:target_income_level:qloo:medium_to_high",
+      "name": "Medium to High",
+      "type": "urn:tag:target_income_level:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   }
+  ]
+ },
+ "success": true
+}

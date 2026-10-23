@@ -1,0 +1,2419 @@
+{
+ "results": [
+  {
+   "disambiguation": "",
+   "entity_id": "C70CE2B8-0AD1-4150-BF18-5A6347F2E860",
+   "name": "Nike",
+   "popularity": 0.9999915241307996,
+   "tags": [
+    {
+     "name": "Nike",
+     "tag_id": "urn:tag:wikipedia_category:nike",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Fashion",
+     "tag_id": "urn:tag:genre:brand:fashion",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "1970s fashion",
+     "tag_id": "urn:tag:wikipedia_category:1970s_fashion",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Watch manufacturing companies of the United States",
+     "tag_id": "urn:tag:wikipedia_category:watch_manufacturing_companies_of_the_united_states",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Clothing companies established in 1964",
+     "tag_id": "urn:tag:wikipedia_category:clothing_companies_established_in_1964",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Sportswear brands",
+     "tag_id": "urn:tag:wikipedia_category:sportswear_brands",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Running",
+     "tag_id": "urn:tag:genre:brand:fashion:footwear:sneaker:running",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Basketball",
+     "tag_id": "urn:tag:genre:brand:fashion:footwear:sneaker:basketball",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Lifestyle / Casual",
+     "tag_id": "urn:tag:genre:brand:fashion:footwear:sneaker:lifestyle",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Companies listed on the New York Stock Exchange",
+     "tag_id": "urn:tag:wikipedia_category:companies_listed_on_the_new_york_stock_exchange",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Multinational companies headquartered in the United States",
+     "tag_id": "urn:tag:wikipedia_category:multinational_companies_headquartered_in_the_united_states",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Footwear",
+     "tag_id": "urn:tag:genre:brand:fashion:footwear",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Nike brands",
+     "tag_id": "urn:tag:wikipedia_category:nike_brands",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Swimwear manufacturers",
+     "tag_id": "urn:tag:wikipedia_category:swimwear_manufacturers",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Sneakers",
+     "tag_id": "urn:tag:genre:brand:fashion:footwear:sneakers",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "1964 establishments in Oregon",
+     "tag_id": "urn:tag:wikipedia_category:1964_establishments_in_oregon",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Companies in the Dow Jones Industrial Average",
+     "tag_id": "urn:tag:wikipedia_category:companies_in_the_dow_jones_industrial_average",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "1990s fashion",
+     "tag_id": "urn:tag:wikipedia_category:1990s_fashion",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "2010s fashion",
+     "tag_id": "urn:tag:wikipedia_category:2010s_fashion",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Shoe brands",
+     "tag_id": "urn:tag:wikipedia_category:shoe_brands",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Shoe companies of the United States",
+     "tag_id": "urn:tag:wikipedia_category:shoe_companies_of_the_united_states",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Athletic",
+     "tag_id": "urn:tag:genre:brand:fashion:athletic",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Companies based in Beaverton",
+     "tag_id": "urn:tag:wikipedia_category:companies_based_in_beaverton",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "1980s fashion",
+     "tag_id": "urn:tag:wikipedia_category:1980s_fashion",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "2000s fashion",
+     "tag_id": "urn:tag:wikipedia_category:2000s_fashion",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "2020s fashion",
+     "tag_id": "urn:tag:wikipedia_category:2020s_fashion",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Retail companies established in 1964",
+     "tag_id": "urn:tag:wikipedia_category:retail_companies_established_in_1964",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Athletic shoe brands",
+     "tag_id": "urn:tag:wikipedia_category:athletic_shoe_brands",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Sporting goods manufacturers of the United States",
+     "tag_id": "urn:tag:wikipedia_category:sporting_goods_manufacturers_of_the_united_states",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Minimalist Logo Design",
+     "tag_id": "urn:tag:aesthetic_property:qloo:minimalist_logo_design",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Technological Aesthetics",
+     "tag_id": "urn:tag:aesthetic_property:qloo:technological_aesthetics",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Performance-Driven Silhouettes",
+     "tag_id": "urn:tag:aesthetic_property:qloo:performance_driven_silhouettes",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Dynamic Motion Lines",
+     "tag_id": "urn:tag:aesthetic_property:qloo:dynamic_motion_lines",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Professional Athletic Achievement",
+     "tag_id": "urn:tag:lifestyle:qloo:professional_athletic_achievement",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Personal Peak Performance",
+     "tag_id": "urn:tag:lifestyle:qloo:personal_peak_performance",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Global Community Leadership",
+     "tag_id": "urn:tag:lifestyle:qloo:global_community_leadership",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Social Advocacy",
+     "tag_id": "urn:tag:lifestyle:qloo:social_advocacy",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Fashion",
+     "tag_id": "urn:tag:brand_subtype:qloo:fashion",
+     "type": "urn:tag:brand_subtype:qloo"
+    },
+    {
+     "name": "Corporate Brand",
+     "tag_id": "urn:tag:brand_type:qloo:corporate_brand",
+     "type": "urn:tag:brand_type:qloo"
+    },
+    {
+     "name": "B2C",
+     "tag_id": "urn:tag:business_model:qloo:b2c",
+     "type": "urn:tag:business_model:qloo"
+    },
+    {
+     "name": "B2B",
+     "tag_id": "urn:tag:business_model:qloo:b2b",
+     "type": "urn:tag:business_model:qloo"
+    },
+    {
+     "name": "Seasonal",
+     "tag_id": "urn:tag:collection_cadence:qloo:seasonal",
+     "type": "urn:tag:collection_cadence:qloo"
+    },
+    {
+     "name": "Drops",
+     "tag_id": "urn:tag:collection_cadence:qloo:drops",
+     "type": "urn:tag:collection_cadence:qloo"
+    },
+    {
+     "name": "Permanent",
+     "tag_id": "urn:tag:collection_cadence:qloo:permanent",
+     "type": "urn:tag:collection_cadence:qloo"
+    },
+    {
+     "name": "Adidas",
+     "tag_id": "urn:tag:competitor_brand:qloo:adidas",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Puma",
+     "tag_id": "urn:tag:competitor_brand:qloo:puma",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Under Armour",
+     "tag_id": "urn:tag:competitor_brand:qloo:under_armour",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "New Balance",
+     "tag_id": "urn:tag:competitor_brand:qloo:new_balance",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Reebok",
+     "tag_id": "urn:tag:competitor_brand:qloo:reebok",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Innovation",
+     "tag_id": "urn:tag:core_value:qloo:innovation",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Excellence",
+     "tag_id": "urn:tag:core_value:qloo:excellence",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Inclusivity",
+     "tag_id": "urn:tag:core_value:qloo:inclusivity",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Performance",
+     "tag_id": "urn:tag:core_value:qloo:performance",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Equality",
+     "tag_id": "urn:tag:core_value:qloo:equality",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Global Sports Culture",
+     "tag_id": "urn:tag:cultural_relevance:qloo:global_sports_culture",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Hip-Hop",
+     "tag_id": "urn:tag:cultural_relevance:qloo:hip_hop",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Streetwear Movement",
+     "tag_id": "urn:tag:cultural_relevance:qloo:streetwear_movement",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Social Justice Advocacy",
+     "tag_id": "urn:tag:cultural_relevance:qloo:social_justice_advocacy",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Professional Athletes",
+     "tag_id": "urn:tag:customer_segment:qloo:professional_athletes",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Fitness Enthusiasts",
+     "tag_id": "urn:tag:customer_segment:qloo:fitness_enthusiasts",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Urban Youth",
+     "tag_id": "urn:tag:customer_segment:qloo:urban_youth",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Casual Wearers",
+     "tag_id": "urn:tag:customer_segment:qloo:casual_wearers",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Performance Engineering",
+     "tag_id": "urn:tag:design_inspiration:qloo:performance_engineering",
+     "type": "urn:tag:design_inspiration:qloo"
+    },
+    {
+     "name": "Athletic Heritage",
+     "tag_id": "urn:tag:design_inspiration:qloo:athletic_heritage",
+     "type": "urn:tag:design_inspiration:qloo"
+    },
+    {
+     "name": "Urban Architecture",
+     "tag_id": "urn:tag:design_inspiration:qloo:urban_architecture",
+     "type": "urn:tag:design_inspiration:qloo"
+    },
+    {
+     "name": "Human Movement",
+     "tag_id": "urn:tag:design_inspiration:qloo:human_movement",
+     "type": "urn:tag:design_inspiration:qloo"
+    },
+    {
+     "name": "Bold",
+     "tag_id": "urn:tag:emotional_tone:qloo:bold",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Motivating",
+     "tag_id": "urn:tag:emotional_tone:qloo:motivating",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Energetic",
+     "tag_id": "urn:tag:emotional_tone:qloo:energetic",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Empowering",
+     "tag_id": "urn:tag:emotional_tone:qloo:empowering",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Confident",
+     "tag_id": "urn:tag:emotional_tone:qloo:confident",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Sportswear",
+     "tag_id": "urn:tag:fashion_segment:qloo:sportswear",
+     "type": "urn:tag:fashion_segment:qloo"
+    },
+    {
+     "name": "Athleisure",
+     "tag_id": "urn:tag:fashion_segment:qloo:athleisure",
+     "type": "urn:tag:fashion_segment:qloo"
+    },
+    {
+     "name": "Activewear",
+     "tag_id": "urn:tag:fashion_segment:qloo:activewear",
+     "type": "urn:tag:fashion_segment:qloo"
+    },
+    {
+     "name": "Heritage",
+     "tag_id": "urn:tag:fashion_segment:qloo:heritage",
+     "type": "urn:tag:fashion_segment:qloo"
+    },
+    {
+     "name": "Fashion & Apparel",
+     "tag_id": "urn:tag:industry:qloo:fashion_apparel",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Sports & Fitness",
+     "tag_id": "urn:tag:industry:qloo:sports_fitness",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Retail",
+     "tag_id": "urn:tag:industry:qloo:retail",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Footwear Manufacturing",
+     "tag_id": "urn:tag:industry:qloo:footwear_manufacturing",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Athletic Equipment",
+     "tag_id": "urn:tag:industry:qloo:athletic_equipment",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Professional Athletes",
+     "tag_id": "urn:tag:influencer_appeal:qloo:professional_athletes",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Fitness Trainers",
+     "tag_id": "urn:tag:influencer_appeal:qloo:fitness_trainers",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Cultural Icons",
+     "tag_id": "urn:tag:influencer_appeal:qloo:cultural_icons",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Street Style Influencers",
+     "tag_id": "urn:tag:influencer_appeal:qloo:street_style_influencers",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Social Activists",
+     "tag_id": "urn:tag:influencer_appeal:qloo:social_activists",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Professional Sports",
+     "tag_id": "urn:tag:interest_adjacency:qloo:professional_sports",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Fitness Training",
+     "tag_id": "urn:tag:interest_adjacency:qloo:fitness_training",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Street Culture",
+     "tag_id": "urn:tag:interest_adjacency:qloo:street_culture",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Tech Innovation",
+     "tag_id": "urn:tag:interest_adjacency:qloo:tech_innovation",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Community Activism",
+     "tag_id": "urn:tag:interest_adjacency:qloo:community_activism",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "North America",
+     "tag_id": "urn:tag:key_market:qloo:north_america",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Europe",
+     "tag_id": "urn:tag:key_market:qloo:europe",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Greater China",
+     "tag_id": "urn:tag:key_market:qloo:greater_china",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Asia Pacific",
+     "tag_id": "urn:tag:key_market:qloo:asia_pacific",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Latin America",
+     "tag_id": "urn:tag:key_market:qloo:latin_america",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Innovation",
+     "tag_id": "urn:tag:keyword:qloo:innovation",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Sport",
+     "tag_id": "urn:tag:keyword:qloo:sport",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Performance",
+     "tag_id": "urn:tag:keyword:qloo:performance",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Movement",
+     "tag_id": "urn:tag:keyword:qloo:movement",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Empowerment",
+     "tag_id": "urn:tag:keyword:qloo:empowerment",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Kevin Durant",
+     "tag_id": "urn:tag:partnership:qloo:kevin_durant",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Colin Kaepernick",
+     "tag_id": "urn:tag:partnership:qloo:colin_kaepernick",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Anna Cockrell",
+     "tag_id": "urn:tag:partnership:qloo:anna_cockrell",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Daryl Homer",
+     "tag_id": "urn:tag:partnership:qloo:daryl_homer",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Saroya Tinker",
+     "tag_id": "urn:tag:partnership:qloo:saroya_tinker",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Active Living",
+     "tag_id": "urn:tag:lifestyle:qloo:active_living",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Daily Training",
+     "tag_id": "urn:tag:lifestyle:qloo:daily_training",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Urban Commuting",
+     "tag_id": "urn:tag:lifestyle:qloo:urban_commuting",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Casual Sporty Style",
+     "tag_id": "urn:tag:lifestyle:qloo:casual_sporty_style",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Mainstream",
+     "tag_id": "urn:tag:market_archetype:qloo:mainstream",
+     "type": "urn:tag:market_archetype:qloo"
+    },
+    {
+     "name": "Heritage",
+     "tag_id": "urn:tag:market_archetype:qloo:heritage",
+     "type": "urn:tag:market_archetype:qloo"
+    },
+    {
+     "name": "Challenger",
+     "tag_id": "urn:tag:market_archetype:qloo:challenger",
+     "type": "urn:tag:market_archetype:qloo"
+    },
+    {
+     "name": "Synthetic Fabrics",
+     "tag_id": "urn:tag:material:qloo:synthetic_fabrics",
+     "type": "urn:tag:material:qloo"
+    },
+    {
+     "name": "Engineered Mesh",
+     "tag_id": "urn:tag:material:qloo:engineered_mesh",
+     "type": "urn:tag:material:qloo"
+    },
+    {
+     "name": "Rubber",
+     "tag_id": "urn:tag:material:qloo:rubber",
+     "type": "urn:tag:material:qloo"
+    },
+    {
+     "name": "Recycled Polyester",
+     "tag_id": "urn:tag:material:qloo:recycled_polyester",
+     "type": "urn:tag:material:qloo"
+    },
+    {
+     "name": "Leather",
+     "tag_id": "urn:tag:material:qloo:leather",
+     "type": "urn:tag:material:qloo"
+    },
+    {
+     "name": "Sporty",
+     "tag_id": "urn:tag:personal_style:qloo:sporty",
+     "type": "urn:tag:personal_style:qloo"
+    },
+    {
+     "name": "Minimalist",
+     "tag_id": "urn:tag:personal_style:qloo:minimalist",
+     "type": "urn:tag:personal_style:qloo"
+    },
+    {
+     "name": "Functional",
+     "tag_id": "urn:tag:personal_style:qloo:functional",
+     "type": "urn:tag:personal_style:qloo"
+    },
+    {
+     "name": "Urban",
+     "tag_id": "urn:tag:personal_style:qloo:urban",
+     "type": "urn:tag:personal_style:qloo"
+    },
+    {
+     "name": "$$",
+     "tag_id": "urn:tag:price_level:qloo:_",
+     "type": "urn:tag:price_level:qloo"
+    },
+    {
+     "name": "Footwear",
+     "tag_id": "urn:tag:product_category:qloo:footwear",
+     "type": "urn:tag:product_category:qloo"
+    },
+    {
+     "name": "Apparel",
+     "tag_id": "urn:tag:product_category:qloo:apparel",
+     "type": "urn:tag:product_category:qloo"
+    },
+    {
+     "name": "Outerwear",
+     "tag_id": "urn:tag:product_category:qloo:outerwear",
+     "type": "urn:tag:product_category:qloo"
+    },
+    {
+     "name": "Sports Equipment",
+     "tag_id": "urn:tag:product_category:qloo:sports_equipment",
+     "type": "urn:tag:product_category:qloo"
+    },
+    {
+     "name": "Accessories",
+     "tag_id": "urn:tag:product_category:qloo:accessories",
+     "type": "urn:tag:product_category:qloo"
+    },
+    {
+     "name": "Running Shoes",
+     "tag_id": "urn:tag:product_service:qloo:running_shoes",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Athletic Apparel",
+     "tag_id": "urn:tag:product_service:qloo:athletic_apparel",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Training Equipment",
+     "tag_id": "urn:tag:product_service:qloo:training_equipment",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Sport-Specific Footwear",
+     "tag_id": "urn:tag:product_service:qloo:sport_specific_footwear",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Sportswear Accessories",
+     "tag_id": "urn:tag:product_service:qloo:sportswear_accessories",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Direct-to-Consumer",
+     "tag_id": "urn:tag:retail_channel:qloo:direct_to_consumer",
+     "type": "urn:tag:retail_channel:qloo"
+    },
+    {
+     "name": "Department Store",
+     "tag_id": "urn:tag:retail_channel:qloo:department_store",
+     "type": "urn:tag:retail_channel:qloo"
+    },
+    {
+     "name": "Wholesale",
+     "tag_id": "urn:tag:retail_channel:qloo:wholesale",
+     "type": "urn:tag:retail_channel:qloo"
+    },
+    {
+     "name": "Online Marketplace",
+     "tag_id": "urn:tag:retail_channel:qloo:online_marketplace",
+     "type": "urn:tag:retail_channel:qloo"
+    },
+    {
+     "name": "Social Commerce",
+     "tag_id": "urn:tag:retail_channel:qloo:social_commerce",
+     "type": "urn:tag:retail_channel:qloo"
+    },
+    {
+     "name": "Air Force 1",
+     "tag_id": "urn:tag:signature_piece:qloo:air_force_1",
+     "type": "urn:tag:signature_piece:qloo"
+    },
+    {
+     "name": "Air Max",
+     "tag_id": "urn:tag:signature_piece:qloo:air_max",
+     "type": "urn:tag:signature_piece:qloo"
+    },
+    {
+     "name": "Air Jordan",
+     "tag_id": "urn:tag:signature_piece:qloo:air_jordan",
+     "type": "urn:tag:signature_piece:qloo"
+    },
+    {
+     "name": "Pegasus",
+     "tag_id": "urn:tag:signature_piece:qloo:pegasus",
+     "type": "urn:tag:signature_piece:qloo"
+    },
+    {
+     "name": "Waffle Racer",
+     "tag_id": "urn:tag:signature_piece:qloo:waffle_racer",
+     "type": "urn:tag:signature_piece:qloo"
+    },
+    {
+     "name": "Lululemon",
+     "tag_id": "urn:tag:similar_brand:qloo:lululemon",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Asics",
+     "tag_id": "urn:tag:similar_brand:qloo:asics",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Salomon",
+     "tag_id": "urn:tag:similar_brand:qloo:salomon",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Hoka",
+     "tag_id": "urn:tag:similar_brand:qloo:hoka",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "On Running",
+     "tag_id": "urn:tag:similar_brand:qloo:on_running",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Jordan Brand",
+     "tag_id": "urn:tag:subsidiary:qloo:jordan_brand",
+     "type": "urn:tag:subsidiary:qloo"
+    },
+    {
+     "name": "Converse",
+     "tag_id": "urn:tag:subsidiary:qloo:converse",
+     "type": "urn:tag:subsidiary:qloo"
+    },
+    {
+     "name": "Move To Zero",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:move_to_zero",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Circular Design",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:circular_design",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Carbon Neutral",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:carbon_neutral",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Eco-Friendly Packaging",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:eco_friendly_packaging",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Recycled Materials",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:recycled_materials",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Reduced Carbon Emissions",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:reduced_carbon_emissions",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Renewable Energy",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:renewable_energy",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Water Conservation",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:water_conservation",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Zero Waste",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:zero_waste",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Children",
+     "tag_id": "urn:tag:target_age_group:qloo:children",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Teens",
+     "tag_id": "urn:tag:target_age_group:qloo:teens",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Young Adults",
+     "tag_id": "urn:tag:target_age_group:qloo:young_adults",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Adults",
+     "tag_id": "urn:tag:target_age_group:qloo:adults",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Middle-Aged",
+     "tag_id": "urn:tag:target_age_group:qloo:middle_aged",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Seniors",
+     "tag_id": "urn:tag:target_age_group:qloo:seniors",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Male",
+     "tag_id": "urn:tag:target_gender:qloo:male",
+     "type": "urn:tag:target_gender:qloo"
+    },
+    {
+     "name": "Female",
+     "tag_id": "urn:tag:target_gender:qloo:female",
+     "type": "urn:tag:target_gender:qloo"
+    },
+    {
+     "name": "Non-Binary",
+     "tag_id": "urn:tag:target_gender:qloo:non_binary",
+     "type": "urn:tag:target_gender:qloo"
+    },
+    {
+     "name": "Gender-Neutral",
+     "tag_id": "urn:tag:target_gender:qloo:gender_neutral",
+     "type": "urn:tag:target_gender:qloo"
+    },
+    {
+     "name": "Low to Medium",
+     "tag_id": "urn:tag:target_income_level:qloo:low_to_medium",
+     "type": "urn:tag:target_income_level:qloo"
+    },
+    {
+     "name": "Medium",
+     "tag_id": "urn:tag:target_income_level:qloo:medium",
+     "type": "urn:tag:target_income_level:qloo"
+    },
+    {
+     "name": "Medium to High",
+     "tag_id": "urn:tag:target_income_level:qloo:medium_to_high",
+     "type": "urn:tag:target_income_level:qloo"
+    },
+    {
+     "name": "High",
+     "tag_id": "urn:tag:target_income_level:qloo:high",
+     "type": "urn:tag:target_income_level:qloo"
+    }
+   ],
+   "types": [
+    "urn:entity:brand"
+   ]
+  },
+  {
+   "disambiguation": "",
+   "entity_id": "43A36E73-9BC7-4B09-A116-78E51554C3E3",
+   "name": "Nike Training Club",
+   "popularity": 0.9970080181722636,
+   "tags": [
+    {
+     "name": "Fitness App",
+     "tag_id": "urn:tag:genre:brand:mobile_app:fitness",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Mobile App",
+     "tag_id": "urn:tag:genre:brand:mobile_app",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Health & Beauty",
+     "tag_id": "urn:tag:genre:brand:health_and_beauty",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Minimalist Interface",
+     "tag_id": "urn:tag:aesthetic_property:qloo:minimalist_interface",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "High-Contrast Typography",
+     "tag_id": "urn:tag:aesthetic_property:qloo:high_contrast_typography",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Dynamic Imagery",
+     "tag_id": "urn:tag:aesthetic_property:qloo:dynamic_imagery",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Clean Layouts",
+     "tag_id": "urn:tag:aesthetic_property:qloo:clean_layouts",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Athletic Excellence",
+     "tag_id": "urn:tag:lifestyle:qloo:athletic_excellence",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Peak Physical Condition",
+     "tag_id": "urn:tag:lifestyle:qloo:peak_physical_condition",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Consistent Progress",
+     "tag_id": "urn:tag:lifestyle:qloo:consistent_progress",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Discipline And Focus",
+     "tag_id": "urn:tag:lifestyle:qloo:discipline_and_focus",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Other",
+     "tag_id": "urn:tag:brand_subtype:qloo:other",
+     "type": "urn:tag:brand_subtype:qloo"
+    },
+    {
+     "name": "Service Brand",
+     "tag_id": "urn:tag:brand_type:qloo:service_brand",
+     "type": "urn:tag:brand_type:qloo"
+    },
+    {
+     "name": "B2C",
+     "tag_id": "urn:tag:business_model:qloo:b2c",
+     "type": "urn:tag:business_model:qloo"
+    },
+    {
+     "name": "Peloton",
+     "tag_id": "urn:tag:competitor_brand:qloo:peloton",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Adidas Training",
+     "tag_id": "urn:tag:competitor_brand:qloo:adidas_training",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Strava",
+     "tag_id": "urn:tag:competitor_brand:qloo:strava",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Fitbit",
+     "tag_id": "urn:tag:competitor_brand:qloo:fitbit",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Under Armour",
+     "tag_id": "urn:tag:competitor_brand:qloo:under_armour",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Inclusivity",
+     "tag_id": "urn:tag:core_value:qloo:inclusivity",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Performance",
+     "tag_id": "urn:tag:core_value:qloo:performance",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Innovation",
+     "tag_id": "urn:tag:core_value:qloo:innovation",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Accessibility",
+     "tag_id": "urn:tag:core_value:qloo:accessibility",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Empowerment",
+     "tag_id": "urn:tag:core_value:qloo:empowerment",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Global Fitness Culture",
+     "tag_id": "urn:tag:cultural_relevance:qloo:global_fitness_culture",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Digital Wellness",
+     "tag_id": "urn:tag:cultural_relevance:qloo:digital_wellness",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Sport For Social Change",
+     "tag_id": "urn:tag:cultural_relevance:qloo:sport_for_social_change",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Fitness Enthusiasts",
+     "tag_id": "urn:tag:customer_segment:qloo:fitness_enthusiasts",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Aspiring Athletes",
+     "tag_id": "urn:tag:customer_segment:qloo:aspiring_athletes",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Home Workout Practitioners",
+     "tag_id": "urn:tag:customer_segment:qloo:home_workout_practitioners",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Motivating",
+     "tag_id": "urn:tag:emotional_tone:qloo:motivating",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Empowering",
+     "tag_id": "urn:tag:emotional_tone:qloo:empowering",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Disciplined",
+     "tag_id": "urn:tag:emotional_tone:qloo:disciplined",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Energetic",
+     "tag_id": "urn:tag:emotional_tone:qloo:energetic",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Health & Wellness",
+     "tag_id": "urn:tag:industry:qloo:health_wellness",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Technology",
+     "tag_id": "urn:tag:industry:qloo:technology",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Digital Fitness",
+     "tag_id": "urn:tag:industry:qloo:digital_fitness",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Professional Athletes",
+     "tag_id": "urn:tag:influencer_appeal:qloo:professional_athletes",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Fitness Coaches",
+     "tag_id": "urn:tag:influencer_appeal:qloo:fitness_coaches",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Marathon Runners",
+     "tag_id": "urn:tag:influencer_appeal:qloo:marathon_runners",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Yoga Instructors",
+     "tag_id": "urn:tag:influencer_appeal:qloo:yoga_instructors",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Sport Activists",
+     "tag_id": "urn:tag:influencer_appeal:qloo:sport_activists",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Athletics",
+     "tag_id": "urn:tag:interest_adjacency:qloo:athletics",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Holistic Wellness",
+     "tag_id": "urn:tag:interest_adjacency:qloo:holistic_wellness",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Strength Training",
+     "tag_id": "urn:tag:interest_adjacency:qloo:strength_training",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Mindful Movement",
+     "tag_id": "urn:tag:interest_adjacency:qloo:mindful_movement",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Personal Development",
+     "tag_id": "urn:tag:interest_adjacency:qloo:personal_development",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "United States",
+     "tag_id": "urn:tag:key_market:qloo:united_states",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "United Kingdom",
+     "tag_id": "urn:tag:key_market:qloo:united_kingdom",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Germany",
+     "tag_id": "urn:tag:key_market:qloo:germany",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "China",
+     "tag_id": "urn:tag:key_market:qloo:china",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Japan",
+     "tag_id": "urn:tag:key_market:qloo:japan",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Training",
+     "tag_id": "urn:tag:keyword:qloo:training",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Performance",
+     "tag_id": "urn:tag:keyword:qloo:performance",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Wellness",
+     "tag_id": "urn:tag:keyword:qloo:wellness",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Athletic",
+     "tag_id": "urn:tag:keyword:qloo:athletic",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Digital Coaching",
+     "tag_id": "urn:tag:keyword:qloo:digital_coaching",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Apple",
+     "tag_id": "urn:tag:partnership:qloo:apple",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Strava",
+     "tag_id": "urn:tag:partnership:qloo:strava",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Various Professional Athletes",
+     "tag_id": "urn:tag:partnership:qloo:various_professional_athletes",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Early Morning Workouts",
+     "tag_id": "urn:tag:lifestyle:qloo:early_morning_workouts",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Active Commuting",
+     "tag_id": "urn:tag:lifestyle:qloo:active_commuting",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Routine Exercise",
+     "tag_id": "urn:tag:lifestyle:qloo:routine_exercise",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Healthy Meal Planning",
+     "tag_id": "urn:tag:lifestyle:qloo:healthy_meal_planning",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Mainstream",
+     "tag_id": "urn:tag:market_archetype:qloo:mainstream",
+     "type": "urn:tag:market_archetype:qloo"
+    },
+    {
+     "name": "Guided Workouts",
+     "tag_id": "urn:tag:product_service:qloo:guided_workouts",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Training Plans",
+     "tag_id": "urn:tag:product_service:qloo:training_plans",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Fitness Coaching",
+     "tag_id": "urn:tag:product_service:qloo:fitness_coaching",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Yoga Sessions",
+     "tag_id": "urn:tag:product_service:qloo:yoga_sessions",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Strength Training",
+     "tag_id": "urn:tag:product_service:qloo:strength_training",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Mobility Exercises",
+     "tag_id": "urn:tag:product_service:qloo:mobility_exercises",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Wellness Advice",
+     "tag_id": "urn:tag:product_service:qloo:wellness_advice",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Calm",
+     "tag_id": "urn:tag:similar_brand:qloo:calm",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Headspace",
+     "tag_id": "urn:tag:similar_brand:qloo:headspace",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "MyFitnessPal",
+     "tag_id": "urn:tag:similar_brand:qloo:myfitnesspal",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Aaptiv",
+     "tag_id": "urn:tag:similar_brand:qloo:aaptiv",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Garmin Connect",
+     "tag_id": "urn:tag:similar_brand:qloo:garmin_connect",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Young Adults",
+     "tag_id": "urn:tag:target_age_group:qloo:young_adults",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Adults",
+     "tag_id": "urn:tag:target_age_group:qloo:adults",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Gender-Neutral",
+     "tag_id": "urn:tag:target_gender:qloo:gender_neutral",
+     "type": "urn:tag:target_gender:qloo"
+    },
+    {
+     "name": "Low to Medium",
+     "tag_id": "urn:tag:target_income_level:qloo:low_to_medium",
+     "type": "urn:tag:target_income_level:qloo"
+    },
+    {
+     "name": "Medium",
+     "tag_id": "urn:tag:target_income_level:qloo:medium",
+     "type": "urn:tag:target_income_level:qloo"
+    },
+    {
+     "name": "Medium to High",
+     "tag_id": "urn:tag:target_income_level:qloo:medium_to_high",
+     "type": "urn:tag:target_income_level:qloo"
+    }
+   ],
+   "types": [
+    "urn:entity:brand"
+   ]
+  },
+  {
+   "disambiguation": "",
+   "entity_id": "E26BC58D-18D2-405B-BC7B-7C556ADE3829",
+   "name": "Air Jordan Product Line",
+   "popularity": 0.9990167991727552,
+   "tags": [
+    {
+     "name": "Basketball",
+     "tag_id": "urn:tag:genre:brand:fashion:footwear:sneaker:basketball",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Sneakers",
+     "tag_id": "urn:tag:genre:brand:fashion:footwear:sneakers",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Fashion",
+     "tag_id": "urn:tag:genre:brand:fashion",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Footwear",
+     "tag_id": "urn:tag:genre:brand:fashion:footwear",
+     "type": "urn:tag:genre:brand"
+    },
+    {
+     "name": "Bold Branding",
+     "tag_id": "urn:tag:aesthetic_property:qloo:bold_branding",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Dynamic Silhouettes",
+     "tag_id": "urn:tag:aesthetic_property:qloo:dynamic_silhouettes",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "High-Contrast Colorways",
+     "tag_id": "urn:tag:aesthetic_property:qloo:high_contrast_colorways",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Performance-Oriented Design",
+     "tag_id": "urn:tag:aesthetic_property:qloo:performance_oriented_design",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Professional Athletic Achievement",
+     "tag_id": "urn:tag:lifestyle:qloo:professional_athletic_achievement",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Global Fame",
+     "tag_id": "urn:tag:lifestyle:qloo:global_fame",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Style Authority",
+     "tag_id": "urn:tag:lifestyle:qloo:style_authority",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Championship Success",
+     "tag_id": "urn:tag:lifestyle:qloo:championship_success",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Fashion",
+     "tag_id": "urn:tag:brand_subtype:qloo:fashion",
+     "type": "urn:tag:brand_subtype:qloo"
+    },
+    {
+     "name": "Product Brand",
+     "tag_id": "urn:tag:brand_type:qloo:product_brand",
+     "type": "urn:tag:brand_type:qloo"
+    },
+    {
+     "name": "B2C",
+     "tag_id": "urn:tag:business_model:qloo:b2c",
+     "type": "urn:tag:business_model:qloo"
+    },
+    {
+     "name": "Drops",
+     "tag_id": "urn:tag:collection_cadence:qloo:drops",
+     "type": "urn:tag:collection_cadence:qloo"
+    },
+    {
+     "name": "Seasonal",
+     "tag_id": "urn:tag:collection_cadence:qloo:seasonal",
+     "type": "urn:tag:collection_cadence:qloo"
+    },
+    {
+     "name": "Limited Edition",
+     "tag_id": "urn:tag:collection_cadence:qloo:limited_edition",
+     "type": "urn:tag:collection_cadence:qloo"
+    },
+    {
+     "name": "Adidas",
+     "tag_id": "urn:tag:competitor_brand:qloo:adidas",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Under Armour",
+     "tag_id": "urn:tag:competitor_brand:qloo:under_armour",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Puma",
+     "tag_id": "urn:tag:competitor_brand:qloo:puma",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Reebok",
+     "tag_id": "urn:tag:competitor_brand:qloo:reebok",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "New Balance",
+     "tag_id": "urn:tag:competitor_brand:qloo:new_balance",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Excellence",
+     "tag_id": "urn:tag:core_value:qloo:excellence",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Innovation",
+     "tag_id": "urn:tag:core_value:qloo:innovation",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Heritage",
+     "tag_id": "urn:tag:core_value:qloo:heritage",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Competition",
+     "tag_id": "urn:tag:core_value:qloo:competition",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Community",
+     "tag_id": "urn:tag:core_value:qloo:community",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Hip-Hop",
+     "tag_id": "urn:tag:cultural_relevance:qloo:hip_hop",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Basketball Culture",
+     "tag_id": "urn:tag:cultural_relevance:qloo:basketball_culture",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Sneakerhead Community",
+     "tag_id": "urn:tag:cultural_relevance:qloo:sneakerhead_community",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Streetwear Movement",
+     "tag_id": "urn:tag:cultural_relevance:qloo:streetwear_movement",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Basketball Enthusiasts",
+     "tag_id": "urn:tag:customer_segment:qloo:basketball_enthusiasts",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Sneaker Collectors",
+     "tag_id": "urn:tag:customer_segment:qloo:sneaker_collectors",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Urban Youth",
+     "tag_id": "urn:tag:customer_segment:qloo:urban_youth",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Athleisure Consumers",
+     "tag_id": "urn:tag:customer_segment:qloo:athleisure_consumers",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Basketball History",
+     "tag_id": "urn:tag:design_inspiration:qloo:basketball_history",
+     "type": "urn:tag:design_inspiration:qloo"
+    },
+    {
+     "name": "Aviation",
+     "tag_id": "urn:tag:design_inspiration:qloo:aviation",
+     "type": "urn:tag:design_inspiration:qloo"
+    },
+    {
+     "name": "Modern Art",
+     "tag_id": "urn:tag:design_inspiration:qloo:modern_art",
+     "type": "urn:tag:design_inspiration:qloo"
+    },
+    {
+     "name": "Performance Engineering",
+     "tag_id": "urn:tag:design_inspiration:qloo:performance_engineering",
+     "type": "urn:tag:design_inspiration:qloo"
+    },
+    {
+     "name": "Bold",
+     "tag_id": "urn:tag:emotional_tone:qloo:bold",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Confident",
+     "tag_id": "urn:tag:emotional_tone:qloo:confident",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Ambitious",
+     "tag_id": "urn:tag:emotional_tone:qloo:ambitious",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Electrifying",
+     "tag_id": "urn:tag:emotional_tone:qloo:electrifying",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Sportswear",
+     "tag_id": "urn:tag:fashion_segment:qloo:sportswear",
+     "type": "urn:tag:fashion_segment:qloo"
+    },
+    {
+     "name": "Streetwear",
+     "tag_id": "urn:tag:fashion_segment:qloo:streetwear",
+     "type": "urn:tag:fashion_segment:qloo"
+    },
+    {
+     "name": "Athleisure",
+     "tag_id": "urn:tag:fashion_segment:qloo:athleisure",
+     "type": "urn:tag:fashion_segment:qloo"
+    },
+    {
+     "name": "Heritage",
+     "tag_id": "urn:tag:fashion_segment:qloo:heritage",
+     "type": "urn:tag:fashion_segment:qloo"
+    },
+    {
+     "name": "Fashion & Apparel",
+     "tag_id": "urn:tag:industry:qloo:fashion_apparel",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Sports & Fitness",
+     "tag_id": "urn:tag:industry:qloo:sports_fitness",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Footwear",
+     "tag_id": "urn:tag:industry:qloo:footwear",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Professional Athletes",
+     "tag_id": "urn:tag:influencer_appeal:qloo:professional_athletes",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Music Artists",
+     "tag_id": "urn:tag:influencer_appeal:qloo:music_artists",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Streetwear Designers",
+     "tag_id": "urn:tag:influencer_appeal:qloo:streetwear_designers",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Creative Directors",
+     "tag_id": "urn:tag:influencer_appeal:qloo:creative_directors",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Cultural Icons",
+     "tag_id": "urn:tag:influencer_appeal:qloo:cultural_icons",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Basketball",
+     "tag_id": "urn:tag:interest_adjacency:qloo:basketball",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Sneaker Culture",
+     "tag_id": "urn:tag:interest_adjacency:qloo:sneaker_culture",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Hip-Hop Music",
+     "tag_id": "urn:tag:interest_adjacency:qloo:hip_hop_music",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Athletic Training",
+     "tag_id": "urn:tag:interest_adjacency:qloo:athletic_training",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Streetwear Fashion",
+     "tag_id": "urn:tag:interest_adjacency:qloo:streetwear_fashion",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "United States",
+     "tag_id": "urn:tag:key_market:qloo:united_states",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "China",
+     "tag_id": "urn:tag:key_market:qloo:china",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Europe",
+     "tag_id": "urn:tag:key_market:qloo:europe",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Japan",
+     "tag_id": "urn:tag:key_market:qloo:japan",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Basketball",
+     "tag_id": "urn:tag:keyword:qloo:basketball",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Jumpman",
+     "tag_id": "urn:tag:keyword:qloo:jumpman",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Sneakers",
+     "tag_id": "urn:tag:keyword:qloo:sneakers",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Performance",
+     "tag_id": "urn:tag:keyword:qloo:performance",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Streetwear",
+     "tag_id": "urn:tag:keyword:qloo:streetwear",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Travis Scott",
+     "tag_id": "urn:tag:partnership:qloo:travis_scott",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Off-White",
+     "tag_id": "urn:tag:partnership:qloo:off_white",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Dior",
+     "tag_id": "urn:tag:partnership:qloo:dior",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Paris Saint-Germain",
+     "tag_id": "urn:tag:partnership:qloo:paris_saint_germain",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Urban Living",
+     "tag_id": "urn:tag:lifestyle:qloo:urban_living",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Active Training",
+     "tag_id": "urn:tag:lifestyle:qloo:active_training",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Basketball Court Culture",
+     "tag_id": "urn:tag:lifestyle:qloo:basketball_court_culture",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Street Culture",
+     "tag_id": "urn:tag:lifestyle:qloo:street_culture",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Mainstream",
+     "tag_id": "urn:tag:market_archetype:qloo:mainstream",
+     "type": "urn:tag:market_archetype:qloo"
+    },
+    {
+     "name": "Heritage",
+     "tag_id": "urn:tag:market_archetype:qloo:heritage",
+     "type": "urn:tag:market_archetype:qloo"
+    },
+    {
+     "name": "Cult",
+     "tag_id": "urn:tag:market_archetype:qloo:cult",
+     "type": "urn:tag:market_archetype:qloo"
+    },
+    {
+     "name": "Leather",
+     "tag_id": "urn:tag:material:qloo:leather",
+     "type": "urn:tag:material:qloo"
+    },
+    {
+     "name": "Mesh",
+     "tag_id": "urn:tag:material:qloo:mesh",
+     "type": "urn:tag:material:qloo"
+    },
+    {
+     "name": "Synthetic Performance Fabrics",
+     "tag_id": "urn:tag:material:qloo:synthetic_performance_fabrics",
+     "type": "urn:tag:material:qloo"
+    },
+    {
+     "name": "Rubber",
+     "tag_id": "urn:tag:material:qloo:rubber",
+     "type": "urn:tag:material:qloo"
+    },
+    {
+     "name": "Sporty",
+     "tag_id": "urn:tag:personal_style:qloo:sporty",
+     "type": "urn:tag:personal_style:qloo"
+    },
+    {
+     "name": "Urban",
+     "tag_id": "urn:tag:personal_style:qloo:urban",
+     "type": "urn:tag:personal_style:qloo"
+    },
+    {
+     "name": "Casual",
+     "tag_id": "urn:tag:personal_style:qloo:casual",
+     "type": "urn:tag:personal_style:qloo"
+    },
+    {
+     "name": "Edgy",
+     "tag_id": "urn:tag:personal_style:qloo:edgy",
+     "type": "urn:tag:personal_style:qloo"
+    },
+    {
+     "name": "$$$",
+     "tag_id": "urn:tag:price_level:qloo:_",
+     "type": "urn:tag:price_level:qloo"
+    },
+    {
+     "name": "Footwear",
+     "tag_id": "urn:tag:product_category:qloo:footwear",
+     "type": "urn:tag:product_category:qloo"
+    },
+    {
+     "name": "Apparel",
+     "tag_id": "urn:tag:product_category:qloo:apparel",
+     "type": "urn:tag:product_category:qloo"
+    },
+    {
+     "name": "Outerwear",
+     "tag_id": "urn:tag:product_category:qloo:outerwear",
+     "type": "urn:tag:product_category:qloo"
+    },
+    {
+     "name": "Accessories",
+     "tag_id": "urn:tag:product_category:qloo:accessories",
+     "type": "urn:tag:product_category:qloo"
+    },
+    {
+     "name": "Basketball Sneakers",
+     "tag_id": "urn:tag:product_service:qloo:basketball_sneakers",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Athletic Apparel",
+     "tag_id": "urn:tag:product_service:qloo:athletic_apparel",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Sportswear",
+     "tag_id": "urn:tag:product_service:qloo:sportswear",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Streetwear",
+     "tag_id": "urn:tag:product_service:qloo:streetwear",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Accessories",
+     "tag_id": "urn:tag:product_service:qloo:accessories",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Direct-to-Consumer",
+     "tag_id": "urn:tag:retail_channel:qloo:direct_to_consumer",
+     "type": "urn:tag:retail_channel:qloo"
+    },
+    {
+     "name": "Department Store",
+     "tag_id": "urn:tag:retail_channel:qloo:department_store",
+     "type": "urn:tag:retail_channel:qloo"
+    },
+    {
+     "name": "Wholesale",
+     "tag_id": "urn:tag:retail_channel:qloo:wholesale",
+     "type": "urn:tag:retail_channel:qloo"
+    },
+    {
+     "name": "Online Marketplace",
+     "tag_id": "urn:tag:retail_channel:qloo:online_marketplace",
+     "type": "urn:tag:retail_channel:qloo"
+    },
+    {
+     "name": "Air Jordan 1",
+     "tag_id": "urn:tag:signature_piece:qloo:air_jordan_1",
+     "type": "urn:tag:signature_piece:qloo"
+    },
+    {
+     "name": "Air Jordan 3",
+     "tag_id": "urn:tag:signature_piece:qloo:air_jordan_3",
+     "type": "urn:tag:signature_piece:qloo"
+    },
+    {
+     "name": "Air Jordan 4",
+     "tag_id": "urn:tag:signature_piece:qloo:air_jordan_4",
+     "type": "urn:tag:signature_piece:qloo"
+    },
+    {
+     "name": "Air Jordan 11",
+     "tag_id": "urn:tag:signature_piece:qloo:air_jordan_11",
+     "type": "urn:tag:signature_piece:qloo"
+    },
+    {
+     "name": "Supreme",
+     "tag_id": "urn:tag:similar_brand:qloo:supreme",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Fear Of God",
+     "tag_id": "urn:tag:similar_brand:qloo:fear_of_god",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Yeezy",
+     "tag_id": "urn:tag:similar_brand:qloo:yeezy",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Kith",
+     "tag_id": "urn:tag:similar_brand:qloo:kith",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Converse",
+     "tag_id": "urn:tag:similar_brand:qloo:converse",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Move To Zero",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:move_to_zero",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Recycled Materials",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:recycled_materials",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Teens",
+     "tag_id": "urn:tag:target_age_group:qloo:teens",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Young Adults",
+     "tag_id": "urn:tag:target_age_group:qloo:young_adults",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Adults",
+     "tag_id": "urn:tag:target_age_group:qloo:adults",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Male",
+     "tag_id": "urn:tag:target_gender:qloo:male",
+     "type": "urn:tag:target_gender:qloo"
+    },
+    {
+     "name": "Female",
+     "tag_id": "urn:tag:target_gender:qloo:female",
+     "type": "urn:tag:target_gender:qloo"
+    },
+    {
+     "name": "Gender-Neutral",
+     "tag_id": "urn:tag:target_gender:qloo:gender_neutral",
+     "type": "urn:tag:target_gender:qloo"
+    },
+    {
+     "name": "Medium",
+     "tag_id": "urn:tag:target_income_level:qloo:medium",
+     "type": "urn:tag:target_income_level:qloo"
+    },
+    {
+     "name": "Medium to High",
+     "tag_id": "urn:tag:target_income_level:qloo:medium_to_high",
+     "type": "urn:tag:target_income_level:qloo"
+    }
+   ],
+   "types": [
+    "urn:entity:brand"
+   ]
+  },
+  {
+   "disambiguation": "",
+   "entity_id": "0769579D-F2B0-49F4-B008-9E62427DCDCE",
+   "name": "Nike Swim",
+   "popularity": 0.6181197131765862,
+   "tags": [
+    {
+     "name": "Fashion",
+     "tag_id": "urn:tag:genre:brand:fashion",
+     "type": "urn:tag:genre:brand"
+    }
+   ],
+   "types": [
+    "urn:entity:brand"
+   ]
+  },
+  {
+   "disambiguation": "",
+   "entity_id": "54E9B121-7023-4370-9ACB-8C5ACFD261B2",
+   "name": "Nornickel",
+   "popularity": 0.5497024969910664,
+   "tags": [
+    {
+     "name": "Copper mining companies of Russia",
+     "tag_id": "urn:tag:wikipedia_category:copper_mining_companies_of_russia",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Palladium mining companies",
+     "tag_id": "urn:tag:wikipedia_category:palladium_mining_companies",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "1993 establishments in Russia",
+     "tag_id": "urn:tag:wikipedia_category:1993_establishments_in_russia",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Non-renewable resource companies established in 1993",
+     "tag_id": "urn:tag:wikipedia_category:non_renewable_resource_companies_established_in_1993",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Norilsk",
+     "tag_id": "urn:tag:wikipedia_category:norilsk",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Companies listed on the Moscow Exchange",
+     "tag_id": "urn:tag:wikipedia_category:companies_listed_on_the_moscow_exchange",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Platinum mining companies",
+     "tag_id": "urn:tag:wikipedia_category:platinum_mining_companies",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Mining companies of Russia",
+     "tag_id": "urn:tag:wikipedia_category:mining_companies_of_russia",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Companies based in Moscow",
+     "tag_id": "urn:tag:wikipedia_category:companies_based_in_moscow",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Nickel mining companies",
+     "tag_id": "urn:tag:wikipedia_category:nickel_mining_companies",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Krasnoyarsk Krai",
+     "tag_id": "urn:tag:wikipedia_category:krasnoyarsk_krai",
+     "type": "urn:tag:wikipedia_category"
+    },
+    {
+     "name": "Industrial Minimalism",
+     "tag_id": "urn:tag:aesthetic_property:qloo:industrial_minimalism",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Functional Design",
+     "tag_id": "urn:tag:aesthetic_property:qloo:functional_design",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Cold Tones",
+     "tag_id": "urn:tag:aesthetic_property:qloo:cold_tones",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Metallic Textures",
+     "tag_id": "urn:tag:aesthetic_property:qloo:metallic_textures",
+     "type": "urn:tag:aesthetic_property:qloo"
+    },
+    {
+     "name": "Technological Innovation",
+     "tag_id": "urn:tag:lifestyle:qloo:technological_innovation",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Industrial Sustainability",
+     "tag_id": "urn:tag:lifestyle:qloo:industrial_sustainability",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Global Trade Leadership",
+     "tag_id": "urn:tag:lifestyle:qloo:global_trade_leadership",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Infrastructure Development",
+     "tag_id": "urn:tag:lifestyle:qloo:infrastructure_development",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Other",
+     "tag_id": "urn:tag:brand_subtype:qloo:other",
+     "type": "urn:tag:brand_subtype:qloo"
+    },
+    {
+     "name": "Corporate Brand",
+     "tag_id": "urn:tag:brand_type:qloo:corporate_brand",
+     "type": "urn:tag:brand_type:qloo"
+    },
+    {
+     "name": "B2B",
+     "tag_id": "urn:tag:business_model:qloo:b2b",
+     "type": "urn:tag:business_model:qloo"
+    },
+    {
+     "name": "Vale",
+     "tag_id": "urn:tag:competitor_brand:qloo:vale",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Anglo American",
+     "tag_id": "urn:tag:competitor_brand:qloo:anglo_american",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Glencore",
+     "tag_id": "urn:tag:competitor_brand:qloo:glencore",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "BHP",
+     "tag_id": "urn:tag:competitor_brand:qloo:bhp",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Rio Tinto",
+     "tag_id": "urn:tag:competitor_brand:qloo:rio_tinto",
+     "type": "urn:tag:competitor_brand:qloo"
+    },
+    {
+     "name": "Reliability",
+     "tag_id": "urn:tag:core_value:qloo:reliability",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Efficiency",
+     "tag_id": "urn:tag:core_value:qloo:efficiency",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Industrial Excellence",
+     "tag_id": "urn:tag:core_value:qloo:industrial_excellence",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Responsibility",
+     "tag_id": "urn:tag:core_value:qloo:responsibility",
+     "type": "urn:tag:core_value:qloo"
+    },
+    {
+     "name": "Arctic Exploration",
+     "tag_id": "urn:tag:cultural_relevance:qloo:arctic_exploration",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Russian Industrial History",
+     "tag_id": "urn:tag:cultural_relevance:qloo:russian_industrial_history",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Global Energy Transition",
+     "tag_id": "urn:tag:cultural_relevance:qloo:global_energy_transition",
+     "type": "urn:tag:cultural_relevance:qloo"
+    },
+    {
+     "name": "Automotive Manufacturers",
+     "tag_id": "urn:tag:customer_segment:qloo:automotive_manufacturers",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Battery Producers",
+     "tag_id": "urn:tag:customer_segment:qloo:battery_producers",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Industrial Conglomerates",
+     "tag_id": "urn:tag:customer_segment:qloo:industrial_conglomerates",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Global Trading Firms",
+     "tag_id": "urn:tag:customer_segment:qloo:global_trading_firms",
+     "type": "urn:tag:customer_segment:qloo"
+    },
+    {
+     "name": "Reliable",
+     "tag_id": "urn:tag:emotional_tone:qloo:reliable",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Resilient",
+     "tag_id": "urn:tag:emotional_tone:qloo:resilient",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Professional",
+     "tag_id": "urn:tag:emotional_tone:qloo:professional",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Sturdy",
+     "tag_id": "urn:tag:emotional_tone:qloo:sturdy",
+     "type": "urn:tag:emotional_tone:qloo"
+    },
+    {
+     "name": "Industrials",
+     "tag_id": "urn:tag:industry:qloo:industrials",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Mining",
+     "tag_id": "urn:tag:industry:qloo:mining",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Metallurgy",
+     "tag_id": "urn:tag:industry:qloo:metallurgy",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Raw Materials",
+     "tag_id": "urn:tag:industry:qloo:raw_materials",
+     "type": "urn:tag:industry:qloo"
+    },
+    {
+     "name": "Industrial Analysts",
+     "tag_id": "urn:tag:influencer_appeal:qloo:industrial_analysts",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Commodity Market Experts",
+     "tag_id": "urn:tag:influencer_appeal:qloo:commodity_market_experts",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Economic Journalists",
+     "tag_id": "urn:tag:influencer_appeal:qloo:economic_journalists",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Supply Chain Strategists",
+     "tag_id": "urn:tag:influencer_appeal:qloo:supply_chain_strategists",
+     "type": "urn:tag:influencer_appeal:qloo"
+    },
+    {
+     "name": "Industrial Mining",
+     "tag_id": "urn:tag:interest_adjacency:qloo:industrial_mining",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Global Trade",
+     "tag_id": "urn:tag:interest_adjacency:qloo:global_trade",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Resource Management",
+     "tag_id": "urn:tag:interest_adjacency:qloo:resource_management",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Infrastructure Development",
+     "tag_id": "urn:tag:interest_adjacency:qloo:infrastructure_development",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Heavy Metallurgy",
+     "tag_id": "urn:tag:interest_adjacency:qloo:heavy_metallurgy",
+     "type": "urn:tag:interest_adjacency:qloo"
+    },
+    {
+     "name": "Russia",
+     "tag_id": "urn:tag:key_market:qloo:russia",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "China",
+     "tag_id": "urn:tag:key_market:qloo:china",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Europe",
+     "tag_id": "urn:tag:key_market:qloo:europe",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "North America",
+     "tag_id": "urn:tag:key_market:qloo:north_america",
+     "type": "urn:tag:key_market:qloo"
+    },
+    {
+     "name": "Nickel",
+     "tag_id": "urn:tag:keyword:qloo:nickel",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Palladium",
+     "tag_id": "urn:tag:keyword:qloo:palladium",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Arctic Mining",
+     "tag_id": "urn:tag:keyword:qloo:arctic_mining",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Metals",
+     "tag_id": "urn:tag:keyword:qloo:metals",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "Commodities",
+     "tag_id": "urn:tag:keyword:qloo:commodities",
+     "type": "urn:tag:keyword:qloo"
+    },
+    {
+     "name": "BASF",
+     "tag_id": "urn:tag:partnership:qloo:basf",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Russian Platinum",
+     "tag_id": "urn:tag:partnership:qloo:russian_platinum",
+     "type": "urn:tag:partnership:qloo"
+    },
+    {
+     "name": "Corporate Management",
+     "tag_id": "urn:tag:lifestyle:qloo:corporate_management",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Industrial Operations",
+     "tag_id": "urn:tag:lifestyle:qloo:industrial_operations",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Global Logistics",
+     "tag_id": "urn:tag:lifestyle:qloo:global_logistics",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Resource Planning",
+     "tag_id": "urn:tag:lifestyle:qloo:resource_planning",
+     "type": "urn:tag:lifestyle:qloo"
+    },
+    {
+     "name": "Mainstream",
+     "tag_id": "urn:tag:market_archetype:qloo:mainstream",
+     "type": "urn:tag:market_archetype:qloo"
+    },
+    {
+     "name": "Heritage",
+     "tag_id": "urn:tag:market_archetype:qloo:heritage",
+     "type": "urn:tag:market_archetype:qloo"
+    },
+    {
+     "name": "Nickel",
+     "tag_id": "urn:tag:product_service:qloo:nickel",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Palladium",
+     "tag_id": "urn:tag:product_service:qloo:palladium",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Copper",
+     "tag_id": "urn:tag:product_service:qloo:copper",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Cobalt",
+     "tag_id": "urn:tag:product_service:qloo:cobalt",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Platinum",
+     "tag_id": "urn:tag:product_service:qloo:platinum",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Gold",
+     "tag_id": "urn:tag:product_service:qloo:gold",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Rhodium",
+     "tag_id": "urn:tag:product_service:qloo:rhodium",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Silver",
+     "tag_id": "urn:tag:product_service:qloo:silver",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Tellurium",
+     "tag_id": "urn:tag:product_service:qloo:tellurium",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Selenium",
+     "tag_id": "urn:tag:product_service:qloo:selenium",
+     "type": "urn:tag:product_service:qloo"
+    },
+    {
+     "name": "Freeport-McMoRan",
+     "tag_id": "urn:tag:similar_brand:qloo:freeport_mcmoran",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Antofagasta",
+     "tag_id": "urn:tag:similar_brand:qloo:antofagasta",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Southern Copper",
+     "tag_id": "urn:tag:similar_brand:qloo:southern_copper",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "First Quantum Minerals",
+     "tag_id": "urn:tag:similar_brand:qloo:first_quantum_minerals",
+     "type": "urn:tag:similar_brand:qloo"
+    },
+    {
+     "name": "Kola MMC",
+     "tag_id": "urn:tag:subsidiary:qloo:kola_mmc",
+     "type": "urn:tag:subsidiary:qloo"
+    },
+    {
+     "name": "Bystrinsky GOK",
+     "tag_id": "urn:tag:subsidiary:qloo:bystrinsky_gok",
+     "type": "urn:tag:subsidiary:qloo"
+    },
+    {
+     "name": "Sulphur Project",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:sulphur_project",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Reduced Carbon Emissions",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:reduced_carbon_emissions",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Supply Chain Transparency",
+     "tag_id": "urn:tag:sustainability_initiative:qloo:supply_chain_transparency",
+     "type": "urn:tag:sustainability_initiative:qloo"
+    },
+    {
+     "name": "Adults",
+     "tag_id": "urn:tag:target_age_group:qloo:adults",
+     "type": "urn:tag:target_age_group:qloo"
+    },
+    {
+     "name": "Gender-Neutral",
+     "tag_id": "urn:tag:target_gender:qloo:gender_neutral",
+     "type": "urn:tag:target_gender:qloo"
+    },
+    {
+     "name": "High",
+     "tag_id": "urn:tag:target_income_level:qloo:high",
+     "type": "urn:tag:target_income_level:qloo"
+    }
+   ],
+   "types": [
+    "urn:entity:brand"
+   ]
+  }
+ ]
+}

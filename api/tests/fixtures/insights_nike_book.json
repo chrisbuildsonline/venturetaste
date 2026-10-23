@@ -1,0 +1,2513 @@
+{
+ "results": {
+  "entities": [
+   {
+    "disambiguation": "2014, Jeff Pearlman",
+    "entity_id": "9E5710CE-D7F4-4E27-8909-B2E690FF0A91",
+    "name": "Showtime: Magic, Kareem, Riley, and the Los Angeles Lakers Dynasty of the 1980s",
+    "popularity": 0.9500605203389139,
+    "query": {
+     "affinity": 0.9102194282429557
+    },
+    "subtype": "urn:entity:book",
+    "tags": [
+     {
+      "id": "urn:tag:genre:media:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:pop_culture",
+      "name": "Pop Culture",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:audiobook",
+      "name": "Audiobook",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:nonfiction",
+      "name": "Nonfiction",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography",
+      "name": "Biography",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:tv",
+      "name": "Tv",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:cultural",
+      "name": "Cultural",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:history",
+      "name": "History",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:journalism",
+      "name": "Journalism",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:18_24",
+      "name": "18-24",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:25_29",
+      "name": "25-29",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:30_34",
+      "name": "30-34",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:35_44",
+      "name": "35-44",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:45_54",
+      "name": "45-54",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:55_",
+      "name": "55+",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:hardcover",
+      "name": "Hardcover",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:paperback",
+      "name": "Paperback",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:ebook",
+      "name": "Ebook",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:non_fiction",
+      "name": "Non-fiction",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:dynasty",
+      "name": "Dynasty",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:nba",
+      "name": "NBA",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:showtime",
+      "name": "Showtime",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:los_angeles_lakers",
+      "name": "Los Angeles Lakers",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:magic_johnson",
+      "name": "Magic Johnson",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:kareem_abdul_jabbar",
+      "name": "Kareem Abdul-Jabbar",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:pat_riley",
+      "name": "Pat Riley",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:1980s",
+      "name": "1980s",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:print",
+      "name": "Print",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:digital",
+      "name": "Digital",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:narrative:qloo:third_person_omniscient",
+      "name": "third person omniscient",
+      "type": "urn:tag:narrative:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:captivating",
+      "name": "Captivating",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:dramatic",
+      "name": "Dramatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:entertaining",
+      "name": "Entertaining",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:historical",
+      "name": "Historical",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:celebrity",
+      "name": "Celebrity",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:sportsmanship",
+      "name": "Sportsmanship",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:teamwork",
+      "name": "Teamwork",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:adversity",
+      "name": "Adversity",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:los_angeles_california_united_states",
+      "name": "Los Angeles, California, United States",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:showtime",
+      "name": "Showtime",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:celebrity_culture",
+      "name": "Celebrity Culture",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:basketball_dynasty",
+      "name": "Basketball Dynasty",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:sports",
+      "name": "Sports",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:biography",
+      "name": "Biography",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:1980s",
+      "name": "1980s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:1990s",
+      "name": "1990s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:vivid",
+      "name": "Vivid",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:comprehensive",
+      "name": "Comprehensive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dynamic",
+      "name": "Dynamic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:informative",
+      "name": "Informative",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:sports_enthusiasts",
+      "name": "Sports Enthusiasts",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:history_buffs",
+      "name": "History Buffs",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:basketball_fans",
+      "name": "Basketball Fans",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:nostalgic_readers",
+      "name": "Nostalgic Readers",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "1986, John Feinstein",
+    "entity_id": "F0968753-84AF-4334-A6AB-B2E28C9A9732",
+    "name": "A Season on the Brink: A Year with Bob Knight and the Indiana Hoosiers",
+    "popularity": 0.9756898638632376,
+    "query": {
+     "affinity": 0.9092650663003289
+    },
+    "subtype": "urn:entity:book",
+    "tags": [
+     {
+      "id": "urn:tag:genre:media:journalism",
+      "name": "Journalism",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:leadership",
+      "name": "Leadership",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography",
+      "name": "Biography",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:audiobook",
+      "name": "Audiobook",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:history",
+      "name": "History",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:adult",
+      "name": "Adult",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography_memoir",
+      "name": "Biography Memoir",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:nonfiction",
+      "name": "Nonfiction",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:18_24",
+      "name": "18-24",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:25_29",
+      "name": "25-29",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:30_34",
+      "name": "30-34",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:35_44",
+      "name": "35-44",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:45_54",
+      "name": "45-54",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:55_",
+      "name": "55+",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:bestselling",
+      "name": "bestselling",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:insightful",
+      "name": "insightful",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:groundbreaking",
+      "name": "groundbreaking",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:controversial",
+      "name": "controversial",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:hardcover",
+      "name": "Hardcover",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:paperback",
+      "name": "Paperback",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:college_basketball",
+      "name": "College Basketball",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:indiana_hoosiers",
+      "name": "Indiana Hoosiers",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:bob_knight",
+      "name": "Bob Knight",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:coaching",
+      "name": "Coaching",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:sports_journalism",
+      "name": "Sports Journalism",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:1985_86_season",
+      "name": "1985-86 Season",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:ncaa",
+      "name": "NCAA",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:print",
+      "name": "Print",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:digital",
+      "name": "Digital",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:narrative:qloo:third_person_objective",
+      "name": "third person objective",
+      "type": "urn:tag:narrative:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:intense",
+      "name": "Intense",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:dramatic",
+      "name": "Dramatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:revealing",
+      "name": "Revealing",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:controversial",
+      "name": "Controversial",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:leadership",
+      "name": "Leadership",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:pressure",
+      "name": "Pressure",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:sportsmanship",
+      "name": "Sportsmanship",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:integrity",
+      "name": "Integrity",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:controversy",
+      "name": "Controversy",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:bloomington_indiana_united_states",
+      "name": "Bloomington, Indiana, United States",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:coaching_strategies",
+      "name": "Coaching Strategies",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:team_dynamics",
+      "name": "Team Dynamics",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:media_access",
+      "name": "Media Access",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:1980s",
+      "name": "1980s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:in_depth",
+      "name": "In-depth",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:journalistic",
+      "name": "Journalistic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:candid",
+      "name": "Candid",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:unfiltered",
+      "name": "Unfiltered",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:sports_enthusiasts",
+      "name": "Sports Enthusiasts",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:analytical",
+      "name": "Analytical",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:detail_oriented",
+      "name": "Detail-oriented",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:history_buffs",
+      "name": "History Buffs",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2016, Alejandro Danois",
+    "entity_id": "2865BCC2-9760-435A-9B18-45F1E9E7C084",
+    "name": "The Boys of Dunbar: A Story of Love, Hope, and Basketball",
+    "popularity": 0.5657121679881407,
+    "query": {
+     "affinity": 0.9049981840976431
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2019, Brian Windhorst",
+    "entity_id": "F9EA7C2A-A4C9-4EB0-826C-4C537327E2B8",
+    "name": "LeBron, Inc.: The Making of a Billion-Dollar Athlete",
+    "popularity": 0.9220953637340369,
+    "query": {
+     "affinity": 0.9037797127603612
+    },
+    "subtype": "urn:entity:book",
+    "tags": [
+     {
+      "id": "urn:tag:genre:media:nonfiction",
+      "name": "Nonfiction",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:history",
+      "name": "History",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:business",
+      "name": "Business",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography",
+      "name": "Biography",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:leadership",
+      "name": "Leadership",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:audiobook",
+      "name": "Audiobook",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:18_24",
+      "name": "18-24",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:25_29",
+      "name": "25-29",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:30_34",
+      "name": "30-34",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:35_44",
+      "name": "35-44",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:45_54",
+      "name": "45-54",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:inspiring",
+      "name": "Inspiring",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:comprehensive",
+      "name": "Comprehensive",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:hardcover",
+      "name": "Hardcover",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:paperback",
+      "name": "Paperback",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:ebook",
+      "name": "Ebook",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:biography",
+      "name": "Biography",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:non_fiction",
+      "name": "Non-fiction",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:lebron_james",
+      "name": "LeBron James",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:nba",
+      "name": "NBA",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:business",
+      "name": "Business",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:brand",
+      "name": "Brand",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:athlete",
+      "name": "Athlete",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:billionaire",
+      "name": "Billionaire",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:sports_icon",
+      "name": "Sports Icon",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:cleveland",
+      "name": "Cleveland",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:lakers",
+      "name": "Lakers",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:print",
+      "name": "Print",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:digital",
+      "name": "Digital",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:narrative:qloo:third_person_objective",
+      "name": "third person objective",
+      "type": "urn:tag:narrative:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:inspirational",
+      "name": "Inspirational",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:informative",
+      "name": "Informative",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:transformation",
+      "name": "Transformation",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:business",
+      "name": "Business",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:influence",
+      "name": "Influence",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:athlete_empowerment",
+      "name": "Athlete Empowerment",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:legacy",
+      "name": "Legacy",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:cleveland_ohio_usa",
+      "name": "Cleveland, Ohio, USA",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:los_angeles_california_usa",
+      "name": "Los Angeles, California, USA",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:brand_building",
+      "name": "Brand Building",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:athlete_empowerment",
+      "name": "Athlete Empowerment",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:legacy",
+      "name": "Legacy",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:sports",
+      "name": "Sports",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:business",
+      "name": "Business",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:2000s",
+      "name": "2000s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:2010s",
+      "name": "2010s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:inspiring",
+      "name": "Inspiring",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:comprehensive",
+      "name": "Comprehensive",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:ambitious",
+      "name": "Ambitious",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:business_minded",
+      "name": "Business-minded",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:sports_enthusiasts",
+      "name": "Sports Enthusiasts",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:entrepreneurial",
+      "name": "Entrepreneurial",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2017, Brian Windhorst",
+    "entity_id": "350ABFCE-AEA3-465E-A434-42CD809D89E4",
+    "name": "Return of the King: LeBron James, The Cleveland Cavaliers and the Greatest Comeback in NBA History",
+    "popularity": 0.9466877014511281,
+    "query": {
+     "affinity": 0.902496039634782
+    },
+    "subtype": "urn:entity:book",
+    "tags": [
+     {
+      "id": "urn:tag:genre:media:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography",
+      "name": "Biography",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:journalism",
+      "name": "Journalism",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:history",
+      "name": "History",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:audiobook",
+      "name": "Audiobook",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography_memoir",
+      "name": "Biography Memoir",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:nonfiction",
+      "name": "Nonfiction",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:contemporary",
+      "name": "Contemporary",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:american",
+      "name": "American",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:18_24",
+      "name": "18-24",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:25_29",
+      "name": "25-29",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:30_34",
+      "name": "30-34",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:35_44",
+      "name": "35-44",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:45_54",
+      "name": "45-54",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:hardcover",
+      "name": "Hardcover",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:paperback",
+      "name": "Paperback",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:ebook",
+      "name": "Ebook",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:non_fiction",
+      "name": "Non-fiction",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:lebron_james",
+      "name": "LeBron James",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:cleveland_cavaliers",
+      "name": "Cleveland Cavaliers",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:nba",
+      "name": "NBA",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:comeback",
+      "name": "Comeback",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:championship",
+      "name": "Championship",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:kevin_love",
+      "name": "Kevin Love",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:david_blatt",
+      "name": "David Blatt",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:golden_state_warriors",
+      "name": "Golden State Warriors",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:print",
+      "name": "Print",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:digital",
+      "name": "Digital",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:narrative:qloo:third_person_objective",
+      "name": "third person objective",
+      "type": "urn:tag:narrative:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:inspirational",
+      "name": "Inspirational",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:dramatic",
+      "name": "Dramatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:revealing",
+      "name": "Revealing",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:redemption",
+      "name": "Redemption",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:teamwork",
+      "name": "Teamwork",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:perseverance",
+      "name": "Perseverance",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:leadership",
+      "name": "Leadership",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:rivalry",
+      "name": "Rivalry",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:cleveland_ohio_united_states",
+      "name": "Cleveland, Ohio, United States",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:miami_florida_united_states",
+      "name": "Miami, Florida, United States",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:oakland_california_united_states",
+      "name": "Oakland, California, United States",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:comeback",
+      "name": "Comeback",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:leadership",
+      "name": "Leadership",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:team_dynamics",
+      "name": "Team Dynamics",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:sports",
+      "name": "Sports",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:biography",
+      "name": "Biography",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:2010s",
+      "name": "2010s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:detailed",
+      "name": "Detailed",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:revealing",
+      "name": "Revealing",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:dramatic",
+      "name": "Dramatic",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:sports_enthusiasts",
+      "name": "Sports Enthusiasts",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:basketball_fans",
+      "name": "Basketball Fans",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:lebron_james_fans",
+      "name": "LeBron James Fans",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:cleveland_cavaliers_supporters",
+      "name": "Cleveland Cavaliers Supporters",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2008, Jeff Pearlman",
+    "entity_id": "5F3DF71C-0BD3-458D-A517-DBF0B3596D0A",
+    "name": "Boys Will Be Boys: The Glory Days and Party Nights of the Dallas Cowboys Dynasty",
+    "popularity": 0.9511587264888683,
+    "query": {
+     "affinity": 0.9018768781398729
+    },
+    "subtype": "urn:entity:book",
+    "tags": [
+     {
+      "id": "urn:tag:genre:media:memoir",
+      "name": "Memoir",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:westerns",
+      "name": "Westerns",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography",
+      "name": "Biography",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:nonfiction",
+      "name": "Nonfiction",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:humor",
+      "name": "Humor",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:football",
+      "name": "Football",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:history",
+      "name": "History",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:audiobook",
+      "name": "Audiobook",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:18_24",
+      "name": "18-24",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:25_29",
+      "name": "25-29",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:30_34",
+      "name": "30-34",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:35_44",
+      "name": "35-44",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:45_54",
+      "name": "45-54",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:55_",
+      "name": "55+",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:rollicking",
+      "name": "rollicking",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:unabashed",
+      "name": "unabashed",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:riveting",
+      "name": "riveting",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:hilarious",
+      "name": "hilarious",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:hardcover",
+      "name": "Hardcover",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:paperback",
+      "name": "Paperback",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:non_fiction",
+      "name": "Non-fiction",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:dallas_cowboys",
+      "name": "Dallas Cowboys",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:nfl",
+      "name": "NFL",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:1990s",
+      "name": "1990s",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:football",
+      "name": "Football",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:michael_irvin",
+      "name": "Michael Irvin",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:deion_sanders",
+      "name": "Deion Sanders",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:emmitt_smith",
+      "name": "Emmitt Smith",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:troy_aikman",
+      "name": "Troy Aikman",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:america_s_team",
+      "name": "America's Team",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:print",
+      "name": "Print",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:digital",
+      "name": "Digital",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:narrative:qloo:third_person_objective",
+      "name": "third person objective",
+      "type": "urn:tag:narrative:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:entertaining",
+      "name": "Entertaining",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:revealing",
+      "name": "Revealing",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:humorous",
+      "name": "Humorous",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:controversy",
+      "name": "Controversy",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:sportsmanship",
+      "name": "Sportsmanship",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:celebrity_culture",
+      "name": "Celebrity Culture",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:dallas_texas_united_states",
+      "name": "Dallas, Texas, United States",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:fame",
+      "name": "Fame",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:scandal",
+      "name": "Scandal",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:team_dynamics",
+      "name": "Team Dynamics",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:sports",
+      "name": "Sports",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:biography",
+      "name": "Biography",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:1990s",
+      "name": "1990s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:unabashed",
+      "name": "Unabashed",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:rollicking",
+      "name": "Rollicking",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:candid",
+      "name": "Candid",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:humorous",
+      "name": "Humorous",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:sports_enthusiasts",
+      "name": "Sports Enthusiasts",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:nostalgic",
+      "name": "Nostalgic",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:entertained",
+      "name": "Entertained",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2020, Jeff Pearlman",
+    "entity_id": "127728E0-52D7-4EF8-B8A2-140F7F09B8BE",
+    "name": "Three-Ring Circus: Kobe, Shaq, Phil, and the Crazy Years of the Lakers Dynasty",
+    "popularity": 0.9613349834759075,
+    "query": {
+     "affinity": 0.9007042207391646
+    },
+    "subtype": "urn:entity:book",
+    "tags": [
+     {
+      "id": "urn:tag:genre:media:biography",
+      "name": "Biography",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:history",
+      "name": "History",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:pop_culture",
+      "name": "Pop Culture",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:journalism",
+      "name": "Journalism",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:audiobook",
+      "name": "Audiobook",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:nonfiction",
+      "name": "Nonfiction",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:18_24",
+      "name": "18-24",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:25_29",
+      "name": "25-29",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:30_34",
+      "name": "30-34",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:35_44",
+      "name": "35-44",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:45_54",
+      "name": "45-54",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:55_",
+      "name": "55+",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:compelling",
+      "name": "Compelling",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:entertaining",
+      "name": "Entertaining",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:well_researched",
+      "name": "Well-researched",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:hardcover",
+      "name": "Hardcover",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:paperback",
+      "name": "Paperback",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:ebook",
+      "name": "Ebook",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:non_fiction",
+      "name": "Non-fiction",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:lakers",
+      "name": "Lakers",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:nba",
+      "name": "NBA",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:dynasty",
+      "name": "Dynasty",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:championships",
+      "name": "Championships",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:kobe_bryant",
+      "name": "Kobe Bryant",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:shaquille_o_neal",
+      "name": "Shaquille O'Neal",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:phil_jackson",
+      "name": "Phil Jackson",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:rivalry",
+      "name": "Rivalry",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:teamwork",
+      "name": "Teamwork",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:print",
+      "name": "Print",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:digital",
+      "name": "Digital",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:narrative:qloo:third_person_objective",
+      "name": "third person objective",
+      "type": "urn:tag:narrative:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:dramatic",
+      "name": "Dramatic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:detailed",
+      "name": "Detailed",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:historical",
+      "name": "Historical",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:rivalry",
+      "name": "Rivalry",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:teamwork",
+      "name": "Teamwork",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:conflict",
+      "name": "Conflict",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:leadership",
+      "name": "Leadership",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:los_angeles_california_united_states",
+      "name": "Los Angeles, California, United States",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:rivalry",
+      "name": "Rivalry",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:championships",
+      "name": "Championships",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:team_dynamics",
+      "name": "Team Dynamics",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:biography",
+      "name": "Biography",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:sports_history",
+      "name": "Sports History",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:1990s",
+      "name": "1990s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:2000s",
+      "name": "2000s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:in_depth",
+      "name": "In-depth",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:analytical",
+      "name": "Analytical",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:narrative_driven",
+      "name": "Narrative-driven",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:historical",
+      "name": "Historical",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:sports_enthusiasts",
+      "name": "Sports Enthusiasts",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:basketball_fans",
+      "name": "Basketball Fans",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:history_buffs",
+      "name": "History Buffs",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:competitive",
+      "name": "Competitive",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:team_oriented",
+      "name": "Team-oriented",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2016, Jeff Pearlman",
+    "entity_id": "315E9C6E-6066-4D19-99B0-380B1234D8D3",
+    "name": "Gunslinger: The Remarkable, Improbable, Iconic Life of Brett Favre",
+    "popularity": 0.8582260060656339,
+    "query": {
+     "affinity": 0.896979002840135
+    },
+    "subtype": "urn:entity:book",
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "1992, Sam  Smith",
+    "entity_id": "2BC3C2E1-8B79-4B27-94ED-937FDE93DB7A",
+    "name": "The Jordan Rules: The Inside Story of One Turbulent Season with Michael Jordan and the Chicago Bulls",
+    "popularity": 0.9724530457370562,
+    "query": {
+     "affinity": 0.8963798053743023
+    },
+    "subtype": "urn:entity:book",
+    "tags": [
+     {
+      "id": "urn:tag:genre:media:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:psychology",
+      "name": "Psychology",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:history",
+      "name": "History",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:business",
+      "name": "Business",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography",
+      "name": "Biography",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:african_american",
+      "name": "African American",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:contemporary",
+      "name": "Contemporary",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography_memoir",
+      "name": "Biography Memoir",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:nonfiction",
+      "name": "Nonfiction",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:18_24",
+      "name": "18-24",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:25_29",
+      "name": "25-29",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:30_34",
+      "name": "30-34",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:35_44",
+      "name": "35-44",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:45_54",
+      "name": "45-54",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:eye_opener",
+      "name": "eye-opener",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:controversial",
+      "name": "controversial",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:insightful",
+      "name": "insightful",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:critical_descriptor:qloo:detailed",
+      "name": "detailed",
+      "type": "urn:tag:critical_descriptor:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:hardcover",
+      "name": "Hardcover",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:paperback",
+      "name": "Paperback",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:nonfiction",
+      "name": "Nonfiction",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:michael_jordan",
+      "name": "Michael Jordan",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:chicago_bulls",
+      "name": "Chicago Bulls",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:nba_championship",
+      "name": "NBA Championship",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:basketball",
+      "name": "Basketball",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:team_dynamics",
+      "name": "Team Dynamics",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:1990_1991_season",
+      "name": "1990-1991 Season",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:phil_jackson",
+      "name": "Phil Jackson",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:scottie_pippen",
+      "name": "Scottie Pippen",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:horace_grant",
+      "name": "Horace Grant",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:jerry_krause",
+      "name": "Jerry Krause",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:print",
+      "name": "Print",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:digital",
+      "name": "Digital",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:narrative:qloo:third_person_objective",
+      "name": "third person objective",
+      "type": "urn:tag:narrative:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:revealing",
+      "name": "Revealing",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:controversial",
+      "name": "Controversial",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:detailed",
+      "name": "Detailed",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:leadership",
+      "name": "Leadership",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:team_dynamics",
+      "name": "Team Dynamics",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:competition",
+      "name": "Competition",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:success",
+      "name": "Success",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:challenges",
+      "name": "Challenges",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:chicago_illinois_united_states",
+      "name": "Chicago, Illinois, United States",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:teamwork",
+      "name": "Teamwork",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:competition",
+      "name": "Competition",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:leadership",
+      "name": "Leadership",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:1990s",
+      "name": "1990s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:revealing",
+      "name": "Revealing",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:controversial",
+      "name": "Controversial",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:detailed",
+      "name": "Detailed",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:engaging",
+      "name": "Engaging",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:sports_enthusiasts",
+      "name": "Sports Enthusiasts",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:basketball_fans",
+      "name": "Basketball Fans",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:curious",
+      "name": "Curious",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:analytical",
+      "name": "Analytical",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:detail_oriented",
+      "name": "Detail-oriented",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   },
+   {
+    "disambiguation": "2021, Kent Babb",
+    "entity_id": "754CC8C6-9E80-45E7-ADD9-4F22D26FDBF9",
+    "name": "Across the River: Life, Death, and Football in an American City",
+    "popularity": 0.7138951978131077,
+    "query": {
+     "affinity": 0.8960506408108844
+    },
+    "subtype": "urn:entity:book",
+    "tags": [
+     {
+      "id": "urn:tag:genre:media:football",
+      "name": "Football",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:audiobook",
+      "name": "Audiobook",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:nonfiction",
+      "name": "Nonfiction",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:race",
+      "name": "Race",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:health",
+      "name": "Health",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:biography",
+      "name": "Biography",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:sports",
+      "name": "Sports",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:history",
+      "name": "History",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:southern",
+      "name": "Southern",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:genre:media:sociology",
+      "name": "Sociology",
+      "type": "urn:tag:genre:media"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:18_24",
+      "name": "18-24",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:25_29",
+      "name": "25-29",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:30_34",
+      "name": "30-34",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:35_44",
+      "name": "35-44",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:45_54",
+      "name": "45-54",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:age_ranges:qloo:55_",
+      "name": "55+",
+      "type": "urn:tag:age_ranges:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:hardcover",
+      "name": "Hardcover",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:paperback",
+      "name": "Paperback",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:book_format:qloo:ebook",
+      "name": "Ebook",
+      "type": "urn:tag:book_format:qloo"
+     },
+     {
+      "id": "urn:tag:genre:qloo:non_fiction",
+      "name": "Non-fiction",
+      "type": "urn:tag:genre:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:football",
+      "name": "Football",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:gun_violence",
+      "name": "Gun Violence",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:community",
+      "name": "Community",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:high_school_sports",
+      "name": "High School Sports",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:new_orleans",
+      "name": "New Orleans",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:poverty",
+      "name": "Poverty",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:resilience",
+      "name": "Resilience",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:youth",
+      "name": "Youth",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:keyword:qloo:coaching",
+      "name": "Coaching",
+      "type": "urn:tag:keyword:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:print",
+      "name": "Print",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:media_type:qloo:digital",
+      "name": "Digital",
+      "type": "urn:tag:media_type:qloo"
+     },
+     {
+      "id": "urn:tag:narrative:qloo:third_person_objective",
+      "name": "third person objective",
+      "type": "urn:tag:narrative:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:inspiring",
+      "name": "Inspiring",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:realistic",
+      "name": "Realistic",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:emotional",
+      "name": "Emotional",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:character:qloo:thought_provoking",
+      "name": "Thought-Provoking",
+      "type": "urn:tag:character:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:resilience",
+      "name": "Resilience",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:community",
+      "name": "Community",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:hope",
+      "name": "Hope",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:overcoming_adversity",
+      "name": "Overcoming Adversity",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:theme:qloo:youth_empowerment",
+      "name": "Youth Empowerment",
+      "type": "urn:tag:theme:qloo"
+     },
+     {
+      "id": "urn:tag:setting:qloo:algiers_new_orleans_louisiana_united_states",
+      "name": "Algiers, New Orleans, Louisiana, United States",
+      "type": "urn:tag:setting:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:football_as_a_metaphor",
+      "name": "Football as a Metaphor",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:community_support",
+      "name": "Community Support",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:motif:qloo:struggle_for_survival",
+      "name": "Struggle for Survival",
+      "type": "urn:tag:motif:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:sports_journalism",
+      "name": "Sports Journalism",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:subgenre:qloo:social_issues",
+      "name": "Social Issues",
+      "type": "urn:tag:subgenre:qloo"
+     },
+     {
+      "id": "urn:tag:time_period:qloo:2010s",
+      "name": "2010s",
+      "type": "urn:tag:time_period:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:gritty",
+      "name": "Gritty",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:unflinching",
+      "name": "Unflinching",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:compelling",
+      "name": "Compelling",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:insightful",
+      "name": "Insightful",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:style:qloo:heartfelt",
+      "name": "Heartfelt",
+      "type": "urn:tag:style:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:empathetic",
+      "name": "Empathetic",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:socially_conscious",
+      "name": "Socially Conscious",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:sports_enthusiasts",
+      "name": "Sports Enthusiasts",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     },
+     {
+      "id": "urn:tag:viewer_characteristic:qloo:community_oriented",
+      "name": "Community-Oriented",
+      "type": "urn:tag:viewer_characteristic:qloo"
+     }
+    ],
+    "type": "urn:entity"
+   }
+  ]
+ },
+ "success": true
+}
