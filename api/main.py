@@ -1,12 +1,16 @@
 import json
+import math
 import os
 import tempfile
+import threading
+import time
+from collections import deque
 from collections.abc import Iterator
 from dataclasses import asdict
 from pathlib import Path
 from typing import Annotated, Any
 
-from fastapi import Depends, FastAPI, Request
+from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, StringConstraints
@@ -66,7 +70,40 @@ def presets() -> list[dict[str, str]]:
     return [asdict(p) for p in PRESETS]
 
 
-@app.post("/api/diligence")
+RATE_WINDOW = 60.0
+_clock = time.monotonic
+_hits: dict[str, deque[float]] = {}
+_hits_lock = threading.Lock()
+
+
+def reset_rate_limit() -> None:
+    with _hits_lock:
+        _hits.clear()
+
+
+# ponytail: single process, in-memory sliding window; a restart or a second worker resets it. Per-IP behind a
+# proxy needs uvicorn --proxy-headers (and FORWARDED_ALLOW_IPS), or every user shares the proxy's address.
+def rate_limit(request: Request) -> None:
+    limit = int(os.environ.get("VENTURETASTE_RATE_LIMIT") or 30)
+    ip = request.client.host if request.client else "unknown"
+    now = _clock()
+    with _hits_lock:
+        for key in [k for k, q in _hits.items() if not q or q[-1] <= now - RATE_WINDOW]:
+            del _hits[key]  # idle clients, so the dict cannot grow without bound
+        hits = _hits.setdefault(ip, deque())
+        while hits and hits[0] <= now - RATE_WINDOW:
+            hits.popleft()
+        if len(hits) >= limit:
+            retry = max(1, math.ceil(hits[0] + RATE_WINDOW - now))
+            raise HTTPException(
+                429,
+                "Too many diligence runs from your network. Try again in a minute.",
+                headers={"Retry-After": str(retry)},
+            )
+        hits.append(now)
+
+
+@app.post("/api/diligence", dependencies=[Depends(rate_limit)])
 def diligence(body: DiligenceRequest, client: Annotated[QlooClient, Depends(get_qloo)]) -> dict[str, Any]:
     return run_diligence(client, body.acquirer, body.target)
 
@@ -75,7 +112,7 @@ def sse(event: str, data: Any) -> str:
     return f"event: {event}\ndata: {json.dumps(data)}\n\n"
 
 
-@app.post("/api/diligence/stream")
+@app.post("/api/diligence/stream", dependencies=[Depends(rate_limit)])
 def diligence_stream(body: DiligenceRequest, client: Annotated[QlooClient, Depends(get_qloo)]) -> StreamingResponse:
     """Same run as /api/diligence, as server-sent events: agent start/finish, then result (or error)."""
 
