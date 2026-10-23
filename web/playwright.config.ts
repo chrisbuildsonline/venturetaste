@@ -8,6 +8,7 @@ export default defineConfig({
   projects: [{ name: "chromium", use: { browserName: "chromium" } }],
   webServer: {
     command: `uv run uvicorn api.main:app --port ${PORT}`,
+    env: { VENTURETASTE_FIXTURES: "1" },
     cwd: "..",
     url: `http://127.0.0.1:${PORT}/api/health`,
     reuseExistingServer: !process.env.CI,
