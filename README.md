@@ -2,6 +2,8 @@
 
 An autonomous 4-agent M&A and venture diligence pipeline for consumer brand acquisitions. Give it an acquirer and a target; it pulls both brands' taste profiles from Qloo's cross-domain taste graph and deterministically scores brand synergy, customer overlap (cannibalization) and cultural churn risk, then writes a deal memo with a verdict.
 
+**Live demo: https://venturetaste.5-78-152-178.sslip.io**
+
 Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/). Submissions close 2026-10-30.
 
 ![VentureTaste running Nike + Adidas](docs/demo-desktop.png)
@@ -126,6 +128,8 @@ The image builds the web app, installs the API with uv and runs uvicorn as a non
 The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffering: no`, so nginx style proxies do not buffer it.
 
 `bun run docker:smoke` builds the image, runs it on port 8799 with your `.env`, waits for `/api/health`, runs the Playwright spec `web/e2e/live.spec.ts` (Nike + Adidas against real Qloo) and removes the container. Set `BASE_URL` and run `cd web && bunx playwright test` to run that spec against any other deployment.
+
+`bun run e2e:live` runs the same spec against the public deployment (https://venturetaste.5-78-152-178.sslip.io, or your own via `BASE_URL`). It uses two diligence runs and also checks that the proxy streams the SSE events instead of buffering them.
 
 ## How to test
 
