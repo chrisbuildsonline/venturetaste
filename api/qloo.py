@@ -61,6 +61,13 @@ class Affinity:
 
 
 @dataclass(frozen=True)
+class Tag:
+    id: str
+    name: str
+    affinity: float
+
+
+@dataclass(frozen=True)
 class Demographics:
     age: dict[str, float]  # e.g. "24_and_younger" -> affinity in -1..1
     gender: dict[str, float]  # "female" / "male" -> affinity
@@ -132,6 +139,22 @@ def parse_insights(payload: object) -> list[Affinity]:
     return affinities
 
 
+def parse_tags(payload: object) -> list[Tag]:
+    results = _obj(_obj(payload, "tags response").get("results"), "results")
+    tags = []
+    for raw in _list(results.get("tags"), "tags"):
+        item = _obj(raw, "tag")
+        query = _obj(item.get("query"), "tag query")
+        tags.append(
+            Tag(
+                id=_str(item.get("tag_id"), "tag_id"),
+                name=_str(_str(item.get("name"), "name").strip(), "name"),
+                affinity=_num(query.get("affinity"), "affinity"),
+            )
+        )
+    return tags
+
+
 def _scores(value: object, what: str) -> dict[str, float]:
     return {key: _num(score, f"{what}.{key}") for key, score in _obj(value, what).items()}
 
@@ -190,6 +213,10 @@ class QlooClient:
     def demographics(self, entity_id: str) -> Demographics:
         params = {"filter.type": "urn:demographics", "signal.interests.entities": entity_id}
         return self._get("/v2/insights", params, parse_demographics)
+
+    def tags(self, entity_id: str, take: int = DEFAULT_TAKE) -> list[Tag]:
+        params = {"filter.type": "urn:tag", "signal.interests.entities": entity_id, "take": str(take)}
+        return self._get("/v2/insights", params, parse_tags)
 
     def _get(self, path: str, params: dict[str, str], parse: Callable[[object], T]) -> T:
         cache_file = self._cache_dir / (
