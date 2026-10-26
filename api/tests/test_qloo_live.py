@@ -10,7 +10,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from api.main import app, get_qloo
-from api.presets import PRESETS, Preset
+from api.presets import PRESETS, SCREENS, Preset
 from api.qloo import DOMAINS, QlooClient
 
 pytestmark = pytest.mark.live
@@ -106,6 +106,16 @@ def test_live_synergy_preset_beats_clash_preset(api: TestClient) -> None:
     assert bci(next(p for p in PRESETS if p.kind == "synergy")) > bci(
         next(p for p in PRESETS if p.kind == "clash")
     )
+
+
+@pytest.mark.parametrize("target", [t for s in SCREENS for t in s.targets])
+def test_live_screen_target_scores_and_verdict(api: TestClient, target: str) -> None:
+    res = api.post("/api/diligence", json={"acquirer": SCREENS[0].acquirer, "target": target})
+    assert res.status_code == 200, res.text
+    report = res.json()
+    assert report["brands"]["target"]["name"].casefold() == target.casefold()
+    assert 0 <= report["scores"]["bci"] <= 100 and 0 <= report["scores"]["culture_clash"] <= 100
+    assert report["memo"]["verdict"] in {"Proceed", "Proceed with conditions", "Pass"}
 
 
 def test_live_second_call_is_cache_hit(qloo: QlooClient, requests_made: list[httpx.Request]) -> None:
