@@ -26,7 +26,18 @@ test("README screenshots: desktop and mobile Nike + Adidas", async ({ page }) =>
   await page.screenshot({ path: "../docs/demo-mobile.png", fullPage: true });
 });
 
-test("README screenshots: Patagonia + Gucci culture clash", async ({ page }) => {
+test("README screenshots: Nike target screening table", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto("/");
+  await page.getByRole("group", { name: "Mode" }).getByRole("button", { name: "Screen targets" }).click();
+  await page.getByRole("button", { name: "Nike: 4 targets" }).click();
+  await expect(page.getByTestId("screen-row")).toHaveCount(4);
+  await expect(page.getByText("Screening…")).toHaveCount(0);
+  await expect(page.locator("form").getByRole("button", { name: "Screen targets" })).toBeEnabled();
+  await page.screenshot({ path: "../docs/screening.png", fullPage: true });
+});
+
+test("README screenshots: Patagonia + Gucci culture clash",async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 });
   await runPreset(page, "Patagonia + Gucci");
   await expect(page.getByTestId("verdict")).toHaveText("Pass");
