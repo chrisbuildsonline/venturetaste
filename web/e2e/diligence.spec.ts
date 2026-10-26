@@ -199,6 +199,34 @@ test("a 429 from the stream shows the message and does not fall back", async ({ 
   expect(errors.filter((e) => !e.includes("429"))).toEqual([]);
 });
 
+const UNAVAILABLE = "Taste data from Qloo is temporarily unavailable. Please try again in a moment.";
+
+test("an upstream failure in the stream shows the friendly message", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.route("**/api/diligence/stream", (r) =>
+    r.fulfill({
+      status: 200,
+      contentType: "text/event-stream",
+      body: `event: agent\ndata: {"agent":"Scout","status":"running"}\n\nevent: error\ndata: ${JSON.stringify({ status: 502, detail: UNAVAILABLE })}\n\n`,
+    }),
+  );
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+  await expect(inlineAlert(page)).toHaveText(UNAVAILABLE);
+  await expect(page.getByRole("button", { name: "Run diligence" })).toBeEnabled();
+  expect(errors).toEqual([]);
+});
+
+test("a 502 from the plain POST shows the friendly message", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.route("**/api/diligence/stream", (r) => r.abort());
+  await page.route("**/api/diligence", (r) => r.fulfill({ status: 502, json: { detail: UNAVAILABLE } }));
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+  await expect(inlineAlert(page)).toHaveText(UNAVAILABLE);
+  expect(errors.filter((e) => !e.includes("502") && !e.includes("net::ERR_FAILED"))).toEqual([]);
+});
+
 test("a 429 from the plain POST shows the message", async ({ page }) => {
   const errors = watchErrors(page);
   await page.route("**/api/diligence/stream", (r) => r.abort());
