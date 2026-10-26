@@ -1,9 +1,12 @@
 """Live probe: nonsense search, max take, candidate pair scores. Run: bun run probe"""
 
 import json
+import os
 import sys
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
+
+import httpx
 
 from api.pipeline import run_diligence
 from api.presets import PRESETS
@@ -21,7 +24,26 @@ PAIRS = [
 ]
 
 
+def tags_probe() -> int:
+    """Raw urn:tag response for Patagonia. Run: bun run probe:tags"""
+    client = QlooClient(cache_dir=Path(".cache/probe"))
+    params = {"filter.type": "urn:tag", "signal.interests.entities": client.search("Patagonia").id, "take": "50"}
+    resp = httpx.get(
+        client._base + "/v2/insights", params=params, headers={"X-Api-Key": os.environ["QLOO_API_KEY"]}, timeout=30
+    )
+    print(resp.status_code)
+    print(json.dumps(resp.json(), indent=1)[:3000])
+    for preset in PRESETS:
+        report = run_diligence(client, preset.acquirer, preset.target)
+        cold = sum(1 for v in report["domain_overlap"].values() if v == 0)
+        trace = next(t for t in report["trace"] if t["agent"] == "Analyst")
+        print(preset.id, "cold", cold, trace["decision"], [b["name"] for b in report["bridges"]])
+    return 0
+
+
 def main() -> int:
+    if sys.argv[1:] == ["tags"]:
+        return tags_probe()
     take = int(sys.argv[1]) if len(sys.argv) > 1 else 50
     client = QlooClient(cache_dir=Path(".cache/probe"))
     try:

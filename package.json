@@ -6,6 +6,7 @@
     "test": "uv run pytest -q api/tests",
     "test:live": "uv run --env-file .env pytest -q -m live api/tests",
     "probe": "uv run --env-file .env python -m api.probe",
+    "probe:tags": "uv run --env-file .env python -m api.probe tags",
     "record": "uv run --env-file .env python -m api.record_fixtures",
     "e2e:ci": "CI=1 bun run e2e",
     "typecheck": "cd web && bun run typecheck && cd .. && uv run mypy",

@@ -36,6 +36,8 @@ def fixture_handler(calls: list[httpx.Request]) -> Callable[[httpx.Request], htt
         kind = params["filter.type"]
         if kind == "urn:demographics":
             return httpx.Response(200, json=load(f"demographics_{name}"))
+        if kind == "urn:tag":
+            return httpx.Response(200, json=load(f"tags_{name}"))
         return httpx.Response(200, json=load(f"insights_{name}_{kind.split(':')[-1]}"))
 
     return handler

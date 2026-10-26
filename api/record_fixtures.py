@@ -65,6 +65,14 @@ def main() -> int:
                 if isinstance(data, dict):
                     slim(data.get("results", {}).get("entities", []))
                     save(f"insights_{name}_{domain}", data)
+            tags = get(
+                client,
+                "/v2/insights",
+                {"filter.type": "urn:tag", "signal.interests.entities": entity_id, "take": str(DEFAULT_TAKE)},
+            )
+            if isinstance(tags, dict):
+                slim(tags.get("results", {}).get("tags", []))
+                save(f"tags_{name}", tags)
             demo = get(
                 client,
                 "/v2/insights",

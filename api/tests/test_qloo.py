@@ -16,6 +16,7 @@ from api.qloo import (
     parse_demographics,
     parse_insights,
     parse_search,
+    parse_tags,
 )
 from api.fixtures import BASE, BRAND_IDS, fixture_handler, make_client
 
@@ -170,9 +171,50 @@ def test_bad_json_and_bad_shape_are_parse_errors_and_not_cached(tmp_path: Path) 
     assert not list(tmp_path.glob("*.json"))
 
 
+def test_tags_sends_tag_filter_and_parses(qloo: QlooClient, calls: list[httpx.Request]) -> None:
+    entity_id = next(iter(BRAND_IDS))
+    tags = qloo.tags(entity_id)
+    assert calls[0].url.params["filter.type"] == "urn:tag"
+    assert calls[0].url.params["signal.interests.entities"] == entity_id
+    assert tags and all(t.id.startswith("urn:tag:") and t.name == t.name.strip() and t.name for t in tags)
+    assert all(isinstance(t.affinity, float) for t in tags)
+
+
+def tag_payload(**tag: object) -> dict[str, object]:
+    good = {"tag_id": "urn:tag:x", "name": " folk", "query": {"affinity": 0.5}}
+    return {"results": {"tags": [{**good, **tag}]}}
+
+
+def test_parse_tags_trims_names() -> None:
+    assert [(t.id, t.name, t.affinity) for t in parse_tags(tag_payload())] == [("urn:tag:x", "folk", 0.5)]
+
+
+@pytest.mark.parametrize(
+    "payload",
+    [
+        {},
+        {"results": []},
+        {"results": {}},
+        {"results": {"tags": {}}},
+        {"results": {"tags": ["x"]}},
+        tag_payload(tag_id=None),
+        tag_payload(tag_id=""),
+        tag_payload(name="  "),
+        tag_payload(name=3),
+        tag_payload(query=None),
+        tag_payload(query={"affinity": "high"}),
+        tag_payload(query={"affinity": True}),
+        tag_payload(query={"affinity": float("nan")}),
+    ],
+)
+def test_parse_tags_rejects_bad_payloads(payload: object) -> None:
+    with pytest.raises(QlooParseError):
+        parse_tags(payload)
+
+
 # Fuzz: anything goes in, only a result or QlooParseError comes out.
 KEYS = st.sampled_from(
-    ["results", "entities", "demographics", "entity_id", "name", "popularity", "query",
+    ["results", "entities", "demographics", "tags", "tag_id", "entity_id", "name", "popularity", "query",
      "affinity", "age", "gender", "x"]
 )
 JSON = st.recursive(
@@ -182,7 +224,7 @@ JSON = st.recursive(
 )
 
 
-@pytest.mark.parametrize("parser", [parse_search, parse_insights, parse_demographics])
+@pytest.mark.parametrize("parser", [parse_search, parse_insights, parse_demographics, parse_tags])
 @given(payload=JSON)
 def test_parsers_only_raise_parse_error(parser: Callable[[object], object], payload: object) -> None:
     try:
@@ -196,12 +238,12 @@ RESULTS = (
     st.dictionaries(KEYS, JSON, max_size=3)
     | st.lists(ITEM, max_size=3)
     | st.fixed_dictionaries(
-        {"entities": st.lists(ITEM, max_size=3), "demographics": st.lists(ITEM, max_size=2)}
+        {"entities": st.lists(ITEM, max_size=3), "demographics": st.lists(ITEM, max_size=2), "tags": st.lists(ITEM, max_size=3)}
     )
 )
 
 
-@pytest.mark.parametrize("parser", [parse_search, parse_insights, parse_demographics])
+@pytest.mark.parametrize("parser", [parse_search, parse_insights, parse_demographics, parse_tags])
 @given(payload=st.fixed_dictionaries({"results": RESULTS}))
 def test_parsers_survive_partial_results(
     parser: Callable[[object], object], payload: object
