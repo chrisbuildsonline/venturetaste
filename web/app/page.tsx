@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Results from "./Results";
-import { AGENTS, type Diligence, type Preset, type TraceStep } from "./types";
+import ScreenTable from "./ScreenTable";
+import { parseTargets, type Row } from "./screen";
+import { AGENTS, type Diligence, type Preset, type Screen, type TraceStep } from "./types";
 
 const AGENT_ROLES: Record<(typeof AGENTS)[number], string> = {
   Scout: "Resolves both brands in the Qloo taste graph",
@@ -33,12 +35,22 @@ export default function Home() {
   const [data, setData] = useState<Diligence | null>(null);
   const [trace, setTrace] = useState<TraceStep[]>([]);
   const [active, setActive] = useState<string | null>(null);
+  const [mode, setMode] = useState<"pair" | "screen">("pair");
+  const [targetsText, setTargetsText] = useState("");
+  const [screens, setScreens] = useState<Screen[]>([]);
+  const [rows, setRows] = useState<Row[]>([]);
+  const [screenAcquirer, setScreenAcquirer] = useState("");
+  const [screening, setScreening] = useState(false);
 
   useEffect(() => {
     fetch("/api/presets")
       .then((r) => (r.ok ? r.json() : []))
       .then(setPresets)
       .catch(() => setPresets([]));
+    fetch("/api/screens")
+      .then((r) => (r.ok ? r.json() : []))
+      .then(setScreens)
+      .catch(() => setScreens([]));
   }, []);
 
   function show(d: Diligence) {
@@ -130,7 +142,70 @@ export default function Home() {
     void run(p.acquirer, p.target);
   }
 
-  const showProgress = running || data !== null;
+  function switchMode(next: "pair" | "screen") {
+    setMode(next);
+    setError(null);
+  }
+
+  /** Screens one target at a time (each run already fans out 6 Qloo threads), filling the rows as they finish. */
+  async function screen(a: string, raw: string) {
+    const acq = a.trim();
+    setError(null);
+    if (!acq) {
+      setError("Enter an acquirer brand.");
+      return;
+    }
+    const parsed = parseTargets(raw, acq);
+    if (parsed.error) {
+      setError(parsed.error);
+      return;
+    }
+    const names = parsed.targets;
+    const put = (i: number, row: Row) => setRows((prev) => prev.map((r, j) => (j === i ? row : r)));
+    setScreenAcquirer(acq);
+    setRows(names.map((t) => ({ target: t, state: "pending" })));
+    setScreening(true);
+    try {
+      for (const [i, t] of names.entries()) {
+        let res: Response;
+        try {
+          res = await fetch("/api/diligence", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ acquirer: acq, target: t }) });
+        } catch {
+          put(i, { target: t, state: "error", error: "Could not reach the VentureTaste API. Check your connection and try again." });
+          continue;
+        }
+        const json: unknown = await res.json().catch(() => null);
+        if (res.ok) {
+          const d = json as Diligence;
+          put(i, { target: t, state: "done", bci: d.scores.bci, clash: d.scores.culture_clash, churn: d.scores.churn_risk, verdict: d.memo.verdict });
+        } else if (res.status === 429) {
+          const msg = errorText(json, res.status);
+          setRows((prev) => prev.map((r, j) => (j >= i ? { target: r.target, state: "error", error: msg } : r)));
+          break;
+        } else {
+          put(i, { target: t, state: "error", error: errorText(json, res.status) });
+        }
+      }
+    } finally {
+      setScreening(false);
+    }
+  }
+
+  function pickScreen(s: Screen) {
+    setAcquirer(s.acquirer);
+    setTargetsText(s.targets.join(", "));
+    void screen(s.acquirer, s.targets.join(", "));
+  }
+
+  function fullDiligence(t: string) {
+    setMode("pair");
+    setAcquirer(screenAcquirer);
+    setTarget(t);
+    void run(screenAcquirer, t);
+  }
+
+  const busy = running || screening;
+  const showProgress = mode === "pair" && (running || data !== null);
 
   return (
     <main className="mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 sm:pt-16">
@@ -140,10 +215,25 @@ export default function Home() {
         <p className="mt-3 max-w-2xl text-lg text-zinc-300">Taste-graph due diligence for consumer brand deals</p>
       </header>
 
+      <div role="group" aria-label="Mode" className="mb-3 inline-flex rounded-xl border border-white/15 p-1">
+        {(["pair", "screen"] as const).map((m) => (
+          <button
+            key={m}
+            type="button"
+            aria-pressed={mode === m}
+            disabled={busy}
+            onClick={() => switchMode(m)}
+            className={`min-h-10 rounded-lg px-4 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed ${mode === m ? "bg-indigo-500 text-white" : "text-zinc-300 hover:text-white"}`}
+          >
+            {m === "pair" ? "Compare a deal" : "Screen targets"}
+          </button>
+        ))}
+      </div>
+
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          void run(acquirer, target);
+          void (mode === "pair" ? run(acquirer, target) : screen(acquirer, targetsText));
         }}
         className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6"
         noValidate
@@ -153,28 +243,35 @@ export default function Home() {
             <label htmlFor="acquirer" className="mb-2 block text-sm font-medium text-zinc-200">Acquirer</label>
             <input id="acquirer" className={INPUT} value={acquirer} onChange={(e) => setAcquirer(e.target.value)} placeholder="e.g. Nike" autoComplete="off" maxLength={100} />
           </div>
-          <div>
-            <label htmlFor="target" className="mb-2 block text-sm font-medium text-zinc-200">Target</label>
-            <input id="target" className={INPUT} value={target} onChange={(e) => setTarget(e.target.value)} placeholder="e.g. Adidas" autoComplete="off" maxLength={100} />
-          </div>
+          {mode === "pair" ? (
+            <div>
+              <label htmlFor="target" className="mb-2 block text-sm font-medium text-zinc-200">Target</label>
+              <input id="target" className={INPUT} value={target} onChange={(e) => setTarget(e.target.value)} placeholder="e.g. Adidas" autoComplete="off" maxLength={100} />
+            </div>
+          ) : (
+            <div>
+              <label htmlFor="targets" className="mb-2 block text-sm font-medium text-zinc-200">Candidate targets</label>
+              <textarea id="targets" className={INPUT} rows={3} value={targetsText} onChange={(e) => setTargetsText(e.target.value)} placeholder="2 to 5 brands, comma or line separated" />
+            </div>
+          )}
         </div>
         <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <button
             type="submit"
-            disabled={running}
+            disabled={busy}
             className="rounded-xl bg-indigo-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-indigo-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {running ? "Running diligence…" : "Run diligence"}
+            {mode === "pair" ? (running ? "Running diligence…" : "Run diligence") : screening ? "Screening targets…" : "Screen targets"}
           </button>
-          {presets.length > 0 && (
-            <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Preset deals">
-              <span className="text-sm text-zinc-400">Try a deal:</span>
-              {presets.map((p) => (
+          {(mode === "pair" ? presets.length : screens.length) > 0 && (
+            <div className="flex flex-wrap items-center gap-2" role="group" aria-label={mode === "pair" ? "Preset deals" : "Preset screens"}>
+              <span className="text-sm text-zinc-400">{mode === "pair" ? "Try a deal:" : "Try a screen:"}</span>
+              {(mode === "pair" ? presets : screens).map((p) => (
                 <button
                   key={p.id}
                   type="button"
-                  disabled={running}
-                  onClick={() => pick(p)}
+                  disabled={busy}
+                  onClick={() => ("target" in p ? pick(p) : pickScreen(p))}
                   className="rounded-full border border-white/15 px-3.5 py-1.5 text-sm text-zinc-200 transition hover:border-indigo-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {p.label}
@@ -217,8 +314,17 @@ export default function Home() {
       )}
 
       <div className="mt-5" aria-live="polite">
-        {data && <Results data={data} />}
-        {!data && !running && !error && (
+        {mode === "screen" && rows.length > 0 && <ScreenTable acquirer={screenAcquirer} rows={rows} onFull={fullDiligence} />}
+        {mode === "screen" && rows.length === 0 && !error && (
+          <div data-testid="screen-empty" className="rounded-2xl border border-dashed border-white/15 px-6 py-14 text-center">
+            <p className="text-lg font-medium text-white">Which acquisition target fits best?</p>
+            <p className="mx-auto mt-2 max-w-xl text-sm text-zinc-400">
+              Enter an acquirer and 2 to 5 candidate targets. Each one gets a full taste-graph diligence, one after another, and the table ranks them. Screening 5 targets counts as 5 diligence runs against the rate limit.
+            </p>
+          </div>
+        )}
+        {mode === "pair" && data && <Results data={data} />}
+        {mode === "pair" && !data && !running && !error && (
           <div data-testid="empty-state" className="rounded-2xl border border-dashed border-white/15 px-6 py-14 text-center">
             <p className="text-lg font-medium text-white">Is this deal a cannibalization trap or a cross-sell win?</p>
             <p className="mx-auto mt-2 max-w-xl text-sm text-zinc-400">

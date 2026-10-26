@@ -16,13 +16,13 @@ const DOMAIN_LABELS: Record<string, string> = {
 const label = (key: string) => DOMAIN_LABELS[key] ?? key.replaceAll("_", " ");
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 
-const VERDICT_STYLE: Record<string, string> = {
+export const VERDICT_STYLE: Record<string, string> = {
   Proceed: "bg-emerald-400/15 text-emerald-300 ring-emerald-400/40",
   "Proceed with conditions": "bg-amber-400/15 text-amber-300 ring-amber-400/40",
   Pass: "bg-rose-400/15 text-rose-300 ring-rose-400/40",
 };
 
-const CHURN_STYLE = { low: "text-emerald-300", medium: "text-amber-300", high: "text-rose-300" };
+export const CHURN_STYLE: Record<string, string> = { low: "text-emerald-300", medium: "text-amber-300", high: "text-rose-300" };
 
 function Card({ title, children, className = "", testId }: { title: string; children: React.ReactNode; className?: string; testId?: string }) {
   return (

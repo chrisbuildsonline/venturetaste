@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "setup": "uv sync && cd web && bun install",
-    "test": "uv run pytest -q api/tests",
+    "test": "uv run pytest -q api/tests && cd web && bun run unit",
     "test:live": "uv run --env-file .env pytest -q -m live api/tests",
     "probe": "uv run --env-file .env python -m api.probe",
     "probe:tags": "uv run --env-file .env python -m api.probe tags",

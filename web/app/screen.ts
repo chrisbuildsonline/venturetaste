@@ -1,0 +1,31 @@
+export const MIN_TARGETS = 2;
+export const MAX_TARGETS = 5;
+
+export type Row =
+  | { target: string; state: "pending" }
+  | { target: string; state: "error"; error: string }
+  | { target: string; state: "done"; bci: number; clash: number; churn: string; verdict: string };
+
+export type SortKey = "bci" | "clash";
+
+export function parseTargets(raw: string, acquirer: string): { targets: string[]; error: string | null } {
+  const skip = new Set([acquirer.trim().toLowerCase()]);
+  const targets: string[] = [];
+  for (const part of raw.split(/[,\n]/)) {
+    const name = part.trim();
+    if (!name || skip.has(name.toLowerCase())) continue;
+    skip.add(name.toLowerCase());
+    targets.push(name);
+  }
+  if (targets.length < MIN_TARGETS) return { targets, error: `Enter at least ${MIN_TARGETS} different candidate targets, separated by commas or new lines.` };
+  if (targets.length > MAX_TARGETS) return { targets, error: `Screen at most ${MAX_TARGETS} targets at a time. Remove ${targets.length - MAX_TARGETS}.` };
+  return { targets, error: null };
+}
+
+/** Finished rows first, sorted by the key (bci high to low, clash low to high, the other as tie-break); pending and error rows keep their order. */
+export function rankRows(rows: Row[], key: SortKey): Row[] {
+  const finished = rows.filter((r): r is Extract<Row, { state: "done" }> => r.state === "done");
+  const rest = rows.filter((r) => r.state !== "done");
+  finished.sort((a, b) => (key === "bci" ? b.bci - a.bci || a.clash - b.clash : a.clash - b.clash || b.bci - a.bci));
+  return [...finished, ...rest];
+}
