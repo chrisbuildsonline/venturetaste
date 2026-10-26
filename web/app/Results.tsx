@@ -185,6 +185,20 @@ export default function Results({ data }: { data: Diligence }) {
               No shared taste in any domain: the audiences don&apos;t overlap.
             </p>
           )}
+          {data.bridges.length > 0 && (
+            <div data-testid="bridges" className="mt-3 rounded-lg border border-indigo-400/30 bg-indigo-400/5 px-3 py-2">
+              <h3 className="text-sm font-medium text-indigo-200">Bridging tastes</h3>
+              <ul className="mt-2 space-y-1.5">
+                {data.bridges.map((b) => (
+                  <li key={b.id} className="flex items-baseline justify-between gap-3 text-sm">
+                    <span className="min-w-0 break-words text-zinc-100">{b.name}</span>
+                    <span className="shrink-0 text-xs tabular-nums text-zinc-400">{b.affinity_acquirer.toFixed(2)} / {b.affinity_target.toFixed(2)}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-2 text-xs text-zinc-400">Qloo tags both audiences share, with {nameA} / {nameB} affinity. Evidence only: scores are unchanged.</p>
+            </div>
+          )}
           <p className="mt-3 text-xs text-zinc-400">Weighted Jaccard overlap of what each audience loves: {Object.entries(data.domain_overlap).map(([d, v]) => `${label(d)} ${pct(v)}`).join(" · ")}</p>
         </Card>
 

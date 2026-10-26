@@ -113,6 +113,47 @@ test("Patagonia + Gucci shows the no shared taste state and a Pass", async ({ pa
   expect(errors).toEqual([]);
 });
 
+test("Patagonia + Gucci: the Analyst probes tags and shows the bridging tastes", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.goto("/");
+  await page.getByRole("button", { name: "Patagonia + Gucci" }).click();
+
+  const decision = page.getByTestId("decision-Analyst");
+  await expect(decision).toHaveText(/^Overlap 0 in 7\/7 domains → probed Qloo tags: \d+ bridging tastes?$/);
+  await expect(page.getByTestId("agent-Analyst")).toContainText("2 Qloo calls");
+  const bridges = page.getByTestId("bridges");
+  await expect(bridges).toBeVisible();
+  await expect(bridges).toContainText("Bridging tastes");
+  expect(await bridges.locator("li").count()).toBeGreaterThan(0);
+  await expect(page.getByTestId("memo")).toContainText("Qloo tags bridge the two audiences");
+
+  await page.setViewportSize({ width: 390, height: 844 });
+  await expect(bridges).toBeVisible();
+  await expect
+    .poll(() => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth))
+    .toBeLessThanOrEqual(0);
+  expect(errors).toEqual([]);
+});
+
+test("Nike + Adidas: the Analyst skips the tag probe and shows no bridging list", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+
+  await expect(page.getByTestId("decision-Analyst")).toHaveText("Overlap in 6/7 domains → no tag probe needed");
+  await expect(page.getByTestId("agent-Analyst")).toContainText("0 Qloo calls");
+  await expect(page.getByTestId("bridges")).toHaveCount(0);
+  expect(errors).toEqual([]);
+});
+
+test("the Analyst decision shows in the non-stream fallback too", async ({ page }) => {
+  await page.route("**/api/diligence/stream", (r) => r.abort());
+  await page.goto("/");
+  await page.getByRole("button", { name: "Patagonia + Gucci" }).click();
+  await expect(page.getByTestId("decision-Analyst")).toContainText("probed Qloo tags");
+  await expect(page.getByTestId("bridges")).toBeVisible();
+});
+
 test("typed brands run from the form", async ({ page }) => {
   const errors = watchErrors(page);
   await page.goto("/");

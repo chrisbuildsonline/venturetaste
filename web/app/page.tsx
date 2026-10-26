@@ -208,6 +208,7 @@ export default function Home() {
                   <p className="mt-2 text-xs tabular-nums text-zinc-300">
                     {step ? `Done · ${step.ms} ms · ${step.qloo_calls} Qloo ${step.qloo_calls === 1 ? "call" : "calls"}` : waiting ? "Waiting" : "Running…"}
                   </p>
+                  {step?.decision && <p data-testid={`decision-${name}`} className="mt-2 text-xs text-indigo-200">{step.decision}</p>}
                 </li>
               );
             })}
