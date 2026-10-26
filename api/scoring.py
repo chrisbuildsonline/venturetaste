@@ -4,7 +4,7 @@ import math
 from collections.abc import Callable
 from dataclasses import dataclass
 
-from api.qloo import Affinity, Demographics
+from api.qloo import Affinity, Demographics, Tag
 
 # Blend: taste overlap counts 70%, audience demographics 30%.
 OVERLAP_WEIGHT, DEMO_WEIGHT = 0.7, 0.3
@@ -35,6 +35,14 @@ class ClashingTaste:
     domain: str
     name: str
     affinity: float
+
+
+@dataclass(frozen=True)
+class Bridge:
+    id: str
+    name: str
+    affinity_acquirer: float
+    affinity_target: float
 
 
 @dataclass(frozen=True)
@@ -110,6 +118,14 @@ def _clean[T: (SharedTaste, ClashingTaste)](items: list[T], brands: set[str], st
     for t in ranked:
         kept.setdefault((t.domain, t.name.casefold()), t)
     return list(kept.values())
+
+
+def bridges(a: list[Tag], b: list[Tag]) -> list[Bridge]:
+    """Tags both brands have, strongest common affinity first. Evidence only: never part of score()."""
+    theirs = {t.id: t.affinity for t in b}
+    found = [Bridge(t.id, t.name, t.affinity, theirs[t.id]) for t in a if t.id in theirs]
+    found.sort(key=lambda x: (-min(x.affinity_acquirer, x.affinity_target), x.name.casefold(), x.id))
+    return found[:TOP_N]
 
 
 def _band(clash: float) -> str:

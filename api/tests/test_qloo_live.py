@@ -3,6 +3,7 @@
 import time
 from collections.abc import Iterator
 from pathlib import Path
+from typing import Any
 
 import httpx
 import pytest
@@ -61,8 +62,33 @@ def test_live_preset_runs_cold_under_20s(api: TestClient, preset: Preset) -> Non
     assert res.status_code == 200, res.text
     report = res.json()
     assert elapsed < 20, f"{elapsed:.1f}s"
-    assert sum(t["qloo_calls"] for t in report["trace"]) == 18
+    assert sum(t["qloo_calls"] for t in report["trace"]) == (20 if report["probed_tags"] else 18)
     assert set(report["domain_overlap"]) == set(DOMAINS)
+
+
+def analyst_trace(report: dict[str, Any]) -> dict[str, Any]:
+    return next(t for t in report["trace"] if t["agent"] == "Analyst")
+
+
+def test_live_cold_pair_takes_the_tag_probe(api: TestClient) -> None:
+    res = api.post("/api/diligence", json={"acquirer": "Patagonia", "target": "Gucci"})
+    assert res.status_code == 200, res.text
+    report = res.json()
+    assert report["probed_tags"] is True
+    assert isinstance(report["bridges"], list) and len(report["bridges"]) <= 5
+    trace = analyst_trace(report)
+    assert trace["qloo_calls"] == 2
+    assert "probed Qloo tags" in trace["decision"]
+
+
+def test_live_warm_pair_skips_the_tag_probe(api: TestClient) -> None:
+    res = api.post("/api/diligence", json={"acquirer": "Nike", "target": "Adidas"})
+    assert res.status_code == 200, res.text
+    report = res.json()
+    assert report["probed_tags"] is False and report["bridges"] == []
+    trace = analyst_trace(report)
+    assert trace["qloo_calls"] == 0
+    assert "no tag probe needed" in trace["decision"]
 
 
 def test_live_nonsense_brand_is_422(api: TestClient) -> None:
