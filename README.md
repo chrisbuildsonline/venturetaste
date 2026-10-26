@@ -28,12 +28,12 @@ Responses are cached on disk (`.cache/qloo`), and HTTP 429 is retried with backo
 
 1. **Scout** resolves both brand names to Qloo entities (2 calls).
 2. **Cartographer** fetches insights for all 7 domains plus demographics for both brands (16 calls, in parallel threads). 18 Qloo calls per run with the two searches.
-3. **Analyst** scores the pair with `api/scoring.py` (pure code, no calls).
+3. **Analyst** scores the pair with `api/scoring.py` (pure code) and then decides: if at least 4 of the 7 domains have zero taste overlap, it asks Qloo for each brand's tag affinities (2 extra calls) and reports the top 5 tags both audiences share as "bridging tastes", ranked by the weaker of the two affinities. Bridges are evidence only and never change the BCI, clash score or verdict. Its trace item carries a `decision` string saying which way it went.
 4. **Partner** writes the deal memo from templates: a verdict (`Proceed`, `Proceed with conditions`, `Pass`), rationale and risks that name real Qloo entities from the data.
 
 ## API
 
-`POST /api/diligence` runs the pipeline and returns one JSON report: resolved brands, scores, `domain_overlap` for all 7 domains (no data = 0), top shared and clashing tastes, demographics for both brands, the memo, and the per-agent `trace`.
+`POST /api/diligence` runs the pipeline and returns one JSON report: resolved brands, scores, `domain_overlap` for all 7 domains (no data = 0), top shared and clashing tastes, demographics for both brands, `bridges` (`[{id, name, affinity_acquirer, affinity_target}]`, empty when none) and `probed_tags` (whether the Analyst probed Qloo tags), the memo, and the per-agent `trace` (the Analyst item also has a `decision`).
 
 ```
 curl -s -X POST http://127.0.0.1:8765/api/diligence \
