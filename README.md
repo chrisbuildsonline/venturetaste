@@ -69,9 +69,10 @@ Errors are always plain sentences. When Qloo is unreachable, answers with an err
 - **Mean overlap**: mean of the domain overlaps (0 if there are none).
 - **Demographic distance** (0..1): over the union of age and gender keys (missing = 0), `mean(|a - b|) / 2`, clamped.
 - **BCI** (0..100): `100 * (0.7 * mean_overlap + 0.3 * (1 - demographic_distance))`.
-- **Culture Clash %** (0..100): `100 * (0.7 * (1 - mean_overlap) + 0.3 * demographic_distance)`.
-- **Culture Clash** is always `100 - BCI`, up to rounding.
-- **Churn-risk band**: from Culture Clash, below 33 is `low`, below 66 is `medium`, otherwise `high`.
+- **Exclusive mass** (0..1, per domain): for each brand, the share of its positive affinity mass that sits on entities the other brand does not list at all (before the top 5 cut); the domain value is the mean of the two brands, and a brand with no positive mass in the domain is skipped. Mean over domains with data.
+- **Culture Clash %** (0..100): `100 * (0.7 * mean_exclusive_mass + 0.3 * demographic_distance)`.
+- Culture Clash is not `100 - BCI`: BCI rewards shared mass (so a shared entity with very unequal weights still lowers BCI), while clash only counts mass on entities the other audience lacks entirely, so the two can sum to more or less than 100.
+- **Churn-risk band**: from Culture Clash, below 33 is `low`, below 66 is `medium`, otherwise `high` (`LOW_BELOW` and `HIGH_FROM` in `api/scoring.py`).
 - **Top shared tastes**: entities in both lists of a domain, ranked by the lower of the two affinities, top 5. **Top clashing tastes**: entities with positive affinity for one brand and absent from the other's list, ranked by affinity, top 5 per brand.
 
 Rounding: BCI and Culture Clash to 1 decimal, everything else to 4.
@@ -84,8 +85,8 @@ Verified live at `take=50` (`api/presets.py`):
 
 | Pair | BCI | Culture Clash | Verdict |
 | --- | --- | --- | --- |
-| Nike + Adidas | 53.9 | 46.1 | Proceed (medium churn risk) |
-| Patagonia + The North Face | 46.6 | 53.4 | Proceed with conditions |
+| Nike + Adidas | 53.9 | 36.6 | Proceed (medium churn risk) |
+| Patagonia + The North Face | 46.6 | 43.8 | Proceed with conditions (medium churn risk) |
 | Patagonia + Gucci | 24.3 | 75.7 | Pass (high churn risk, no shared taste) |
 
 Patagonia + Gucci: Qloo finds no entity both audiences love in any of the seven domains.
