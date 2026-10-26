@@ -4,7 +4,8 @@ export type Brand = { query: string; id: string; name: string; popularity: numbe
 export type Shared = { domain: string; name: string; affinity_a: number; affinity_b: number };
 export type Clashing = { domain: string; name: string; affinity: number };
 export type Demographics = { age: Record<string, number>; gender: Record<string, number> };
-export type TraceStep = { agent: string; status: string; ms: number; qloo_calls: number };
+export type TraceStep = { agent: string; status: string; ms: number; qloo_calls: number; decision?: string };
+export type Bridge = { id: string; name: string; affinity_acquirer: number; affinity_target: number };
 
 export type Diligence = {
   brands: { acquirer: Brand; target: Brand };
@@ -13,6 +14,8 @@ export type Diligence = {
   top_shared: Shared[];
   top_clashing: { acquirer: Clashing[]; target: Clashing[] };
   demographics: { acquirer: Demographics; target: Demographics };
+  bridges: Bridge[];
+  probed_tags: boolean;
   memo: { verdict: string; headline: string; rationale: string[]; risks: string[] };
   trace: TraceStep[];
 };
