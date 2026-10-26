@@ -11,6 +11,7 @@ from collections.abc import Iterator
 from dataclasses import asdict
 from pathlib import Path
 from typing import Annotated, Any
+from urllib.parse import urlsplit
 
 from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse, StreamingResponse
@@ -78,12 +79,18 @@ def qloo_error(request: Request, exc: QlooError) -> JSONResponse:
     return JSONResponse({"detail": detail}, status_code=status)
 
 
+def _origin(url: str) -> str:
+    """scheme://host[:port] only, so userinfo, path and query in the env URL never leave the server."""
+    parts = urlsplit(url)
+    return f"{parts.scheme}://{parts.netloc.rpartition('@')[2]}"
+
+
 @app.get("/api/health")
 def health() -> dict[str, Any]:
     return {
         "ok": True,
         "qloo_key": bool(os.environ.get("QLOO_API_KEY")),
-        "qloo_url": normalize_base_url(os.environ.get("QLOO_API_URL")),
+        "qloo_url": _origin(normalize_base_url(os.environ.get("QLOO_API_URL"))),
         "fixtures": os.environ.get("VENTURETASTE_FIXTURES") == "1",
     }
 
