@@ -1,5 +1,6 @@
 import ipaddress
 import json
+import logging
 import math
 import os
 import tempfile
@@ -25,8 +26,10 @@ from api.qloo import (
     QlooClient,
     QlooError,
     QlooParseError,
+    normalize_base_url,
 )
 
+logger = logging.getLogger(__name__)
 app = FastAPI(title="VentureTaste")
 
 BrandName = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=100)]
@@ -50,20 +53,39 @@ class DiligenceRequest(BaseModel):
 def get_qloo() -> QlooClient:
     """Built per request (never at import) so a missing key is a 503, not a crash."""
     if os.environ.get("VENTURETASTE_FIXTURES") == "1":  # e2e runs: recorded Qloo answers, no key, no network
-        from api.tests.qloo_fake import fixture_handler, make_client
+        from api.fixtures import fixture_handler, make_client
 
         return make_client(Path(tempfile.mkdtemp(prefix="venturetaste-fixtures-")), fixture_handler([]))
     return QlooClient()
 
 
+UNAVAILABLE = "Taste data from Qloo is temporarily unavailable. Please try again in a moment."
+# These messages are written for people. Everything else (transport, HTTP status, parse errors) can carry
+# httpx text or response bodies, so the client gets UNAVAILABLE and the raw exception goes to the log.
+HUMAN_ERRORS = (BrandNotFoundError, NoTasteDataError, SameBrandError, MissingKeyError)
+
+
+def public_error(exc: Exception) -> tuple[int, str]:
+    if isinstance(exc, HUMAN_ERRORS):
+        return ERROR_STATUS[type(exc)], str(exc)
+    logger.error("diligence failed: %r", exc, exc_info=exc)
+    return 502, UNAVAILABLE
+
+
 @app.exception_handler(QlooError)
 def qloo_error(request: Request, exc: QlooError) -> JSONResponse:
-    return JSONResponse({"detail": str(exc)}, status_code=ERROR_STATUS.get(type(exc), 502))
+    status, detail = public_error(exc)
+    return JSONResponse({"detail": detail}, status_code=status)
 
 
 @app.get("/api/health")
-def health() -> dict[str, bool]:
-    return {"ok": True}
+def health() -> dict[str, Any]:
+    return {
+        "ok": True,
+        "qloo_key": bool(os.environ.get("QLOO_API_KEY")),
+        "qloo_url": normalize_base_url(os.environ.get("QLOO_API_URL")),
+        "fixtures": os.environ.get("VENTURETASTE_FIXTURES") == "1",
+    }
 
 
 @app.get("/api/presets")
@@ -127,8 +149,9 @@ def diligence_stream(body: DiligenceRequest, client: Annotated[QlooClient, Depen
         try:
             for event, data in stream_diligence(client, body.acquirer, body.target):
                 yield sse(event, data)
-        except QlooError as exc:
-            yield sse("error", {"status": ERROR_STATUS.get(type(exc), 502), "detail": str(exc)})
+        except Exception as exc:  # the stream has started, so even a surprise must end as a clean error event
+            status, detail = public_error(exc)
+            yield sse("error", {"status": status, "detail": detail})
 
     return StreamingResponse(events(), media_type="text/event-stream", headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 

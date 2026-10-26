@@ -15,7 +15,7 @@ from api.scoring import (
     score,
 )
 
-FIXTURES = Path(__file__).parent / "fixtures"
+FIXTURES = Path(__file__).resolve().parent.parent / "fixture_data"
 
 
 def aff(id: str, a: float) -> Affinity:

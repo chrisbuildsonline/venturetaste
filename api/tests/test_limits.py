@@ -9,7 +9,7 @@ from uvicorn.middleware.proxy_headers import ProxyHeadersMiddleware
 
 from api import main
 from api.main import app, get_qloo
-from api.tests.qloo_fake import fixture_handler, make_client
+from api.fixtures import fixture_handler, make_client
 
 BODY = {"acquirer": "Nike", "target": "Adidas"}
 PATHS = ["/api/diligence", "/api/diligence/stream"]

@@ -1,4 +1,4 @@
-"""Fixture-backed fake of the Qloo HTTP API, shared by the unit and pipeline tests."""
+"""Fixture-backed fake of the Qloo HTTP API: recorded answers for fixture mode and the tests."""
 
 import json
 from collections.abc import Callable
@@ -10,7 +10,7 @@ import httpx
 from api.presets import preset_brands, slug
 from api.qloo import QlooClient
 
-FIXTURES = Path(__file__).parent / "fixtures"
+FIXTURES = Path(__file__).parent / "fixture_data"
 BASE = "https://qloo.test"
 
 

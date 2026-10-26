@@ -6,4 +6,4 @@ from api.main import app
 def test_health() -> None:
     res = TestClient(app).get("/api/health")
     assert res.status_code == 200
-    assert res.json() == {"ok": True}
+    assert res.json()["ok"] is True
