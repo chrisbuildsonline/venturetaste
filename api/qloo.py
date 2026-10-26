@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import logging
 import math
 import os
 import time
@@ -9,8 +10,11 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import TypeVar
+from urllib.parse import urlsplit
 
 import httpx
+
+logger = logging.getLogger(__name__)
 
 DEFAULT_URL = "https://hackathon.api.qloo.com"
 DEFAULT_CACHE_DIR = Path(".cache/qloo")
@@ -141,6 +145,17 @@ def parse_demographics(payload: object) -> Demographics:
     return Demographics(age=_scores(query.get("age"), "age"), gender=_scores(query.get("gender"), "gender"))
 
 
+def normalize_base_url(value: str | None) -> str:
+    """The base URL to call: a valid http(s) URL without a trailing slash, else DEFAULT_URL (with a warning)."""
+    if not value or not value.strip():
+        return DEFAULT_URL
+    parts = urlsplit(value.strip())
+    if parts.scheme in ("http", "https") and parts.hostname:
+        return value.strip().rstrip("/")
+    logger.warning("QLOO_API_URL %r is not an http(s) URL with a host; using %s", value, DEFAULT_URL)
+    return DEFAULT_URL
+
+
 class QlooClient:
     def __init__(
         self,
@@ -152,7 +167,7 @@ class QlooClient:
         self._key = api_key or os.environ.get("QLOO_API_KEY")
         if not self._key:
             raise MissingKeyError("QLOO_API_KEY is not set")
-        self._base = (base_url or os.environ.get("QLOO_API_URL") or DEFAULT_URL).rstrip("/")
+        self._base = normalize_base_url(base_url or os.environ.get("QLOO_API_URL"))
         self._cache_dir = cache_dir
         self._http = http or httpx.Client(timeout=30)
 

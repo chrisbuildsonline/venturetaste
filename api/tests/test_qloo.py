@@ -17,7 +17,7 @@ from api.qloo import (
     parse_insights,
     parse_search,
 )
-from api.tests.qloo_fake import BASE, BRAND_IDS, fixture_handler, make_client
+from api.fixtures import BASE, BRAND_IDS, fixture_handler, make_client
 
 
 @pytest.fixture

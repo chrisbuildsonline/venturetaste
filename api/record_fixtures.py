@@ -1,4 +1,4 @@
-"""Record raw Qloo responses to api/tests/fixtures. Run: bun run record"""
+"""Record raw Qloo responses to api/fixture_data. Run: bun run record"""
 
 import json
 import os
@@ -11,7 +11,7 @@ import httpx
 from api.presets import preset_brands, slug
 from api.qloo import DEFAULT_TAKE, DOMAINS
 
-FIXTURES = Path(__file__).resolve().parent / "tests" / "fixtures"
+FIXTURES = Path(__file__).resolve().parent / "fixture_data"
 
 
 def get(client: httpx.Client, path: str, params: dict[str, str]) -> object:

@@ -9,7 +9,7 @@ from fastapi.testclient import TestClient
 from api.main import app, get_qloo
 from api.presets import PRESETS
 from api.qloo import DOMAINS, MissingKeyError, QlooClient
-from api.tests.qloo_fake import fixture_handler, load, make_client
+from api.fixtures import fixture_handler, load, make_client
 
 AGENTS = ["Scout", "Cartographer", "Analyst", "Partner"]
 

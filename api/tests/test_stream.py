@@ -9,7 +9,7 @@ from fastapi.testclient import TestClient
 
 from api.main import app, get_qloo
 from api.pipeline import run_diligence, stream_diligence
-from api.tests.qloo_fake import fixture_handler, make_client
+from api.fixtures import fixture_handler, make_client
 
 AGENTS = ["Scout", "Cartographer", "Analyst", "Partner"]
 
