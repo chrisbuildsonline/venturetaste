@@ -8,7 +8,7 @@ export default defineConfig({
   testDir: "./e2e",
   testIgnore: [
     ...(process.env.SCREENSHOTS ? [] : ["**/screenshots.spec.ts"]),
-    ...(BASE_URL ? ["**/diligence.spec.ts"] : ["**/live.spec.ts"]),
+    ...(BASE_URL ? ["**/diligence.spec.ts", "**/screen.spec.ts"] : ["**/live.spec.ts"]),
   ],
   use: { baseURL: BASE_URL ?? `http://127.0.0.1:${PORT}` },
   projects: [{ name: "chromium", use: { browserName: "chromium" } }],
