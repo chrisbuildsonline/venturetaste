@@ -119,6 +119,18 @@ function DemographicsCard({ a, b, nameA, nameB, distance }: { a: Demographics; b
   );
 }
 
+// Radar axis label with the overlap percent underneath, so a zero axis still reads as "0%".
+function AxisTick({ x, y, textAnchor, index, values }: { x?: number; y?: number; textAnchor?: "start" | "middle" | "end" | "inherit"; index?: number; values: { domain: string; overlap: number }[] }) {
+  const row = values[index ?? 0];
+  if (!row) return null;
+  return (
+    <text x={x} y={y} textAnchor={textAnchor} fill="#d4d4d8" fontSize={12}>
+      <tspan x={x}>{row.domain}</tspan>
+      <tspan x={x} dy="1.2em" data-testid="radar-value" fill="#a5b4fc" fontWeight={600}>{row.overlap}%</tspan>
+    </text>
+  );
+}
+
 export default function Results({ data }: { data: Diligence }) {
   const { scores, memo, brands } = data;
   const nameA = brands.acquirer.name;
@@ -158,25 +170,20 @@ export default function Results({ data }: { data: Diligence }) {
 
       <div className="grid gap-5 lg:grid-cols-2">
         <Card title={`${nameA} × ${nameB} taste overlap`}>
-          {noOverlap ? (
-            <div data-testid="no-shared-taste" className="flex h-80 flex-col lg:h-[28rem] items-center justify-center rounded-xl border border-dashed border-rose-400/40 bg-rose-400/5 px-6 text-center">
-              <p className="text-xl font-semibold text-rose-200">No shared taste</p>
-              <p className="mt-2 max-w-sm text-sm text-zinc-300">
-                Qloo finds no taste entity that both {nameA} and {nameB} audiences love, in any of the seven domains. The two customer bases barely
-                overlap, so there is little cannibalization, and little to cross-sell.
-              </p>
-            </div>
-          ) : (
-            <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="h-80 w-full lg:h-[28rem]">
-              <ResponsiveContainer width="100%" height="100%">
-                <RadarChart data={radarData} outerRadius="58%" margin={{ top: 20, right: 40, bottom: 20, left: 40 }}>
-                  <PolarGrid stroke="rgba(255,255,255,0.18)" />
-                  <PolarAngleAxis dataKey="domain" tick={{ fill: "#d4d4d8", fontSize: 12 }} />
-                  <PolarRadiusAxis angle={90} domain={[0, 100]} tick={false} axisLine={false} />
-                  <Radar name="Overlap" dataKey="overlap" stroke="#818cf8" fill="#818cf8" fillOpacity={0.4} isAnimationActive={false} />
-                </RadarChart>
-              </ResponsiveContainer>
-            </div>
+          <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="h-80 w-full lg:h-[28rem]">
+            <ResponsiveContainer width="100%" height="100%">
+              <RadarChart data={radarData} outerRadius="58%" margin={{ top: 20, right: 40, bottom: 20, left: 40 }}>
+                <PolarGrid stroke="rgba(255,255,255,0.18)" />
+                <PolarAngleAxis dataKey="domain" tick={<AxisTick values={radarData} />} />
+                <PolarRadiusAxis angle={90} domain={[0, 100]} tick={false} axisLine={false} />
+                <Radar name="Overlap" dataKey="overlap" stroke="#818cf8" fill="#818cf8" fillOpacity={0.4} dot={{ r: 3, fill: "#818cf8" }} isAnimationActive={false} />
+              </RadarChart>
+            </ResponsiveContainer>
+          </div>
+          {noOverlap && (
+            <p data-testid="no-shared-taste" className="mt-3 rounded-lg border border-dashed border-rose-400/40 bg-rose-400/5 px-3 py-2 text-center text-sm text-rose-200">
+              No shared taste in any domain: the audiences don&apos;t overlap.
+            </p>
           )}
           <p className="mt-3 text-xs text-zinc-400">Weighted Jaccard overlap of what each audience loves: {Object.entries(data.domain_overlap).map(([d, v]) => `${label(d)} ${pct(v)}`).join(" · ")}</p>
         </Card>

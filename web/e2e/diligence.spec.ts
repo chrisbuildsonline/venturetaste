@@ -29,6 +29,9 @@ test("demo: Nike + Adidas preset runs the whole diligence", async ({ page }) => 
   await expect(page.getByTestId("churn-band")).toContainText(/medium/i);
   await expect(page.getByTestId("clash-value")).toBeVisible();
   await expect(page.locator("[data-testid=radar] svg").first()).toBeVisible();
+  await expect(page.getByTestId("radar-value")).toHaveCount(7);
+  await expect(page.getByTestId("radar-value").first()).toHaveText(/^\d+%$/);
+  await expect(page.getByTestId("no-shared-taste")).toHaveCount(0);
   await expect(page.getByTestId("memo")).toBeVisible();
   await expect(page.getByTestId("memo")).toContainText("Nike + Adidas");
   await expect(page.getByTestId("shared-tastes")).toBeVisible();
@@ -93,9 +96,17 @@ test("Patagonia + Gucci shows the no shared taste state and a Pass", async ({ pa
   await page.goto("/");
   await page.getByRole("button", { name: "Patagonia + Gucci" }).click();
 
-  await expect(page.getByTestId("no-shared-taste")).toBeVisible();
-  await expect(page.getByTestId("no-shared-taste")).toContainText("No shared taste");
   await expect(page.getByTestId("verdict")).toHaveText("Pass");
+  // the radar always renders: all 7 axes, each with its percent, and a caption when nothing overlaps
+  await expect(page.locator("[data-testid=radar] svg").first()).toBeVisible();
+  await expect(page.locator("[data-testid=radar] .recharts-polar-angle-axis-tick text")).toHaveCount(7);
+  const values = page.getByTestId("radar-value");
+  await expect(values).toHaveCount(7);
+  for (let i = 0; i < 7; i++) await expect(values.nth(i)).toHaveText("0%");
+  await expect(page.getByTestId("no-shared-taste")).toBeVisible();
+  await expect(page.getByTestId("no-shared-taste")).toHaveText(
+    "No shared taste in any domain: the audiences don't overlap.",
+  );
   await expect(page.getByTestId("memo")).toBeVisible();
   await page.screenshot({ path: "e2e/screenshots/no-shared-taste.png", fullPage: true });
 
