@@ -59,6 +59,8 @@ Errors are always plain sentences. When Qloo is unreachable, answers with an err
 
 `GET /api/presets` lists the demo pairs (`id`, `label`, `acquirer`, `target`, `kind`).
 
+`GET /api/screens` lists the target screens (`id`, `label`, `acquirer`, `targets`).
+
 `GET /api/health` returns `{"ok": true, "qloo_key": true, "qloo_url": "https://hackathon.api.qloo.com", "fixtures": false}`: whether a key is set (never the key itself), the base URL actually used and whether fixture mode is on. A `QLOO_API_URL` that is empty or not an http(s) URL with a host (for example a placeholder like `set by orchestrator`) is ignored with a logged warning, and the default is used.
 
 ## Scoring
@@ -94,6 +96,12 @@ Patagonia + Gucci: Qloo finds no entity both audiences love in any of the seven 
 ![Patagonia + Gucci culture clash](docs/culture-clash.png)
 
 <img src="docs/demo-mobile.png" alt="VentureTaste on a phone" width="300">
+
+## Target screening
+
+"Screen targets" ranks one acquirer against 2 to 5 candidate targets in a sortable table (BCI, culture clash, churn risk, verdict). There is no extra backend: the page calls `POST /api/diligence` once per target, in sequence (each run already uses 6 Qloo threads, and Qloo answers 429 at about 8 parallel requests), and rows fill in as each run finishes. "Full diligence" on a row opens the normal pair view with the agent timeline and report. Each target is one run against the per-IP rate limit (30 per minute by default), so screening 5 targets leaves room for 25 more; on a 429 the screen stops and the remaining rows show the rate-limit message.
+
+![Nike screened against four targets](docs/screening.png)
 
 ## How to run
 
@@ -141,7 +149,7 @@ The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffe
 
 ## How to test
 
-- `bun run test`: pytest over `api/tests` (offline).
+- `bun run test`: pytest over `api/tests` (offline), then `bun test` for the screening logic in `web/app`.
 - `bun run test:live`: the live-marked tests against the real Qloo API (needs `QLOO_API_KEY` in `.env`).
 - `bun run typecheck`: `tsc` for the web app and `mypy` for the API.
 - `bun run e2e:ci`: builds the web app, then runs the Playwright tests against FastAPI in fixture mode. `bun run e2e` is the same but reuses a server already running on :8765.
