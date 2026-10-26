@@ -6,16 +6,17 @@ from collections.abc import Callable, Iterator
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict
 from functools import partial
-from typing import Annotated, Any, TypedDict
+from typing import Annotated, Any, Protocol, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
-from api.qloo import DOMAINS, Demographics, Entity, QlooClient, QlooError, QlooParseError
-from api.scoring import BrandProfile, Scores, score
+from api.qloo import DOMAINS, Demographics, Entity, QlooClient, QlooError, QlooParseError, Tag
+from api.scoring import BrandProfile, Bridge, Scores, bridges, score
 
 AGENTS = ("Scout", "Cartographer", "Analyst", "Partner")
 SIDES = ("acquirer", "target")
 MAX_WORKERS = 6
+COLD_DOMAINS_TO_PROBE = 4  # this many of the 7 domains with zero overlap sends the Analyst to Qloo tags
 PROCEED_BCI = 50  # synergy deals at or above this BCI get a clean "Proceed"
 NAMED = 3  # entities quoted per sentence in the memo
 
@@ -34,6 +35,8 @@ class State(TypedDict, total=False):
     entities: dict[str, Entity]
     profiles: dict[str, BrandProfile]
     scores: Scores
+    bridges: list[Bridge]
+    probed_tags: bool
     memo: dict[str, Any]
     trace: Annotated[list[dict[str, Any]], operator.add]
 
@@ -42,13 +45,15 @@ Step = Callable[[State], tuple[dict[str, Any], int]]  # state update, Qloo calls
 
 
 def _agent(name: str, step: Step) -> Callable[[State], dict[str, Any]]:
-    """Wrap a step so it appends its name, status, duration and Qloo call count to the trace."""
+    """Wrap a step so it appends its name, status, duration and Qloo call count to the trace.
+    A step can put a "decision" string in its update: it goes on the trace item, not into the state."""
 
     def node(state: State) -> dict[str, Any]:
         start = time.perf_counter()
         update, calls = step(state)
         ms = round((time.perf_counter() - start) * 1000)
-        return {**update, "trace": [{"agent": name, "status": "ok", "ms": ms, "qloo_calls": calls}]}
+        extra = {"decision": update.pop("decision")} if "decision" in update else {}
+        return {**update, "trace": [{"agent": name, "status": "ok", "ms": ms, "qloo_calls": calls, **extra}]}
 
     return node
 
@@ -96,9 +101,26 @@ def make_cartographer(client: QlooClient) -> Step:
     return cartographer
 
 
-def analyst(state: State) -> tuple[dict[str, Any], int]:
-    profiles = state["profiles"]
-    return {"scores": score(profiles["acquirer"], profiles["target"])}, 0
+class TagSource(Protocol):
+    def tags(self, entity_id: str) -> list[Tag]: ...
+
+
+def make_analyst(client: TagSource) -> Step:
+    def analyst(state: State) -> tuple[dict[str, Any], int]:
+        profiles = state["profiles"]
+        s = score(profiles["acquirer"], profiles["target"])
+        cold = sum(1 for v in full_overlap(s).values() if v == 0)
+        if cold < COLD_DOMAINS_TO_PROBE:
+            decision = f"Overlap in {len(DOMAINS) - cold}/{len(DOMAINS)} domains → no tag probe needed"
+            return {"scores": s, "bridges": [], "probed_tags": False, "decision": decision}, 0
+        entities = state["entities"]
+        tags_a, tags_b = _parallel([partial(client.tags, entities[side].id) for side in SIDES])
+        found = bridges(tags_a, tags_b)
+        n = f"{len(found)} bridging taste{'' if len(found) == 1 else 's'}" if found else "no bridging tastes found"
+        decision = f"Overlap 0 in {cold}/{len(DOMAINS)} domains → probed Qloo tags: {n}"
+        return {"scores": s, "bridges": found, "probed_tags": True, "decision": decision}, 2
+
+    return analyst
 
 
 SINGULAR = {
@@ -130,7 +152,9 @@ def full_overlap(s: Scores) -> dict[str, float]:
     return {d: s.domain_overlap.get(d, 0.0) for d in DOMAINS}
 
 
-def build_memo(acquirer: str, target: str, s: Scores) -> dict[str, Any]:
+def build_memo(
+    acquirer: str, target: str, s: Scores, found: list[Bridge] | None = None, probed: bool = False
+) -> dict[str, Any]:
     """Deterministic deal memo: templated from the scores and the real Qloo entities behind them."""
     verdict = "Pass" if s.churn_risk == "high" else "Proceed" if s.bci >= PROCEED_BCI else "Proceed with conditions"
     rationale = []
@@ -142,6 +166,10 @@ def build_memo(acquirer: str, target: str, s: Scores) -> dict[str, Any]:
         rationale.append(f"Strongest taste overlap is in {PLURAL[best]} ({overlap[best]:.0%} weighted overlap).")
     else:
         rationale.append("Qloo finds no shared taste entities in any domain.")
+    if found:
+        rationale.append(f"Qloo tags bridge the two audiences: {', '.join(b.name for b in found[:NAMED])}.")
+    elif probed:
+        rationale.append("Qloo tags found no bridging tastes between the two audiences.")
     rationale.append(f"Audience demographic distance is {s.demographic_distance:.2f} (0 means identical).")
 
     risks = [f"Culture clash is {s.culture_clash}%, so churn risk is {s.churn_risk}."]
@@ -159,7 +187,8 @@ def build_memo(acquirer: str, target: str, s: Scores) -> dict[str, Any]:
 
 def partner(state: State) -> tuple[dict[str, Any], int]:
     names = {side: state["profiles"][side].name for side in SIDES}
-    return {"memo": build_memo(names["acquirer"], names["target"], state["scores"])}, 0
+    memo = build_memo(names["acquirer"], names["target"], state["scores"], state["bridges"], state["probed_tags"])
+    return {"memo": memo}, 0
 
 
 def build_graph(client: QlooClient) -> Any:
@@ -167,7 +196,7 @@ def build_graph(client: QlooClient) -> Any:
     steps: list[tuple[str, Step]] = [
         ("Scout", make_scout(client)),
         ("Cartographer", make_cartographer(client)),
-        ("Analyst", analyst),
+        ("Analyst", make_analyst(client)),
         ("Partner", partner),
     ]
     for name, step in steps:
@@ -218,6 +247,8 @@ def _report(state: dict[str, Any], acquirer: str, target: str) -> dict[str, Any]
             "target": [asdict(t) for t in s.top_clashing_b],
         },
         "demographics": {side: asdict(state["profiles"][side].demographics) for side in SIDES},
+        "bridges": [asdict(b) for b in state["bridges"]],
+        "probed_tags": state["probed_tags"],
         "memo": state["memo"],
         "trace": state["trace"],
     }
