@@ -55,7 +55,11 @@ curl -N -X POST http://127.0.0.1:8765/api/diligence/stream \
   -d '{"acquirer": "Nike", "target": "Adidas"}'
 ```
 
-`GET /api/presets` lists the demo pairs (`id`, `label`, `acquirer`, `target`, `kind`). `GET /api/health` returns `{"ok": true}`.
+Errors are always plain sentences. When Qloo is unreachable, answers with an error status or returns something unparseable, the API replies 502 with "Taste data from Qloo is temporarily unavailable. Please try again in a moment." and logs the raw exception server side.
+
+`GET /api/presets` lists the demo pairs (`id`, `label`, `acquirer`, `target`, `kind`).
+
+`GET /api/health` returns `{"ok": true, "qloo_key": true, "qloo_url": "https://hackathon.api.qloo.com", "fixtures": false}`: whether a key is set (never the key itself), the base URL actually used and whether fixture mode is on. A `QLOO_API_URL` that is empty or not an http(s) URL with a host (for example a placeholder like `set by orchestrator`) is ignored with a logged warning, and the default is used.
 
 ## Scoring
 
@@ -106,7 +110,9 @@ bun run start                                   # FastAPI serves API and web on 
 
 Dev mode: `bun run dev` starts the API with reload on :8765 and `next dev` for the UI.
 
-**Fixture mode:** with `VENTURETASTE_FIXTURES=1` the API answers from recorded Qloo responses, with no key and no network. The e2e tests use it. Do not use it in production.
+No key? `VENTURETASTE_FIXTURES=1` serves recorded Qloo answers (`VENTURETASTE_FIXTURES=1 bun run start`, or `docker run -p 8765:8765 -e VENTURETASTE_FIXTURES=1 venturetaste`).
+
+**Fixture mode:** with `VENTURETASTE_FIXTURES=1` the API answers from recorded Qloo responses (`api/fixtures.py`, `api/fixture_data/`, shipped in the image), with no key and no network. It covers the preset brands only; any other brand is an unknown brand. The e2e tests use it. Do not use it in production.
 
 ## Deploy
 
@@ -115,19 +121,20 @@ docker build -t venturetaste .
 docker run -d -p 8765:8765 --env-file .env venturetaste    # http://127.0.0.1:8765
 ```
 
-The image builds the web app, installs the API with uv and runs uvicorn as a non-root user with `--proxy-headers`. Never set `VENTURETASTE_FIXTURES` in production.
+The image builds the web app, installs the API with uv and runs uvicorn as a non-root user with `--proxy-headers`. It listens on `$PORT` (default 8765). Never set `VENTURETASTE_FIXTURES` in production.
 
 | Variable | Default | What it does |
 | --- | --- | --- |
 | `QLOO_API_KEY` | none, required | Qloo hackathon API key |
-| `QLOO_API_URL` | `https://hackathon.api.qloo.com` | Qloo base URL |
+| `QLOO_API_URL` | `https://hackathon.api.qloo.com` | Qloo base URL; an invalid value falls back to the default |
+| `PORT` | `8765` | port the image listens on |
 | `VENTURETASTE_RATE_LIMIT` | `30` | diligence runs per client IP per 60 s, over it the API answers 429 with `Retry-After` |
 | `VENTURETASTE_CACHE_MAX_FILES` | `2000` | most files kept in `.cache/qloo`, the oldest are deleted first |
 | `FORWARDED_ALLOW_IPS` | `127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16` (in the image) | proxies uvicorn trusts for `X-Forwarded-For`, CIDR ranges allowed. The default covers a Docker network proxy such as Traefik on Coolify, so the rate limit is per visitor. Never `*`: a client could then spoof its IP to dodge the limit |
 
 The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffering: no`, so nginx style proxies do not buffer it.
 
-`bun run docker:smoke` builds the image, runs it on port 8799 with your `.env`, waits for `/api/health`, runs the Playwright spec `web/e2e/live.spec.ts` (Nike + Adidas against real Qloo) and removes the container. Set `BASE_URL` and run `cd web && bunx playwright test` to run that spec against any other deployment.
+`bun run docker:smoke` builds the image, first runs it in fixture mode with no key and checks that Nike + Adidas returns 200 with a `bci`, then runs it on port 8799 with your `.env`, waits for `/api/health`, runs the Playwright spec `web/e2e/live.spec.ts` (Nike + Adidas against real Qloo) and removes the container. Set `BASE_URL` and run `cd web && bunx playwright test` to run that spec against any other deployment.
 
 `bun run e2e:live` runs the same spec against the public deployment (https://venturetaste.5-78-152-178.sslip.io, or your own via `BASE_URL`). It uses two diligence runs and also checks that the proxy streams the SSE events instead of buffering them.
 
@@ -152,7 +159,8 @@ api/scoring.py         pure scoring
 api/presets.py         demo pairs
 api/record_fixtures.py records Qloo responses for fixture mode
 api/probe.py           scores candidate pairs live
-api/tests/             pytest suite and the fixture-backed fake Qloo
+api/fixtures.py        fixture-backed fake Qloo (fixture mode and tests), data in api/fixture_data/
+api/tests/             pytest suite
 web/                   Next.js app (static export to web/out), Playwright tests in web/e2e
 docs/                  README screenshots
 scripts/fresh-clone.sh fresh-clone check
