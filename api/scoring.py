@@ -8,7 +8,11 @@ from api.qloo import Affinity, Demographics
 
 # Blend: taste overlap counts 70%, audience demographics 30%.
 OVERLAP_WEIGHT, DEMO_WEIGHT = 0.7, 0.3
+# Culture clash blend: exclusive (clashing) taste mass 70%, audience demographic distance 30%.
+CLASH_TASTE_WEIGHT = 0.7
 TOP_N = 5
+# Churn-risk bands on culture clash (the one place to tune them): below LOW_BELOW is low, below HIGH_FROM medium.
+LOW_BELOW, HIGH_FROM = 33, 66
 
 
 @dataclass(frozen=True)
@@ -66,6 +70,22 @@ def domain_overlap(a: list[Affinity], b: list[Affinity]) -> float:
     return _clamp(sum(min(wa.get(i, 0.0), wb.get(i, 0.0)) for i in ids) / top, 1.0)
 
 
+def _own_exclusive(mine: dict[str, float], other: dict[str, float]) -> float | None:
+    """Share of my positive affinity mass on entities the other brand lacks entirely; None if I have no mass."""
+    total = sum(mine.values())
+    if not total > 0 or not math.isfinite(total):
+        return None
+    return _clamp(sum(w for i, w in mine.items() if i not in other) / total, 1.0)
+
+
+def exclusive_mass(a: list[Affinity], b: list[Affinity]) -> float:
+    """Clashing-taste mass of one domain, 0..1: mean over the two brands (those with taste mass) of the
+    share of their affinity that sits on entities the other brand does not list at all."""
+    wa, wb = _weights(a), _weights(b)
+    shares = [s for s in (_own_exclusive(wa, wb), _own_exclusive(wb, wa)) if s is not None]
+    return sum(shares) / len(shares) if shares else 0.0
+
+
 def demographic_distance(a: Demographics, b: Demographics) -> float:
     """Mean absolute difference over the union of age and gender keys, halved to land in 0..1."""
     va, vb = {**a.age, **a.gender}, {**b.age, **b.gender}
@@ -93,7 +113,7 @@ def _clean[T: (SharedTaste, ClashingTaste)](items: list[T], brands: set[str], st
 
 
 def _band(clash: float) -> str:
-    return "low" if clash < 33 else "medium" if clash < 66 else "high"
+    return "low" if clash < LOW_BELOW else "medium" if clash < HIGH_FROM else "high"
 
 
 def score(a: BrandProfile, b: BrandProfile) -> Scores:
@@ -121,7 +141,10 @@ def score(a: BrandProfile, b: BrandProfile) -> Scores:
     clash_a = _clean(clash_a, brands, lambda t: t.affinity)
     clash_b = _clean(clash_b, brands, lambda t: t.affinity)
 
-    clash = round(100 * _clamp(OVERLAP_WEIGHT * (1 - mean_overlap) + DEMO_WEIGHT * dist, 1.0), 1)
+    # Culture clash is NOT 100 - BCI: BCI counts shared mass (weighted Jaccard), clash counts the mass each
+    # audience puts on entities the other lacks. Shared ids with unequal weights lower BCI but do not clash.
+    mean_exclusive = sum(exclusive_mass(a.insights.get(d, []), b.insights.get(d, [])) for d in domains) / len(domains) if domains else 0.0
+    clash = round(100 * _clamp(CLASH_TASTE_WEIGHT * mean_exclusive + DEMO_WEIGHT * dist, 1.0), 1)
     bci = round(100 * _clamp(OVERLAP_WEIGHT * mean_overlap + DEMO_WEIGHT * (1 - dist), 1.0), 1)
     return Scores(
         bci=bci,

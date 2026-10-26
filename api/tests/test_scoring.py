@@ -8,10 +8,12 @@ from hypothesis import strategies as st
 
 from api.qloo import DOMAINS, Affinity, Demographics, parse_demographics, parse_insights
 from api.scoring import (
+    DEMO_WEIGHT,
     BrandProfile,
     Scores,
     demographic_distance,
     domain_overlap,
+    exclusive_mass,
     score,
 )
 
@@ -238,6 +240,79 @@ def test_same_brand_never_clashes_more_than_nothing_shared(p: BrandProfile) -> N
     assert s.demographic_distance == 0
 
 
+# ---- culture clash is not 100 - BCI ----
+
+
+def test_clash_and_bci_do_not_sum_to_100_when_shared_ids_have_unequal_weights() -> None:
+    # same entity, very different strength: low weighted overlap, but nothing is exclusive to either side
+    a = BrandProfile("A", {"brand": [aff("1", 1.0)]}, demo(0, 0))
+    b = BrandProfile("B", {"brand": [aff("1", 0.1)]}, demo(0, 0))
+    s = score(a, b)
+    assert s.bci == pytest.approx(37.0)
+    assert s.culture_clash == 0
+    assert s.bci + s.culture_clash != 100
+
+
+def test_identical_profiles_clash_is_only_the_demographic_part() -> None:
+    p = BrandProfile("X", {"brand": [aff("1", 0.8), aff("2", 0.4)], "movie": [aff("3", 0.5)]}, demo(0.3, -0.2))
+    assert score(p, p).culture_clash == 0
+    q = BrandProfile("Y", p.insights, demo(-0.7, 0.8))  # same taste, different audience
+    s = score(p, q)
+    assert s.culture_clash == round(100 * DEMO_WEIGHT * s.demographic_distance, 1)
+    assert s.culture_clash > 0
+
+
+def test_disjoint_profiles_have_exclusive_mass_one() -> None:
+    a = [aff("1", 0.9), aff("2", 0.3)]
+    b = [aff("3", 0.5)]
+    assert exclusive_mass(a, b) == 1.0
+    pa = BrandProfile("A", {"brand": a, "movie": a}, demo(0, 0))
+    pb = BrandProfile("B", {"brand": b, "movie": b}, demo(0, 0))
+    assert score(pa, pb).culture_clash == 70.0  # 0.7 * 1 + 0.3 * 0 distance
+
+
+def test_exclusive_mass_is_symmetric_and_weights_by_affinity() -> None:
+    a = [aff("1", 0.75), aff("2", 0.25)]
+    b = [aff("1", 0.5), aff("3", 0.5)]
+    # a: 0.25 of its mass is exclusive, b: 0.5 of its mass is exclusive
+    assert exclusive_mass(a, b) == pytest.approx(0.375)
+    assert exclusive_mass(a, b) == exclusive_mass(b, a)
+    assert exclusive_mass([], []) == 0.0
+    assert exclusive_mass([aff("1", 0.5)], []) == 1.0  # one-sided: the side with taste is all exclusive
+
+
+def test_clash_ignores_the_top_n_cut() -> None:
+    # 8 exclusive entities per side: the lists are cut to 5, the mass is not
+    a = BrandProfile("A", {"brand": [aff(f"a{i}", 0.5) for i in range(8)]}, demo(0, 0))
+    b = BrandProfile("B", {"brand": [aff(f"b{i}", 0.5) for i in range(8)]}, demo(0, 0))
+    s = score(a, b)
+    assert len(s.top_clashing_a) == 5
+    assert s.culture_clash == 70.0
+
+
+ANY_FLOAT = st.floats(allow_nan=True, allow_infinity=True)
+WILD_AFFS = st.lists(st.builds(aff, st.sampled_from(list("abcdefgh")), ANY_FLOAT), max_size=8)
+WILD_PROFILES = st.builds(
+    BrandProfile,
+    st.just("P"),
+    st.dictionaries(st.sampled_from(DOMAINS), WILD_AFFS, max_size=7),
+    st.builds(
+        Demographics,
+        st.dictionaries(st.sampled_from(["a1", "a2"]), ANY_FLOAT, max_size=2),
+        st.dictionaries(st.sampled_from(["female", "male"]), ANY_FLOAT, max_size=2),
+    ),
+)
+
+
+@given(a=WILD_PROFILES, b=WILD_PROFILES)
+def test_clash_bounded_and_symmetric_for_any_floats(a: BrandProfile, b: BrandProfile) -> None:
+    s = score(a, b)
+    assert math.isfinite(s.culture_clash) and 0 <= s.culture_clash <= 100
+    assert math.isfinite(s.bci) and 0 <= s.bci <= 100
+    assert score(b, a).culture_clash == s.culture_clash
+    assert s.churn_risk in ("low", "medium", "high")
+
+
 # ---- real data ----
 
 
@@ -248,7 +323,7 @@ def test_nike_vs_patagonia() -> None:
     assert all(math.isfinite(x) for x in all_numbers(s))
     assert 0 <= s.bci <= 100 and 0 <= s.culture_clash <= 100
     assert set(s.domain_overlap) <= set(DOMAINS)
-    assert (s.bci, s.culture_clash, s.churn_risk) == (24.5, 75.5, "high")  # snapshot
+    assert (s.bci, s.culture_clash, s.churn_risk) == (24.5, 75.4, "high")  # snapshot
     # at take=50 the two brands share only one brand entity
     assert s.domain_overlap == {**dict.fromkeys(DOMAINS, 0.0), "brand": 0.0099}
     assert s.demographic_distance == 0.1881
