@@ -21,6 +21,11 @@ PAIRS = [
     ("Patagonia", "Gucci"),
     ("Nike", "Patagonia"),
     ("Gucci", "Walmart"),
+    ("Nike", "Gucci"),
+    ("Nike", "Lululemon"),
+    ("Nike", "Under Armour"),
+    ("Nike", "New Balance"),
+    ("Nike", "Reebok"),
 ]
 
 

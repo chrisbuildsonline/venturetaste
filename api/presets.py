@@ -20,9 +20,21 @@ PRESETS = (
 )
 
 
+@dataclass(frozen=True)
+class Screen:
+    id: str
+    label: str
+    acquirer: str
+    targets: tuple[str, ...]
+
+
+SCREENS = (Screen("nike-targets", "Nike: 4 targets", "Nike", ("Adidas", "Puma", "Lululemon", "Gucci")),)
+
+
 def slug(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
 
 
 def preset_brands() -> list[str]:
-    return sorted({b for p in PRESETS for b in (p.acquirer, p.target)})
+    deals = {b for p in PRESETS for b in (p.acquirer, p.target)}
+    return sorted(deals | {b for s in SCREENS for b in (s.acquirer, *s.targets)})

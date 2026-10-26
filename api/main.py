@@ -19,7 +19,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, StringConstraints
 
 from api.pipeline import NoTasteDataError, SameBrandError, run_diligence, stream_diligence
-from api.presets import PRESETS
+from api.presets import PRESETS, SCREENS
 from api.qloo import (
     BrandNotFoundError,
     MissingKeyError,
@@ -98,6 +98,11 @@ def health() -> dict[str, Any]:
 @app.get("/api/presets")
 def presets() -> list[dict[str, str]]:
     return [asdict(p) for p in PRESETS]
+
+
+@app.get("/api/screens")
+def screens() -> list[dict[str, Any]]:
+    return [asdict(s) for s in SCREENS]
 
 
 RATE_WINDOW = 60.0
