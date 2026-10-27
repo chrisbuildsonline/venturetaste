@@ -134,8 +134,8 @@ def test_brand_without_taste_data_is_422_before_scoring(
 
 def test_missing_key_is_503(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.delenv("QLOO_API_KEY", raising=False)
-    res = TestClient(app).post("/api/diligence", json={"acquirer": "Nike", "target": "Adidas"})
-    assert res.status_code == 503
+    res = TestClient(app).post("/api/diligence", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"})
+    assert res.status_code == 503  # a preset pair replays recorded answers instead, see test_recorded.py
     assert "QLOO_API_KEY" in res.json()["detail"]
 
 

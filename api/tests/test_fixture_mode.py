@@ -43,5 +43,5 @@ def test_fixture_mode_unknown_brand_is_422(monkeypatch: pytest.MonkeyPatch) -> N
 def test_without_the_flag_a_missing_key_is_still_503(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.delenv("VENTURETASTE_FIXTURES", raising=False)
     monkeypatch.delenv("QLOO_API_KEY", raising=False)
-    res = TestClient(app).post("/api/diligence", json={"acquirer": "Nike", "target": "Adidas"})
-    assert res.status_code == 503
+    res = TestClient(app).post("/api/diligence", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"})
+    assert res.status_code == 503  # a preset pair would replay recorded answers instead, see test_recorded.py

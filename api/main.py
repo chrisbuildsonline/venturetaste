@@ -18,8 +18,8 @@ from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, StringConstraints
 
-from api.pipeline import NoTasteDataError, SameBrandError, run_diligence, stream_diligence
-from api.presets import PRESETS, SCREENS
+from api.pipeline import NoTasteDataError, SameBrandError, stream_diligence
+from api.presets import PRESETS, SCREENS, preset_brands, slug
 from api.qloo import (
     BrandNotFoundError,
     MissingKeyError,
@@ -51,13 +51,60 @@ class DiligenceRequest(BaseModel):
     target: BrandName
 
 
-def get_qloo() -> QlooClient:
-    """Built per request (never at import) so a missing key is a 503, not a crash."""
-    if os.environ.get("VENTURETASTE_FIXTURES") == "1":  # e2e runs: recorded Qloo answers, no key, no network
-        from api.fixtures import fixture_handler, make_client
+def fixture_client() -> QlooClient:
+    from api.fixtures import fixture_handler, make_client
 
-        return make_client(Path(tempfile.mkdtemp(prefix="venturetaste-fixtures-")), fixture_handler([]))
-    return QlooClient()
+    return make_client(Path(tempfile.mkdtemp(prefix="venturetaste-fixtures-")), fixture_handler([]))
+
+
+def fixture_mode() -> bool:
+    return os.environ.get("VENTURETASTE_FIXTURES") == "1"
+
+
+def get_qloo() -> QlooClient | None:
+    """Built per request (never at import). None means no key is set: the run falls back or is a 503."""
+    if fixture_mode():  # e2e runs: recorded Qloo answers, no key, no network
+        return fixture_client()
+    try:
+        return QlooClient()
+    except MissingKeyError:
+        return None
+
+
+# Why a run replays recorded answers. Shown to the user next to the results.
+RECORDED_FIXTURE_MODE = "This server runs in fixture mode: recorded Qloo answers, no live calls."
+RECORDED_NO_KEY = "No Qloo API key is set on this server, so this run replays recorded Qloo answers for this preset pair."
+RECORDED_KEY_REJECTED = "Qloo rejected this server's API key, so this run replays recorded Qloo answers for this preset pair."
+
+
+def is_recorded_pair(body: DiligenceRequest) -> bool:
+    return {slug(body.acquirer), slug(body.target)} <= {slug(b) for b in preset_brands()}
+
+
+def recorded_run(client: QlooClient, body: DiligenceRequest, reason: str) -> Iterator[tuple[str, dict[str, Any]]]:
+    """stream_diligence, with the result carrying why the answers are recorded."""
+    for event, data in stream_diligence(client, body.acquirer, body.target):
+        yield event, {**data, "recorded": {"reason": reason}} if event == "result" else data
+
+
+def run_events(client: QlooClient | None, body: DiligenceRequest) -> Iterator[tuple[str, dict[str, Any]]]:
+    """stream_diligence, falling back to recorded answers for a preset pair when there is no usable Qloo key.
+    Only a missing key or an HTTP 401/403 falls back; every other Qloo failure propagates unchanged."""
+    if client is None:
+        if not is_recorded_pair(body):
+            raise MissingKeyError("QLOO_API_KEY is not set")
+        yield from recorded_run(fixture_client(), body, RECORDED_NO_KEY)
+        return
+    if fixture_mode():
+        yield from recorded_run(client, body, RECORDED_FIXTURE_MODE)
+        return
+    try:
+        yield from stream_diligence(client, body.acquirer, body.target)
+    except QlooAPIError as exc:
+        if exc.status not in (401, 403) or not is_recorded_pair(body):
+            raise
+        logger.warning("Qloo rejected the API key (HTTP %s); replaying recorded answers", exc.status)
+        yield from recorded_run(fixture_client(), body, RECORDED_KEY_REJECTED)
 
 
 UNAVAILABLE = "Taste data from Qloo is temporarily unavailable. Please try again in a moment."
@@ -145,8 +192,8 @@ def rate_limit(request: Request) -> None:
 
 
 @app.post("/api/diligence", dependencies=[Depends(rate_limit)])
-def diligence(body: DiligenceRequest, client: Annotated[QlooClient, Depends(get_qloo)]) -> dict[str, Any]:
-    return run_diligence(client, body.acquirer, body.target)
+def diligence(body: DiligenceRequest, client: Annotated[QlooClient | None, Depends(get_qloo)]) -> dict[str, Any]:
+    return next(data for event, data in run_events(client, body) if event == "result")
 
 
 def sse(event: str, data: Any) -> str:
@@ -154,12 +201,14 @@ def sse(event: str, data: Any) -> str:
 
 
 @app.post("/api/diligence/stream", dependencies=[Depends(rate_limit)])
-def diligence_stream(body: DiligenceRequest, client: Annotated[QlooClient, Depends(get_qloo)]) -> StreamingResponse:
+def diligence_stream(body: DiligenceRequest, client: Annotated[QlooClient | None, Depends(get_qloo)]) -> StreamingResponse:
     """Same run as /api/diligence, as server-sent events: agent start/finish, then result (or error)."""
+    if client is None and not is_recorded_pair(body):
+        raise MissingKeyError("QLOO_API_KEY is not set")  # a plain 503 before streaming starts
 
     def events() -> Iterator[str]:
         try:
-            for event, data in stream_diligence(client, body.acquirer, body.target):
+            for event, data in run_events(client, body):
                 yield sse(event, data)
         except Exception as exc:  # the stream has started, so even a surprise must end as a clean error event
             status, detail = public_error(exc)

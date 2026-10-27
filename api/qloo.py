@@ -38,7 +38,9 @@ class BrandNotFoundError(QlooError):
 
 
 class QlooAPIError(QlooError):
-    pass
+    def __init__(self, message: str, status: int | None = None) -> None:
+        super().__init__(message)
+        self.status = status  # HTTP status when Qloo answered, None for transport failures
 
 
 class QlooParseError(QlooError):
@@ -257,7 +259,7 @@ class QlooClient:
                 break
             time.sleep(delay)
         if not resp.is_success:
-            raise QlooAPIError(f"Qloo {path} returned HTTP {resp.status_code}")
+            raise QlooAPIError(f"Qloo {path} returned HTTP {resp.status_code}", resp.status_code)
         try:
             data: object = resp.json()
         except ValueError as exc:

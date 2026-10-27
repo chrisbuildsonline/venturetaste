@@ -121,7 +121,7 @@ def test_human_written_errors_are_kept(web: TestClient, monkeypatch: pytest.Monk
     assert same.status_code == 422 and "two different brands" in same.json()["detail"]
     monkeypatch.delenv("VENTURETASTE_FIXTURES")
     monkeypatch.delenv("QLOO_API_KEY", raising=False)
-    missing = web.post("/api/diligence", json=BODY)
+    missing = web.post("/api/diligence", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"})
     assert missing.status_code == 503 and "QLOO_API_KEY" in missing.json()["detail"]
 
 

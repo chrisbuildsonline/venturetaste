@@ -1,5 +1,6 @@
 """Hits the real Qloo API. Run with: bun run test:live"""
 
+import os
 import time
 from collections.abc import Iterator
 from pathlib import Path
@@ -9,9 +10,9 @@ import httpx
 import pytest
 from fastapi.testclient import TestClient
 
-from api.main import app, get_qloo
+from api.main import RECORDED_KEY_REJECTED, app, get_qloo
 from api.presets import PRESETS, SCREENS, Preset
-from api.qloo import DOMAINS, QlooClient
+from api.qloo import DOMAINS, QlooClient, normalize_base_url
 
 pytestmark = pytest.mark.live
 
@@ -64,6 +65,7 @@ def test_live_preset_runs_cold_under_20s(api: TestClient, preset: Preset) -> Non
     assert elapsed < 20, f"{elapsed:.1f}s"
     assert sum(t["qloo_calls"] for t in report["trace"]) == (20 if report["probed_tags"] else 18)
     assert set(report["domain_overlap"]) == set(DOMAINS)
+    assert "recorded" not in report  # a live run with a valid key never replays recorded answers
 
 
 def analyst_trace(report: dict[str, Any]) -> dict[str, Any]:
@@ -89,6 +91,18 @@ def test_live_warm_pair_skips_the_tag_probe(api: TestClient) -> None:
     trace = analyst_trace(report)
     assert trace["qloo_calls"] == 0
     assert "no tag probe needed" in trace["decision"]
+
+
+def test_live_placeholder_key_is_rejected_and_replays_recorded(tmp_path: Path) -> None:
+    """The jury sandbox sends a placeholder key to the real Qloo API: it must answer 401/403 so the fallback fires."""
+    base = normalize_base_url(os.environ.get("QLOO_API_URL"))
+    app.dependency_overrides[get_qloo] = lambda: QlooClient(api_key="set by orchestrator", base_url=base, cache_dir=tmp_path)
+    try:
+        res = TestClient(app).post("/api/diligence", json={"acquirer": "Nike", "target": "Adidas"})
+    finally:
+        app.dependency_overrides.clear()
+    assert res.status_code == 200, res.text
+    assert res.json()["recorded"]["reason"] == RECORDED_KEY_REJECTED
 
 
 def test_live_nonsense_brand_is_422(api: TestClient) -> None:
