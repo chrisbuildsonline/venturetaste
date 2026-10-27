@@ -23,4 +23,16 @@ export type Diligence = {
   recorded?: { reason: string } | null;
 };
 
+const DOMAIN_LABELS: Record<string, string> = {
+  brand: "Brands",
+  artist: "Artists",
+  movie: "Movies",
+  tv_show: "TV shows",
+  place: "Places",
+  destination: "Destinations",
+  book: "Books",
+};
+
+export const label = (key: string) => DOMAIN_LABELS[key] ?? key.replaceAll("_", " ");
+
 export const AGENTS = ["Scout", "Cartographer", "Analyst", "Partner"] as const;
