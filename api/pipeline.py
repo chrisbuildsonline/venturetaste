@@ -19,7 +19,7 @@ from typing import Annotated, Any, Protocol, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
-from api.llm import Llm
+from api.llm import Llm, Recorded
 from api.qloo import DOMAINS, Demographics, Entity, QlooClient, QlooError, QlooParseError, Tag
 from api.scoring import BrandProfile, Bridge, Scores, bridges, score
 
@@ -29,7 +29,7 @@ MAX_WORKERS = 6
 COLD_DOMAINS_TO_PROBE = 4  # this many of the 7 domains with zero overlap sends the Analyst to Qloo tags
 PROCEED_BCI = 50  # synergy deals at or above this BCI get a clean "Proceed"
 NAMED = 3  # entities quoted per sentence in the memo
-TRACE_KEYS = ("decision", "planner", "model", "fallback")  # step update keys that go on the trace item, not into the state
+TRACE_KEYS = ("decision", "planner", "model", "recorded", "fallback")  # step update keys that go on the trace item, not into the state
 
 
 class NoTasteDataError(QlooError):
@@ -129,23 +129,42 @@ def _ask[T](llm: Llm | None, system: str, user: str, check: Callable[[dict[str, 
         return None, {"planner": fallback, "fallback": "LLM unreachable"}
     model, raw = reply
     try:
-        return check(raw), {"planner": "llm", "model": model}
+        return check(raw), {"planner": "llm", "model": model, **({"recorded": True} if isinstance(reply, Recorded) else {})}
     except Rejected as exc:
         return None, {"planner": fallback, "fallback": str(exc)}
 
 
+def _credit(who: dict[str, Any]) -> str:
+    """The model's name, marked as recorded when the reply was replayed rather than live."""
+    return f"recorded {who['model']}" if who.get("recorded") else str(who["model"])
+
+
 PLAN_SYSTEM = (
     "You are the Analyst on an M&A taste-diligence team. You get the taste overlap between two consumer brands' audiences "
-    "per domain (0 to 1) and how many domains have none. Decide whether to spend two extra Qloo calls probing taste tags "
-    "to look for bridging tastes between the audiences. "
+    "per domain (0 to 1), how many domains have some overlap (domains_with_overlap) and how many have none (cold_domains). "
+    "Decide whether to spend two extra Qloo calls probing taste tags to look for bridging tastes between the audiences. "
+    "The reason must agree with those counts: do not call the overlap low when most domains have overlap, "
+    "and do not call it high when most domains have none. "
     'Answer with JSON only: {"probe_tags": true or false, "reason": "one short sentence"}.'
+)
+LOW_OVERLAP = re.compile(
+    r"\b(?:low|little|limited|minimal|weak|no)\s+(?:\w+\s+)?overlap|\boverlap\s+(?:is\s+|are\s+|looks\s+|seems\s+)?(?:low|limited|minimal|weak|absent)\b",
+    re.IGNORECASE,
+)
+HIGH_OVERLAP = re.compile(
+    r"\b(?:high|strong|broad|significant|substantial|extensive|large)\s+(?:\w+\s+)?overlap|\boverlap\s+(?:is\s+|are\s+|looks\s+|seems\s+)?(?:high|strong|broad|significant)\b",
+    re.IGNORECASE,
 )
 
 
-def _check_plan(raw: dict[str, Any]) -> tuple[bool, str]:
+def _check_plan(raw: dict[str, Any], overlapping: int, domains: int) -> tuple[bool, str]:
     probe, reason = raw.get("probe_tags"), raw.get("reason")
     if not isinstance(probe, bool) or not isinstance(reason, str) or not reason.strip():
         raise Rejected("LLM plan was not {probe_tags: bool, reason: str}")
+    if overlapping * 2 >= domains and LOW_OVERLAP.search(reason):
+        raise Rejected(f"LLM reason says overlap is low but {overlapping}/{domains} domains overlap")
+    if overlapping * 2 < domains and HIGH_OVERLAP.search(reason):
+        raise Rejected(f"LLM reason says overlap is high but only {overlapping}/{domains} domains overlap")
     return probe, reason.strip()[:200]
 
 
@@ -159,10 +178,11 @@ def make_analyst(client: TagSource, llm: Llm | None = None) -> Step:
             "acquirer": profiles["acquirer"].name,
             "target": profiles["target"].name,
             "domain_overlap": {d: round(v, 3) for d, v in overlap.items()},
+            "domains_with_overlap": len(DOMAINS) - cold,
             "cold_domains": cold,
             "domains": len(DOMAINS),
         }
-        plan, who = _ask(llm, PLAN_SYSTEM, json.dumps(facts), _check_plan, "rule")
+        plan, who = _ask(llm, PLAN_SYSTEM, json.dumps(facts), lambda raw: _check_plan(raw, len(DOMAINS) - cold, len(DOMAINS)), "rule")
         probe, reason = plan if plan else (cold >= COLD_DOMAINS_TO_PROBE, "")
         found: list[Bridge] = []
         if probe:
@@ -174,7 +194,7 @@ def make_analyst(client: TagSource, llm: Llm | None = None) -> Step:
         else:
             decision = f"Overlap in {len(DOMAINS) - cold}/{len(DOMAINS)} domains → no tag probe needed"
         if plan:
-            decision += f" ({who['model']}: {reason})"
+            decision += f" ({_credit(who)}: {reason})"
         return {"scores": s, "bridges": found, "probed_tags": probe, "decision": decision, **who}, 2 if probe else 0
 
     return analyst
@@ -245,18 +265,27 @@ def build_memo(
 MEMO_SYSTEM = (
     "You are the Partner on an M&A taste-diligence team writing the rationale and risks of a deal memo for two consumer "
     "brands. The verdict is already decided; do not change it. Use only the scores and the Qloo entities you are given. "
-    'Answer with JSON only: {"rationale": [{"text": str, "cites": [str]}], "risks": [{"text": str, "cites": [str]}]}. '
-    "Write 2 to 4 short items per list. Rules for every item: "
-    "1) cites is a list of strings taken exactly from allowed_cites, and the text contains each cited name word for word; "
-    "2) every item should name and cite one to three entities from allowed_cites; only an item that quotes a number from the facts "
-    "(the BCI, culture clash or demographic distance) may have empty cites; field names such as culture_clash are never cites; "
-    "3) do not cite anything that is not in allowed_cites, and do not state facts that are not in the data. "
-    'Example item: {"text": "Both audiences love <name 1> and <name 2>.", "cites": ["<name 1>", "<name 2>"]} '
-    "with the placeholders replaced by names from allowed_cites."
+    'Answer with JSON only: {"rationale": [{"cites": [str], "text": str}], "risks": [{"cites": [str], "text": str}]}. '
+    "Write 2 or 3 short items per list, each of one of three kinds, and say only what the data says. "
+    "Code checks every item and throws the whole memo away on one violation: a name in cites must be in allowed_cites and must be "
+    "written in that item's text exactly as in cites, and a name written in the text but not in cites is fine. cites has at most 3 names. "
+    "Kind 1, a shared taste (rationale): the text names one to three entities from top_shared, and cites lists exactly those. "
+    "If the facts have first_rationale_item, the audiences share NO tastes: copy that item verbatim as your first rationale item "
+    "and make it the only rationale item; never write that the audiences share or love anything. "
+    "Kind 2, a clash (risks): the text names one to three entities from one list of top_clashing and says that the audience of the brand "
+    "in the list's name (favoured_by_<brand>) favours them but the other brand's audience does not; cites lists exactly those. "
+    "Kind 3, the score: copy score_item from the facts verbatim as the last item of risks; it is the only item that quotes a score. "
+    'Example of kind 1: {"cites": ["<name 1>", "<name 2>"], "text": "Both audiences share a taste for <name 1> and <name 2>."} '
+    "with the placeholders replaced by names from allowed_cites or by the numbers and labels in the facts. "
+    "Never leave a name in cites that the text does not contain. Do not write about bridges, ownership, history, products, "
+    "mergers or what an audience likes beyond top_shared and top_clashing, and never describe the overlap or the BCI with an adjective such as high, low, moderate or strong; quote the number instead."
 )
 
 
-def _check_memo(raw: dict[str, Any], known: set[str]) -> dict[str, list[str]]:
+SHARED_CLAIM = re.compile(r"\bboth audiences\b|\bshare an? tastes?\b|\baudiences? (?:also )?(?:share|love)\b", re.IGNORECASE)
+
+
+def _check_memo(raw: dict[str, Any], known: set[str], shared: bool = True) -> dict[str, list[str]]:
     memo: dict[str, list[str]] = {}
     for key in ("rationale", "risks"):
         items = raw.get(key)
@@ -273,6 +302,8 @@ def _check_memo(raw: dict[str, Any], known: set[str]) -> dict[str, list[str]]:
                     raise Rejected(f"LLM cited unknown entity {c!r}")
                 if c.casefold() not in text.casefold():
                     raise Rejected(f"LLM cite {c!r} is not in its text")
+            if key == "rationale" and not shared and SHARED_CLAIM.search(text) and "no tastes" not in text:
+                raise Rejected("LLM memo claims shared tastes but the audiences share none")
             if not cites and not re.search(r"\d", text):
                 raise Rejected(f"LLM memo {key} item cites no entity and no number")
             texts.append(text.strip())
@@ -291,8 +322,10 @@ def make_partner(llm: Llm | None = None) -> Step:
             for side, c in zip(SIDES, (s.top_clashing_a, s.top_clashing_b), strict=True)
         }
         # Qloo entities behind this run: shared and distinctive tastes, bridging tags, and the two brands themselves
-        allowed = list(dict.fromkeys([*(e["name"] for e in [*shared, *clashing["acquirer"], *clashing["target"]]), *(b.name for b in found), *names.values()]))
-        known = {n.casefold() for n in allowed}
+        known = {n.casefold() for n in [*(e["name"] for e in [*shared, *clashing["acquirer"], *clashing["target"]]), *(b.name for b in found), *names.values()]}
+        # the model sees only the first NAMED of each list (like the template): it copies long lists into cites without writing them
+        shared, clashing = shared[:NAMED], {side: c[:NAMED] for side, c in clashing.items()}
+        allowed = list(dict.fromkeys([*(e["name"] for e in [*shared, *clashing["acquirer"], *clashing["target"]]), *(b.name for b in found[:NAMED]), *names.values()]))
         facts = {
             "acquirer": names["acquirer"],
             "target": names["target"],
@@ -300,12 +333,15 @@ def make_partner(llm: Llm | None = None) -> Step:
             "scores": {"bci": s.bci, "culture_clash": s.culture_clash, "churn_risk": s.churn_risk, "demographic_distance": s.demographic_distance},
             "domain_overlap": {d: round(v, 3) for d, v in full_overlap(s).items()},
             "top_shared": shared,
-            "top_clashing": clashing,
-            "bridges": [b.name for b in found],
+            "top_clashing": {"favoured_by_" + names[side]: items for side, items in clashing.items()},
+            "bridges": [b.name for b in found[:NAMED]],
             "allowed_cites": allowed,
+            "score_item": {"cites": [], "text": f"Culture clash is {s.culture_clash}%, so churn risk is {s.churn_risk}."},
         }
-        written, who = _ask(llm, MEMO_SYSTEM, json.dumps(facts), lambda raw: _check_memo(raw, known), "template")
-        memo = {**template, **written, "author": who["model"]} if written else {**template, "author": "template"}
+        if not shared:
+            facts["first_rationale_item"] = {"cites": list(names.values()), "text": f"{names['acquirer']} and {names['target']} audiences share no tastes (BCI {s.bci})."}
+        written, who = _ask(llm, MEMO_SYSTEM, json.dumps(facts), lambda raw: _check_memo(raw, known, bool(s.top_shared)), "template")
+        memo = {**template, **written, "author": _credit(who)} if written else {**template, "author": "template"}
         return {"memo": memo, **who}, 0
 
     return partner

@@ -122,13 +122,13 @@ test("Patagonia + Gucci: the Analyst probes tags and shows the bridging tastes",
   await page.getByRole("button", { name: "Patagonia + Gucci" }).click();
 
   const decision = page.getByTestId("decision-Analyst");
-  await expect(decision).toHaveText(/^Overlap 0 in 7\/7 domains → probed Qloo tags: \d+ bridging tastes?$/);
+  await expect(decision).toHaveText(/^Overlap 0 in 7\/7 domains → probed Qloo tags: \d+ bridging tastes? \(recorded qwen2\.5:7b: .+\)$/);
   await expect(page.getByTestId("agent-Analyst")).toContainText("2 Qloo calls");
   const bridges = page.getByTestId("bridges");
   await expect(bridges).toBeVisible();
   await expect(bridges).toContainText("Bridging tastes");
   expect(await bridges.locator("li").count()).toBeGreaterThan(0);
-  await expect(page.getByTestId("memo")).toContainText("Qloo tags bridge the two audiences");
+  await expect(page.getByTestId("memo")).toContainText("audiences share no tastes");  // the recorded memo; the bridges have their own panel
 
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(bridges).toBeVisible();
@@ -143,16 +143,30 @@ test("Nike + Adidas: the Analyst skips the tag probe and shows no bridging list"
   await page.goto("/");
   await page.getByRole("button", { name: "Nike + Adidas" }).click();
 
-  await expect(page.getByTestId("decision-Analyst")).toHaveText("Overlap in 6/7 domains → no tag probe needed");
+  await expect(page.getByTestId("decision-Analyst")).toHaveText(/^Overlap in 6\/7 domains → no tag probe needed \(recorded qwen2\.5:7b: .+\)$/);
   await expect(page.getByTestId("agent-Analyst")).toContainText("0 Qloo calls");
   await expect(page.getByTestId("bridges")).toHaveCount(0);
   expect(errors).toEqual([]);
 });
 
-test("with the LLM off the agents say they fell back to the rule and the template", async ({ page }) => {
+test("with the LLM off a preset replays a labelled recorded run for both agents", async ({ page }) => {
   const errors = watchErrors(page);
   await page.goto("/");
   await page.getByRole("button", { name: "Nike + Adidas" }).click();
+
+  await expect(page.getByTestId("planner-Analyst")).toHaveText("Recorded qwen2.5:7b run");
+  await expect(page.getByTestId("planner-Partner")).toHaveText("Recorded qwen2.5:7b run");
+  await expect(page.getByTestId("decision-Analyst")).toContainText("(recorded qwen2.5:7b:");
+  await expect(page.getByTestId("memo")).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
+test("with the LLM off a pair with no recording says it fell back to the rule and the template", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.goto("/");
+  await page.getByLabel("Acquirer").fill("Adidas");
+  await page.getByLabel("Target").fill("Nike");
+  await page.getByRole("button", { name: "Run diligence" }).click();
 
   await expect(page.getByTestId("planner-Analyst")).toHaveText("Rule-based fallback");
   await expect(page.getByTestId("planner-Partner")).toHaveText("Template memo");

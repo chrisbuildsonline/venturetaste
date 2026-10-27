@@ -356,7 +356,7 @@ export default function Home() {
                   {step?.decision && <p data-testid={`decision-${name}`} className="mt-2 text-xs text-indigo-200">{step.decision}</p>}
                   {step?.planner && (
                     <p data-testid={`planner-${name}`} title={step.fallback} className="mt-1 text-xs text-zinc-400">
-                      {step.planner === "llm" ? `${name === "Partner" ? "Memo by" : "Decided by"} ${step.model}` : step.planner === "rule" ? "Rule-based fallback" : "Template memo"}
+                      {step.planner === "llm" ? (step.recorded ? `Recorded ${step.model} run` : `${name === "Partner" ? "Memo by" : "Decided by"} ${step.model}`) : step.planner === "rule" ? "Rule-based fallback" : "Template memo"}
                     </p>
                   )}
                 </li>

@@ -1,18 +1,29 @@
 """One call to an OpenAI-compatible chat endpoint (local Ollama by default). Any failure returns None."""
 
+import hashlib
 import json
 import os
 import re
 from collections.abc import Callable
-from typing import Any
+from pathlib import Path
+from typing import Any, NamedTuple
 
 import httpx
 
 DEFAULT_URL = "http://localhost:11434/v1"
 DEFAULT_MODEL = "qwen2.5:7b"
 TIMEOUT = httpx.Timeout(30.0, connect=1.0)
+REPLAY_FILE = Path(__file__).parent / "fixture_data" / "llm_replay.json"
 
-Reply = tuple[str, dict[str, Any]]  # (model name, parsed JSON object)
+
+class Recorded(NamedTuple):
+    """A reply replayed from REPLAY_FILE, not produced by a live model just now."""
+
+    model: str
+    data: dict[str, Any]
+
+
+Reply = tuple[str, dict[str, Any]]  # (model name, parsed JSON object); a Recorded is one too
 Llm = Callable[[str, str], Reply | None]  # (system prompt, user prompt)
 
 
@@ -42,3 +53,20 @@ def chat_json(system: str, user: str) -> Reply | None:
     except (httpx.HTTPError, ValueError, KeyError, IndexError, TypeError):
         return None
     return (name, parsed) if isinstance(parsed, dict) else None
+
+
+def prompt_hash(system: str, user: str) -> str:
+    return hashlib.sha256(f"{system}\n{user}".encode()).hexdigest()
+
+
+def chat_json_or_replay(system: str, user: str) -> Reply | None:
+    """chat_json; when it gets no answer, the recorded reply for this exact (system, user) pair, if there is one.
+    The caller runs the same checks on a Recorded reply as on a live one."""
+    live = chat_json(system, user)
+    if live is not None:
+        return live
+    try:
+        entry = json.loads(REPLAY_FILE.read_text())[prompt_hash(system, user)]
+        return Recorded(str(entry["model"]), dict(entry["reply"]))
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
