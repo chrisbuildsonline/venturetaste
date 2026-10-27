@@ -16,11 +16,11 @@ describe("rowsFromScreen", () => {
 
 describe("discoveryLine", () => {
   test("names the acquirer and counts the candidates", () => {
-    expect(discoveryLine("Nike", 5)).toBe("Found by Qloo: Nike's top 5 consumer-brand affinities");
+    expect(discoveryLine("Nike", 5)).toBe("Found by Qloo: Nike's 5 best category fits");
   });
 
   test("is singular for one candidate", () => {
-    expect(discoveryLine("Nike", 1)).toBe("Found by Qloo: Nike's top consumer-brand affinity");
+    expect(discoveryLine("Nike", 1)).toBe("Found by Qloo: Nike's best category fit");
   });
 });
 

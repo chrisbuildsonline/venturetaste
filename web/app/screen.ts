@@ -40,7 +40,7 @@ export function parseTargets(raw: string, acquirer: string): { targets: string[]
 
 /** The line above the table after "Find targets". */
 export function discoveryLine(acquirer: string, count: number): string {
-  return `Found by Qloo: ${acquirer}'s top ${count === 1 ? "" : `${count} `}consumer-brand ${count === 1 ? "affinity" : "affinities"}`;
+  return `Found by Qloo: ${acquirer}'s ${count === 1 ? "" : `${count} `}best category ${count === 1 ? "fit" : "fits"}`;
 }
 
 /** The reason of the first finished row that came from recorded Qloo data, or null when every row is live. */
