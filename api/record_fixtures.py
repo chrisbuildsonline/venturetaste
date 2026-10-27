@@ -48,6 +48,8 @@ def main() -> int:
     with httpx.Client(base_url=base, headers={"X-Api-Key": key}, timeout=30) as client:
         for brand in preset_brands():
             name = slug(brand)
+            if (FIXTURES / f"search_{name}.json").exists():
+                continue  # already recorded: re-recording would shift the scores the tests pin. Delete the files to refresh.
             found = get(client, "/search", {"query": brand, "types": "urn:entity:brand"})
             if not isinstance(found, dict) or not found.get("results"):
                 print(f"no search result for {brand}", file=sys.stderr)

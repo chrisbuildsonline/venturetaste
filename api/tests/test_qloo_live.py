@@ -132,6 +132,16 @@ def test_live_screen_target_scores_and_verdict(api: TestClient, target: str) -> 
     assert report["memo"]["verdict"] in {"Proceed", "Proceed with conditions", "Pass"}
 
 
+def test_live_discover_nike_finds_other_brands(api: TestClient) -> None:
+    res = api.post("/api/discover", json={"acquirer": "Nike"})
+    assert res.status_code == 200, res.text
+    body = res.json()
+    names = [c["name"] for c in body["candidates"]]
+    assert 2 <= len(names) <= 5
+    assert not any("nike" in n.casefold() for n in names)
+    assert "recorded" not in body
+
+
 def test_live_second_call_is_cache_hit(qloo: QlooClient, requests_made: list[httpx.Request]) -> None:
     qloo.search("Patagonia")
     assert len(requests_made) == 1

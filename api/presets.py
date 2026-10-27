@@ -31,10 +31,19 @@ class Screen:
 SCREENS = (Screen("nike-targets", "Nike: 4 targets", "Nike", ("Adidas", "Puma", "Lululemon", "Gucci")),)
 
 
+# What "Find targets" returns offline: the top brand affinities of the recorded acquirer (a snapshot of
+# fixture_data/insights_<acquirer>_brand.json, checked by test_discover), so their diligence replays too.
+DISCOVERED = {
+    "Nike": ("Air Jordan Product Line", "Adidas", "Beats Electronics", "Foot Locker", "Puma"),
+    "Patagonia": ("Recreational Equipment Inc", "The North Face", "Backcountry", "Osprey", "Arc'teryx"),
+}
+
+
 def slug(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
 
 
 def preset_brands() -> list[str]:
     deals = {b for p in PRESETS for b in (p.acquirer, p.target)}
-    return sorted(deals | {b for s in SCREENS for b in (s.acquirer, *s.targets)})
+    screened = {b for s in SCREENS for b in (s.acquirer, *s.targets)}
+    return sorted(deals | screened | {b for a, ts in DISCOVERED.items() for b in (a, *ts)})

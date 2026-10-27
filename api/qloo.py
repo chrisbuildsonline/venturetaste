@@ -60,6 +60,7 @@ class Affinity:
     name: str
     affinity: float
     popularity: float | None
+    brand_types: tuple[str, ...] = ()  # names of the entity's urn:tag:brand_type:qloo tags, e.g. "Retail Brand"
 
 
 @dataclass(frozen=True)
@@ -124,6 +125,17 @@ def parse_search(payload: object) -> list[Entity]:
     return entities
 
 
+def _brand_types(tags: object) -> tuple[str, ...]:
+    """Lenient on purpose: tags are optional, so a missing or odd block means no brand type, never a parse error."""
+    if not isinstance(tags, list):
+        return ()
+    return tuple(
+        t["name"]
+        for t in tags
+        if isinstance(t, dict) and t.get("type") == "urn:tag:brand_type:qloo" and isinstance(t.get("name"), str)
+    )
+
+
 def parse_insights(payload: object) -> list[Affinity]:
     results = _obj(_obj(payload, "insights response").get("results"), "results")
     affinities = []
@@ -136,6 +148,7 @@ def parse_insights(payload: object) -> list[Affinity]:
                 name=_str(item.get("name"), "name"),
                 affinity=_num(query.get("affinity"), "affinity"),
                 popularity=_opt_num(item.get("popularity"), "popularity"),
+                brand_types=_brand_types(item.get("tags")),
             )
         )
     return affinities

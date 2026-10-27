@@ -18,9 +18,10 @@ from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, StringConstraints
 
+from api.discover import discover
 from api.llm import chat_json
 from api.pipeline import NoTasteDataError, SameBrandError, stream_diligence
-from api.presets import PRESETS, SCREENS, preset_brands, slug
+from api.presets import DISCOVERED, PRESETS, SCREENS, preset_brands, slug
 from api.qloo import (
     BrandNotFoundError,
     MissingKeyError,
@@ -195,6 +196,29 @@ def rate_limit(request: Request) -> None:
 @app.post("/api/diligence", dependencies=[Depends(rate_limit)])
 def diligence(body: DiligenceRequest, client: Annotated[QlooClient | None, Depends(get_qloo)]) -> dict[str, Any]:
     return next(data for event, data in run_events(client, body) if event == "result")
+
+
+class DiscoverRequest(BaseModel):
+    acquirer: BrandName
+
+
+@app.post("/api/discover", dependencies=[Depends(rate_limit)])
+def discover_targets(body: DiscoverRequest, client: Annotated[QlooClient | None, Depends(get_qloo)]) -> dict[str, Any]:
+    """Candidate targets for Screen mode. Same recorded fallback as diligence, for the acquirers we recorded."""
+    recorded = slug(body.acquirer) in {slug(a) for a in DISCOVERED}
+    if client is None:
+        if not recorded:
+            raise MissingKeyError("QLOO_API_KEY is not set")
+        return {**discover(fixture_client(), body.acquirer), "recorded": {"reason": RECORDED_NO_KEY}}
+    if fixture_mode():
+        return {**discover(client, body.acquirer), "recorded": {"reason": RECORDED_FIXTURE_MODE}}
+    try:
+        return discover(client, body.acquirer)
+    except QlooAPIError as exc:
+        if exc.status not in (401, 403) or not recorded:
+            raise
+        logger.warning("Qloo rejected the API key (HTTP %s); replaying recorded answers", exc.status)
+        return {**discover(fixture_client(), body.acquirer), "recorded": {"reason": RECORDED_KEY_REJECTED}}
 
 
 def sse(event: str, data: Any) -> str:
