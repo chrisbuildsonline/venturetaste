@@ -8,6 +8,14 @@ Source: https://github.com/chrisbuildsonline/venturetaste. License: MIT, see [LI
 
 When the server has no valid Qloo key, preset brand pairs replay recorded Qloo answers, and the UI labels those runs "Recorded Qloo data".
 
+**Docker quickstart** (presets work with no key):
+
+```
+docker build -t venturetaste . && docker run -p 8765:8765 venturetaste
+```
+
+Then open http://127.0.0.1:8765. Add `--env-file .env` with a `QLOO_API_KEY` to try any brand.
+
 The hosted demo has a valid Qloo key and calls live Qloo (18 calls per run, answers cached on disk, no recorded banner). Captured 2026-10-27:
 
 ![Nike + Adidas against live Qloo](docs/live-qloo-run.png)
@@ -44,7 +52,7 @@ Responses are cached on disk (`.cache/qloo`), and HTTP 429 is retried with backo
 
 1. **Scout** resolves both brand names to Qloo entities (2 calls).
 2. **Cartographer** fetches insights for all 7 domains plus demographics for both brands (16 calls, in parallel threads). 18 Qloo calls per run with the two searches.
-3. **Analyst** scores the pair with `api/scoring.py` (pure code) and then decides whether to probe tags. The optional LLM makes that call; without it the rule is: if at least 4 of the 7 domains have zero taste overlap, it asks Qloo for each brand's tag affinities (2 extra calls) and reports the top 5 tags both audiences share as "bridging tastes", ranked by the weaker of the two affinities. Bridges are evidence only and never change the BCI, clash score or verdict. Its trace item carries a `decision` string saying which way it went.
+3. **Analyst** scores the pair with `api/scoring.py` (pure code) and then decides whether to probe tags. The optional LLM makes that call; without it the rule is: if at least 4 of the 7 domains have zero taste overlap, it asks Qloo for each brand's tag affinities (2 extra calls) and reports the top 5 tags both audiences share as "bridging tastes", ranked by the weaker of the two affinities. Trivial tags are dropped by Qloo tag id prefix: place attributes (`inclusivity`, `cost_description`, `credit_card`, `hotel_rating`, `specialty_dish`) and film-plot keywords (`keyword:media`), so "Identifies as women-owned" or "friendship" never count as a bridge. Bridges are evidence only and never change the BCI, clash score or verdict. Its trace item carries a `decision` string saying which way it went.
 4. **Partner** writes the deal memo: a verdict (`Proceed`, `Proceed with conditions`, `Pass`, always computed from the scores), and rationale and risks that name real Qloo entities from the data. The optional LLM writes the rationale and risks; otherwise a template does.
 
 ### Optional LLM agent
@@ -82,13 +90,15 @@ curl -s -X POST http://127.0.0.1:8765/api/diligence \
 
 `recorded` is `{"reason": "..."}` when the answers are recorded Qloo data instead of live calls, and absent on live runs. It is set when `VENTURETASTE_FIXTURES=1`, and when the server has no `QLOO_API_KEY` or Qloo rejects the key (HTTP 401 or 403) and both brands are preset brands (the ones in `api/fixtures.py`); the run is then repeated on the recorded answers. The stream does the same: no `error` event, and the final `result` carries `recorded`. Other brands, and every other Qloo failure (timeouts, 429, 5xx), keep the errors below.
 
-Errors are `{"detail": "..."}` with: 422 for a bad body, an unknown brand, a brand with no taste data, or the same brand twice; 503 when `QLOO_API_KEY` is missing; 502 when Qloo fails or returns something unparseable.
+Errors are `{"detail": "..."}` with: 422 for a bad body, an unknown brand, a brand with no taste data, or the same brand twice (checked before any Qloo call, ignoring case and punctuation); 422 when no `QLOO_API_KEY` is set and the pair is not recorded ("No Qloo API key is set on this server, so only recorded brands work: ... Set QLOO_API_KEY to try any brand."); 502 when Qloo fails or returns something unparseable.
+
+On a recorded run (no key, fixture mode, or a rejected key) nothing is asked of Qloo, so every trace item has `"qloo_calls": 0` and `"replayed": true`.
 
 `POST /api/diligence/stream` takes the same body and returns server-sent events (`text/event-stream`, with `Cache-Control: no-cache` and `X-Accel-Buffering: no`):
 
 - `event: agent` with `{"agent": "Scout", "status": "running"}` when an agent starts, and `{"agent": "Scout", "status": "ok", "ms": 4, "qloo_calls": 2}` when it finishes. Agents come in order: Scout, Cartographer, Analyst, Partner.
 - `event: result` with the same report `POST /api/diligence` returns. It is the last event of a good run.
-- `event: error` with `{"status": 422, "detail": "..."}` if the run fails after the stream has started. The HTTP status is already 200 by then, so read `status` from the payload. A missing key (503) or a bad body (422) still fails before streaming, as a plain JSON error.
+- `event: error` with `{"status": 422, "detail": "..."}` if the run fails after the stream has started. The HTTP status is already 200 by then, so read `status` from the payload. An unrecorded pair with no key, the same brand twice, or a bad body (all 422) still fails before streaming, as a plain JSON error.
 
 ```
 curl -N -X POST http://127.0.0.1:8765/api/diligence/stream \
@@ -117,6 +127,7 @@ Errors are always plain sentences. When Qloo is unreachable, answers with an err
 - **Exclusive mass** (0..1, per domain): for each brand, the share of its positive affinity mass that sits on entities the other brand does not list at all (before the top 5 cut); the domain value is the mean of the two brands, and a brand with no positive mass in the domain is skipped. Mean over domains with data.
 - **Culture Clash %** (0..100): `100 * (0.7 * mean_exclusive_mass + 0.3 * demographic_distance)`.
 - Culture Clash is not `100 - BCI`: BCI rewards shared mass (so a shared entity with very unequal weights still lowers BCI), while clash only counts mass on entities the other audience lacks entirely, so the two can sum to more or less than 100.
+- **Why 0.7 / 0.3.** Taste overlap is the direct Qloo signal of shared audiences, so it drives both cannibalization (BCI) and clash. Demographic distance is a coarser age and gender proxy, so it gets the smaller share. Clash mirrors BCI: exclusive taste mass takes the 0.7 and demographic distance the 0.3. These weights are a judgment call, not calibrated: they have not been backtested against real deals. They are constants in `api/scoring.py` (`OVERLAP_WEIGHT`, `CLASH_TASTE_WEIGHT`, `DEMO_WEIGHT`), so anyone can retune them.
 - **Churn-risk band**: from Culture Clash, below 33 is `low`, below 66 is `medium`, otherwise `high` (`LOW_BELOW` and `HIGH_FROM` in `api/scoring.py`).
 - **Top shared tastes**: entities in both lists of a domain, ranked by the lower of the two affinities, top 5. **Top clashing tastes**: entities with positive affinity for one brand and absent from the other's list, ranked by affinity, top 5 per brand.
 
@@ -188,7 +199,7 @@ The image builds the web app, installs the API with uv and runs uvicorn as a non
 
 The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffering: no`, so nginx style proxies do not buffer it.
 
-`bun run docker:smoke` builds the image, first runs it in fixture mode with no key and checks that Nike + Adidas returns 200 with a `bci`, then runs it on port 8799 with your `.env`, waits for `/api/health`, runs the Playwright spec `web/e2e/live.spec.ts` (Nike + Adidas against real Qloo) and removes the container. Set `BASE_URL` and run `cd web && bunx playwright test` to run that spec against any other deployment.
+`bun run docker:smoke` builds the image, first runs it in fixture mode with no key and checks that Nike + Adidas returns 200 with a `bci`, then runs it on port 8799 with your `.env`, waits for `/api/health` and for the image's `HEALTHCHECK` (stdlib Python against `/api/health`) to report `healthy`, runs the Playwright spec `web/e2e/live.spec.ts` (Nike + Adidas against real Qloo) and removes the container. Set `BASE_URL` and run `cd web && bunx playwright test` to run that spec against any other deployment.
 
 `bun run e2e:live` runs the same spec against the public deployment (https://venturetaste.5-78-152-178.sslip.io, or your own via `BASE_URL`). It uses two diligence runs and also checks that the proxy streams the SSE events instead of buffering them.
 
