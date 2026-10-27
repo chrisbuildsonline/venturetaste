@@ -1,6 +1,15 @@
-"""Four-agent diligence pipeline (LangGraph): Scout, Cartographer, Analyst, Partner. No LLM."""
+"""Four-agent diligence pipeline (LangGraph): Scout, Cartographer, Analyst, Partner.
 
+Scores, the verdict and the headline are deterministic and never depend on an LLM. An optional LLM (api/llm.py,
+local Ollama by default) does two things: the Analyst asks it whether to probe Qloo tags, and the Partner asks it
+to write the memo's rationale and risks. Every entity the LLM cites is checked against what Qloo returned; any
+unusable answer (LLM off, unreachable, bad JSON, unknown cite) falls back to the COLD_DOMAINS_TO_PROBE rule and
+the build_memo template, and the trace says which one decided.
+"""
+
+import json
 import operator
+import re
 import time
 from collections.abc import Callable, Iterator
 from concurrent.futures import ThreadPoolExecutor
@@ -10,6 +19,7 @@ from typing import Annotated, Any, Protocol, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
+from api.llm import Llm
 from api.qloo import DOMAINS, Demographics, Entity, QlooClient, QlooError, QlooParseError, Tag
 from api.scoring import BrandProfile, Bridge, Scores, bridges, score
 
@@ -19,6 +29,7 @@ MAX_WORKERS = 6
 COLD_DOMAINS_TO_PROBE = 4  # this many of the 7 domains with zero overlap sends the Analyst to Qloo tags
 PROCEED_BCI = 50  # synergy deals at or above this BCI get a clean "Proceed"
 NAMED = 3  # entities quoted per sentence in the memo
+TRACE_KEYS = ("decision", "planner", "model", "fallback")  # step update keys that go on the trace item, not into the state
 
 
 class NoTasteDataError(QlooError):
@@ -46,13 +57,13 @@ Step = Callable[[State], tuple[dict[str, Any], int]]  # state update, Qloo calls
 
 def _agent(name: str, step: Step) -> Callable[[State], dict[str, Any]]:
     """Wrap a step so it appends its name, status, duration and Qloo call count to the trace.
-    A step can put a "decision" string in its update: it goes on the trace item, not into the state."""
+    A step can put TRACE_KEYS in its update: they go on the trace item, not into the state."""
 
     def node(state: State) -> dict[str, Any]:
         start = time.perf_counter()
         update, calls = step(state)
         ms = round((time.perf_counter() - start) * 1000)
-        extra = {"decision": update.pop("decision")} if "decision" in update else {}
+        extra = {k: update.pop(k) for k in TRACE_KEYS if k in update}
         return {**update, "trace": [{"agent": name, "status": "ok", "ms": ms, "qloo_calls": calls, **extra}]}
 
     return node
@@ -105,20 +116,66 @@ class TagSource(Protocol):
     def tags(self, entity_id: str) -> list[Tag]: ...
 
 
-def make_analyst(client: TagSource) -> Step:
+class Rejected(Exception):
+    """The LLM answered, but not with something usable."""
+
+
+def _ask[T](llm: Llm | None, system: str, user: str, check: Callable[[dict[str, Any]], T], fallback: str) -> tuple[T | None, dict[str, Any]]:
+    """The checked LLM answer (or None) and the trace fields saying who decided; `fallback` names the non-LLM way."""
+    if llm is None:
+        return None, {"planner": fallback, "fallback": "LLM off"}
+    reply = llm(system, user)
+    if reply is None:
+        return None, {"planner": fallback, "fallback": "LLM unreachable"}
+    model, raw = reply
+    try:
+        return check(raw), {"planner": "llm", "model": model}
+    except Rejected as exc:
+        return None, {"planner": fallback, "fallback": str(exc)}
+
+
+PLAN_SYSTEM = (
+    "You are the Analyst on an M&A taste-diligence team. You get the taste overlap between two consumer brands' audiences "
+    "per domain (0 to 1) and how many domains have none. Decide whether to spend two extra Qloo calls probing taste tags "
+    "to look for bridging tastes between the audiences. "
+    'Answer with JSON only: {"probe_tags": true or false, "reason": "one short sentence"}.'
+)
+
+
+def _check_plan(raw: dict[str, Any]) -> tuple[bool, str]:
+    probe, reason = raw.get("probe_tags"), raw.get("reason")
+    if not isinstance(probe, bool) or not isinstance(reason, str) or not reason.strip():
+        raise Rejected("LLM plan was not {probe_tags: bool, reason: str}")
+    return probe, reason.strip()[:200]
+
+
+def make_analyst(client: TagSource, llm: Llm | None = None) -> Step:
     def analyst(state: State) -> tuple[dict[str, Any], int]:
         profiles = state["profiles"]
         s = score(profiles["acquirer"], profiles["target"])
-        cold = sum(1 for v in full_overlap(s).values() if v == 0)
-        if cold < COLD_DOMAINS_TO_PROBE:
+        overlap = full_overlap(s)
+        cold = sum(1 for v in overlap.values() if v == 0)
+        facts = {
+            "acquirer": profiles["acquirer"].name,
+            "target": profiles["target"].name,
+            "domain_overlap": {d: round(v, 3) for d, v in overlap.items()},
+            "cold_domains": cold,
+            "domains": len(DOMAINS),
+        }
+        plan, who = _ask(llm, PLAN_SYSTEM, json.dumps(facts), _check_plan, "rule")
+        probe, reason = plan if plan else (cold >= COLD_DOMAINS_TO_PROBE, "")
+        found: list[Bridge] = []
+        if probe:
+            entities = state["entities"]
+            tags_a, tags_b = _parallel([partial(client.tags, entities[side].id) for side in SIDES])
+            found = bridges(tags_a, tags_b)
+            n = f"{len(found)} bridging taste{'' if len(found) == 1 else 's'}" if found else "no bridging tastes found"
+            decision = f"Overlap 0 in {cold}/{len(DOMAINS)} domains → probed Qloo tags: {n}"
+        else:
             decision = f"Overlap in {len(DOMAINS) - cold}/{len(DOMAINS)} domains → no tag probe needed"
-            return {"scores": s, "bridges": [], "probed_tags": False, "decision": decision}, 0
-        entities = state["entities"]
-        tags_a, tags_b = _parallel([partial(client.tags, entities[side].id) for side in SIDES])
-        found = bridges(tags_a, tags_b)
-        n = f"{len(found)} bridging taste{'' if len(found) == 1 else 's'}" if found else "no bridging tastes found"
-        decision = f"Overlap 0 in {cold}/{len(DOMAINS)} domains → probed Qloo tags: {n}"
-        return {"scores": s, "bridges": found, "probed_tags": True, "decision": decision}, 2
+        if plan:
+            decision += f" ({who['model']}: {reason})"
+        return {"scores": s, "bridges": found, "probed_tags": probe, "decision": decision, **who}, 2 if probe else 0
 
     return analyst
 
@@ -185,19 +242,82 @@ def build_memo(
     return {"verdict": verdict, "headline": headline, "rationale": rationale, "risks": risks}
 
 
-def partner(state: State) -> tuple[dict[str, Any], int]:
-    names = {side: state["profiles"][side].name for side in SIDES}
-    memo = build_memo(names["acquirer"], names["target"], state["scores"], state["bridges"], state["probed_tags"])
-    return {"memo": memo}, 0
+MEMO_SYSTEM = (
+    "You are the Partner on an M&A taste-diligence team writing the rationale and risks of a deal memo for two consumer "
+    "brands. The verdict is already decided; do not change it. Use only the scores and the Qloo entities you are given. "
+    'Answer with JSON only: {"rationale": [{"text": str, "cites": [str]}], "risks": [{"text": str, "cites": [str]}]}. '
+    "Write 2 to 4 short items per list. Rules for every item: "
+    "1) cites is a list of strings taken exactly from allowed_cites, and the text contains each cited name word for word; "
+    "2) every item should name and cite one to three entities from allowed_cites; only an item that quotes a number from the facts "
+    "(the BCI, culture clash or demographic distance) may have empty cites; field names such as culture_clash are never cites; "
+    "3) do not cite anything that is not in allowed_cites, and do not state facts that are not in the data. "
+    'Example item: {"text": "Both audiences love <name 1> and <name 2>.", "cites": ["<name 1>", "<name 2>"]} '
+    "with the placeholders replaced by names from allowed_cites."
+)
 
 
-def build_graph(client: QlooClient) -> Any:
+def _check_memo(raw: dict[str, Any], known: set[str]) -> dict[str, list[str]]:
+    memo: dict[str, list[str]] = {}
+    for key in ("rationale", "risks"):
+        items = raw.get(key)
+        if not isinstance(items, list) or not items:
+            raise Rejected(f"LLM memo has no {key}")
+        texts = []
+        for item in items:
+            text = item.get("text") if isinstance(item, dict) else None
+            cites = item.get("cites") if isinstance(item, dict) else None
+            if not isinstance(text, str) or not text.strip() or not isinstance(cites, list) or not all(isinstance(c, str) for c in cites):
+                raise Rejected(f"LLM memo {key} item is not {{text, cites}}")
+            for c in cites:
+                if c.casefold() not in known:
+                    raise Rejected(f"LLM cited unknown entity {c!r}")
+                if c.casefold() not in text.casefold():
+                    raise Rejected(f"LLM cite {c!r} is not in its text")
+            if not cites and not re.search(r"\d", text):
+                raise Rejected(f"LLM memo {key} item cites no entity and no number")
+            texts.append(text.strip())
+        memo[key] = texts
+    return memo
+
+
+def make_partner(llm: Llm | None = None) -> Step:
+    def partner(state: State) -> tuple[dict[str, Any], int]:
+        names = {side: state["profiles"][side].name for side in SIDES}
+        s, found = state["scores"], state["bridges"]
+        template = build_memo(names["acquirer"], names["target"], s, found, state["probed_tags"])
+        shared = [{"name": t.name, "domain": t.domain} for t in s.top_shared]
+        clashing = {
+            side: [{"name": t.name, "domain": t.domain} for t in c]
+            for side, c in zip(SIDES, (s.top_clashing_a, s.top_clashing_b), strict=True)
+        }
+        # Qloo entities behind this run: shared and distinctive tastes, bridging tags, and the two brands themselves
+        allowed = list(dict.fromkeys([*(e["name"] for e in [*shared, *clashing["acquirer"], *clashing["target"]]), *(b.name for b in found), *names.values()]))
+        known = {n.casefold() for n in allowed}
+        facts = {
+            "acquirer": names["acquirer"],
+            "target": names["target"],
+            "verdict": template["verdict"],
+            "scores": {"bci": s.bci, "culture_clash": s.culture_clash, "churn_risk": s.churn_risk, "demographic_distance": s.demographic_distance},
+            "domain_overlap": {d: round(v, 3) for d, v in full_overlap(s).items()},
+            "top_shared": shared,
+            "top_clashing": clashing,
+            "bridges": [b.name for b in found],
+            "allowed_cites": allowed,
+        }
+        written, who = _ask(llm, MEMO_SYSTEM, json.dumps(facts), lambda raw: _check_memo(raw, known), "template")
+        memo = {**template, **written, "author": who["model"]} if written else {**template, "author": "template"}
+        return {"memo": memo, **who}, 0
+
+    return partner
+
+
+def build_graph(client: QlooClient, llm: Llm | None = None) -> Any:
     graph = StateGraph(State)
     steps: list[tuple[str, Step]] = [
         ("Scout", make_scout(client)),
         ("Cartographer", make_cartographer(client)),
-        ("Analyst", make_analyst(client)),
-        ("Partner", partner),
+        ("Analyst", make_analyst(client, llm)),
+        ("Partner", make_partner(llm)),
     ]
     for name, step in steps:
         node: Any = _agent(name, step)  # langgraph's overloads reject a plain State callable
@@ -209,11 +329,11 @@ def build_graph(client: QlooClient) -> Any:
     return graph.compile()
 
 
-def stream_diligence(client: QlooClient, acquirer: str, target: str) -> Iterator[tuple[str, dict[str, Any]]]:
+def stream_diligence(client: QlooClient, acquirer: str, target: str, llm: Llm | None = None) -> Iterator[tuple[str, dict[str, Any]]]:
     """Lazily yield ("agent", {...}) as each agent starts and finishes, then ("result", report). QlooErrors propagate."""
     yield "agent", {"agent": AGENTS[0], "status": "running"}
     state: dict[str, Any] = {"acquirer": acquirer, "target": target, "trace": []}
-    for chunk in build_graph(client).stream(state, stream_mode="updates"):
+    for chunk in build_graph(client, llm).stream(state, stream_mode="updates"):
         for update in chunk.values():
             state |= {**update, "trace": state["trace"] + update["trace"]}
             item = update["trace"][0]
@@ -223,8 +343,8 @@ def stream_diligence(client: QlooClient, acquirer: str, target: str) -> Iterator
     yield "result", _report(state, acquirer, target)
 
 
-def run_diligence(client: QlooClient, acquirer: str, target: str) -> dict[str, Any]:
-    return next(data for event, data in stream_diligence(client, acquirer, target) if event == "result")
+def run_diligence(client: QlooClient, acquirer: str, target: str, llm: Llm | None = None) -> dict[str, Any]:
+    return next(data for event, data in stream_diligence(client, acquirer, target, llm) if event == "result")
 
 
 def _report(state: dict[str, Any], acquirer: str, target: str) -> dict[str, Any]:

@@ -18,6 +18,7 @@ from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, StringConstraints
 
+from api.llm import chat_json
 from api.pipeline import NoTasteDataError, SameBrandError, stream_diligence
 from api.presets import PRESETS, SCREENS, preset_brands, slug
 from api.qloo import (
@@ -83,7 +84,7 @@ def is_recorded_pair(body: DiligenceRequest) -> bool:
 
 def recorded_run(client: QlooClient, body: DiligenceRequest, reason: str) -> Iterator[tuple[str, dict[str, Any]]]:
     """stream_diligence, with the result carrying why the answers are recorded."""
-    for event, data in stream_diligence(client, body.acquirer, body.target):
+    for event, data in stream_diligence(client, body.acquirer, body.target, chat_json):
         yield event, {**data, "recorded": {"reason": reason}} if event == "result" else data
 
 
@@ -99,7 +100,7 @@ def run_events(client: QlooClient | None, body: DiligenceRequest) -> Iterator[tu
         yield from recorded_run(client, body, RECORDED_FIXTURE_MODE)
         return
     try:
-        yield from stream_diligence(client, body.acquirer, body.target)
+        yield from stream_diligence(client, body.acquirer, body.target, chat_json)
     except QlooAPIError as exc:
         if exc.status not in (401, 403) or not is_recorded_pair(body):
             raise

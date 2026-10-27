@@ -21,8 +21,11 @@ dev = [
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["api/tests"]
-addopts = "-m 'not live'"
-markers = ["live: hits the real Qloo API (bun run test:live)"]
+addopts = "-m 'not live and not llm'"
+markers = [
+    "live: hits the real Qloo API (bun run test:live)",
+    "llm: needs the local Ollama LLM (bun run test:llm)",
+]
 
 [tool.mypy]
 strict = true
