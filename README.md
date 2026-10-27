@@ -4,6 +4,10 @@ An autonomous 4-agent M&A and venture diligence pipeline for consumer brand acqu
 
 **Live demo: https://venturetaste.5-78-152-178.sslip.io**
 
+Source: https://github.com/chrisbuildsonline/venturetaste. License: MIT, see [LICENSE](LICENSE).
+
+When the server has no valid Qloo key, preset brand pairs replay recorded Qloo answers, and the UI labels those runs "Recorded Qloo data".
+
 Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/). Submissions close 2026-10-30.
 
 ![VentureTaste running Nike + Adidas](docs/demo-desktop.png)
@@ -44,6 +48,8 @@ curl -s -X POST http://127.0.0.1:8765/api/diligence \
   -H 'Content-Type: application/json' \
   -d '{"acquirer": "Nike", "target": "Adidas"}'
 ```
+
+`recorded` is `{"reason": "..."}` when the answers are recorded Qloo data instead of live calls, and absent on live runs. It is set when `VENTURETASTE_FIXTURES=1`, and when the server has no `QLOO_API_KEY` or Qloo rejects the key (HTTP 401 or 403) and both brands are preset brands (the ones in `api/fixtures.py`); the run is then repeated on the recorded answers. The stream does the same: no `error` event, and the final `result` carries `recorded`. Other brands, and every other Qloo failure (timeouts, 429, 5xx), keep the errors below.
 
 Errors are `{"detail": "..."}` with: 422 for a bad body, an unknown brand, a brand with no taste data, or the same brand twice; 503 when `QLOO_API_KEY` is missing; 502 when Qloo fails or returns something unparseable.
 
