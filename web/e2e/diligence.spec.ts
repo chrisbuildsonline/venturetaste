@@ -149,6 +149,18 @@ test("Nike + Adidas: the Analyst skips the tag probe and shows no bridging list"
   expect(errors).toEqual([]);
 });
 
+test("with the LLM off the agents say they fell back to the rule and the template", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+
+  await expect(page.getByTestId("planner-Analyst")).toHaveText("Rule-based fallback");
+  await expect(page.getByTestId("planner-Partner")).toHaveText("Template memo");
+  await expect(page.getByTestId("planner-Partner")).toHaveAttribute("title", "LLM unreachable");
+  await expect(page.getByTestId("memo")).toBeVisible();
+  expect(errors).toEqual([]);
+});
+
 test("the Analyst decision shows in the non-stream fallback too", async ({ page }) => {
   await page.route("**/api/diligence/stream", (r) => r.abort());
   await page.goto("/");

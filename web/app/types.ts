@@ -6,7 +6,7 @@ export type Brand = {query: string; id: string; name: string; popularity: number
 export type Shared = { domain: string; name: string; affinity_a: number; affinity_b: number };
 export type Clashing = { domain: string; name: string; affinity: number };
 export type Demographics = { age: Record<string, number>; gender: Record<string, number> };
-export type TraceStep = { agent: string; status: string; ms: number; qloo_calls: number; decision?: string };
+export type TraceStep = { agent: string; status: string; ms: number; qloo_calls: number; decision?: string; planner?: "llm" | "rule" | "template"; model?: string; fallback?: string };
 export type Bridge = { id: string; name: string; affinity_acquirer: number; affinity_target: number };
 
 export type Diligence = {
@@ -18,7 +18,7 @@ export type Diligence = {
   demographics: { acquirer: Demographics; target: Demographics };
   bridges: Bridge[];
   probed_tags: boolean;
-  memo: { verdict: string; headline: string; rationale: string[]; risks: string[] };
+  memo: { verdict: string; headline: string; rationale: string[]; risks: string[]; author?: string };
   trace: TraceStep[];
   recorded?: { reason: string } | null;
 };

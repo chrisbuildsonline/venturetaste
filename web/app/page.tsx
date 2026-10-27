@@ -306,6 +306,11 @@ export default function Home() {
                     {step ? `Done · ${step.ms} ms · ${step.qloo_calls} Qloo ${step.qloo_calls === 1 ? "call" : "calls"}` : waiting ? "Waiting" : "Running…"}
                   </p>
                   {step?.decision && <p data-testid={`decision-${name}`} className="mt-2 text-xs text-indigo-200">{step.decision}</p>}
+                  {step?.planner && (
+                    <p data-testid={`planner-${name}`} title={step.fallback} className="mt-1 text-xs text-zinc-400">
+                      {step.planner === "llm" ? `${name === "Partner" ? "Memo by" : "Decided by"} ${step.model}` : step.planner === "rule" ? "Rule-based fallback" : "Template memo"}
+                    </p>
+                  )}
                 </li>
               );
             })}

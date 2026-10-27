@@ -17,7 +17,7 @@ export default defineConfig({
     ? undefined
     : {
         command: `uv run uvicorn api.main:app --port ${PORT}`,
-        env: { VENTURETASTE_FIXTURES: "1", VENTURETASTE_RATE_LIMIT: "100000" },
+        env: { VENTURETASTE_FIXTURES: "1", VENTURETASTE_LLM: "off", VENTURETASTE_RATE_LIMIT: "100000" },
         cwd: "..",
         url: `http://127.0.0.1:${PORT}/api/health`,
         reuseExistingServer: !process.env.CI,
