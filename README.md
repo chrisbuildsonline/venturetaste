@@ -87,6 +87,8 @@ Errors are always plain sentences. When Qloo is unreachable, answers with an err
 
 `GET /api/screens` lists the target screens (`id`, `label`, `acquirer`, `targets`).
 
+`POST /api/discover` takes `{"acquirer": "Nike"}` and returns `{"acquirer", "candidates": [{"name", "affinity"}], "source"}`: up to 5 of the acquirer's top Qloo brand affinities, in Qloo's order. Only consumer brands are kept, by Qloo's own `brand_type` tag: Product, Corporate, Retail and Service Brands stay; Entertainment (clubs, leagues), Media and Nonprofit Brands, and brands with no type, are dropped. The acquirer itself, its sub-brands (any name containing the acquirer's, like "Nike SB") and repeats are dropped too. It counts as one hit against the rate limit, uses the same friendly errors, and for Nike and Patagonia falls back to recorded answers (with `recorded.reason`) exactly like diligence.
+
 `GET /api/health` returns `{"ok": true, "qloo_key": true, "qloo_url": "https://hackathon.api.qloo.com", "fixtures": false}`: whether a key is set (never the key itself), the base URL actually used and whether fixture mode is on. A `QLOO_API_URL` that is empty or not an http(s) URL with a host (for example a placeholder like `set by orchestrator`) is ignored with a logged warning, and the default is used.
 
 ## Scoring
@@ -126,6 +128,8 @@ Patagonia + Gucci: Qloo finds no entity both audiences love in any of the seven 
 ## Target screening
 
 "Screen targets" ranks one acquirer against 2 to 5 candidate targets in a sortable table (BCI, culture clash, churn risk, verdict). There is no extra backend: the page calls `POST /api/diligence` once per target, in sequence (each run already uses 6 Qloo threads, and Qloo answers 429 at about 8 parallel requests), and rows fill in as each run finishes. "Full diligence" on a row opens the normal pair view with the agent timeline and report. Each target is one run against the per-IP rate limit (30 per minute by default), so screening 5 targets leaves room for 25 more; on a 429 the screen stops and the remaining rows show the rate-limit message.
+
+"Find targets" skips the typing: it calls `POST /api/discover` for the acquirer, fills the targets field with Qloo's top brand affinities and runs the same screen on them. The table says where they came from ("Found by Qloo: Nike's top 5 consumer-brand affinities"). Clubs, leagues and media are filtered out by Qloo's brand type, but the closest brands are still what audiences share, not a list of companies for sale (Qloo does not link every sub-brand, so a line like "Air Jordan Product Line" can slip through), so check the list before you act on it. Offline, Nike and Patagonia discover recorded candidates whose diligence is recorded too.
 
 ![Nike screened against four targets](docs/screening.png)
 
