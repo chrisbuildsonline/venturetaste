@@ -7,6 +7,7 @@ import { chromium, type Page } from '../web/node_modules/@playwright/test';
 import { mkdtempSync, mkdirSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
+import { narration } from './narration';
 
 const ROOT = join(import.meta.dir, '..');
 const PORT = 8766;
@@ -101,12 +102,12 @@ h1{font:700 36px/1.15 Inter;letter-spacing:-.02em;margin:0 0 8px}
 </div>`);
 
   const agent = (d: number, name: string, role: string, detail: string) => card(d, `<div class="eyebrow">${name}</div><b>${role}</b><p class="dim" style="margin:6px 0 0;font-size:14.5px">${detail}</p>`);
-  const HOW = slide(`<div class="eyebrow">How it works</div><h1>Four agents, deterministic scoring, no LLM</h1><p class="lead">Every number and every memo sentence comes from Qloo data and fixed formulas.</p>
+  const HOW = slide(`<div class="eyebrow">How it works</div><h1>Four agents, deterministic scoring</h1><p class="lead">Every number comes from Qloo data and fixed formulas. An optional LLM only words the memo, checked against that data.</p>
 <div class="cols" style="grid-template-columns:repeat(4,1fr)">
   ${agent(0.3, 'Scout', 'Resolves both brands', 'Qloo <span class="chip">/search</span>')}
   ${agent(0.9, 'Cartographer', 'Maps tastes and audiences', '<span class="chip">/v2/insights</span> per domain (7), <span class="chip">urn:demographics</span>')}
   ${agent(1.5, 'Analyst', 'Scores, then decides', 'Overlap in under 4 of 7 domains: probes <span class="chip">urn:tag</span> for bridging tastes')}
-  ${agent(2.1, 'Partner', 'Writes the deal memo', 'From templates, naming real Qloo entities')}
+  ${agent(2.1, 'Partner', 'Writes the deal memo', 'Names real Qloo entities, by template or a checked LLM')}
 </div>
 <div class="card in mono" style="margin-top:20px;animation-delay:4s;font-size:15.5px">
   BCI = 100 * (0.7 * mean weighted-Jaccard overlap + 0.3 * (1 - demographic distance))<br>
@@ -130,14 +131,8 @@ h1{font:700 36px/1.15 Inter;letter-spacing:-.02em;margin:0 0 8px}
 
   // ---- 4. voice lines, synthesized up front so the recording never waits on edge-tts ----
   const N = {
-    title: tts("VentureTaste is due diligence for consumer brand deals, built on Qloo's taste graph. When a company buys a brand, the spreadsheet shows revenue and margin, but not whether the two customer bases overlap or clash. Overlap means cannibalization. Clash means churn. The buyers are corporate development teams, private equity and venture investors in consumer brands, and M and A advisors. We would charge per seat as a SaaS tool, or per diligence report."),
-    nike: tts('Here is the real app. This recording replays recorded Qloo responses, so it needs no key. Nike and Adidas: one click on the preset. Four agents run in order, and each reports its time and how many Qloo calls it made. The radar shows taste overlap across seven domains. The brand cannibalization index is 53.9, the verdict is Proceed, and the deal memo names real entities from the Qloo data.'),
-    gucci: tts('Now Patagonia and Gucci. Qloo finds no shared taste in any domain. The Analyst agent notices, and decides to probe Qloo tags for both brands, looking for bridging tastes the two audiences have in common. Its decision line is on the card. The bridges are evidence only, they never change the score. Culture clash is 75.7, so the verdict is Pass.'),
-    screen: tts('Screen targets mode ranks one acquirer against several candidates. Nike against Adidas, Puma, Lululemon and Gucci. Each target gets a full diligence run, and the ranked table fills in as they finish.'),
-    how: tts('How it works. Scout resolves both brands with Qloo search. Cartographer pulls insights for seven domains, plus demographics. The Analyst scores the pair in plain code, and if most domains show no overlap, it probes Qloo tags. Partner writes the memo from templates. There is no LLM anywhere: the scoring is deterministic, and the agents decide from Qloo data. The index is seventy percent weighted overlap plus thirty percent demographic similarity. Culture clash is seventy percent exclusive taste plus thirty percent demographic distance. Pass when clash is at least sixty six. Proceed when the index is at least fifty. Otherwise, proceed with conditions.'),
-    tests: tts(`Before this recording, the test suite ran. ${pyPassed} Python tests and ${bunPass} web tests passed, and the type checks are clean.`),
-    outro: tts('VentureTaste. Do these customers overlap, or clash? Ask Qloo before you sign. The live app and the code are on screen.'),
-  };
+    ...Object.fromEntries(Object.entries(narration(pyPassed, bunPass)).map(([k, text]) => [k, tts(text)])),
+  } as Record<keyof ReturnType<typeof narration>, Promise<Clip>>;
   await Promise.all(Object.values(N));
 
   // ---- 5. recording ----
@@ -197,7 +192,7 @@ h1{font:700 36px/1.15 Inter;letter-spacing:-.02em;margin:0 0 8px}
       if (!decision.includes('probed Qloo tags')) throw new Error(`Analyst did not probe tags: ${decision}`);
       await page.getByTestId('decision-Analyst').scrollIntoViewIfNeeded();
     },
-    () => glide('bridges', 'center'),
+    () => glide('no-shared-taste', 'center'),
     () => glide('verdict', 'center'),
   ]);
 
@@ -208,12 +203,29 @@ h1{font:700 36px/1.15 Inter;letter-spacing:-.02em;margin:0 0 8px}
       await Bun.sleep(600);
       await page.getByRole('group', { name: 'Mode' }).getByRole('button', { name: 'Screen targets' }).click();
       await Bun.sleep(900);
-      await page.getByRole('button', { name: 'Nike: 4 targets' }).click();
+      await page.getByLabel('Acquirer').fill('Nike');
+      await page.getByRole('button', { name: 'Find targets' }).click();
     },
     async () => {
-      await page.getByTestId('screen-row').nth(3).waitFor();
-      await page.getByText('Screening…').waitFor({ state: 'detached' });
+      await page.getByTestId('screen-bci').nth(4).waitFor();
+      if ((await page.getByTestId('screen-reason').count()) !== 5) throw new Error('Find targets showed no reason lines');
       await glide('screen-table', 'center');
+    },
+    async () => {
+      await page.getByRole('button', { name: 'Download table (.md)' }).scrollIntoViewIfNeeded();
+      await page.getByRole('button', { name: 'Download table (.md)' }).hover();
+    },
+  ]);
+
+  // Export: open the top found target's memo and point at the download button
+  await narrate(N.export, [
+    async () => {
+      await page.getByTestId('screen-row').first().getByRole('button', { name: /Full diligence/ }).click();
+      await page.getByTestId('memo').waitFor();
+    },
+    async () => {
+      await glide('verdict', 'center');
+      await page.getByRole('button', { name: 'Download memo (.md)' }).hover();
     },
   ]);
 
