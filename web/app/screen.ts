@@ -8,6 +8,9 @@ export type Row =
 
 export type SortKey = "bci" | "clash";
 
+/** What "Find targets" tells the table: the line above it, why the data is recorded, and why each target was picked (by name). */
+export type Found = { line: string; recorded?: string; reasons?: Record<string, string> };
+
 export function parseTargets(raw: string, acquirer: string): { targets: string[]; error: string | null } {
   const skip = new Set([acquirer.trim().toLowerCase()]);
   const targets: string[] = [];

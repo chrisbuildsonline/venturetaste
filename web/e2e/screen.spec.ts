@@ -172,6 +172,10 @@ test("Find targets discovers Nike's candidates and screens them with recorded da
   await expect(page.getByTestId("screen-found")).toHaveText("Found by Qloo: Nike's top 5 consumer-brand affinities");
   await expect(page.getByLabel("Candidate targets")).toHaveValue(/Adidas/);
   await expect(rows(page)).toHaveCount(5);
+  const reasons = rows(page).getByTestId("screen-reason");
+  await expect(reasons).toHaveCount(5);
+  for (const text of await reasons.allTextContents()) expect(text).toMatch(/^(Shares .+|No shared categories) · affinity \d\.\d\d$/);
+  await expect(page.getByLabel("Candidate targets")).not.toHaveValue(/Jordan/);
   await expect(page.getByText("Screening…")).toHaveCount(0);
   await expect(findButton(page)).toBeEnabled();
   await expect(rows(page).getByTestId("screen-bci")).toHaveCount(5); // every row finished with recorded data

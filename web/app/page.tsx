@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Results from "./Results";
 import ScreenTable from "./ScreenTable";
-import { discoveryLine, MIN_TARGETS, parseTargets, type Row } from "./screen";
+import { discoveryLine, MIN_TARGETS, parseTargets, type Found, type Row } from "./screen";
 import { AGENTS, type Diligence, type Preset, type Screen, type TraceStep } from "./types";
 
 const AGENT_ROLES: Record<(typeof AGENTS)[number], string> = {
@@ -42,7 +42,7 @@ export default function Home() {
   const [screenAcquirer, setScreenAcquirer] = useState("");
   const [screening, setScreening] = useState(false);
   const [finding, setFinding] = useState(false);
-  const [found, setFound] = useState<{ line: string; recorded?: string } | null>(null);
+  const [found, setFound] = useState<Found | null>(null);
 
   useEffect(() => {
     fetch("/api/presets")
@@ -222,7 +222,7 @@ export default function Home() {
         setError(errorText(json, res.status));
         return;
       }
-      const d = json as { acquirer: string; candidates: { name: string }[]; recorded?: { reason: string } };
+      const d = json as { acquirer: string; candidates: { name: string; reason?: string }[]; recorded?: { reason: string } };
       const names = d.candidates.map((c) => c.name);
       if (names.length < MIN_TARGETS) {
         setError(`Qloo found fewer than ${MIN_TARGETS} other brands for ${d.acquirer}. Type the targets yourself.`);
@@ -230,7 +230,8 @@ export default function Home() {
       }
       const text = names.join(", ");
       setTargetsText(text);
-      await screen(acq, text, { line: discoveryLine(d.acquirer, names.length), recorded: d.recorded?.reason });
+      const reasons = Object.fromEntries(d.candidates.flatMap((c) => (c.reason ? [[c.name, c.reason]] : [])));
+      await screen(acq, text, { line: discoveryLine(d.acquirer, names.length), recorded: d.recorded?.reason, reasons });
     } finally {
       setFinding(false);
     }

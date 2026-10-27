@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import { CHURN_STYLE, RecordedBanner, VERDICT_STYLE } from "./Results";
-import { rankRows, recordedReason, type Row, type SortKey } from "./screen";
+import { rankRows, recordedReason, type Found, type Row, type SortKey } from "./screen";
 
 const TH = "px-3 py-2 text-left text-xs font-semibold uppercase tracking-widest text-zinc-400";
 const TD = "px-3 py-3 align-middle";
 const SORT_BTN = "inline-flex min-h-11 items-center gap-1 uppercase tracking-widest hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300";
 
-export default function ScreenTable({ acquirer, rows, found, onFull }: { acquirer: string; rows: Row[]; found?: { line: string; recorded?: string } | null; onFull: (target: string) => void }) {
+export default function ScreenTable({ acquirer, rows, found, onFull }: { acquirer: string; rows: Row[]; found?: Found | null; onFull: (target: string) => void }) {
   const [sort, setSort] = useState<SortKey>("bci");
   const ranked = rankRows(rows, sort);
   const recorded = recordedReason(rows) ?? found?.recorded;
@@ -43,7 +43,10 @@ export default function ScreenTable({ acquirer, rows, found, onFull }: { acquire
             {ranked.map((r) => (
               <tr key={r.target} data-testid="screen-row" data-target={r.target} className="border-b border-white/5 last:border-0">
                 <td className={`${TD} tabular-nums text-zinc-400`}>{r.state === "done" ? ++rank : "–"}</td>
-                <th scope="row" className={`${TD} text-left font-medium text-white`}>{r.target}</th>
+                <th scope="row" className={`${TD} text-left font-medium text-white`}>
+                  {r.target}
+                  {found?.reasons?.[r.target] && <p data-testid="screen-reason" className="mt-0.5 text-xs font-normal text-zinc-400">{found.reasons[r.target]}</p>}
+                </th>
                 {r.state === "done" ? (
                   <>
                     <td data-testid="screen-bci" className={`${TD} tabular-nums text-white`}>{r.bci.toFixed(1)}</td>
