@@ -12,7 +12,7 @@ Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/). Submissions c
 
 ![VentureTaste running Nike + Adidas](docs/demo-desktop.png)
 
-Stack: Python, FastAPI, LangGraph, Pydantic, Qloo Taste AI API, Next.js (static export), Tailwind, Recharts. No LLM is involved: every number and every sentence of the memo comes from Qloo data and fixed formulas, so a run is reproducible.
+Stack: Python, FastAPI, LangGraph, Pydantic, Qloo Taste AI API, Next.js (static export), Tailwind, Recharts. Every number comes from Qloo data and fixed formulas, so the scores are reproducible. An optional local LLM plans and writes the memo text (see [Optional LLM agent](#optional-llm-agent)).
 
 ## Who pays
 
@@ -36,8 +36,24 @@ Responses are cached on disk (`.cache/qloo`), and HTTP 429 is retried with backo
 
 1. **Scout** resolves both brand names to Qloo entities (2 calls).
 2. **Cartographer** fetches insights for all 7 domains plus demographics for both brands (16 calls, in parallel threads). 18 Qloo calls per run with the two searches.
-3. **Analyst** scores the pair with `api/scoring.py` (pure code) and then decides: if at least 4 of the 7 domains have zero taste overlap, it asks Qloo for each brand's tag affinities (2 extra calls) and reports the top 5 tags both audiences share as "bridging tastes", ranked by the weaker of the two affinities. Bridges are evidence only and never change the BCI, clash score or verdict. Its trace item carries a `decision` string saying which way it went.
-4. **Partner** writes the deal memo from templates: a verdict (`Proceed`, `Proceed with conditions`, `Pass`), rationale and risks that name real Qloo entities from the data.
+3. **Analyst** scores the pair with `api/scoring.py` (pure code) and then decides whether to probe tags. The optional LLM makes that call; without it the rule is: if at least 4 of the 7 domains have zero taste overlap, it asks Qloo for each brand's tag affinities (2 extra calls) and reports the top 5 tags both audiences share as "bridging tastes", ranked by the weaker of the two affinities. Bridges are evidence only and never change the BCI, clash score or verdict. Its trace item carries a `decision` string saying which way it went.
+4. **Partner** writes the deal memo: a verdict (`Proceed`, `Proceed with conditions`, `Pass`, always computed from the scores), and rationale and risks that name real Qloo entities from the data. The optional LLM writes the rationale and risks; otherwise a template does.
+
+### Optional LLM agent
+
+The Analyst's tag-probe decision and the Partner's memo text can come from an LLM, by default a local [Ollama](https://ollama.com) model (`ollama pull qwen2.5:7b`; `bun run llm:up` starts the service). It is never required and never touches a number:
+
+- **Scores, verdict and headline stay deterministic.** The LLM only chooses whether to spend the two tag calls and words the rationale and risks.
+- **Every cited entity is checked.** The LLM returns each memo line with the entity names it cites. A cite must match (case-insensitively) an entity Qloo returned for this pair (the two brands, shared tastes, each side's distinctive tastes, bridging tags) and appear in the line's text; a line citing nothing must quote a number. One bad cite rejects the whole LLM memo.
+- **Cold start.** Ollama unloads an idle model; the first run after that can hit the 30 s cut-off while the weights load and falls back to the template. Set `OLLAMA_KEEP_ALIVE` to keep it loaded.
+- **Fallback.** If the LLM is off, unreachable (a refused connection fails in about a second; replies are cut off after 30 s), answers bad JSON or fails the check, the rule decides and the template writes the memo. Each trace item says who decided (`planner`: `llm`, `rule` or `template`, plus `model` or `fallback` with the reason), the UI shows "Decided by qwen2.5:7b" or "Rule-based fallback", and "Memo by qwen2.5:7b" or "Template memo", and `memo.author` is the model or `template`.
+
+| Variable | Default | What it does |
+| --- | --- | --- |
+| `VENTURETASTE_LLM` | on | `off` disables the LLM (the e2e tests and the Docker image smoke test run this way or with no LLM present) |
+| `VENTURETASTE_LLM_URL` | `http://localhost:11434/v1` | any OpenAI-compatible base URL |
+| `VENTURETASTE_LLM_MODEL` | `qwen2.5:7b` | model name |
+| `VENTURETASTE_LLM_API_KEY` | none | sent as a Bearer token; lets you use a paid provider, never required |
 
 ## API
 
@@ -161,6 +177,7 @@ The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffe
 
 - `bun run test`: pytest over `api/tests` (offline), then `bun test` for the screening logic in `web/app`.
 - `bun run test:live`: the live-marked tests against the real Qloo API (needs `QLOO_API_KEY` in `.env`).
+- `bun run test:llm`: the llm-marked test, one pipeline run on recorded Qloo data against the real local Ollama (run `bun run llm:up` first).
 - `bun run typecheck`: `tsc` for the web app and `mypy` for the API.
 - `bun run e2e:ci`: builds the web app, then runs the Playwright tests against its own fixture-mode FastAPI on :8767, so a dev server on :8765 can stay up. `bun run e2e` is the same but reuses a server already running on :8765.
 - `bun run screenshots`: rebuilds and regenerates the images in `docs/`.
@@ -173,7 +190,8 @@ The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffe
 
 ```
 api/main.py            FastAPI app, error mapping, SSE stream, static web mount
-api/pipeline.py        the four agents as a LangGraph StateGraph, deal memo templates
+api/pipeline.py        the four agents as a LangGraph StateGraph, LLM planner and memo check, deal memo template
+api/llm.py             one OpenAI-compatible chat call, None on any failure
 api/qloo.py            typed Qloo client: search, insights, demographics, cache, retries
 api/scoring.py         pure scoring
 api/presets.py         demo pairs
