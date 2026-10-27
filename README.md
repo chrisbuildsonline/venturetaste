@@ -8,6 +8,14 @@ Source: https://github.com/chrisbuildsonline/venturetaste. License: MIT, see [LI
 
 When the server has no valid Qloo key, preset brand pairs replay recorded Qloo answers, and the UI labels those runs "Recorded Qloo data".
 
+The hosted demo has a valid Qloo key and calls live Qloo (18 calls per run, answers cached on disk, no recorded banner). Captured 2026-10-27:
+
+![Nike + Adidas against live Qloo](docs/live-qloo-run.png)
+
+## What it does
+
+Deal teams can see revenue and margin for a consumer brand, but not whether the buyer's and the target's customers overlap (cannibalization) or clash (churn after the deal). VentureTaste answers that with Qloo's cross-domain taste graph: it compares what each brand's audience loves across brands, artists, movies, TV shows, places, destinations and books, plus age and gender. Four agents run the diligence. Scout resolves both brands in Qloo, Cartographer pulls their taste and demographic profiles, Analyst scores overlap and culture clash with fixed formulas, and Partner writes a deal memo with a verdict (Proceed, Proceed with conditions, Pass). "Find targets" screens one acquirer against up to 5 candidates, so a team can rank possible deals before running full diligence. The buyers are corporate development teams, consumer-brand investors and M&A advisors (see [Who pays](#who-pays)).
+
 Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/). Submissions close 2026-10-30.
 
 ![VentureTaste running Nike + Adidas](docs/demo-desktop.png)
