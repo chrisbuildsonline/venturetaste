@@ -1,19 +1,10 @@
 "use client";
 
+import { useEffect, useRef } from "react";
+import { download, memoFilename, memoMarkdown } from "./export";
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from "recharts";
-import type { Clashing, Demographics, Diligence } from "./types";
+import { label, type Clashing, type Demographics, type Diligence } from "./types";
 
-const DOMAIN_LABELS: Record<string, string> = {
-  brand: "Brands",
-  artist: "Artists",
-  movie: "Movies",
-  tv_show: "TV shows",
-  place: "Places",
-  destination: "Destinations",
-  book: "Books",
-};
-
-const label = (key: string) => DOMAIN_LABELS[key] ?? key.replaceAll("_", " ");
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 
 export const VERDICT_STYLE: Record<string, string> = {
@@ -146,11 +137,15 @@ export default function Results({ data }: { data: Diligence }) {
   const nameB = brands.target.name;
   const radarData = Object.entries(data.domain_overlap).map(([d, v]) => ({ domain: label(d), overlap: Math.round(v * 100) }));
   const noOverlap = radarData.every((r) => r.overlap === 0);
+  const top = useRef<HTMLDivElement>(null);
+  // the verdict and radar sit at the top of the results: bring them into view once a run finishes
+  useEffect(() => top.current?.scrollIntoView({ block: "start" }), []);
 
   return (
-    <div className="space-y-5" data-testid="results">
+    <div ref={top} className="scroll-mt-4 space-y-5" data-testid="results">
       {data.recorded && <RecordedBanner reason={data.recorded.reason} />}
-      <section className="grid gap-5 rounded-2xl border border-white/10 bg-gradient-to-br from-indigo-500/10 via-white/[0.03] to-fuchsia-500/10 p-5 sm:p-8 md:grid-cols-[auto_1fr] md:items-center md:gap-10">
+      <div className="grid gap-5 lg:grid-cols-2">
+      <section className="flex flex-col justify-center gap-6 rounded-2xl border border-white/10 bg-gradient-to-br from-indigo-500/10 via-white/[0.03] to-fuchsia-500/10 p-5 sm:p-8">
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400">Brand Cannibalization Index</p>
           <p className="mt-2 flex items-baseline gap-2">
@@ -175,14 +170,20 @@ export default function Results({ data }: { data: Diligence }) {
             </div>
           </div>
           <p className="text-sm text-zinc-300">{memo.headline}</p>
+          <button
+            type="button"
+            onClick={() => download(memoFilename(data), memoMarkdown(data))}
+            className="min-h-11 rounded-xl border border-indigo-300/60 px-5 text-sm font-semibold text-indigo-100 transition hover:bg-indigo-400/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300"
+          >
+            Download memo (.md)
+          </button>
         </div>
       </section>
 
-      <div className="grid gap-5 lg:grid-cols-2">
         <Card title={`${nameA} × ${nameB} taste overlap`}>
           <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="h-80 w-full lg:h-[28rem]">
             <ResponsiveContainer width="100%" height="100%">
-              <RadarChart data={radarData} outerRadius="58%" margin={{ top: 20, right: 40, bottom: 20, left: 40 }}>
+              <RadarChart data={radarData} outerRadius="72%" margin={{ top: 24, right: 40, bottom: 24, left: 40 }}>
                 <PolarGrid stroke="rgba(255,255,255,0.18)" />
                 <PolarAngleAxis dataKey="domain" tick={<AxisTick values={radarData} />} />
                 <PolarRadiusAxis angle={90} domain={[0, 100]} tick={false} axisLine={false} />
@@ -211,9 +212,9 @@ export default function Results({ data }: { data: Diligence }) {
           )}
           <p className="mt-3 text-xs text-zinc-400">Weighted Jaccard overlap of what each audience loves: {Object.entries(data.domain_overlap).map(([d, v]) => `${label(d)} ${pct(v)}`).join(" · ")}</p>
         </Card>
-
-        <DemographicsCard a={data.demographics.acquirer} b={data.demographics.target} nameA={nameA} nameB={nameB} distance={scores.demographic_distance} />
       </div>
+
+      <DemographicsCard a={data.demographics.acquirer} b={data.demographics.target} nameA={nameA} nameB={nameB} distance={scores.demographic_distance} />
 
       <div className="grid gap-5 md:grid-cols-3">
         <TasteList

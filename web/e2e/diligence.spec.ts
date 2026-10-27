@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { expect, test, type Page } from "@playwright/test";
 
 const AGENTS = ["Scout", "Cartographer", "Analyst", "Partner"];
@@ -91,6 +92,40 @@ test("demo: Nike + Adidas preset runs the whole diligence", async ({ page }) => 
     .toBe(0);
   await page.screenshot({ path: "e2e/screenshots/mobile.png", fullPage: true });
 
+  expect(errors).toEqual([]);
+});
+
+test("after a run the verdict and radar sit in a 1280x800 viewport and the memo downloads", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+  await expect(page.getByTestId("bci-value")).toHaveText("53.9");
+
+  // no manual scrolling: the results scroll themselves into view
+  await expect
+    .poll(async () => {
+      for (const id of ["verdict", "radar"]) {
+        const b = await page.getByTestId(id).boundingBox();
+        if (!b || b.y < 0 || b.x < 0 || b.y + b.height > 800 || b.x + b.width > 1280) return id;
+      }
+      return "ok";
+    })
+    .toBe("ok");
+  const verdict = (await page.getByTestId("verdict").boundingBox())!;
+  const radar = (await page.getByTestId("radar").boundingBox())!;
+  expect(verdict.x + verdict.width).toBeLessThanOrEqual(radar.x); // side by side
+  await page.screenshot({ path: "e2e/screenshots/above-the-fold.png" });
+
+  const downloadPromise = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Download memo (.md)" }).click();
+  const file = await downloadPromise;
+  expect(file.suggestedFilename()).toBe("venturetaste-nike-adidas.md");
+  const text = readFileSync((await file.path())!, "utf8");
+  expect(text).toContain("**Verdict:** Proceed");
+  expect(text).toContain("53.9 / 100");
+  expect(text).toContain("recorded Qloo data");
+  expect(text).toContain("recorded qwen2.5:7b");
   expect(errors).toEqual([]);
 });
 
