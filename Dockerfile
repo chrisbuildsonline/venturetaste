@@ -18,5 +18,7 @@ COPY --from=web --chown=app /web/out web/out
 # Trust X-Forwarded-For only from loopback and private Docker/LAN ranges (Traefik/Coolify), never "*", so clients cannot spoof their IP.
 ENV FORWARDED_ALLOW_IPS="127.0.0.1,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16"
 EXPOSE 8765
+# No curl in the slim image, so the check is Python stdlib; urlopen raises on a non-2xx, which makes the check fail.
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s CMD ["python", "-c", "import os, urllib.request; urllib.request.urlopen('http://127.0.0.1:%s/api/health' % os.environ.get('PORT', '8765'), timeout=4)"]
 # Keys come from the environment (docker run --env-file .env); the Qloo cache lives in /app/.cache/qloo.
 CMD ["sh", "-c", "exec uvicorn api.main:app --host 0.0.0.0 --port ${PORT:-8765} --proxy-headers"]

@@ -23,6 +23,18 @@ wait_for_health() {
   done
   curl -fs "http://127.0.0.1:$port/api/health"
   echo
+  # The image's HEALTHCHECK must agree (first probe after the 20s start period or the first interval).
+  echo "==> waiting for the container to be healthy"
+  for _ in $(seq 90); do
+    status=$(docker inspect --format '{{.State.Health.Status}}' "$name")
+    [ "$status" = healthy ] && break
+    sleep 1
+  done
+  if [ "$status" != healthy ]; then
+    echo "container health is '$status', expected 'healthy'" >&2
+    exit 1
+  fi
+  echo "container health: healthy"
 }
 
 echo "==> fixture mode, no key"
