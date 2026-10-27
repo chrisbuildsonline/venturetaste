@@ -157,45 +157,6 @@
   },
   "step": "memo"
  },
- "268162730cfdfda5879408a31f1da862f5cc5ebeef7776c1c1095b7c8eac915f": {
-  "model": "qwen2.5:7b",
-  "pair": "Nike + Lululemon",
-  "reply": {
-   "rationale": [
-    {
-     "cites": [
-      "Ford v Ferrari",
-      "Bohemian Rhapsody",
-      "Molly's Game"
-     ],
-     "text": "Both audiences share a taste for Ford v Ferrari, Bohemian Rhapsody, and Molly's Game."
-    }
-   ],
-   "risks": [
-    {
-     "cites": [
-      "Wiz Khalifa",
-      "Jay-Z",
-      "DJ Khaled"
-     ],
-     "text": "The Nike audience favours Wiz Khalifa, Jay-Z, and DJ Khaled, but the Lululemon audience does not."
-    },
-    {
-     "cites": [
-      "The Bold Type",
-      "Lake Louise",
-      "Revelstoke"
-     ],
-     "text": "The Lululemon audience favours The Bold Type, Lake Louise, and Revelstoke, but the Nike audience does not."
-    },
-    {
-     "cites": [],
-     "text": "Culture clash is 74.1%, so churn risk is high."
-    }
-   ]
-  },
-  "step": "memo"
- },
  "28b5455926c509e5e51f4e6f4a754c796397b51532a02d23706accf438c32898": {
   "model": "qwen2.5:7b",
   "pair": "Starbucks + McDonald's",
@@ -292,6 +253,37 @@
    "reason": "Most domains have some overlap"
   },
   "step": "plan"
+ },
+ "4231640018beb305b0f18462e9b00e56a612261be7a181b181832c8b9d04685a": {
+  "model": "qwen2.5:7b",
+  "pair": "Nike + Lululemon",
+  "reply": {
+   "rationale": [
+    {
+     "cites": [
+      "Ford v Ferrari",
+      "Bohemian Rhapsody",
+      "Molly's Game"
+     ],
+     "text": "Both audiences share a taste for Ford v Ferrari, Bohemian Rhapsody, and Molly's Game."
+    }
+   ],
+   "risks": [
+    {
+     "cites": [
+      "Wiz Khalifa",
+      "Jay-Z",
+      "DJ Khaled"
+     ],
+     "text": "The Nike audience favours Wiz Khalifa, Jay-Z, and DJ Khaled, but the Lululemon audience does not."
+    },
+    {
+     "cites": [],
+     "text": "Culture clash is 74.1%, so churn risk is high."
+    }
+   ]
+  },
+  "step": "memo"
  },
  "45e2f9ebbd8fdb79081887565377ba392ba4d082e34caa5295fb2e2f40ea2f2d": {
   "model": "qwen2.5:7b",
@@ -455,7 +447,16 @@
   },
   "step": "plan"
  },
- "82ed22df351dfd532d2c92642d24d7f4fcb984b6b0bdf0d3366261c47637e630": {
+ "86bbc484eeaad11ee240b8c2f78bc6a04bab12e3b8965a314753db289e78822e": {
+  "model": "qwen2.5:7b",
+  "pair": "Starbucks + Taco Bell",
+  "reply": {
+   "probe_tags": false,
+   "reason": "overlap is low and most domains have none"
+  },
+  "step": "plan"
+ },
+ "8977617ea87ce333747d56f4c21c413c305cfca2516c34028773de7d5f0c0b4b": {
   "model": "qwen2.5:7b",
   "pair": "Patagonia + Gucci",
   "reply": {
@@ -483,15 +484,6 @@
    ]
   },
   "step": "memo"
- },
- "86bbc484eeaad11ee240b8c2f78bc6a04bab12e3b8965a314753db289e78822e": {
-  "model": "qwen2.5:7b",
-  "pair": "Starbucks + Taco Bell",
-  "reply": {
-   "probe_tags": false,
-   "reason": "overlap is low and most domains have none"
-  },
-  "step": "plan"
  },
  "8fb0fdb249e959c1f36d30a2e7befcc721c1292f62e2c2e38bcb65be003551c9": {
   "model": "qwen2.5:7b",

@@ -120,10 +120,22 @@ def _clean[T: (SharedTaste, ClashingTaste)](items: list[T], brands: set[str], st
     return list(kept.values())
 
 
+# Qloo tag families that say nothing about taste: place attributes (ownership, price, payment, star rating, dishes)
+# and film-plot keywords ("friendship", "21st century"). Dropped by id prefix, so no per-brand list.
+TRIVIAL_TAGS = (
+    "urn:tag:inclusivity:",
+    "urn:tag:cost_description:",
+    "urn:tag:credit_card:",
+    "urn:tag:hotel_rating:",
+    "urn:tag:specialty_dish:",
+    "urn:tag:keyword:media:",
+)
+
+
 def bridges(a: list[Tag], b: list[Tag]) -> list[Bridge]:
-    """Tags both brands have, strongest common affinity first. Evidence only: never part of score()."""
+    """Tags both brands have, strongest common affinity first, minus trivial ones. Evidence only: never part of score()."""
     theirs = {t.id: t.affinity for t in b}
-    found = [Bridge(t.id, t.name, t.affinity, theirs[t.id]) for t in a if t.id in theirs]
+    found = [Bridge(t.id, t.name, t.affinity, theirs[t.id]) for t in a if t.id in theirs and not t.id.startswith(TRIVIAL_TAGS)]
     found.sort(key=lambda x: (-min(x.affinity_acquirer, x.affinity_target), x.name.casefold(), x.id))
     return found[:TOP_N]
 
