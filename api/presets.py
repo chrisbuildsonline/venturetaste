@@ -31,11 +31,12 @@ class Screen:
 SCREENS = (Screen("nike-targets", "Nike: 4 targets", "Nike", ("Adidas", "Puma", "Lululemon", "Gucci")),)
 
 
-# What "Find targets" returns offline: the top brand affinities of the recorded acquirer (a snapshot of
-# fixture_data/insights_<acquirer>_brand.json, checked by test_discover), so their diligence replays too.
+# What "Find targets" returns offline: the ranked candidates of the recorded acquirer (a snapshot of
+# api.discover run on fixture_data, checked by test_discover), so their diligence replays too.
 DISCOVERED = {
-    "Nike": ("Air Jordan Product Line", "Adidas", "Beats Electronics", "Foot Locker", "Puma"),
-    "Patagonia": ("Recreational Equipment Inc", "The North Face", "Backcountry", "Osprey", "Arc'teryx"),
+    "Nike": ("Puma", "Under Armour", "Adidas", "Reebok", "New Balance"),
+    "Patagonia": ("Arc'teryx", "Eddie Bauer", "Filson", "The North Face", "Smartwool"),
+    "Starbucks": ("Dunkin' Donuts", "Taco Bell", "McDonald's", "Subway", "Domino's Pizza"),
 }
 
 

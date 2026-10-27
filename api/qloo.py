@@ -47,11 +47,15 @@ class QlooParseError(QlooError):
     pass
 
 
+TagRef = tuple[str, str, str]  # (tag type, tag id, tag name), e.g. ("urn:tag:industry:qloo", "urn:tag:industry:qloo:retail", "Retail")
+
+
 @dataclass(frozen=True)
 class Entity:
     id: str
     name: str
     popularity: float | None
+    tags: tuple[TagRef, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -61,6 +65,7 @@ class Affinity:
     affinity: float
     popularity: float | None
     brand_types: tuple[str, ...] = ()  # names of the entity's urn:tag:brand_type:qloo tags, e.g. "Retail Brand"
+    tags: tuple[TagRef, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -120,9 +125,21 @@ def parse_search(payload: object) -> list[Entity]:
                 id=_str(item.get("entity_id"), "entity_id"),
                 name=_str(item.get("name"), "name"),
                 popularity=_opt_num(item.get("popularity"), "popularity"),
+                tags=_tag_refs(item.get("tags")),
             )
         )
     return entities
+
+
+def _tag_refs(tags: object) -> tuple[TagRef, ...]:
+    """Lenient like _brand_types. Search results name the id "tag_id", insights name it "id"."""
+    if not isinstance(tags, list):
+        return ()
+    return tuple(
+        (t["type"], str(t.get("tag_id") or t.get("id") or t["name"]), t["name"])
+        for t in tags
+        if isinstance(t, dict) and isinstance(t.get("type"), str) and isinstance(t.get("name"), str)
+    )
 
 
 def _brand_types(tags: object) -> tuple[str, ...]:
@@ -149,6 +166,7 @@ def parse_insights(payload: object) -> list[Affinity]:
                 affinity=_num(query.get("affinity"), "affinity"),
                 popularity=_opt_num(item.get("popularity"), "popularity"),
                 brand_types=_brand_types(item.get("tags")),
+                tags=_tag_refs(item.get("tags")),
             )
         )
     return affinities

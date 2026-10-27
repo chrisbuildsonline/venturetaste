@@ -1,5 +1,6 @@
 from collections.abc import Iterator
 from pathlib import Path
+from typing import Any
 
 import httpx
 import pytest
@@ -10,13 +11,34 @@ from api.discover import MAX_CANDIDATES, discover, pick_candidates
 from api.fixtures import BASE, fixture_handler, make_client
 from api.main import RECORDED_FIXTURE_MODE, RECORDED_NO_KEY, app, get_qloo
 from api.presets import DISCOVERED
-from api.qloo import Affinity, Entity, QlooClient, parse_insights
+from api.qloo import Affinity, Entity, QlooClient, TagRef, parse_insights, parse_search
 
 NIKE = Entity("nike-id", "Nike", 0.9)
+INDUSTRY = "urn:tag:industry:qloo"
+GENRE = "urn:tag:genre:brand"
+SUBSIDIARY = "urn:tag:subsidiary:qloo"
 
 
-def aff(name: str, affinity: float = 0.5, id: str | None = None, types: tuple[str, ...] = ("Product Brand",)) -> Affinity:
-    return Affinity(id or f"id-{name}", name, affinity, None, types)
+def tag(kind: str, name: str) -> TagRef:
+    return (kind, f"{kind}:{name.lower()}", name)
+
+
+def acquirer_with(name: str, *tags: TagRef) -> Entity:
+    return Entity(f"{name}-id", name, 0.9, tags)
+
+
+def aff(
+    name: str,
+    affinity: float = 0.5,
+    id: str | None = None,
+    types: tuple[str, ...] = ("Product Brand",),
+    tags: tuple[TagRef, ...] = (),
+) -> Affinity:
+    return Affinity(id or f"id-{name}", name, affinity, None, types, tags)
+
+
+def names_of(candidates: list[dict[str, Any]]) -> list[str]:
+    return [c["name"] for c in candidates]
 
 
 @pytest.mark.parametrize("kind", ["Product Brand", "Corporate Brand", "Retail Brand", "Service Brand"])
@@ -26,7 +48,7 @@ def test_pick_keeps_consumer_brand_types(kind: str) -> None:
 
 @pytest.mark.parametrize("types", [("Entertainment Brand",), ("Media Brand",), ("Nonprofit Brand",), ()])
 def test_pick_drops_clubs_media_nonprofits_and_untyped(types: tuple[str, ...]) -> None:
-    assert pick_candidates(NIKE, [aff("Real Madrid CF", types=types), aff("Puma")]) == [{"name": "Puma", "affinity": 0.5}]
+    assert names_of(pick_candidates(NIKE, [aff("Real Madrid CF", types=types), aff("Puma")])) == ["Puma"]
 
 
 def test_pick_filters_before_the_cap() -> None:
@@ -62,14 +84,101 @@ def test_pick_drops_sub_brands() -> None:
 
 def test_pick_dedupes_by_slug_and_keeps_the_first() -> None:
     got = pick_candidates(NIKE, [aff("Adidas", 0.9), aff("ADIDAS", 0.8, id="x"), aff("Puma", 0.7)])
-    assert got == [{"name": "Adidas", "affinity": 0.9}, {"name": "Puma", "affinity": 0.7}]
+    assert [(c["name"], c["affinity"]) for c in got] == [("Adidas", 0.9), ("Puma", 0.7)]
 
 
-def test_pick_caps_at_five_in_qloos_order() -> None:
+def test_pick_caps_at_five_and_keeps_affinity_order_without_tag_signal() -> None:
     names = [f"Brand {i}" for i in range(9)]
     got = pick_candidates(NIKE, [aff(n, 1 - i / 10) for i, n in enumerate(names)])
     assert MAX_CANDIDATES == 5
-    assert [c["name"] for c in got] == names[:5]
+    assert names_of(got) == names[:5]
+
+
+JORDAN = acquirer_with("Nike", tag(SUBSIDIARY, "Jordan Brand"), tag(SUBSIDIARY, "Converse"))
+
+
+def test_pick_drops_the_acquirers_own_lines_even_when_named_differently() -> None:
+    got = pick_candidates(JORDAN, [aff("Air Jordan Product Line", 0.9), aff("Converse, Inc.", 0.8), aff("Adidas", 0.7)])
+    assert names_of(got) == ["Adidas"]
+
+
+def test_pick_drops_the_parent_when_its_subsidiaries_name_the_acquirer() -> None:
+    converse = acquirer_with("Converse")
+    parent = aff("Nike", 0.9, tags=(tag(SUBSIDIARY, "Jordan Brand"), tag(SUBSIDIARY, "Converse")))
+    assert names_of(pick_candidates(converse, [parent, aff("Vans", 0.5)])) == ["Vans"]
+
+
+def test_pick_drops_by_name_containment_in_both_directions() -> None:
+    cola = acquirer_with("The Coca-Cola Company")
+    assert names_of(pick_candidates(cola, [aff("Coca-Cola Zero"), aff("Coca-Cola"), aff("Pepsi")])) == ["Pepsi"]
+
+
+def test_pick_has_no_false_positives_on_generic_words_or_unrelated_names() -> None:
+    owner = acquirer_with("Nike", tag(SUBSIDIARY, "Jordan Brand"), tag(SUBSIDIARY, "The Group"))
+    got = pick_candidates(owner, [aff("Brand Group Co", 0.9), aff("Adidas", 0.8), aff("Puma", 0.7), aff("Under Armour", 0.6)])
+    assert names_of(got) == ["Brand Group Co", "Adidas", "Puma", "Under Armour"]
+
+
+def test_pick_ranks_a_same_category_brand_above_a_more_affine_off_category_one() -> None:
+    cafe = acquirer_with("Starbucks", tag(INDUSTRY, "Coffee"), tag(GENRE, "Cafe"))
+    off = aff("Forever 21", 0.9, tags=(tag(INDUSTRY, "Fashion"),))
+    same = aff("Dunkin'", 0.5, tags=(tag(INDUSTRY, "Coffee"), tag(GENRE, "Cafe")))
+    assert names_of(pick_candidates(cafe, [off, same])) == ["Dunkin'", "Forever 21"]
+
+
+def test_pick_ranks_over_the_whole_list_not_just_the_first_five() -> None:
+    cafe = acquirer_with("Starbucks", tag(INDUSTRY, "Coffee"))
+    far = [aff(f"Off {i}", 0.9 - i / 100, tags=(tag(INDUSTRY, "Fashion"),)) for i in range(8)]
+    best = aff("Peet's", 0.3, tags=(tag(INDUSTRY, "Coffee"),))
+    assert names_of(pick_candidates(cafe, [*far, best]))[0] == "Peet's"
+
+
+def test_candidates_carry_score_adjacency_and_a_reason() -> None:
+    cafe = acquirer_with("Starbucks", tag(INDUSTRY, "Coffee"), tag(GENRE, "Cafe"))
+    got = pick_candidates(cafe, [aff("Dunkin'", 0.5, tags=(tag(INDUSTRY, "Coffee"), tag(GENRE, "Cafe")))])
+    assert got == [
+        {"name": "Dunkin'", "affinity": 0.5, "adjacency": 1.0, "score": 0.75, "reason": "Shares Coffee, Cafe · affinity 0.50"}
+    ]
+
+
+def test_reason_caps_shared_names_at_three_and_says_so_when_nothing_is_shared() -> None:
+    shared = [tag(INDUSTRY, n) for n in ("Footwear", "Running", "Sports & Fitness", "Retail")]
+    owner = acquirer_with("Nike", *shared)
+    got = pick_candidates(owner, [aff("Brooks", 0.93, tags=tuple(shared)), aff("Zara", 0.4, tags=(tag(INDUSTRY, "Apparel"),))])
+    assert [c["reason"] for c in got] == [
+        "Shares Footwear, Running, Sports & Fitness · affinity 0.93",
+        "No shared categories · affinity 0.40",
+    ]
+
+
+def test_parse_search_reads_tags_with_their_ids() -> None:
+    item = {
+        "entity_id": "e1",
+        "name": "Nike",
+        "tags": [{"tag_id": "urn:tag:subsidiary:qloo:converse", "name": "Converse", "type": SUBSIDIARY}, "junk"],
+    }
+    got = parse_search({"results": [item, {"entity_id": "e2", "name": "Bare"}]})
+    assert [e.tags for e in got] == [((SUBSIDIARY, "urn:tag:subsidiary:qloo:converse", "Converse"),), ()]
+
+
+def test_recorded_nike_drops_its_own_lines_and_keeps_sportswear_peers(tmp_path: Path) -> None:
+    got = discover(make_client(tmp_path, fixture_handler([])), "Nike")["candidates"]
+    assert not any("jordan" in n.casefold() for n in names_of(got))
+    assert "Adidas" in names_of(got)
+    assert not any(c["reason"].startswith("No shared") for c in got)
+
+
+def test_recorded_starbucks_ranks_food_and_beverage_over_fashion(tmp_path: Path) -> None:
+    got = discover(make_client(tmp_path, fixture_handler([])), "Starbucks")["candidates"]
+    assert len(got) == MAX_CANDIDATES
+    assert not set(names_of(got)) & {"Forever 21", "Victoria's Secret"}
+    assert not any(c["reason"].startswith("No shared") for c in got)
+
+
+def test_recorded_patagonia_keeps_outdoor_peers(tmp_path: Path) -> None:
+    got = discover(make_client(tmp_path, fixture_handler([])), "Patagonia")["candidates"]
+    assert "The North Face" in names_of(got)
+    assert not any(c["reason"].startswith("No shared") for c in got)
 
 
 @pytest.fixture(autouse=True)

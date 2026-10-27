@@ -137,8 +137,9 @@ def test_live_discover_nike_finds_other_brands(api: TestClient) -> None:
     assert res.status_code == 200, res.text
     body = res.json()
     names = [c["name"] for c in body["candidates"]]
-    assert 2 <= len(names) <= 5
-    assert not any("nike" in n.casefold() for n in names)
+    assert len(names) == 5
+    assert not any("nike" in n.casefold() or "jordan" in n.casefold() or "converse" in n.casefold() for n in names)
+    assert all(c["reason"].strip() and "·" in c["reason"] for c in body["candidates"])
     assert "recorded" not in body
 
 
