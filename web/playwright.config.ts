@@ -1,6 +1,7 @@
 import { defineConfig } from "@playwright/test";
 
-const PORT = 8765;
+// E2E_PORT moves the test server off 8765 when something else holds it.
+const PORT = Number(process.env.E2E_PORT ?? 8765);
 // BASE_URL points the opt-in live spec at an already running deployment (docker:smoke, the public URL).
 const BASE_URL = process.env.BASE_URL;
 
