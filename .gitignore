@@ -8,6 +8,7 @@ dist/
 web/e2e/screenshots/
 web/.next/
 web/out/
+/out/
 web/next-env.d.ts
 test-results/
 playwright-report/
