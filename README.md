@@ -10,6 +10,10 @@ Built for the [Qloo Agentic Hackathon](https://qloo.devpost.com/). Submissions c
 
 Stack: Python, FastAPI, LangGraph, Pydantic, Qloo Taste AI API, Next.js (static export), Tailwind, Recharts. No LLM is involved: every number and every sentence of the memo comes from Qloo data and fixed formulas, so a run is reproducible.
 
+## Who pays
+
+The buyer is the team that signs consumer-brand deals: corporate development teams, PE and VC investors in consumer brands, and M&A advisors. Their spreadsheets cover revenue and margin but not whether two customer bases overlap (cannibalization) or clash (churn after the deal). Pricing idea: per seat as SaaS for deal teams, or per diligence report for advisors who run a few deals a year. Target screening (one acquirer against up to 5 candidates) is the sourcing-stage hook.
+
 ## Why it needs Qloo
 
 The pipeline is built on Qloo's cross-domain taste graph. A brand maps to the things its audience loves in seven domains (brand, artist, movie, tv_show, place, destination, book) plus its age and gender skew. Comparing two brands across those domains is what makes "do these customers overlap, or clash?" answerable. Without Qloo there is no data to compare.
@@ -152,8 +156,9 @@ The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffe
 - `bun run test`: pytest over `api/tests` (offline), then `bun test` for the screening logic in `web/app`.
 - `bun run test:live`: the live-marked tests against the real Qloo API (needs `QLOO_API_KEY` in `.env`).
 - `bun run typecheck`: `tsc` for the web app and `mypy` for the API.
-- `bun run e2e:ci`: builds the web app, then runs the Playwright tests against FastAPI in fixture mode. `bun run e2e` is the same but reuses a server already running on :8765.
+- `bun run e2e:ci`: builds the web app, then runs the Playwright tests against its own fixture-mode FastAPI on :8767, so a dev server on :8765 can stay up. `bun run e2e` is the same but reuses a server already running on :8765.
 - `bun run screenshots`: rebuilds and regenerates the images in `docs/`.
+- `bun run demo:video`: runs the tests and typecheck, builds the web app, starts its own fixture-mode server on :8766, records the narrated demo and writes `out/venturetaste-demo.mp4` (1920x1080, 2 to 3 min), then checks it with ffprobe. Needs ffmpeg and uv (voice via `uvx edge-tts`) and no key. The MP4 is not committed.
 - `bun run fresh-clone`: clones the committed HEAD into a temp dir and runs setup, test, typecheck and e2e:ci there, as a new user would. Needs no key.
 - `bun run record`: re-records the fixtures for the preset brands (needs a key).
 - `bun run probe`: scores candidate pairs live (needs a key).
