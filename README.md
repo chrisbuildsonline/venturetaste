@@ -159,6 +159,18 @@ Patagonia + Gucci: Qloo finds no entity both audiences love in any of the seven 
 
 ![Nike screened against four targets](docs/screening.png)
 
+"Find targets" for Nike, with a reason line under each candidate:
+
+![Find targets for Nike](docs/find-targets.png)
+
+On a phone the table becomes stacked cards:
+
+<img src="docs/screening-mobile.png" alt="Screening cards on a phone" width="300">
+
+The deal memo and the screening table download as markdown (the "Download memo (.md)" and "Download table (.md)" buttons).
+
+![Download memo button](docs/export.png)
+
 ## How to run
 
 Needs [bun](https://bun.sh), [uv](https://docs.astral.sh/uv/) and Python 3.12, plus a Qloo hackathon API key.
