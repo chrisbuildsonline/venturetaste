@@ -1,3 +1,4 @@
+import path from "node:path";
 import { expect, test } from "@playwright/test";
 
 // Opt-in: only runs when BASE_URL points at a deployment with a real Qloo key (bun run docker:smoke, the public URL).
@@ -22,6 +23,13 @@ test("live: Nike + Adidas runs end to end with no console errors", async ({ page
   await expect(page.getByTestId("memo")).toContainText("Nike + Adidas");
   for (const agent of AGENTS) await expect(page.getByTestId(`agent-${agent}`)).toHaveAttribute("data-state", "done");
   await expect(page.getByRole("button", { name: "Run diligence" })).toBeEnabled();
+
+  const scout = page.getByTestId("agent-Scout");
+  await expect(scout).toContainText(/Qloo calls?/);
+  const calls = Number((await scout.innerText()).match(/(\d+) Qloo calls?/)?.[1]);
+  expect(calls).toBeGreaterThan(0);
+
+  await page.screenshot({ path: path.resolve(__dirname, "../../docs/live-qloo-run.png"), fullPage: true });
 
   expect(errors).toEqual([]);
 });
