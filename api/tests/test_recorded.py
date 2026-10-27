@@ -1,4 +1,5 @@
 import json
+import time
 from collections.abc import Callable, Iterator
 from pathlib import Path
 from typing import Any
@@ -65,6 +66,29 @@ def test_rejected_key_stream_ends_in_a_recorded_result(reject: Callable[[int], T
     kind, data = events[-1]
     assert kind == "result" and data["scores"]["bci"] == 53.9
     assert "rejected" in data["recorded"]["reason"]
+
+
+@pytest.fixture
+def dead_llm(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.setenv("VENTURETASTE_LLM", "on")
+    monkeypatch.setenv("VENTURETASTE_LLM_URL", "http://127.0.0.1:9/v1")
+
+
+def test_rejected_key_and_dead_llm_answers_within_5_seconds(reject: Callable[[int], TestClient], dead_llm: None) -> None:
+    api = reject(401)
+    start = time.monotonic()
+    res = api.post("/api/diligence", json=BODY)
+    assert time.monotonic() - start < 5
+    assert res.status_code == 200, res.text
+    assert "rejected" in res.json()["recorded"]["reason"]
+
+
+def test_rejected_key_and_dead_llm_stream_ends_in_result_within_5_seconds(reject: Callable[[int], TestClient], dead_llm: None) -> None:
+    api = reject(401)
+    start = time.monotonic()
+    events = parse_sse(api.post("/api/diligence/stream", json=BODY).text)
+    assert time.monotonic() - start < 5
+    assert events[-1][0] == "result" and "rejected" in events[-1][1]["recorded"]["reason"]
 
 
 def test_missing_key_on_a_preset_pair_replays_recorded_answers(monkeypatch: pytest.MonkeyPatch) -> None:
