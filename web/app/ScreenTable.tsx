@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { download, screenFilename, screenMarkdown } from "./export";
 import { CHURN_STYLE, RecordedBanner, VERDICT_STYLE } from "./Results";
 import { rankRows, recordedReason, type Found, type Row, type SortKey } from "./screen";
 
@@ -26,6 +27,15 @@ export default function ScreenTable({ acquirer, rows, found, onFull }: { acquire
       <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400">{acquirer} screened against {rows.length} targets</h2>
       {found && <p data-testid="screen-found" className="mt-2 text-sm text-indigo-200">{found.line}</p>}
       {recorded && <RecordedBanner reason={recorded} className="mt-4" />}
+      {rows.some((r) => r.state === "done") && (
+        <button
+          type="button"
+          onClick={() => download(screenFilename(acquirer), screenMarkdown(rows, acquirer))}
+          className="mt-4 min-h-11 rounded-xl border border-indigo-300/60 px-5 text-sm font-semibold text-indigo-100 transition hover:bg-indigo-400/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300"
+        >
+          Download table (.md)
+        </button>
+      )}
       <div className="relative mt-4 overflow-x-auto" role="region" aria-label="Screening table" tabIndex={0}>
         <table data-testid="screen-table" className="w-full min-w-[34rem] border-collapse text-sm">
           <thead>

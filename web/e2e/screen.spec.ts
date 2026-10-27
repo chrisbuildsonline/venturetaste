@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { expect, test, type Page } from "@playwright/test";
 
 const inlineAlert = (page: Page) => page.locator("[role=alert]:not(#__next-route-announcer__)");
@@ -66,6 +67,20 @@ test("screen preset fills every row, ranked by BCI descending", async ({ page })
   await expect(inlineAlert(page)).toHaveCount(0);
   await expect(page.getByRole("status").filter({ hasText: "Recorded Qloo data" })).toHaveCount(1);
   await page.screenshot({ path: "e2e/screenshots/screen-desktop.png", fullPage: true });
+  expect(errors).toEqual([]);
+});
+
+test("Download table saves the ranked screen as markdown", async ({ page }) => {
+  const errors = watchErrors(page);
+  await runPreset(page);
+  const downloadPromise = page.waitForEvent("download");
+  await page.getByRole("button", { name: "Download table (.md)" }).click();
+  const file = await downloadPromise;
+  expect(file.suggestedFilename()).toBe("venturetaste-screen-nike.md");
+  const text = readFileSync((await file.path())!, "utf8");
+  for (const name of ["Adidas", "Gucci", "Lululemon", "Puma"]) expect(text).toContain(name);
+  expect(text).toContain("| Rank | Target | BCI | Culture clash | Churn risk | Verdict |");
+  expect(text.indexOf("Adidas")).toBeLessThan(text.indexOf("Puma")); // ranked, Adidas first
   expect(errors).toEqual([]);
 });
 
