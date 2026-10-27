@@ -55,6 +55,13 @@ The Analyst's tag-probe decision and the Partner's memo text can come from an LL
 - **Every cited entity is checked.** The LLM returns each memo line with the entity names it cites. A cite must match (case-insensitively) an entity Qloo returned for this pair (the two brands, shared tastes, each side's distinctive tastes, bridging tags) and appear in the line's text; a line citing nothing must quote a number. One bad cite rejects the whole LLM memo.
 - **Cold start.** Ollama unloads an idle model; the first run after that can hit the 30 s cut-off while the weights load and falls back to the template. Set `OLLAMA_KEEP_ALIVE` to keep it loaded.
 - **Fallback.** If the LLM is off, unreachable (a refused connection fails in about a second; replies are cut off after 30 s), answers bad JSON or fails the check, the rule decides and the template writes the memo. Each trace item says who decided (`planner`: `llm`, `rule` or `template`, plus `model` or `fallback` with the reason), the UI shows "Decided by qwen2.5:7b" or "Rule-based fallback", and "Memo by qwen2.5:7b" or "Template memo", and `memo.author` is the model or `template`.
+- **The reason must agree with the data.** The Analyst gets `domains_with_overlap` and `cold_domains`; a reason that calls the overlap low when at least half the domains overlap (or high when most are cold) is rejected and the rule decides.
+
+### Hosted LLM, and recorded runs
+
+Point the same three variables at any hosted OpenAI-compatible endpoint (for example `VENTURETASTE_LLM_URL=https://api.openai.com/v1`, `VENTURETASTE_LLM_API_KEY=...`, `VENTURETASTE_LLM_MODEL=gpt-4o-mini`) and every run uses it live.
+
+With no reachable LLM (the jury sandbox, the hosted demo) a pair whose exact prompts were recorded replays a recorded qwen2.5:7b run from `api/fixture_data/llm_replay.json` (keyed by the SHA-256 of the system and user prompt). The replay goes through the same checks as a live reply, and it is never passed off as live: the trace item has `recorded: true`, the UI says "Recorded qwen2.5:7b run", the Analyst decision reads "(recorded qwen2.5:7b: ...)" and `memo.author` is "recorded qwen2.5:7b". Any other pair uses the rule and the template. Re-record after changing a prompt with `bun run llm:up` then `bun run record:llm`; it keeps only replies that pass the checks, and `bun run test:replay` fails while a preset recording is stale.
 
 | Variable | Default | What it does |
 | --- | --- | --- |
