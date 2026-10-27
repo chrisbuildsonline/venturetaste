@@ -1,0 +1,1 @@
+{"results":{"demographics":[{"entity_id":"D271BA64-5A65-42E3-ADF2-7342222248BD","query":{"age":{"24_and_younger":0.15,"25_to_29":-0.03,"30_to_34":0.1,"35_to_44":0.13,"45_to_54":0.14,"55_and_older":-0.68},"gender":{"female":-0.34,"male":0.34}}}]},"success":true}
