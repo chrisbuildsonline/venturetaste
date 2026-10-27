@@ -1,5 +1,5 @@
 import { describe, expect, test } from "bun:test";
-import { parseTargets, rankRows, type Row } from "./screen";
+import { parseTargets, rankRows, recordedReason, type Row } from "./screen";
 
 const done = (target: string, bci: number, clash: number): Row => ({
   target,
@@ -8,6 +8,17 @@ const done = (target: string, bci: number, clash: number): Row => ({
   clash,
   churn: "medium",
   verdict: "Proceed",
+});
+
+describe("recordedReason", () => {
+  test("is null when every finished row is live", () => {
+    expect(recordedReason([done("A", 1, 1), { target: "B", state: "pending" }])).toBeNull();
+  });
+
+  test("is the reason of the first recorded finished row", () => {
+    const rows: Row[] = [{ target: "B", state: "pending" }, done("A", 1, 1), { target: "C", state: "done", bci: 2, clash: 2, churn: "low", verdict: "Pass", recorded: "why" }];
+    expect(recordedReason(rows)).toBe("why");
+  });
 });
 
 describe("parseTargets", () => {

@@ -20,6 +20,7 @@ export type Diligence = {
   probed_tags: boolean;
   memo: { verdict: string; headline: string; rationale: string[]; risks: string[] };
   trace: TraceStep[];
+  recorded?: { reason: string } | null;
 };
 
 export const AGENTS = ["Scout", "Cartographer", "Analyst", "Partner"] as const;

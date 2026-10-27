@@ -24,6 +24,15 @@ export const VERDICT_STYLE: Record<string, string> = {
 
 export const CHURN_STYLE: Record<string, string> = { low: "text-emerald-300", medium: "text-amber-300", high: "text-rose-300" };
 
+export function RecordedBanner({ reason, className = "" }: { reason: string; className?: string }) {
+  return (
+    <div role="status" data-testid="recorded-banner" className={`rounded-2xl border border-amber-400/40 bg-amber-400/10 px-5 py-4 ${className}`}>
+      <p className="text-sm font-semibold text-amber-200">Recorded Qloo data</p>
+      <p className="mt-1 text-sm text-amber-50">{reason}</p>
+    </div>
+  );
+}
+
 function Card({ title, children, className = "", testId }: { title: string; children: React.ReactNode; className?: string; testId?: string }) {
   return (
     <section data-testid={testId} className={`min-w-0 rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6 ${className}`}>
@@ -140,6 +149,7 @@ export default function Results({ data }: { data: Diligence }) {
 
   return (
     <div className="space-y-5" data-testid="results">
+      {data.recorded && <RecordedBanner reason={data.recorded.reason} />}
       <section className="grid gap-5 rounded-2xl border border-white/10 bg-gradient-to-br from-indigo-500/10 via-white/[0.03] to-fuchsia-500/10 p-5 sm:p-8 md:grid-cols-[auto_1fr] md:items-center md:gap-10">
         <div>
           <p className="text-xs font-semibold uppercase tracking-widest text-zinc-400">Brand Cannibalization Index</p>

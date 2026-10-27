@@ -17,6 +17,7 @@ test("live: Nike + Adidas runs end to end with no console errors", async ({ page
   await expect(page.getByLabel("Target")).toHaveValue("Adidas");
 
   await expect(page.getByTestId("bci-value")).toBeVisible({ timeout: 90_000 });
+  await expect(page.getByTestId("recorded-banner")).toHaveCount(0); // live data, not a replay
   await expect(page.getByTestId("verdict")).toBeVisible();
   await expect(page.getByTestId("memo")).toContainText("Nike + Adidas");
   for (const agent of AGENTS) await expect(page.getByTestId(`agent-${agent}`)).toHaveAttribute("data-state", "done");

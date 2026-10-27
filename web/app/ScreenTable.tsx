@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { CHURN_STYLE, VERDICT_STYLE } from "./Results";
-import { rankRows, type Row, type SortKey } from "./screen";
+import { CHURN_STYLE, RecordedBanner, VERDICT_STYLE } from "./Results";
+import { rankRows, recordedReason, type Row, type SortKey } from "./screen";
 
 const TH = "px-3 py-2 text-left text-xs font-semibold uppercase tracking-widest text-zinc-400";
 const TD = "px-3 py-3 align-middle";
@@ -11,6 +11,7 @@ const SORT_BTN = "inline-flex min-h-11 items-center gap-1 uppercase tracking-wid
 export default function ScreenTable({ acquirer, rows, onFull }: { acquirer: string; rows: Row[]; onFull: (target: string) => void }) {
   const [sort, setSort] = useState<SortKey>("bci");
   const ranked = rankRows(rows, sort);
+  const recorded = recordedReason(rows);
   const th = (key: SortKey, label: string) => (
     <th scope="col" aria-sort={sort === key ? (key === "bci" ? "descending" : "ascending") : "none"} className={TH}>
       <button type="button" onClick={() => setSort(key)} className={SORT_BTN}>
@@ -23,6 +24,7 @@ export default function ScreenTable({ acquirer, rows, onFull }: { acquirer: stri
   return (
     <section aria-label="Screening results" className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
       <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400">{acquirer} screened against {rows.length} targets</h2>
+      {recorded && <RecordedBanner reason={recorded} className="mt-4" />}
       <div className="relative mt-4 overflow-x-auto" role="region" aria-label="Screening table" tabIndex={0}>
         <table data-testid="screen-table" className="w-full min-w-[34rem] border-collapse text-sm">
           <thead>

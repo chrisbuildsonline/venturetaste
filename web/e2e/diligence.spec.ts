@@ -26,6 +26,9 @@ test("demo: Nike + Adidas preset runs the whole diligence", async ({ page }) => 
   await expect(page.getByLabel("Target")).toHaveValue("Adidas");
   await expect(page.getByTestId("bci-value")).toHaveText("53.9");
   await expect(page.getByTestId("verdict")).toHaveText("Proceed");
+  const banner = page.getByRole("status").filter({ hasText: "Recorded Qloo data" });
+  await expect(banner).toBeVisible();
+  await expect(banner).toContainText("This server runs in fixture mode: recorded Qloo answers, no live calls.");
   await expect(page.getByTestId("churn-band")).toContainText(/medium/i);
   await expect(page.getByTestId("clash-value")).toBeVisible();
   await expect(page.locator("[data-testid=radar] svg").first()).toBeVisible();

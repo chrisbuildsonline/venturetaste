@@ -64,6 +64,7 @@ test("screen preset fills every row, ranked by BCI descending", async ({ page })
   await expect(page.getByRole("columnheader", { name: "BCI" })).toHaveAttribute("aria-sort", "descending");
   await expect(page.getByRole("columnheader", { name: "Culture clash" })).toHaveAttribute("aria-sort", "none");
   await expect(inlineAlert(page)).toHaveCount(0);
+  await expect(page.getByRole("status").filter({ hasText: "Recorded Qloo data" })).toHaveCount(1);
   await page.screenshot({ path: "e2e/screenshots/screen-desktop.png", fullPage: true });
   expect(errors).toEqual([]);
 });

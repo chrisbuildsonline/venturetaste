@@ -177,7 +177,7 @@ export default function Home() {
         const json: unknown = await res.json().catch(() => null);
         if (res.ok) {
           const d = json as Diligence;
-          put(i, { target: t, state: "done", bci: d.scores.bci, clash: d.scores.culture_clash, churn: d.scores.churn_risk, verdict: d.memo.verdict });
+          put(i, { target: t, state: "done", bci: d.scores.bci, clash: d.scores.culture_clash, churn: d.scores.churn_risk, verdict: d.memo.verdict, recorded: d.recorded?.reason });
         } else if (res.status === 429) {
           const msg = errorText(json, res.status);
           setRows((prev) => prev.map((r, j) => (j >= i ? { target: r.target, state: "error", error: msg } : r)));
