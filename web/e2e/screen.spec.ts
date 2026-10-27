@@ -206,7 +206,7 @@ test("Find targets discovers Nike's candidates and screens them with recorded da
   await findButton(page).click();
   await expect(findButton(page)).toBeDisabled();
 
-  await expect(page.getByTestId("screen-found")).toHaveText("Found by Qloo: Nike's top 5 consumer-brand affinities");
+  await expect(page.getByTestId("screen-found")).toHaveText("Found by Qloo: Nike's 5 best category fits");
   await expect(page.getByLabel("Candidate targets")).toHaveValue(/Adidas/);
   await expect(rows(page)).toHaveCount(5);
   const reasons = rows(page).getByTestId("screen-reason");
@@ -247,9 +247,9 @@ test("390px: the screening table has no horizontal overflow and keeps usable tou
   await page.setViewportSize({ width: 390, height: 844 });
   await runPreset(page);
   expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBeLessThanOrEqual(0);
-  for (const btn of [screenButton(page), page.getByRole("button", { name: "Culture clash" }), rows(page).first().getByRole("button", { name: /Full diligence/ })]) {
+  for (const btn of [screenButton(page), page.getByTestId("screen-card").first().getByRole("button", { name: /Full diligence/ })]) {
     const box = await btn.boundingBox();
-    expect(box!.height).toBeGreaterThanOrEqual(36);
+    expect(box!.height).toBeGreaterThanOrEqual(44);
   }
   await page.screenshot({ path: "e2e/screenshots/screen-mobile.png", fullPage: true });
 });

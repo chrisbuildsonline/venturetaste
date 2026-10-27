@@ -36,7 +36,41 @@ export default function ScreenTable({ acquirer, rows, found, onFull }: { acquire
           Download table (.md)
         </button>
       )}
-      <div className="relative mt-4 overflow-x-auto" role="region" aria-label="Screening table" tabIndex={0}>
+      <ul className="mt-4 space-y-3 sm:hidden" aria-label="Screening cards">
+        {ranked.map((r) => (
+          <li key={r.target} data-testid="screen-card" className="rounded-xl border border-white/10 bg-black/20 p-4">
+            <div className="flex items-start justify-between gap-3">
+              <p className="font-medium text-white">{r.target}</p>
+              {r.state === "done" && (
+                <span data-testid="screen-card-verdict" className={`inline-block whitespace-nowrap rounded-full px-3 py-1 text-xs font-semibold ring-1 ${VERDICT_STYLE[r.verdict] ?? VERDICT_STYLE.Pass}`}>{r.verdict}</span>
+              )}
+            </div>
+            {found?.reasons?.[r.target] && <p className="mt-0.5 text-xs text-zinc-400">{found.reasons[r.target]}</p>}
+            {r.state === "done" ? (
+              <>
+                <dl className="mt-3 grid grid-cols-3 gap-2 text-sm">
+                  <div><dt className="text-xs uppercase tracking-widest text-zinc-400">BCI</dt><dd className="tabular-nums text-white">{r.bci.toFixed(1)}</dd></div>
+                  <div><dt className="text-xs uppercase tracking-widest text-zinc-400">Clash</dt><dd className="tabular-nums text-zinc-200">{r.clash.toFixed(1)}%</dd></div>
+                  <div><dt className="text-xs uppercase tracking-widest text-zinc-400">Churn</dt><dd className={`font-medium ${CHURN_STYLE[r.churn]}`}>{r.churn.charAt(0).toUpperCase() + r.churn.slice(1)}</dd></div>
+                </dl>
+                <button
+                  type="button"
+                  aria-label={`Full diligence for ${r.target}`}
+                  onClick={() => onFull(r.target)}
+                  className="mt-3 min-h-11 w-full rounded-full border border-white/15 px-3.5 text-sm text-zinc-200 transition hover:border-indigo-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300"
+                >
+                  Full diligence
+                </button>
+              </>
+            ) : r.state === "pending" ? (
+              <p className="mt-3 text-sm text-zinc-400">Screening…</p>
+            ) : (
+              <p className="mt-3 text-sm text-rose-200">{r.error}</p>
+            )}
+          </li>
+        ))}
+      </ul>
+      <div className="relative mt-4 hidden overflow-x-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 sm:block" role="region" aria-label="Screening table" tabIndex={0}>
         <table data-testid="screen-table" className="w-full min-w-[34rem] border-collapse text-sm">
           <thead>
             <tr className="border-b border-white/10">
