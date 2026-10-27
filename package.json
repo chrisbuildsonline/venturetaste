@@ -5,6 +5,7 @@
     "setup": "uv sync && cd web && bun install",
     "test": "uv run pytest -q api/tests && cd web && bun run unit",
     "test:discover": "uv run pytest -q api/tests/test_discover.py",
+    "test:screen": "uv run pytest -q api/tests/test_screen.py",
     "test:replay": "uv run pytest -q api/tests/test_replay.py",
     "test:recorded": "uv run pytest -q -vv --durations=3 api/tests/test_recorded.py",
     "test:live": "uv run --env-file .env pytest -q -m live api/tests",

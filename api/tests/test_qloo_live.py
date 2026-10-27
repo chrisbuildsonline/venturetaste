@@ -132,6 +132,14 @@ def test_live_screen_target_scores_and_verdict(api: TestClient, target: str) -> 
     assert report["memo"]["verdict"] in {"Proceed", "Proceed with conditions", "Pass"}
 
 
+def test_live_screen_two_targets_in_one_call(api: TestClient) -> None:
+    res = api.post("/api/screen", json={"acquirer": "Nike", "targets": list(SCREENS[0].targets[:2])})
+    assert res.status_code == 200, res.text
+    rows = res.json()["rows"]
+    assert [r["target"] for r in rows] == list(SCREENS[0].targets[:2])
+    assert all(r["ok"] and 0 <= r["bci"] <= 100 and "recorded" not in r for r in rows), rows
+
+
 def test_live_discover_nike_finds_other_brands(api: TestClient) -> None:
     res = api.post("/api/discover", json={"acquirer": "Nike"})
     assert res.status_code == 200, res.text

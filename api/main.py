@@ -8,6 +8,7 @@ import threading
 import time
 from collections import deque
 from collections.abc import Iterator
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict
 from pathlib import Path
 from typing import Annotated, Any
@@ -16,7 +17,7 @@ from urllib.parse import urlsplit
 from fastapi import Depends, FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel, StringConstraints
+from pydantic import BaseModel, Field, StringConstraints
 
 from api.discover import discover
 from api.llm import chat_json_or_replay
@@ -172,8 +173,15 @@ def rate_limit(request: Request) -> None:
     ip = request.client.host if request.client else "unknown"
     try:
         addr = ipaddress.ip_address(ip)
+        mapped = addr.ipv4_mapped if isinstance(addr, ipaddress.IPv6Address) else None
+        # The limit protects the public deploy's Qloo quota. Local runs and a judge's container reach the app from
+        # loopback, so they are exempt. Not when X-Forwarded-For is present: uvicorn's proxy-headers middleware
+        # (trusting 127.0.0.1) turns "X-Forwarded-For: 127.0.0.1" into a loopback client, so a visitor could
+        # spoof the exemption. A proxy always sets that header; a direct local caller never does.
+        if (addr.is_loopback or (mapped and mapped.is_loopback)) and "x-forwarded-for" not in request.headers:
+            return
         if isinstance(addr, ipaddress.IPv6Address):  # one client owns a whole /64, so key on that
-            ip = str(addr.ipv4_mapped or ipaddress.ip_network(f"{addr}/64", strict=False))
+            ip = str(mapped or ipaddress.ip_network(f"{addr}/64", strict=False))
     except ValueError:
         pass  # not an IP (e.g. "testclient"): use it as is
     now = _clock()
@@ -193,9 +201,52 @@ def rate_limit(request: Request) -> None:
         hits.append(now)
 
 
+def run_result(client: QlooClient | None, body: DiligenceRequest) -> dict[str, Any]:
+    """One pair's full diligence result, with the recorded fallback. Shared by /api/diligence and /api/screen."""
+    return next(data for event, data in run_events(client, body) if event == "result")
+
+
 @app.post("/api/diligence", dependencies=[Depends(rate_limit)])
 def diligence(body: DiligenceRequest, client: Annotated[QlooClient | None, Depends(get_qloo)]) -> dict[str, Any]:
-    return next(data for event, data in run_events(client, body) if event == "result")
+    return run_result(client, body)
+
+
+MIN_TARGETS, MAX_TARGETS = 2, 5
+
+
+class ScreenRequest(BaseModel):
+    acquirer: BrandName
+    targets: Annotated[list[Annotated[str, StringConstraints(strip_whitespace=True, max_length=100)]], Field(max_length=50)]
+
+
+def screen_row(client: QlooClient | None, acquirer: str, target: str) -> dict[str, Any]:
+    try:
+        d = run_result(client, DiligenceRequest(acquirer=acquirer, target=target))
+    except Exception as exc:  # one target failing must not sink the others
+        status, detail = public_error(exc)
+        return {"target": target, "ok": False, "status": status, "detail": detail}
+    row = {"target": target, "ok": True, "bci": d["scores"]["bci"], "clash": d["scores"]["culture_clash"],
+           "churn": d["scores"]["churn_risk"], "verdict": d["memo"]["verdict"]}
+    if "recorded" in d:
+        row["recorded"] = d["recorded"]["reason"]
+    return row
+
+
+@app.post("/api/screen", dependencies=[Depends(rate_limit)])
+def screen(body: ScreenRequest, client: Annotated[QlooClient | None, Depends(get_qloo)]) -> dict[str, Any]:
+    """Screens 2 to 5 targets against one acquirer. One rate-limit hit for the whole screen, targets in parallel."""
+    seen = {body.acquirer.casefold()}
+    targets: list[str] = []
+    for t in body.targets:
+        if t and t.casefold() not in seen:
+            seen.add(t.casefold())
+            targets.append(t)
+    if not MIN_TARGETS <= len(targets) <= MAX_TARGETS:
+        raise HTTPException(422, f"Screen {MIN_TARGETS} to {MAX_TARGETS} different targets, other than the acquirer.")
+    # ponytail: each run already fans out about 6 Qloo threads and Qloo answers 429 at about 8 parallel requests, so 3 workers is the ceiling.
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        rows = list(pool.map(lambda t: screen_row(client, body.acquirer, t), targets))
+    return {"acquirer": body.acquirer, "rows": rows}
 
 
 class DiscoverRequest(BaseModel):
