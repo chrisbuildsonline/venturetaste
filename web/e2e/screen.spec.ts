@@ -155,6 +155,53 @@ test("a 429 stops the screen and marks the remaining rows", async ({ page }) => 
   expect(calls).toBe(2);
 });
 
+const findButton = (page: Page) => page.getByRole("button", { name: /^Find(ing)? targets/ });
+
+test("Find targets discovers Nike's candidates and screens them with recorded data", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await screenMode(page);
+  await page.getByLabel("Acquirer").fill("Nike");
+  const box = await findButton(page).boundingBox();
+  expect(box!.height).toBeGreaterThanOrEqual(44);
+  await findButton(page).focus();
+  await expect(findButton(page)).toBeFocused();
+  await findButton(page).click();
+  await expect(findButton(page)).toBeDisabled();
+
+  await expect(page.getByTestId("screen-found")).toHaveText("Found by Qloo: Nike's top 5 consumer-brand affinities");
+  await expect(page.getByLabel("Candidate targets")).toHaveValue(/Adidas/);
+  await expect(rows(page)).toHaveCount(5);
+  await expect(page.getByText("Screening…")).toHaveCount(0);
+  await expect(findButton(page)).toBeEnabled();
+  await expect(rows(page).getByTestId("screen-bci")).toHaveCount(5); // every row finished with recorded data
+  const scores = await bci(page);
+  expect(scores).toEqual([...scores].sort((a, b) => b - a));
+  await expect(page.getByRole("status").filter({ hasText: "Recorded Qloo data" })).toHaveCount(1);
+  await expect(inlineAlert(page)).toHaveCount(0);
+  await page.screenshot({ path: "test-results/find-targets.png", fullPage: true });
+  expect(errors).toEqual([]);
+});
+
+test("Find targets with an unknown acquirer shows the friendly alert", async ({ page }) => {
+  await screenMode(page);
+  await page.getByLabel("Acquirer").fill("Zzqx Nonbrand");
+  await findButton(page).click();
+  await expect(inlineAlert(page)).toContainText("Qloo has no brand named");
+  await expect(rows(page)).toHaveCount(0);
+  await expect(findButton(page)).toBeEnabled();
+});
+
+test("Find targets shows a 429 from discovery", async ({ page }) => {
+  await page.route("**/api/discover", (route) =>
+    route.fulfill({ status: 429, contentType: "application/json", body: JSON.stringify({ detail: "Too many diligence runs from your network. Try again in a minute." }) }),
+  );
+  await screenMode(page);
+  await page.getByLabel("Acquirer").fill("Nike");
+  await findButton(page).click();
+  await expect(inlineAlert(page)).toContainText("Too many diligence runs");
+});
+
 test("390px: the screening table has no horizontal overflow and keeps usable touch targets", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await runPreset(page);

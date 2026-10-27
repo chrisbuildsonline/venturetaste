@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Results from "./Results";
 import ScreenTable from "./ScreenTable";
-import { parseTargets, type Row } from "./screen";
+import { discoveryLine, MIN_TARGETS, parseTargets, type Row } from "./screen";
 import { AGENTS, type Diligence, type Preset, type Screen, type TraceStep } from "./types";
 
 const AGENT_ROLES: Record<(typeof AGENTS)[number], string> = {
@@ -41,6 +41,8 @@ export default function Home() {
   const [rows, setRows] = useState<Row[]>([]);
   const [screenAcquirer, setScreenAcquirer] = useState("");
   const [screening, setScreening] = useState(false);
+  const [finding, setFinding] = useState(false);
+  const [found, setFound] = useState<{ line: string; recorded?: string } | null>(null);
 
   useEffect(() => {
     fetch("/api/presets")
@@ -148,9 +150,10 @@ export default function Home() {
   }
 
   /** Screens one target at a time (each run already fans out 6 Qloo threads), filling the rows as they finish. */
-  async function screen(a: string, raw: string) {
+  async function screen(a: string, raw: string, from: typeof found = null) {
     const acq = a.trim();
     setError(null);
+    setFound(from);
     if (!acq) {
       setError("Enter an acquirer brand.");
       return;
@@ -197,6 +200,42 @@ export default function Home() {
     void screen(s.acquirer, s.targets.join(", "));
   }
 
+  /** Asks Qloo for the acquirer's closest brands, then screens them with the usual sequential runs. */
+  async function findTargets() {
+    const acq = acquirer.trim();
+    setError(null);
+    if (!acq) {
+      setError("Enter an acquirer brand.");
+      return;
+    }
+    setFinding(true);
+    try {
+      let res: Response;
+      try {
+        res = await fetch("/api/discover", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ acquirer: acq }) });
+      } catch {
+        setError("Could not reach the VentureTaste API. Check your connection and try again.");
+        return;
+      }
+      const json: unknown = await res.json().catch(() => null);
+      if (!res.ok) {
+        setError(errorText(json, res.status));
+        return;
+      }
+      const d = json as { acquirer: string; candidates: { name: string }[]; recorded?: { reason: string } };
+      const names = d.candidates.map((c) => c.name);
+      if (names.length < MIN_TARGETS) {
+        setError(`Qloo found fewer than ${MIN_TARGETS} other brands for ${d.acquirer}. Type the targets yourself.`);
+        return;
+      }
+      const text = names.join(", ");
+      setTargetsText(text);
+      await screen(acq, text, { line: discoveryLine(d.acquirer, names.length), recorded: d.recorded?.reason });
+    } finally {
+      setFinding(false);
+    }
+  }
+
   function fullDiligence(t: string) {
     setMode("pair");
     setAcquirer(screenAcquirer);
@@ -204,7 +243,7 @@ export default function Home() {
     void run(screenAcquirer, t);
   }
 
-  const busy = running || screening;
+  const busy = running || screening || finding;
   const showProgress = mode === "pair" && (running || data !== null);
 
   return (
@@ -252,6 +291,14 @@ export default function Home() {
             <div>
               <label htmlFor="targets" className="mb-2 block text-sm font-medium text-zinc-200">Candidate targets</label>
               <textarea id="targets" className={INPUT} rows={3} value={targetsText} onChange={(e) => setTargetsText(e.target.value)} placeholder="2 to 5 brands, comma or line separated" />
+              <button
+                type="button"
+                disabled={busy}
+                onClick={() => void findTargets()}
+                className="mt-3 min-h-11 rounded-xl border border-indigo-300/60 px-5 text-sm font-semibold text-indigo-100 transition hover:bg-indigo-400/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {finding ? "Finding targets…" : "Find targets"}
+              </button>
             </div>
           )}
         </div>
@@ -319,7 +366,7 @@ export default function Home() {
       )}
 
       <div className="mt-5" aria-live="polite">
-        {mode === "screen" && rows.length > 0 && <ScreenTable acquirer={screenAcquirer} rows={rows} onFull={fullDiligence} />}
+        {mode === "screen" && rows.length > 0 && <ScreenTable acquirer={screenAcquirer} rows={rows} found={found} onFull={fullDiligence} />}
         {mode === "screen" && rows.length === 0 && !error && (
           <div data-testid="screen-empty" className="rounded-2xl border border-dashed border-white/15 px-6 py-14 text-center">
             <p className="text-lg font-medium text-white">Which acquisition target fits best?</p>

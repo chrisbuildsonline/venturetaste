@@ -22,6 +22,11 @@ export function parseTargets(raw: string, acquirer: string): { targets: string[]
   return { targets, error: null };
 }
 
+/** The line above the table after "Find targets". */
+export function discoveryLine(acquirer: string, count: number): string {
+  return `Found by Qloo: ${acquirer}'s top ${count === 1 ? "" : `${count} `}consumer-brand ${count === 1 ? "affinity" : "affinities"}`;
+}
+
 /** The reason of the first finished row that came from recorded Qloo data, or null when every row is live. */
 export function recordedReason(rows: Row[]): string | null {
   for (const r of rows) if (r.state === "done" && r.recorded) return r.recorded;

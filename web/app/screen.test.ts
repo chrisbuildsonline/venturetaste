@@ -1,5 +1,15 @@
 import { describe, expect, test } from "bun:test";
-import { parseTargets, rankRows, recordedReason, type Row } from "./screen";
+import { discoveryLine, parseTargets, rankRows, recordedReason, type Row } from "./screen";
+
+describe("discoveryLine", () => {
+  test("names the acquirer and counts the candidates", () => {
+    expect(discoveryLine("Nike", 5)).toBe("Found by Qloo: Nike's top 5 consumer-brand affinities");
+  });
+
+  test("is singular for one candidate", () => {
+    expect(discoveryLine("Nike", 1)).toBe("Found by Qloo: Nike's top consumer-brand affinity");
+  });
+});
 
 const done = (target: string, bci: number, clash: number): Row => ({
   target,
