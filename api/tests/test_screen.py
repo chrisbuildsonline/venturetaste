@@ -92,7 +92,7 @@ def test_missing_key_still_replays_recorded_pairs(api: TestClient) -> None:
     assert all(r["recorded"] for r in rows)
     rows = api.post("/api/screen", json={"acquirer": "Nike", "targets": ["Adidas", "Zzqx Nonbrand"]}).json()["rows"]
     assert rows[0]["ok"] is True
-    assert rows[1]["ok"] is False and rows[1]["status"] == 503
+    assert rows[1]["ok"] is False and rows[1]["status"] == 422 and "recorded brands" in rows[1]["detail"]
 
 
 @pytest.mark.parametrize(

@@ -78,10 +78,9 @@ def test_error_event_for_unknown_brand(api: TestClient) -> None:
     assert len(events) == 2
 
 
-def test_error_event_for_same_brand(api: TestClient) -> None:
-    events = parse_sse(api.post("/api/diligence/stream", json={"acquirer": "Nike", "target": "nike"}).text)
-    kind, data = events[-1]
-    assert kind == "error" and data["status"] == 422 and "two different brands" in data["detail"]
+def test_same_brand_fails_before_streaming(api: TestClient) -> None:
+    res = api.post("/api/diligence/stream", json={"acquirer": "Nike", "target": "nike"})
+    assert res.status_code == 422 and "two different brands" in res.json()["detail"]
 
 
 def test_error_event_for_missing_key(tmp_path: Path) -> None:

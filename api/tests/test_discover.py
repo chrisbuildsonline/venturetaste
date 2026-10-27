@@ -232,9 +232,9 @@ def test_no_key_with_a_preset_replays_recorded(monkeypatch: pytest.MonkeyPatch) 
     assert [c["name"] for c in res.json()["candidates"]] == list(DISCOVERED["Nike"])
 
 
-def test_no_key_with_a_non_preset_is_503(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_no_key_with_a_non_preset_is_422(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.delenv("QLOO_API_KEY", raising=False)
-    assert TestClient(app).post("/api/discover", json={"acquirer": "Zara"}).status_code == 503
+    assert TestClient(app).post("/api/discover", json={"acquirer": "Zara"}).status_code == 422
 
 
 @pytest.mark.parametrize("status", [401, 403])

@@ -122,7 +122,7 @@ def test_human_written_errors_are_kept(web: TestClient, monkeypatch: pytest.Monk
     monkeypatch.delenv("VENTURETASTE_FIXTURES")
     monkeypatch.delenv("QLOO_API_KEY", raising=False)
     missing = web.post("/api/diligence", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"})
-    assert missing.status_code == 503 and "QLOO_API_KEY" in missing.json()["detail"]
+    assert missing.status_code == 422 and "QLOO_API_KEY" in missing.json()["detail"]
 
 
 def test_health_reports_config_without_the_key(web: TestClient, monkeypatch: pytest.MonkeyPatch) -> None:

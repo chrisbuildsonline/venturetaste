@@ -151,26 +151,41 @@ test("Patagonia + Gucci shows the no shared taste state and a Pass", async ({ pa
   expect(errors).toEqual([]);
 });
 
-test("Patagonia + Gucci: the Analyst probes tags and shows the bridging tastes", async ({ page }) => {
+test("Patagonia + Gucci: the Analyst probes tags and finds no real bridging taste", async ({ page }) => {
   const errors = watchErrors(page);
   await page.goto("/");
   await page.getByRole("button", { name: "Patagonia + Gucci" }).click();
 
+  // Their only shared tags are trivial ("Identifies as women-owned", "friendship"), which are filtered out.
   const decision = page.getByTestId("decision-Analyst");
-  await expect(decision).toHaveText(/^Overlap 0 in 7\/7 domains → probed Qloo tags: \d+ bridging tastes? \(recorded qwen2\.5:7b: .+\)$/);
-  await expect(page.getByTestId("agent-Analyst")).toContainText("2 Qloo calls");
+  await expect(decision).toHaveText(/^Overlap 0 in 7\/7 domains → probed Qloo tags: no bridging tastes found \(recorded qwen2\.5:7b: .+\)$/);
+  await expect(page.getByTestId("agent-Analyst")).toContainText("recorded answers, no live Qloo calls");
+  await expect(page.getByTestId("bridges")).toHaveCount(0);
+  await expect(page.getByTestId("memo")).toContainText("audiences share no tastes");
+  expect(errors).toEqual([]);
+});
+
+test("the bridging tastes panel lists bridges and fits a phone", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.route("**/api/diligence/stream", (r) => r.abort());
+  await page.route("**/api/diligence", async (route) => {
+    const res = await route.fetch();
+    const json = await res.json();
+    json.bridges = [{ id: "urn:tag:keyword:qloo:sustainability", name: "sustainability", affinity_acquirer: 0.6, affinity_target: 0.5 }];
+    await route.fulfill({ response: res, json });
+  });
+  await page.goto("/");
+  await page.getByRole("button", { name: "Patagonia + Gucci" }).click();
   const bridges = page.getByTestId("bridges");
-  await expect(bridges).toBeVisible();
   await expect(bridges).toContainText("Bridging tastes");
-  expect(await bridges.locator("li").count()).toBeGreaterThan(0);
-  await expect(page.getByTestId("memo")).toContainText("audiences share no tastes");  // the recorded memo; the bridges have their own panel
+  expect(await bridges.locator("li").count()).toBe(1);
 
   await page.setViewportSize({ width: 390, height: 844 });
   await expect(bridges).toBeVisible();
   await expect
     .poll(() => page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth))
     .toBeLessThanOrEqual(0);
-  expect(errors).toEqual([]);
+  expect(errors.filter((e) => !e.includes("net::ERR_FAILED"))).toEqual([]);
 });
 
 test("Nike + Adidas: the Analyst skips the tag probe and shows no bridging list", async ({ page }) => {
@@ -179,7 +194,7 @@ test("Nike + Adidas: the Analyst skips the tag probe and shows no bridging list"
   await page.getByRole("button", { name: "Nike + Adidas" }).click();
 
   await expect(page.getByTestId("decision-Analyst")).toHaveText(/^Overlap in 6\/7 domains → no tag probe needed \(recorded qwen2\.5:7b: .+\)$/);
-  await expect(page.getByTestId("agent-Analyst")).toContainText("0 Qloo calls");
+  await expect(page.getByTestId("agent-Analyst")).toContainText("recorded answers, no live Qloo calls");
   await expect(page.getByTestId("bridges")).toHaveCount(0);
   expect(errors).toEqual([]);
 });
@@ -215,7 +230,6 @@ test("the Analyst decision shows in the non-stream fallback too", async ({ page 
   await page.goto("/");
   await page.getByRole("button", { name: "Patagonia + Gucci" }).click();
   await expect(page.getByTestId("decision-Analyst")).toContainText("probed Qloo tags");
-  await expect(page.getByTestId("bridges")).toBeVisible();
 });
 
 test("typed brands run from the form", async ({ page }) => {
@@ -341,6 +355,15 @@ test("a 502 from the plain POST shows the friendly message", async ({ page }) =>
   await page.getByRole("button", { name: "Nike + Adidas" }).click();
   await expect(inlineAlert(page)).toHaveText(UNAVAILABLE);
   expect(errors.filter((e) => !e.includes("502") && !e.includes("net::ERR_FAILED"))).toEqual([]);
+});
+
+test("a 422 no-key message from the plain POST shows the recorded brands", async ({ page }) => {
+  const NO_KEY = "No Qloo API key is set on this server, so only recorded brands work: Adidas, Nike. Set QLOO_API_KEY to try any brand.";
+  await page.route("**/api/diligence/stream", (r) => r.abort());
+  await page.route("**/api/diligence", (r) => r.fulfill({ status: 422, json: { detail: NO_KEY } }));
+  await page.goto("/");
+  await page.getByRole("button", { name: "Nike + Adidas" }).click();
+  await expect(inlineAlert(page)).toHaveText(NO_KEY);
 });
 
 test("a 429 from the plain POST shows the message", async ({ page }) => {

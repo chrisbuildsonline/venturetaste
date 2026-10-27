@@ -125,12 +125,12 @@ def test_unknown_brand_with_a_rejected_key_streams_the_error(reject: Callable[[i
     assert kind == "error" and data["status"] == 502
 
 
-def test_unknown_brand_with_no_key_is_503(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_unknown_brand_with_no_key_is_422(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.delenv("QLOO_API_KEY", raising=False)
     res = TestClient(app).post("/api/diligence", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"})
-    assert res.status_code == 503
+    assert res.status_code == 422
     res = TestClient(app).post("/api/diligence/stream", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"})
-    assert res.status_code == 503
+    assert res.status_code == 422
 
 
 @pytest.mark.parametrize("status", [429, 500, 503])

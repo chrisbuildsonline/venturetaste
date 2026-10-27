@@ -7,7 +7,7 @@ import tempfile
 import threading
 import time
 from collections import deque
-from collections.abc import Iterator
+from collections.abc import Iterable, Iterator
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict
 from pathlib import Path
@@ -38,11 +38,22 @@ app = FastAPI(title="VentureTaste")
 
 BrandName = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1, max_length=100)]
 
+
+class UnrecordedBrandError(QlooError):
+    """No key and no recorded answers for this brand: the visitor can only try the recorded ones."""
+
+    def __init__(self, brands: Iterable[str]) -> None:
+        super().__init__(
+            f"No Qloo API key is set on this server, so only recorded brands work: {', '.join(brands)}. Set QLOO_API_KEY to try any brand."
+        )
+
+
 # QlooError subclass -> HTTP status, so every pipeline failure becomes a friendly JSON message.
 ERROR_STATUS: dict[type[QlooError], int] = {
     BrandNotFoundError: 422,
     NoTasteDataError: 422,
     SameBrandError: 422,
+    UnrecordedBrandError: 422,
     MissingKeyError: 503,
     QlooAPIError: 502,
     QlooParseError: 502,
@@ -85,17 +96,31 @@ def is_recorded_pair(body: DiligenceRequest) -> bool:
 
 
 def recorded_run(client: QlooClient, body: DiligenceRequest, reason: str) -> Iterator[tuple[str, dict[str, Any]]]:
-    """stream_diligence, with the result carrying why the answers are recorded."""
+    """stream_diligence, with the result carrying why the answers are recorded. Nothing is asked of Qloo, so every
+    agent reports 0 Qloo calls and replayed: true."""
+
+    def replayed(step: dict[str, Any]) -> dict[str, Any]:
+        return {**step, "qloo_calls": 0, "replayed": True} if "qloo_calls" in step else step
+
     for event, data in stream_diligence(client, body.acquirer, body.target, chat_json_or_replay):
-        yield event, {**data, "recorded": {"reason": reason}} if event == "result" else data
+        if event == "result":
+            data = {**data, "trace": [replayed(t) for t in data["trace"]], "recorded": {"reason": reason}}
+        yield event, replayed(data) if event == "agent" else data
+
+
+def ensure_distinct(body: DiligenceRequest) -> None:
+    """Same brand by input (case and punctuation aside) fails before any Qloo call. Aliases that resolve to one entity are caught later, in the Scout."""
+    if slug(body.acquirer) == slug(body.target):
+        raise SameBrandError(f"Pick two different brands: {body.acquirer!r} and {body.target!r} are the same brand")
 
 
 def run_events(client: QlooClient | None, body: DiligenceRequest) -> Iterator[tuple[str, dict[str, Any]]]:
     """stream_diligence, falling back to recorded answers for a preset pair when there is no usable Qloo key.
     Only a missing key or an HTTP 401/403 falls back; every other Qloo failure propagates unchanged."""
+    ensure_distinct(body)
     if client is None:
         if not is_recorded_pair(body):
-            raise MissingKeyError("QLOO_API_KEY is not set")
+            raise UnrecordedBrandError(preset_brands())
         yield from recorded_run(fixture_client(), body, RECORDED_NO_KEY)
         return
     if fixture_mode():
@@ -113,7 +138,7 @@ def run_events(client: QlooClient | None, body: DiligenceRequest) -> Iterator[tu
 UNAVAILABLE = "Taste data from Qloo is temporarily unavailable. Please try again in a moment."
 # These messages are written for people. Everything else (transport, HTTP status, parse errors) can carry
 # httpx text or response bodies, so the client gets UNAVAILABLE and the raw exception goes to the log.
-HUMAN_ERRORS = (BrandNotFoundError, NoTasteDataError, SameBrandError, MissingKeyError)
+HUMAN_ERRORS = (BrandNotFoundError, NoTasteDataError, SameBrandError, UnrecordedBrandError, MissingKeyError)
 
 
 def public_error(exc: Exception) -> tuple[int, str]:
@@ -259,7 +284,7 @@ def discover_targets(body: DiscoverRequest, client: Annotated[QlooClient | None,
     recorded = slug(body.acquirer) in {slug(a) for a in DISCOVERED}
     if client is None:
         if not recorded:
-            raise MissingKeyError("QLOO_API_KEY is not set")
+            raise UnrecordedBrandError(DISCOVERED)
         return {**discover(fixture_client(), body.acquirer), "recorded": {"reason": RECORDED_NO_KEY}}
     if fixture_mode():
         return {**discover(client, body.acquirer), "recorded": {"reason": RECORDED_FIXTURE_MODE}}
@@ -279,8 +304,9 @@ def sse(event: str, data: Any) -> str:
 @app.post("/api/diligence/stream", dependencies=[Depends(rate_limit)])
 def diligence_stream(body: DiligenceRequest, client: Annotated[QlooClient | None, Depends(get_qloo)]) -> StreamingResponse:
     """Same run as /api/diligence, as server-sent events: agent start/finish, then result (or error)."""
+    ensure_distinct(body)  # a plain 422 before streaming starts, like the key check below
     if client is None and not is_recorded_pair(body):
-        raise MissingKeyError("QLOO_API_KEY is not set")  # a plain 503 before streaming starts
+        raise UnrecordedBrandError(preset_brands())
 
     def events() -> Iterator[str]:
         try:

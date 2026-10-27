@@ -341,7 +341,7 @@ export default function Home() {
                   </div>
                   <p className="mt-1 text-xs text-zinc-400">{AGENT_ROLES[name]}</p>
                   <p className="mt-2 text-xs tabular-nums text-zinc-300">
-                    {step ? `Done · ${step.ms} ms · ${step.qloo_calls} Qloo ${step.qloo_calls === 1 ? "call" : "calls"}` : waiting ? "Waiting" : "Running…"}
+                    {step ? `Done · ${step.ms} ms · ${step.replayed ? "recorded answers, no live Qloo calls" : `${step.qloo_calls} Qloo ${step.qloo_calls === 1 ? "call" : "calls"}`}` : waiting ? "Waiting" : "Running…"}
                   </p>
                   {step?.decision && <p data-testid={`decision-${name}`} className="mt-2 text-xs text-indigo-200">{step.decision}</p>}
                   {step?.planner && (

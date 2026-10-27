@@ -132,11 +132,11 @@ def test_brand_without_taste_data_is_422_before_scoring(
     assert "Adidas" in res.json()["detail"]
 
 
-def test_missing_key_is_503(monkeypatch: pytest.MonkeyPatch) -> None:
+def test_missing_key_is_422_naming_the_recorded_brands(monkeypatch: pytest.MonkeyPatch) -> None:
     monkeypatch.delenv("QLOO_API_KEY", raising=False)
     res = TestClient(app).post("/api/diligence", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"})
-    assert res.status_code == 503  # a preset pair replays recorded answers instead, see test_recorded.py
-    assert "QLOO_API_KEY" in res.json()["detail"]
+    assert res.status_code == 422  # a preset pair replays recorded answers instead, see test_recorded.py
+    assert "QLOO_API_KEY" in res.json()["detail"] and "Adidas" in res.json()["detail"]
 
 
 def test_missing_key_from_dependency_is_503() -> None:
@@ -163,10 +163,15 @@ def test_malformed_qloo_response_is_502(api: TestClient, tmp_path: Path) -> None
     assert api.post("/api/diligence", json={"acquirer": "Nike", "target": "Adidas"}).status_code == 502
 
 
-def test_same_brand_on_both_sides_is_422_before_cartographer(
-    api: TestClient, calls: list[httpx.Request]
+def test_aliases_of_one_entity_are_422_before_cartographer(
+    api: TestClient, calls: list[httpx.Request], tmp_path: Path
 ) -> None:
-    res = api.post("/api/diligence", json={"acquirer": "Nike", "target": "nike"})
+    def handler(request: httpx.Request) -> httpx.Response:  # every name resolves to Nike
+        calls.append(request)
+        return httpx.Response(200, json=load("search_nike"))
+
+    use_handler(tmp_path, handler)
+    res = api.post("/api/diligence", json={"acquirer": "Nike", "target": "Nike Inc"})
     assert res.status_code == 422
     assert "two different brands" in res.json()["detail"]
     assert len(calls) == 2  # only Scout's searches
