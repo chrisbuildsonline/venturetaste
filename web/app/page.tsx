@@ -253,7 +253,7 @@ export default function Home() {
             aria-pressed={mode === m}
             disabled={busy}
             onClick={() => switchMode(m)}
-            className={`min-h-10 rounded-lg px-4 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed ${mode === m ? "bg-indigo-500 text-white" : "text-zinc-300 hover:text-white"}`}
+            className={`min-h-11 rounded-lg px-4 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed ${mode === m ? "bg-indigo-500 text-white" : "text-zinc-300 hover:text-white"}`}
           >
             {m === "pair" ? "Compare a deal" : "Screen targets"}
           </button>
@@ -310,7 +310,7 @@ export default function Home() {
                   type="button"
                   disabled={busy}
                   onClick={() => ("target" in p ? pick(p) : pickScreen(p))}
-                  className="rounded-full border border-white/15 px-3.5 py-1.5 text-sm text-zinc-200 transition hover:border-indigo-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="min-h-11 rounded-full border border-white/15 px-3.5 text-sm text-zinc-200 transition hover:border-indigo-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {p.label}
                 </button>
