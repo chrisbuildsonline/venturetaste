@@ -6,6 +6,19 @@ export type Row =
   | { target: string; state: "error"; error: string }
   | { target: string; state: "done"; bci: number; clash: number; churn: string; verdict: string; recorded?: string };
 
+/** One row of the POST /api/screen response. */
+export type ScreenRow =
+  | { target: string; ok: true; bci: number; clash: number; churn: string; verdict: string; recorded?: string }
+  | { target: string; ok: false; status: number; detail: string };
+
+export function rowsFromScreen(rows: ScreenRow[]): Row[] {
+  return rows.map((r): Row =>
+    r.ok
+      ? { target: r.target, state: "done", bci: r.bci, clash: r.clash, churn: r.churn, verdict: r.verdict, recorded: r.recorded }
+      : { target: r.target, state: "error", error: r.detail },
+  );
+}
+
 export type SortKey = "bci" | "clash";
 
 /** What "Find targets" tells the table: the line above it, why the data is recorded, and why each target was picked (by name). */

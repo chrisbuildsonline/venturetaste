@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Results from "./Results";
 import ScreenTable from "./ScreenTable";
-import { discoveryLine, MIN_TARGETS, parseTargets, type Found, type Row } from "./screen";
+import { discoveryLine, MIN_TARGETS, parseTargets, rowsFromScreen, type Found, type Row, type ScreenRow } from "./screen";
 import { AGENTS, type Diligence, type Preset, type Screen, type TraceStep } from "./types";
 
 const AGENT_ROLES: Record<(typeof AGENTS)[number], string> = {
@@ -149,7 +149,7 @@ export default function Home() {
     setError(null);
   }
 
-  /** Screens one target at a time (each run already fans out 6 Qloo threads), filling the rows as they finish. */
+  /** Screens every target in ONE request (the server runs them in parallel and counts one rate-limit hit); rows stay pending until it answers. */
   async function screen(a: string, raw: string, from: typeof found = null) {
     const acq = a.trim();
     setError(null);
@@ -164,31 +164,21 @@ export default function Home() {
       return;
     }
     const names = parsed.targets;
-    const put = (i: number, row: Row) => setRows((prev) => prev.map((r, j) => (j === i ? row : r)));
+    const failAll = (error: string) => setRows(names.map((t) => ({ target: t, state: "error", error })));
     setScreenAcquirer(acq);
     setRows(names.map((t) => ({ target: t, state: "pending" })));
     setScreening(true);
     try {
-      for (const [i, t] of names.entries()) {
-        let res: Response;
-        try {
-          res = await fetch("/api/diligence", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ acquirer: acq, target: t }) });
-        } catch {
-          put(i, { target: t, state: "error", error: "Could not reach the VentureTaste API. Check your connection and try again." });
-          continue;
-        }
-        const json: unknown = await res.json().catch(() => null);
-        if (res.ok) {
-          const d = json as Diligence;
-          put(i, { target: t, state: "done", bci: d.scores.bci, clash: d.scores.culture_clash, churn: d.scores.churn_risk, verdict: d.memo.verdict, recorded: d.recorded?.reason });
-        } else if (res.status === 429) {
-          const msg = errorText(json, res.status);
-          setRows((prev) => prev.map((r, j) => (j >= i ? { target: r.target, state: "error", error: msg } : r)));
-          break;
-        } else {
-          put(i, { target: t, state: "error", error: errorText(json, res.status) });
-        }
+      let res: Response;
+      try {
+        res = await fetch("/api/screen", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ acquirer: acq, targets: names }) });
+      } catch {
+        failAll("Could not reach the VentureTaste API. Check your connection and try again.");
+        return;
       }
+      const json: unknown = await res.json().catch(() => null);
+      if (res.ok && Array.isArray((json as { rows?: unknown } | null)?.rows)) setRows(rowsFromScreen((json as { rows: ScreenRow[] }).rows));
+      else failAll(errorText(json, res.status));
     } finally {
       setScreening(false);
     }
@@ -200,7 +190,7 @@ export default function Home() {
     void screen(s.acquirer, s.targets.join(", "));
   }
 
-  /** Asks Qloo for the acquirer's closest brands, then screens them with the usual sequential runs. */
+  /** Asks Qloo for the acquirer's closest brands, then screens them in one parallel request. */
   async function findTargets() {
     const acq = acquirer.trim();
     setError(null);
@@ -372,7 +362,7 @@ export default function Home() {
           <div data-testid="screen-empty" className="rounded-2xl border border-dashed border-white/15 px-6 py-14 text-center">
             <p className="text-lg font-medium text-white">Which acquisition target fits best?</p>
             <p className="mx-auto mt-2 max-w-xl text-sm text-zinc-400">
-              Enter an acquirer and 2 to 5 candidate targets. Each one gets a full taste-graph diligence, one after another, and the table ranks them. Screening 5 targets counts as 5 diligence runs against the rate limit.
+              Enter an acquirer and 2 to 5 candidate targets. Each one gets a full taste-graph diligence, run in parallel, and the table ranks them. A whole screen counts as one run against the rate limit.
             </p>
           </div>
         )}

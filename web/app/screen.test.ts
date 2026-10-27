@@ -1,5 +1,18 @@
 import { describe, expect, test } from "bun:test";
-import { discoveryLine, parseTargets, rankRows, recordedReason, type Row } from "./screen";
+import { discoveryLine, parseTargets, rankRows, recordedReason, rowsFromScreen, type Row } from "./screen";
+
+describe("rowsFromScreen", () => {
+  test("maps ok rows to done and error rows to error, in order", () => {
+    const rows = rowsFromScreen([
+      { target: "Adidas", ok: true, bci: 70, clash: 20, churn: "low", verdict: "Proceed", recorded: "why" },
+      { target: "Zzqx", ok: false, status: 422, detail: "Qloo has no brand named Zzqx." },
+    ]);
+    expect(rows).toEqual([
+      { target: "Adidas", state: "done", bci: 70, clash: 20, churn: "low", verdict: "Proceed", recorded: "why" },
+      { target: "Zzqx", state: "error", error: "Qloo has no brand named Zzqx." },
+    ]);
+  });
+});
 
 describe("discoveryLine", () => {
   test("names the acquirer and counts the candidates", () => {

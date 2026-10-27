@@ -88,10 +88,12 @@ test("clicking culture clash reorders the rows and sets aria-sort", async ({ pag
   await page.setViewportSize({ width: 1280, height: 800 });
   // fixtures rank the real brands the same on both scores, so feed scores where BCI and clash disagree
   const fake: Record<string, [number, number]> = { A: [80, 50], B: [40, 10], C: [60, 30] };
-  await page.route("**/api/diligence", async (route) => {
-    const [bci, clash] = fake[route.request().postDataJSON().target];
-    const body = { scores: { bci, culture_clash: clash, churn_risk: "medium" }, memo: { verdict: "Proceed with conditions" } };
-    await route.fulfill({ json: body });
+  await page.route("**/api/screen", async (route) => {
+    const rows = (route.request().postDataJSON().targets as string[]).map((target) => {
+      const [bci, clash] = fake[target];
+      return { target, ok: true, bci, clash, churn: "medium", verdict: "Proceed with conditions" };
+    });
+    await route.fulfill({ json: { acquirer: "Nike", rows } });
   });
   await screenMode(page);
   await page.getByLabel("Acquirer").fill("Nike");
@@ -156,18 +158,38 @@ test("Full diligence on a row opens the pair flow with its Results", async ({ pa
   expect(errors).toEqual([]);
 });
 
-test("a 429 stops the screen and marks the remaining rows", async ({ page }) => {
+test("a 429 marks every row", async ({ page }) => {
   await screenMode(page);
   let calls = 0;
-  await page.route("**/api/diligence", async (route) => {
+  await page.route("**/api/screen", async (route) => {
     calls++;
-    if (calls === 1) return route.continue();
     await route.fulfill({ status: 429, contentType: "application/json", body: JSON.stringify({ detail: "Too many diligence runs from your network. Try again in a minute." }) });
   });
   await page.getByRole("button", { name: "Nike: 4 targets" }).click();
   await expect(page.getByText("Screening…")).toHaveCount(0);
-  await expect(rows(page).filter({ hasText: "Too many diligence runs" })).toHaveCount(3);
-  expect(calls).toBe(2);
+  await expect(rows(page).filter({ hasText: "Too many diligence runs" })).toHaveCount(4);
+  expect(calls).toBe(1);
+});
+
+test("a screen is one request, and one failing target logs no console errors", async ({ page }) => {
+  const errors = watchErrors(page);
+  await screenMode(page);
+  let calls = 0;
+  await page.route("**/api/screen", async (route) => {
+    calls++;
+    const ok = (target: string, bci: number) => ({ target, ok: true, bci, clash: 10, churn: "low", verdict: "Proceed" });
+    const rows = [ok("A", 50), { target: "B", ok: false, status: 502, detail: "Taste data from Qloo is temporarily unavailable. Please try again in a moment." }, ok("C", 70)];
+    await route.fulfill({ json: { acquirer: "Nike", rows } });
+  });
+  await page.getByLabel("Acquirer").fill("Nike");
+  await page.getByLabel("Candidate targets").fill("A, B, C");
+  await screenButton(page).click();
+  await expect(rows(page)).toHaveCount(3);
+  await expect(page.getByText("Screening…")).toHaveCount(0);
+  await expect(page.locator("[data-testid=screen-row][data-target=B]")).toContainText("temporarily unavailable");
+  expect(await targets(page)).toEqual(["C", "A", "B"]);
+  expect(calls).toBe(1);
+  expect(errors).toEqual([]);
 });
 
 const findButton = (page: Page) => page.getByRole("button", { name: /^Find(ing)? targets/ });
