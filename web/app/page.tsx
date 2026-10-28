@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Backtest from "./Backtest";
 import Results from "./Results";
 import ScreenTable from "./ScreenTable";
 import { discoveryLine, MIN_TARGETS, parseTargets, rowsFromScreen, type Found, type Row, type ScreenRow } from "./screen";
@@ -377,6 +378,8 @@ export default function Home() {
           </div>
         )}
       </div>
+
+      {mode === "pair" && <Backtest />}
     </main>
   );
 }
