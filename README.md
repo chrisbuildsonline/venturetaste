@@ -20,6 +20,10 @@ The hosted demo has a valid Qloo key and calls live Qloo (18 calls per run, answ
 
 ![Nike + Adidas against live Qloo](docs/live-qloo-run.png)
 
+Gymshark + Allbirds has no recorded answers anywhere in the repo, so this run can only come from live Qloo. Captured 2026-10-28:
+
+![Gymshark + Allbirds against live Qloo](docs/live-any-pair.png)
+
 ## What it does
 
 Deal teams can see revenue and margin for a consumer brand, but not whether the buyer's and the target's customers overlap (cannibalization) or clash (churn after the deal). VentureTaste answers that with Qloo's cross-domain taste graph: it compares what each brand's audience loves across brands, artists, movies, TV shows, places, destinations and books, plus age and gender. Four agents run the diligence. Scout resolves both brands in Qloo, Cartographer pulls their taste and demographic profiles, Analyst scores overlap and culture clash with fixed formulas, and Partner writes a deal memo with a verdict (Proceed, Proceed with conditions, Pass). "Find targets" screens one acquirer against up to 5 candidates, so a team can rank possible deals before running full diligence. The buyers are corporate development teams, consumer-brand investors and M&A advisors (see [Who pays](#who-pays)).
@@ -213,7 +217,7 @@ The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffe
 
 `bun run docker:smoke` builds the image, first runs it in fixture mode with no key and checks that Nike + Adidas returns 200 with a `bci`, then runs it on port 8799 with your `.env`, waits for `/api/health` and for the image's `HEALTHCHECK` (stdlib Python against `/api/health`) to report `healthy`, runs the Playwright spec `web/e2e/live.spec.ts` (Nike + Adidas against real Qloo) and removes the container. Set `BASE_URL` and run `cd web && bunx playwright test` to run that spec against any other deployment.
 
-`bun run e2e:live` runs the same spec against the public deployment (https://venturetaste.5-78-152-178.sslip.io, or your own via `BASE_URL`). It uses two diligence runs and also checks that the proxy streams the SSE events instead of buffering them.
+`bun run e2e:live` runs the same spec against the public deployment (https://venturetaste.5-78-152-178.sslip.io, or your own via `BASE_URL`). It uses three diligence runs (the third is Gymshark + Allbirds, which has no recording) and also checks that the proxy streams the SSE events instead of buffering them.
 
 ## How to test
 
