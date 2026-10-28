@@ -10,8 +10,8 @@ import httpx
 
 from api.pipeline import run_diligence
 from api.presets import PRESETS
-from api.qloo import DOMAINS, QlooClient
-from api.scoring import BrandProfile, score
+from api.qloo import DOMAINS, QlooClient, QlooError
+from api.scoring import BrandProfile, bridges, score
 
 PAIRS = [
     ("Nike", "Adidas"),
@@ -46,9 +46,30 @@ def tags_probe() -> int:
     return 0
 
 
+def picks_probe() -> int:
+    """The Analyst's follow-up on live Qloo: entities of every domain for the top bridge tag of each preset. Run: bun run probe:picks"""
+    client = QlooClient(cache_dir=Path(".cache/probe"))
+    for preset in PRESETS:
+        a, b = client.search(preset.acquirer), client.search(preset.target)
+        found = bridges(client.tags(a.id), client.tags(b.id))
+        print(preset.id, "bridges", [x.id for x in found])
+        if not found:
+            continue
+        for domain in DOMAINS:
+            try:
+                picks = client.tag_insights(found[0].id, domain)
+            except QlooError as exc:
+                print("  ", found[0].id, domain, "failed", repr(exc))
+                continue
+            print("  ", found[0].id, domain, [(p.name, p.affinity) for p in picks])
+    return 0
+
+
 def main() -> int:
     if sys.argv[1:] == ["tags"]:
         return tags_probe()
+    if sys.argv[1:] == ["picks"]:
+        return picks_probe()
     take = int(sys.argv[1]) if len(sys.argv) > 1 else 50
     client = QlooClient(cache_dir=Path(".cache/probe"))
     try:

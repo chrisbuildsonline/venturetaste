@@ -8,6 +8,7 @@ export type Clashing = { domain: string; name: string; affinity: number };
 export type Demographics = { age: Record<string, number>; gender: Record<string, number> };
 export type TraceStep = { agent: string; status: string; ms: number; qloo_calls: number; replayed?: boolean; decision?: string; planner?: "llm" | "rule" | "template"; model?: string; recorded?: boolean; fallback?: string };
 export type Bridge = { id: string; name: string; affinity_acquirer: number; affinity_target: number };
+export type BridgePick = { name: string; domain: string; tag_id: string; tag_name: string };
 
 export type Diligence = {
   brands: { acquirer: Brand; target: Brand };
@@ -17,6 +18,8 @@ export type Diligence = {
   top_clashing: { acquirer: Clashing[]; target: Clashing[] };
   demographics: { acquirer: Demographics; target: Demographics };
   bridges: Bridge[];
+  bridge_picks: BridgePick[];
+  bridge_potential: number;
   probed_tags: boolean;
   memo: { verdict: string; headline: string; rationale: string[]; risks: string[]; author?: string };
   trace: TraceStep[];

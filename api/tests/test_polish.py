@@ -96,7 +96,7 @@ def test_replayed_run_reports_zero_qloo_calls(monkeypatch: pytest.MonkeyPatch) -
 
 def test_live_run_keeps_real_counts(counting: list[httpx.Request]) -> None:
     trace = TestClient(app).post("/api/diligence", json={"acquirer": "Nike", "target": "Adidas"}).json()["trace"]
-    assert [t["qloo_calls"] for t in trace] == [2, 16, 0, 0]
+    assert [t["qloo_calls"] for t in trace] == [2, 16, 3, 0]  # the recorded Nike + Adidas plan probes tags and follows up
     assert not any("replayed" in t for t in trace)
 
 

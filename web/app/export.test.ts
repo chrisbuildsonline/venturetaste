@@ -11,6 +11,8 @@ const base: Diligence = {
   top_clashing: { acquirer: [], target: [] },
   demographics: { acquirer: { age: {}, gender: {} }, target: { age: {}, gender: {} } },
   bridges: [],
+  bridge_picks: [],
+  bridge_potential: 0,
   probed_tags: false,
   memo: { verdict: "Proceed", headline: "Nike + Adidas overlap a lot", rationale: ["Shared sneaker fans"], risks: ["Cannibalization"], author: "qwen2.5:7b" },
   trace: [],
@@ -46,6 +48,34 @@ describe("memoMarkdown", () => {
     const rec = memoMarkdown({ ...base, memo: { ...base.memo, author: "recorded qwen2.5:7b" }, recorded: { reason: "fixture mode" } }, date);
     expect(rec).toContain("**Memo written by:** recorded qwen2.5:7b");
     expect(rec).toContain("**Data source:** recorded Qloo data (fixture mode)");
+  });
+
+  test("no tag probe: no bridge section", () => {
+    expect(md).not.toContain("ridge");
+  });
+
+  test("probed with bridges: bridge potential, bridges and the follow-up picks", () => {
+    const probed = memoMarkdown(
+      {
+        ...base,
+        probed_tags: true,
+        bridge_potential: 16,
+        bridges: [{ id: "urn:tag:genre:music:rock", name: "rock", affinity_acquirer: 0.9, affinity_target: 0.7 }],
+        bridge_picks: [{ name: "Movie A", domain: "movie", tag_id: "urn:tag:genre:music:rock", tag_name: "rock" }],
+      },
+      date,
+    );
+    expect(probed).toContain("- **Bridge potential:** 16 / 100");
+    expect(probed).toContain("## Bridging tastes");
+    expect(probed).toContain("- rock (Nike 0.90 / Adidas 0.70)");
+    expect(probed).toContain("## Follow-up: Movies via rock");
+    expect(probed).toContain("- Movie A");
+  });
+
+  test("probed with no bridges still shows the potential as 0", () => {
+    const probed = memoMarkdown({ ...base, probed_tags: true, bridge_potential: 0 }, date);
+    expect(probed).toContain("- **Bridge potential:** 0 / 100");
+    expect(probed).not.toContain("## Bridging tastes");
   });
 
   test("template case", () => {

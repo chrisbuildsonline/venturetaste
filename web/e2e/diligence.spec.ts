@@ -158,9 +158,12 @@ test("Patagonia + Gucci: the Analyst probes tags and finds no real bridging tast
 
   // Their only shared tags are trivial ("Identifies as women-owned", "friendship"), which are filtered out.
   const decision = page.getByTestId("decision-Analyst");
-  await expect(decision).toHaveText(/^Overlap 0 in 7\/7 domains → probed Qloo tags: no bridging tastes found \(recorded qwen2\.5:7b: .+\)$/);
+  await expect(decision).toHaveText(/^Overlap 0 in 7\/7 domains → probed Qloo tags \(genre, lifestyle\): no bridging tastes found \(recorded qwen2\.5:7b: .+\)$/);
   await expect(page.getByTestId("agent-Analyst")).toContainText("recorded answers, no live Qloo calls");
   await expect(page.getByTestId("bridges")).toHaveCount(0);
+  await expect(page.getByTestId("bridge-potential")).toBeVisible(); // a probe that found nothing still shows its score
+  await expect(page.getByTestId("bridge-potential-value")).toHaveText("0");
+  await expect(page.getByTestId("bridge-picks")).toHaveCount(0);
   await expect(page.getByTestId("memo")).toContainText("audiences share no tastes");
   expect(errors).toEqual([]);
 });
@@ -188,13 +191,36 @@ test("the bridging tastes panel lists bridges and fits a phone", async ({ page }
   expect(errors.filter((e) => !e.includes("net::ERR_FAILED"))).toEqual([]);
 });
 
-test("Nike + Adidas: the Analyst skips the tag probe and shows no bridging list", async ({ page }) => {
+test("Nike + Adidas: the Analyst probes chosen tag families, scores the bridges and follows up in a domain", async ({ page }) => {
   const errors = watchErrors(page);
   await page.goto("/");
   await page.getByRole("button", { name: "Nike + Adidas" }).click();
 
-  await expect(page.getByTestId("decision-Analyst")).toHaveText(/^Overlap in 6\/7 domains → no tag probe needed \(recorded qwen2\.5:7b: .+\)$/);
+  await expect(page.getByTestId("decision-Analyst")).toHaveText(
+    /^Overlap 0 in 1\/7 domains → probed Qloo tags \([a-z_, ]+\): \d bridging tastes? → follow-up in [A-Za-z ]+: .+ \(recorded qwen2\.5:7b: .+\)$/,
+  );
   await expect(page.getByTestId("agent-Analyst")).toContainText("recorded answers, no live Qloo calls");
+  const potential = page.getByTestId("bridge-potential");
+  await expect(potential).toBeVisible();
+  await expect(potential).toContainText("Bridge potential");
+  const value = Number(await page.getByTestId("bridge-potential-value").textContent());
+  expect(value).toBeGreaterThan(0);
+  expect(value).toBeLessThanOrEqual(100);
+  expect(await page.getByTestId("bridges").locator("li").count()).toBeGreaterThan(0);
+  const picks = page.getByTestId("bridge-picks");
+  await expect(picks).toContainText("Follow-up: Destinations via");
+  expect(await picks.locator("li").count()).toBeGreaterThan(0);
+  await expect(page.getByTestId("bci-value")).toHaveText("53.9"); // the bridge potential never moves the BCI
+  expect(errors).toEqual([]);
+});
+
+test("Patagonia + The North Face: no tag probe, so no bridge potential", async ({ page }) => {
+  const errors = watchErrors(page);
+  await page.goto("/");
+  await page.getByRole("button", { name: "Patagonia + The North Face" }).click();
+
+  await expect(page.getByTestId("decision-Analyst")).toHaveText(/^Overlap in 7\/7 domains → no tag probe needed \(recorded qwen2\.5:7b: .+\)$/);
+  await expect(page.getByTestId("bridge-potential")).toHaveCount(0);
   await expect(page.getByTestId("bridges")).toHaveCount(0);
   expect(errors).toEqual([]);
 });

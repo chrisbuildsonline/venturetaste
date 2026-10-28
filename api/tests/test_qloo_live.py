@@ -43,6 +43,16 @@ def test_live_insights_cover_most_domains(qloo: QlooClient) -> None:
         assert all(isinstance(a.affinity, float) for a in qloo.insights(nike.id, domain))
 
 
+@pytest.mark.parametrize("domain", ["movie", "artist", "book"])
+def test_live_tag_signalled_insights_parse(qloo: QlooClient, requests_made: list[httpx.Request], domain: str) -> None:
+    """The Analyst's follow-up: entities of a domain for a bridge tag (signal.interests.tags), not for a brand."""
+    picks = qloo.tag_insights("urn:tag:genre:music:hip_hop", domain)
+    assert 1 <= len(picks) <= 5
+    assert all(a.id and a.name and isinstance(a.affinity, float) for a in picks)
+    params = requests_made[-1].url.params
+    assert params["signal.interests.tags"] == "urn:tag:genre:music:hip_hop" and params["filter.type"] == f"urn:entity:{domain}"
+
+
 def test_live_demographics(qloo: QlooClient) -> None:
     demo = qloo.demographics(qloo.search("Nike").id)
     assert demo.age and demo.gender
@@ -63,7 +73,8 @@ def test_live_preset_runs_cold_under_20s(api: TestClient, preset: Preset) -> Non
     assert res.status_code == 200, res.text
     report = res.json()
     assert elapsed < 20, f"{elapsed:.1f}s"
-    assert sum(t["qloo_calls"] for t in report["trace"]) == (20 if report["probed_tags"] else 18)
+    follow_up = "follow-up in" in analyst_trace(report)["decision"]  # the recorded plan may ask for it
+    assert sum(t["qloo_calls"] for t in report["trace"]) == 18 + (2 if report["probed_tags"] else 0) + (1 if follow_up else 0)
     assert set(report["domain_overlap"]) == set(DOMAINS)
     assert "recorded" not in report  # a live run with a valid key never replays recorded answers
 
@@ -79,15 +90,29 @@ def test_live_cold_pair_takes_the_tag_probe(api: TestClient) -> None:
     assert report["probed_tags"] is True
     assert isinstance(report["bridges"], list) and len(report["bridges"]) <= 5
     trace = analyst_trace(report)
-    assert trace["qloo_calls"] == 2
+    assert trace["qloo_calls"] == 2 + ("follow-up in" in trace["decision"])
     assert "probed Qloo tags" in trace["decision"]
+    assert 0 <= report["bridge_potential"] <= 100 and isinstance(report["bridge_picks"], list)
 
 
-def test_live_warm_pair_skips_the_tag_probe(api: TestClient) -> None:
+def test_live_pair_with_the_recorded_follow_up_plan_queries_qloo_for_picks(api: TestClient) -> None:
+    """The recorded Nike + Adidas plan probes lifestyle and customer_segment tags, then asks for destinations."""
     res = api.post("/api/diligence", json={"acquirer": "Nike", "target": "Adidas"})
     assert res.status_code == 200, res.text
     report = res.json()
-    assert report["probed_tags"] is False and report["bridges"] == []
+    trace = analyst_trace(report)
+    assert report["probed_tags"] is True and report["bridges"] and 0 < report["bridge_potential"] <= 100
+    assert trace["qloo_calls"] == 3 and "follow-up in destinations" in trace["decision"]
+    assert 1 <= len(report["bridge_picks"]) <= 5
+    assert {p["domain"] for p in report["bridge_picks"]} == {"destination"}
+    assert {p["tag_id"] for p in report["bridge_picks"]} == {report["bridges"][0]["id"]}
+
+
+def test_live_warm_pair_skips_the_tag_probe(api: TestClient) -> None:
+    res = api.post("/api/diligence", json={"acquirer": "Patagonia", "target": "The North Face"})
+    assert res.status_code == 200, res.text
+    report = res.json()
+    assert report["probed_tags"] is False and report["bridges"] == [] and report["bridge_picks"] == [] and report["bridge_potential"] == 0
     trace = analyst_trace(report)
     assert trace["qloo_calls"] == 0
     assert "no tag probe needed" in trace["decision"]

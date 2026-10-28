@@ -23,7 +23,19 @@ export function memoMarkdown(d: Diligence, now: Date = new Date()): string {
     `- **Brand Cannibalization Index:** ${scores.bci.toFixed(1)} / 100`,
     `- **Culture clash:** ${scores.culture_clash.toFixed(1)}%`,
     `- **Churn risk:** ${cap(scores.churn_risk)}`,
+    ...(d.probed_tags ? [`- **Bridge potential:** ${d.bridge_potential} / 100`] : []),
     "",
+    ...(d.bridges.length
+      ? [
+          "## Bridging tastes",
+          "",
+          ...d.bridges.map((b) => `- ${b.name} (${brands.acquirer.name} ${b.affinity_acquirer.toFixed(2)} / ${brands.target.name} ${b.affinity_target.toFixed(2)})`),
+          "",
+        ]
+      : []),
+    ...(d.bridge_picks.length
+      ? [`## Follow-up: ${label(d.bridge_picks[0].domain)} via ${d.bridge_picks[0].tag_name}`, "", ...d.bridge_picks.map((p) => `- ${p.name}`), ""]
+      : []),
     "## Taste overlap by domain",
     "",
     "| Domain | Overlap |",

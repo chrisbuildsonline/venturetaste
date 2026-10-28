@@ -8,8 +8,10 @@ from pathlib import Path
 
 import httpx
 
-from api.presets import preset_brands, slug
-from api.qloo import DEFAULT_TAKE, DOMAINS
+from api.pipeline import ALLOWED_FAMILIES
+from api.presets import PRESETS, bridge_picks_name, preset_brands, slug
+from api.qloo import DEFAULT_TAKE, DOMAINS, FOLLOW_UP_TAKE, parse_tags
+from api.scoring import bridges
 
 FIXTURES = Path(__file__).resolve().parent / "fixture_data"
 
@@ -37,6 +39,28 @@ def slim(entities: list[dict[str, object]]) -> None:
 def save(name: str, data: object) -> None:
     FIXTURES.mkdir(parents=True, exist_ok=True)
     (FIXTURES / f"{name}.json").write_text(json.dumps(data, separators=(",", ":"), sort_keys=True))
+
+
+def record_bridge_picks(client: httpx.Client) -> None:
+    """The Analyst's follow-up query (entities a bridge tag points to) for each preset pair: the strongest bridge of every
+    tag family in every domain, so whichever families and domain the planner picks has a recording. Needs the tag fixtures."""
+    for preset in PRESETS:
+        tags = [parse_tags(json.loads((FIXTURES / f"tags_{slug(b)}.json").read_text())) for b in (preset.acquirer, preset.target)]
+        tops = [b.id for family in ALLOWED_FAMILIES for b in bridges(tags[0], tags[1], {family})[:1]]
+        for tag_id in dict.fromkeys(tops):
+            for domain in DOMAINS:
+                name = bridge_picks_name(tag_id, domain)
+                if (FIXTURES / f"{name}.json").exists():
+                    continue
+                params = {"filter.type": f"urn:entity:{domain}", "signal.interests.tags": tag_id, "take": str(FOLLOW_UP_TAKE)}
+                try:
+                    data = get(client, "/v2/insights", params)
+                except httpx.HTTPError as exc:  # Qloo times out on tag-signalled place queries: no recording, fixture mode answers empty
+                    print(f"skipped {name}: {exc!r}")
+                    continue
+                if isinstance(data, dict):
+                    slim(data.get("results", {}).get("entities", []))
+                    save(name, data)
 
 
 def main() -> int:
@@ -82,6 +106,7 @@ def main() -> int:
             )
             if demo is not None:
                 save(f"demographics_{name}", demo)
+        record_bridge_picks(client)
     return 0
 
 

@@ -1,8 +1,9 @@
 """Four-agent diligence pipeline (LangGraph): Scout, Cartographer, Analyst, Partner.
 
 Scores, the verdict and the headline are deterministic and never depend on an LLM. An optional LLM (api/llm.py,
-local Ollama by default) does two things: the Analyst asks it whether to probe Qloo tags, and the Partner asks it
-to write the memo's rationale and risks. Every entity the LLM cites is checked against what Qloo returned; any
+local Ollama by default) does two things: the Analyst asks it whether to probe Qloo tags, which tag families to keep
+bridges from and whether to run one follow-up query in a domain, and the Partner asks it to write the memo's rationale
+and risks. The bridge potential (0-100) is computed from the kept bridges and is separate from BCI and culture clash. Every entity the LLM cites is checked against what Qloo returned; any
 unusable answer (LLM off, unreachable, bad JSON, unknown cite) falls back to the COLD_DOMAINS_TO_PROBE rule and
 the build_memo template, and the trace says which one decided.
 """
@@ -15,13 +16,13 @@ from collections.abc import Callable, Iterator
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict
 from functools import partial
-from typing import Annotated, Any, Protocol, TypedDict
+from typing import Annotated, Any, NamedTuple, Protocol, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 
 from api.llm import Llm, Recorded
-from api.qloo import DOMAINS, Demographics, Entity, QlooClient, QlooError, QlooParseError, Tag
-from api.scoring import BrandProfile, Bridge, Scores, bridges, score
+from api.qloo import DOMAINS, Affinity, Demographics, Entity, QlooClient, QlooError, QlooParseError, Tag
+from api.scoring import BrandProfile, Bridge, BridgePick, Scores, bridge_potential, bridges, score
 
 AGENTS = ("Scout", "Cartographer", "Analyst", "Partner")
 SIDES = ("acquirer", "target")
@@ -47,6 +48,8 @@ class State(TypedDict, total=False):
     profiles: dict[str, BrandProfile]
     scores: Scores
     bridges: list[Bridge]
+    bridge_picks: list[BridgePick]
+    bridge_potential: float
     probed_tags: bool
     memo: dict[str, Any]
     trace: Annotated[list[dict[str, Any]], operator.add]
@@ -115,6 +118,8 @@ def make_cartographer(client: QlooClient) -> Step:
 class TagSource(Protocol):
     def tags(self, entity_id: str) -> list[Tag]: ...
 
+    def tag_insights(self, tag_id: str, domain: str) -> list[Affinity]: ...
+
 
 class Rejected(Exception):
     """The LLM answered, but not with something usable."""
@@ -139,13 +144,39 @@ def _credit(who: dict[str, Any]) -> str:
     return f"recorded {who['model']}" if who.get("recorded") else str(who["model"])
 
 
+# Qloo tag families (the third segment of a tag id, urn:tag:<family>:...) worth bridging on; the ones that say nothing
+# about taste are TRIVIAL_TAGS in api/scoring.py. Taken from the families that occur in the recorded tag answers.
+ALLOWED_FAMILIES = (
+    "genre",
+    "lifestyle",
+    "emotional_tone",
+    "influencer_appeal",
+    "adjective",
+    "customer_segment",
+    "product_service",
+    "customer_identity",
+    "cultural_relevance",
+    "aesthetic_property",
+    "personal_style",
+    "industry",
+    "keyword",
+)
 PLAN_SYSTEM = (
     "You are the Analyst on an M&A taste-diligence team. You get the taste overlap between two consumer brands' audiences "
     "per domain (0 to 1), how many domains have some overlap (domains_with_overlap) and how many have none (cold_domains). "
     "Decide whether to spend two extra Qloo calls probing taste tags to look for bridging tastes between the audiences. "
-    "The reason must agree with those counts: do not call the overlap low when most domains have overlap, "
-    "and do not call it high when most domains have none. "
-    'Answer with JSON only: {"probe_tags": true or false, "reason": "one short sentence"}.'
+    "A probe is worth it whenever at least one domain has no overlap (cold_domains is 1 or more, listed in domains_without_overlap), "
+    "because a bridging taste shows where the audiences could still meet; skip it when every domain has some overlap. "
+    "If you probe, choose which tag families to keep bridges from, one to four of these (tag families are not domains): "
+    + ", ".join(ALLOWED_FAMILIES)
+    + ". When you probe, also ask for one follow-up query: entities of one domain that the strongest bridging tag points to, "
+    "so the memo can name cross-sell ideas where the audiences do not overlap yet. "
+    "Choose its domain from domains_without_overlap (the domains are: " + ", ".join(DOMAINS) + "), or null for no follow-up. "
+    "The reason must agree with the overlap counts: do not call the overlap low when most domains have overlap, "
+    "and do not call it high when most domains have none. When you probe a pair that mostly overlaps, "
+    "do not use the word overlap in the reason: name the domain instead, for example \"books share no taste, so look for a bridge\". "
+    'Answer with JSON only, for example {"probe_tags": true, "tag_families": ["genre", "lifestyle"], "follow_up_domain": "book", '
+    '"reason": "books share no taste, so look for a bridge"}. If probe_tags is false, tag_families is [] and follow_up_domain is null.'
 )
 LOW_OVERLAP = re.compile(
     r"\b(?:low|little|limited|minimal|weak|no)\s+(?:\w+\s+)?overlap|\boverlap\s+(?:is\s+|are\s+|looks\s+|seems\s+)?(?:low|limited|minimal|weak|absent)\b",
@@ -157,7 +188,14 @@ HIGH_OVERLAP = re.compile(
 )
 
 
-def _check_plan(raw: dict[str, Any], overlapping: int, domains: int) -> tuple[bool, str]:
+class Plan(NamedTuple):
+    probe: bool
+    families: tuple[str, ...]  # tag families to keep bridges from; () when not probing
+    follow_up: str | None  # a domain to run one follow-up query in, signalled by the top bridge tag
+    reason: str
+
+
+def _check_plan(raw: dict[str, Any], overlapping: int, domains: int) -> Plan:
     probe, reason = raw.get("probe_tags"), raw.get("reason")
     if not isinstance(probe, bool) or not isinstance(reason, str) or not reason.strip():
         raise Rejected("LLM plan was not {probe_tags: bool, reason: str}")
@@ -165,7 +203,14 @@ def _check_plan(raw: dict[str, Any], overlapping: int, domains: int) -> tuple[bo
         raise Rejected(f"LLM reason says overlap is low but {overlapping}/{domains} domains overlap")
     if overlapping * 2 < domains and HIGH_OVERLAP.search(reason):
         raise Rejected(f"LLM reason says overlap is high but only {overlapping}/{domains} domains overlap")
-    return probe, reason.strip()[:200]
+    if not probe:
+        return Plan(False, (), None, reason.strip()[:200])
+    families, follow_up = raw.get("tag_families"), raw.get("follow_up_domain")
+    if not isinstance(families, list) or not families or not all(isinstance(f, str) and f in ALLOWED_FAMILIES for f in families):
+        raise Rejected(f"LLM plan tag_families was not a non-empty list of {', '.join(ALLOWED_FAMILIES)}")
+    if follow_up is not None and (not isinstance(follow_up, str) or follow_up not in DOMAINS):
+        raise Rejected(f"LLM plan follow_up_domain {follow_up!r} is not one of {', '.join(DOMAINS)}")
+    return Plan(True, tuple(dict.fromkeys(families)), follow_up, reason.strip()[:200])
 
 
 def make_analyst(client: TagSource, llm: Llm | None = None) -> Step:
@@ -180,22 +225,39 @@ def make_analyst(client: TagSource, llm: Llm | None = None) -> Step:
             "domain_overlap": {d: round(v, 3) for d, v in overlap.items()},
             "domains_with_overlap": len(DOMAINS) - cold,
             "cold_domains": cold,
+            "domains_without_overlap": [d for d, v in overlap.items() if v == 0],
             "domains": len(DOMAINS),
         }
         plan, who = _ask(llm, PLAN_SYSTEM, json.dumps(facts), lambda raw: _check_plan(raw, len(DOMAINS) - cold, len(DOMAINS)), "rule")
-        probe, reason = plan if plan else (cold >= COLD_DOMAINS_TO_PROBE, "")
+        # the rule probes every non-trivial family and never follows up; only the LLM narrows the families and asks for a follow-up
+        probe, families, follow_up, reason = plan or Plan(cold >= COLD_DOMAINS_TO_PROBE, (), None, "")
         found: list[Bridge] = []
+        picks: list[BridgePick] = []
+        calls = 0
         if probe:
             entities = state["entities"]
             tags_a, tags_b = _parallel([partial(client.tags, entities[side].id) for side in SIDES])
-            found = bridges(tags_a, tags_b)
+            calls = 2
+            found = bridges(tags_a, tags_b, families if plan else None)
             n = f"{len(found)} bridging taste{'' if len(found) == 1 else 's'}" if found else "no bridging tastes found"
-            decision = f"Overlap 0 in {cold}/{len(DOMAINS)} domains → probed Qloo tags: {n}"
+            chosen = f" ({', '.join(families)})" if families else ""
+            decision = f"Overlap 0 in {cold}/{len(DOMAINS)} domains → probed Qloo tags{chosen}: {n}"
+            if follow_up and found:
+                top = found[0]
+                brands = {profiles[side].name.casefold() for side in SIDES}
+                calls += 1
+                try:
+                    picks = [BridgePick(a.name, follow_up, top.id, top.name) for a in client.tag_insights(top.id, follow_up) if a.name.casefold() not in brands]
+                    outcome = ", ".join(p.name for p in picks) or "nothing found"
+                except QlooError:
+                    outcome = "Qloo did not answer"  # the follow-up is optional: the bridges stand without it
+                decision += f" → follow-up in {PLURAL[follow_up]}: {outcome}"
         else:
             decision = f"Overlap in {len(DOMAINS) - cold}/{len(DOMAINS)} domains → no tag probe needed"
         if plan:
             decision += f" ({_credit(who)}: {reason})"
-        return {"scores": s, "bridges": found, "probed_tags": probe, "decision": decision, **who}, 2 if probe else 0
+        update = {"scores": s, "bridges": found, "bridge_picks": picks, "bridge_potential": bridge_potential(found), "probed_tags": probe, "decision": decision, **who}
+        return update, calls
 
     return analyst
 
@@ -230,7 +292,7 @@ def full_overlap(s: Scores) -> dict[str, float]:
 
 
 def build_memo(
-    acquirer: str, target: str, s: Scores, found: list[Bridge] | None = None, probed: bool = False
+    acquirer: str, target: str, s: Scores, found: list[Bridge] | None = None, probed: bool = False, picks: list[BridgePick] | None = None
 ) -> dict[str, Any]:
     """Deterministic deal memo: templated from the scores and the real Qloo entities behind them."""
     verdict = "Pass" if s.churn_risk == "high" else "Proceed" if s.bci >= PROCEED_BCI else "Proceed with conditions"
@@ -244,9 +306,11 @@ def build_memo(
     else:
         rationale.append("Qloo finds no shared taste entities in any domain.")
     if found:
-        rationale.append(f"Qloo tags bridge the two audiences: {', '.join(b.name for b in found[:NAMED])}.")
+        rationale.append(f"Qloo tags bridge the two audiences: {', '.join(b.name for b in found[:NAMED])} (bridge potential {bridge_potential(found):g}/100).")
     elif probed:
-        rationale.append("Qloo tags found no bridging tastes between the two audiences.")
+        rationale.append("Qloo tags found no bridging tastes between the two audiences (bridge potential 0/100).")
+    if found and picks:
+        rationale.append(f"Following the strongest bridge, {picks[0].tag_name}, Qloo suggests {PLURAL[picks[0].domain]}: {', '.join(p.name for p in picks[:NAMED])}.")
     rationale.append(f"Audience demographic distance is {s.demographic_distance:.2f} (0 means identical).")
 
     risks = [f"Culture clash is {s.culture_clash}%, so churn risk is {s.churn_risk}."]
@@ -274,7 +338,7 @@ MEMO_SYSTEM = (
     "and make it the only rationale item; never write that the audiences share or love anything. "
     "Kind 2, a clash (risks): the text names one to three entities from one list of top_clashing and says that the audience of the brand "
     "in the list's name (favoured_by_<brand>) favours them but the other brand's audience does not; cites lists exactly those. "
-    "Kind 3, the score: copy score_item from the facts verbatim as the last item of risks; it is the only item that quotes a score. "
+    "Kind 3, the score: copy score_item from the facts verbatim as the last item of risks, with its empty cites list (never put the word score_item in cites); it is the only item that quotes a score. "
     'Example of kind 1: {"cites": ["<name 1>", "<name 2>"], "text": "Both audiences share a taste for <name 1> and <name 2>."} '
     "with the placeholders replaced by names from allowed_cites or by the numbers and labels in the facts. "
     "Never leave a name in cites that the text does not contain. Do not write about bridges, ownership, history, products, "
@@ -315,7 +379,7 @@ def make_partner(llm: Llm | None = None) -> Step:
     def partner(state: State) -> tuple[dict[str, Any], int]:
         names = {side: state["profiles"][side].name for side in SIDES}
         s, found = state["scores"], state["bridges"]
-        template = build_memo(names["acquirer"], names["target"], s, found, state["probed_tags"])
+        template = build_memo(names["acquirer"], names["target"], s, found, state["probed_tags"], state["bridge_picks"])
         shared = [{"name": t.name, "domain": t.domain} for t in s.top_shared]
         clashing = {
             side: [{"name": t.name, "domain": t.domain} for t in c]
@@ -404,6 +468,8 @@ def _report(state: dict[str, Any], acquirer: str, target: str) -> dict[str, Any]
         },
         "demographics": {side: asdict(state["profiles"][side].demographics) for side in SIDES},
         "bridges": [asdict(b) for b in state["bridges"]],
+        "bridge_picks": [asdict(p) for p in state["bridge_picks"]],
+        "bridge_potential": state["bridge_potential"],
         "probed_tags": state["probed_tags"],
         "memo": state["memo"],
         "trace": state["trace"],

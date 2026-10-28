@@ -1,7 +1,7 @@
 """Pure scoring of two brands from their Qloo taste profiles (no I/O, no LLM)."""
 
 import math
-from collections.abc import Callable
+from collections.abc import Callable, Collection
 from dataclasses import dataclass
 
 from api.qloo import Affinity, Demographics, Tag
@@ -43,6 +43,14 @@ class Bridge:
     name: str
     affinity_acquirer: float
     affinity_target: float
+
+
+@dataclass(frozen=True)
+class BridgePick:
+    name: str  # an entity Qloo ties to the bridge tag
+    domain: str
+    tag_id: str
+    tag_name: str
 
 
 @dataclass(frozen=True)
@@ -132,12 +140,28 @@ TRIVIAL_TAGS = (
 )
 
 
-def bridges(a: list[Tag], b: list[Tag]) -> list[Bridge]:
-    """Tags both brands have, strongest common affinity first, minus trivial ones. Evidence only: never part of score()."""
+def tag_family(tag_id: str) -> str:
+    """The third URN segment of a Qloo tag id: urn:tag:genre:music:rock -> genre."""
+    return tag_id.split(":")[2] if tag_id.count(":") >= 2 else ""
+
+
+def bridges(a: list[Tag], b: list[Tag], families: Collection[str] | None = None) -> list[Bridge]:
+    """Tags both brands have, strongest common affinity first, minus trivial ones and (when given) outside `families`.
+    Evidence only: never part of score()."""
     theirs = {t.id: t.affinity for t in b}
-    found = [Bridge(t.id, t.name, t.affinity, theirs[t.id]) for t in a if t.id in theirs and not t.id.startswith(TRIVIAL_TAGS)]
+    found = [
+        Bridge(t.id, t.name, t.affinity, theirs[t.id])
+        for t in a
+        if t.id in theirs and not t.id.startswith(TRIVIAL_TAGS) and (families is None or tag_family(t.id) in families)
+    ]
     found.sort(key=lambda x: (-min(x.affinity_acquirer, x.affinity_target), x.name.casefold(), x.id))
     return found[:TOP_N]
+
+
+def bridge_potential(found: list[Bridge]) -> float:
+    """0..100: each bridge counts its weaker audience's affinity (clamped to 0..1) and TOP_N perfect bridges make 100.
+    Deterministic and separate from BCI and culture clash."""
+    return round(100 * sum(_clamp(min(b.affinity_acquirer, b.affinity_target), 1.0) for b in found[:TOP_N]) / TOP_N, 1)
 
 
 def _band(clash: float) -> str:

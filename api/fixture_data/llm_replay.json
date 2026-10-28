@@ -1,124 +1,19 @@
 {
- "0664dcc226f2cfb5f22a1bb5a77a870ce5db48774ca83c93160b3635123305ed": {
+ "0098d34b217379289ca049063bc271cd514908369295a8f9cb29fdb3626bb801": {
   "model": "qwen2.5:7b",
   "pair": "Nike + Under Armour",
   "reply": {
-   "rationale": [
-    {
-     "cites": [
-      "2pac",
-      "Ice Cube",
-      "Dr. Dre"
-     ],
-     "text": "Both audiences share a taste for 2pac, Ice Cube, and Dr. Dre."
-    }
-   ],
-   "risks": [
-    {
-     "cites": [
-      "Wiz Khalifa",
-      "DJ Khaled",
-      "Tyga"
-     ],
-     "text": "The audience of Nike favours Wiz Khalifa, DJ Khaled, and Tyga, but the audience of Under Armour does not."
-    },
-    {
-     "cites": [],
-     "text": "Culture clash is 44.5%, so churn risk is medium."
-    }
-   ]
-  },
-  "step": "memo"
- },
- "0d3ae08fe7a06974c5d8f7141ecd7441fde5c8db513d9ca41af18a033c0e6b58": {
-  "model": "qwen2.5:7b",
-  "pair": "Nike + Reebok",
-  "reply": {
-   "rationale": [
-    {
-     "cites": [
-      "Jay-Z",
-      "Snoop Dogg",
-      "50 Cent"
-     ],
-     "text": "Both audiences share a taste for Jay-Z, Snoop Dogg, and 50 Cent."
-    }
-   ],
-   "risks": [
-    {
-     "cites": [
-      "The Last Dance",
-      "Real Madrid CF",
-      "Meek Mill"
-     ],
-     "text": "The Nike audience favours The Last Dance, Real Madrid CF, and Meek Mill, but the Reebok audience does not."
-    },
-    {
-     "cites": [
-      "The Ultimate Fighter",
-      "The Challenge",
-      "American Ninja Warrior"
-     ],
-     "text": "The Reebok audience favours The Ultimate Fighter, The Challenge, and American Ninja Warrior, but the Nike audience does not."
-    },
-    {
-     "cites": [],
-     "text": "Culture clash is 53.4%, so churn risk is medium."
-    }
-   ]
-  },
-  "step": "memo"
- },
- "1437474fc1df45367b9c42e2cdcdbb53289a71d8cf96fbf03f4d927c5c18058e": {
-  "model": "qwen2.5:7b",
-  "pair": "Starbucks + Subway",
-  "reply": {
-   "probe_tags": false,
-   "reason": "Most domains have no overlap"
-  },
-  "step": "plan"
- },
- "1ad63046aff9c2ebc26ab1ca7f55e3de1289ef393ec620038775204105295768": {
-  "model": "qwen2.5:7b",
-  "pair": "Nike + New Balance",
-  "reply": {
-   "rationale": [
-    {
-     "cites": [
-      "Adidas",
-      "Puma",
-      "La Cantina"
-     ],
-     "text": "Both audiences share a taste for Adidas, Puma, and La Cantina."
-    }
-   ],
-   "risks": [
-    {
-     "cites": [
-      "Wiz Khalifa",
-      "Jay-Z",
-      "DJ Khaled"
-     ],
-     "text": "The audience of Nike favours Wiz Khalifa, Jay-Z, and DJ Khaled, but the audience of New Balance does not."
-    },
-    {
-     "cites": [],
-     "text": "Culture clash is 62.4%, so churn risk is medium."
-    }
-   ]
-  },
-  "step": "memo"
- },
- "238b9f2b18a8c713e0fefab4c173a5076a6b0a914d5e98a6a94993e9e6ada9ab": {
-  "model": "qwen2.5:7b",
-  "pair": "Nike + Lululemon",
-  "reply": {
+   "follow_up_domain": "place",
    "probe_tags": true,
-   "reason": "only one domain has overlap"
+   "reason": "place shares no taste, so look for a bridge",
+   "tag_families": [
+    "lifestyle",
+    "customer_segment"
+   ]
   },
   "step": "plan"
  },
- "242a7719066ef39f17712dd5aea2e229e2be8d80afeb27655f114e8db0346db2": {
+ "09b42922298b68e4c9dc2e03ec2e9d76669b8e0fa8fd066a47b72f28a13eb70a": {
   "model": "qwen2.5:7b",
   "pair": "Starbucks + McDonald's",
   "reply": {
@@ -157,104 +52,99 @@
   },
   "step": "memo"
  },
- "28b5455926c509e5e51f4e6f4a754c796397b51532a02d23706accf438c32898": {
+ "170e62de23d44edc45c4a2032c21fef3a166dca1fa59a7704e1343c2caf70764": {
   "model": "qwen2.5:7b",
-  "pair": "Starbucks + McDonald's",
-  "reply": {
-   "probe_tags": false,
-   "reason": "Most domains have some overlap"
-  },
-  "step": "plan"
- },
- "3aa179ed7febfbfca6faf98d9254437139b2f8d328d29ff63bacfa4cca4d4c51": {
-  "model": "qwen2.5:7b",
-  "pair": "Nike + Adidas",
-  "reply": {
-   "probe_tags": false,
-   "reason": "Most domains have overlap"
-  },
-  "step": "plan"
- },
- "3b3a1684336f49c69fa95cc78eaf623f231b60bab51f0c67e175ec7c26ef74d2": {
-  "model": "qwen2.5:7b",
-  "pair": "Patagonia + Arc'teryx",
+  "pair": "Starbucks + Subway",
   "reply": {
    "rationale": [
     {
      "cites": [
-      "The Dawn Wall",
-      "The North Face",
-      "Life Below Zero"
+      "McDonald's",
+      "New Girl",
+      "The Mindy Project"
      ],
-     "text": "Both audiences share a taste for The Dawn Wall, The North Face, and Life Below Zero."
+     "text": "Both audiences share a taste for McDonald's, New Girl, and The Mindy Project."
     }
    ],
    "risks": [
     {
      "cites": [
-      "The Head and the Heart",
+      "Kobe-shi",
+      "Gilmore Girls",
+      "Shinjuku"
+     ],
+     "text": "The audience of Starbucks favours Kobe-shi, Gilmore Girls, and Shinjuku, but the audience of Subway does not."
+    },
+    {
+     "cites": [
+      "Brooklyn Nine-Nine",
+      "Modern Family",
+      "Superstore"
+     ],
+     "text": "The audience of Subway favours Brooklyn Nine-Nine, Modern Family, and Superstore, but the audience of Starbucks does not."
+    },
+    {
+     "cites": [],
+     "text": "Culture clash is 65.6%, so churn risk is medium."
+    }
+   ]
+  },
+  "step": "memo"
+ },
+ "185c7aad024bc499b29a5abfe0ef731efac5bc90e75984ecf3cbc827684409ff": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + Smartwool",
+  "reply": {
+   "rationale": [
+    {
+     "cites": [
+      "Moab",
+      "Crested Butte",
+      "The Head and the Heart"
+     ],
+     "text": "Both audiences share a taste for Moab, Crested Butte, and The Head and the Heart."
+    }
+   ],
+   "risks": [
+    {
+     "cites": [
       "Lord Huron",
-      "Destination Truth"
+      "Destination Truth",
+      "Expedition Bigfoot"
      ],
-     "text": "Patagonia's audience favours The Head and the Heart, Lord Huron, and Destination Truth, but Arc'teryx's audience does not."
+     "text": "Patagonia's audience favours Lord Huron, Destination Truth, and Expedition Bigfoot, but Smartwool's audience does not."
     },
     {
      "cites": [
-      "The Island with Bear Grylls",
-      "Revelstoke",
-      "Alone Australia"
+      "Trampled by Turtles",
+      "The Wood Brothers",
+      "The Island with Bear Grylls"
      ],
-     "text": "Arc'teryx's audience favours The Island with Bear Grylls, Revelstoke, and Alone Australia, but Patagonia's audience does not."
+     "text": "Smartwool's audience favours Trampled by Turtles, The Wood Brothers, and The Island with Bear Grylls, but Patagonia's audience does not."
     },
     {
      "cites": [],
-     "text": "Culture clash is 39.9%, so churn risk is medium."
+     "text": "Culture clash is 35.4%, so churn risk is medium."
     }
    ]
   },
   "step": "memo"
  },
- "3bc8942b45c06448c21f0525b844981b78786b7de6401fe48d38d9332be60770": {
+ "1addd22c5a5cf08c47c2bc46f9c1e2dc04df430ecb2a9fd8f0763d39d4f156f1": {
   "model": "qwen2.5:7b",
-  "pair": "Nike + Gucci",
+  "pair": "Nike + New Balance",
   "reply": {
-   "rationale": [
-    {
-     "cites": [
-      "Drake&Orson",
-      "Tommy Hilfiger",
-      "John Wick: Chapter 2"
-     ],
-     "text": "Both audiences share a taste for Drake&Orson, Tommy Hilfiger, and John Wick: Chapter 2."
-    }
-   ],
-   "risks": [
-    {
-     "cites": [
-      "Wiz Khalifa",
-      "Jay-Z",
-      "DJ Khaled"
-     ],
-     "text": "The audience of Nike favours Wiz Khalifa, Jay-Z, and DJ Khaled, but the audience of Gucci does not."
-    },
-    {
-     "cites": [],
-     "text": "Culture clash is 70.6%, so churn risk is high."
-    }
+   "follow_up_domain": "destination",
+   "probe_tags": true,
+   "reason": "destination shares no taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
    ]
-  },
-  "step": "memo"
- },
- "3f9d2726b16d288d28221190b45664014a60e74573411a5958c1402d0bb877af": {
-  "model": "qwen2.5:7b",
-  "pair": "Nike + Under Armour",
-  "reply": {
-   "probe_tags": false,
-   "reason": "Most domains have some overlap"
   },
   "step": "plan"
  },
- "4231640018beb305b0f18462e9b00e56a612261be7a181b181832c8b9d04685a": {
+ "1f6442884815beb6dbcca74ca15073312c8495a0137533f74abe937ed7b28bf3": {
   "model": "qwen2.5:7b",
   "pair": "Nike + Lululemon",
   "reply": {
@@ -278,6 +168,14 @@
      "text": "The Nike audience favours Wiz Khalifa, Jay-Z, and DJ Khaled, but the Lululemon audience does not."
     },
     {
+     "cites": [
+      "The Bold Type",
+      "Lake Louise",
+      "Revelstoke"
+     ],
+     "text": "The Lululemon audience favours The Bold Type, Lake Louise, and Revelstoke, but the Nike audience does not."
+    },
+    {
      "cites": [],
      "text": "Culture clash is 74.1%, so churn risk is high."
     }
@@ -285,7 +183,32 @@
   },
   "step": "memo"
  },
- "45e2f9ebbd8fdb79081887565377ba392ba4d082e34caa5295fb2e2f40ea2f2d": {
+ "218fbdc25b7f257cfd2ed94f1a7d661878dc14e388a42608947e880a6e991b5e": {
+  "model": "qwen2.5:7b",
+  "pair": "Nike + Lululemon",
+  "reply": {
+   "follow_up_domain": "tv_show",
+   "probe_tags": true,
+   "reason": "tv_show has some taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
+   ]
+  },
+  "step": "plan"
+ },
+ "3286f2b89dccc8bba47b3865416bbdffa421d157c62985ce7f422218320d0785": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + Eddie Bauer",
+  "reply": {
+   "follow_up_domain": null,
+   "probe_tags": false,
+   "reason": "all domains show some taste overlap, no need to probe for bridging tastes",
+   "tag_families": []
+  },
+  "step": "plan"
+ },
+ "372ad9b990ccad07bf768c136287b31a855950f81501a4cd5bae390651feac9d": {
   "model": "qwen2.5:7b",
   "pair": "Patagonia + Eddie Bauer",
   "reply": {
@@ -324,16 +247,369 @@
   },
   "step": "memo"
  },
- "49c9baf02f121ac74a9db0257d097714c18d57a77101853b53843d159bb53ef0": {
+ "3738b4576bb1bac03b20f6795f7182be77ebd33f37fce0ade8c9d8947a375672": {
   "model": "qwen2.5:7b",
-  "pair": "Patagonia + Eddie Bauer",
+  "pair": "Nike + Reebok",
   "reply": {
-   "probe_tags": false,
-   "reason": "all domains have some overlap"
+   "rationale": [
+    {
+     "cites": [
+      "Jay-Z",
+      "Snoop Dogg",
+      "50 Cent"
+     ],
+     "text": "Both audiences share a taste for Jay-Z, Snoop Dogg, and 50 Cent."
+    }
+   ],
+   "risks": [
+    {
+     "cites": [
+      "The Last Dance",
+      "Real Madrid CF",
+      "Meek Mill"
+     ],
+     "text": "The Nike audience favours The Last Dance, Real Madrid CF, and Meek Mill, but the Reebok audience does not."
+    },
+    {
+     "cites": [
+      "The Ultimate Fighter",
+      "The Challenge",
+      "American Ninja Warrior"
+     ],
+     "text": "The Reebok audience favours The Ultimate Fighter, The Challenge, and American Ninja Warrior, but the Nike audience does not."
+    },
+    {
+     "cites": [],
+     "text": "Culture clash is 53.4%, so churn risk is medium."
+    }
+   ]
+  },
+  "step": "memo"
+ },
+ "3a99fc8003beadf01cddc9c82861a8ac112dafa1d75994f54dc937748c53a3d0": {
+  "model": "qwen2.5:7b",
+  "pair": "Starbucks + Domino's Pizza",
+  "reply": {
+   "rationale": [
+    {
+     "cites": [
+      "BTS",
+      "GOT7",
+      "Red Velvet"
+     ],
+     "text": "Both audiences share a taste for BTS, GOT7, and Red Velvet."
+    }
+   ],
+   "risks": [
+    {
+     "cites": [
+      "Kobe-shi",
+      "Gilmore Girls",
+      "Shinjuku"
+     ],
+     "text": "The audience of Starbucks favours Kobe-shi, Gilmore Girls, and Shinjuku, but the audience of Domino's Pizza does not."
+    },
+    {
+     "cites": [
+      "Parks and Recreation",
+      "Brooklyn Nine-Nine",
+      "The Office"
+     ],
+     "text": "The audience of Domino's Pizza favours Parks and Recreation, Brooklyn Nine-Nine, and The Office, but the audience of Starbucks does not."
+    },
+    {
+     "cites": [],
+     "text": "Culture clash is 60.8%, so churn risk is medium."
+    }
+   ]
+  },
+  "step": "memo"
+ },
+ "3d87e453d1f5f78b587542a1d8462a30edd241b81573aba2d747c7fdab12cccf": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + Gucci",
+  "reply": {
+   "follow_up_domain": "brand",
+   "probe_tags": true,
+   "reason": "books share no taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
+   ]
   },
   "step": "plan"
  },
- "547161e73f345e063fc80b42f53447ad301534eb79154fe48c51a0f04652cb82": {
+ "45d8adc7b8f9846a94a9d8b328ac76c55c5d6746b76cdb4e133924a78768781c": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + Filson",
+  "reply": {
+   "follow_up_domain": null,
+   "probe_tags": false,
+   "reason": "Most domains have overlap, no need to look for a bridge",
+   "tag_families": []
+  },
+  "step": "plan"
+ },
+ "506a48577f5adcbf5b05702fc56015bec29b8296f749551ef304aac71260ed5b": {
+  "model": "qwen2.5:7b",
+  "pair": "Nike + Adidas",
+  "reply": {
+   "rationale": [
+    {
+     "cites": [
+      "The Last Dance",
+      "50 Cent",
+      "Drake&Orson"
+     ],
+     "text": "Both audiences share a taste for The Last Dance, 50 Cent, and Drake&Orson."
+    }
+   ],
+   "risks": [
+    {
+     "cites": [
+      "Rick Ross",
+      "Juicy J",
+      "The Notorious B.I.G."
+     ],
+     "text": "The Nike audience favours Rick Ross, Juicy J, and The Notorious B.I.G., but the Adidas audience does not."
+    },
+    {
+     "cites": [
+      "Rio de Janeiro",
+      "Rihanna",
+      "Resende"
+     ],
+     "text": "The Adidas audience favours Rio de Janeiro, Rihanna, and Resende, but the Nike audience does not."
+    },
+    {
+     "cites": [],
+     "text": "Culture clash is 36.6%, so churn risk is medium."
+    }
+   ]
+  },
+  "step": "memo"
+ },
+ "5530958bfea9979db4c303899669ac5dbe77c8fd542076f66ca48ae08e37ffc0": {
+  "model": "qwen2.5:7b",
+  "pair": "Starbucks + Subway",
+  "reply": {
+   "follow_up_domain": "artist",
+   "probe_tags": true,
+   "reason": "artist share no taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
+   ]
+  },
+  "step": "plan"
+ },
+ "684ec5d979088b0502e0f88c0cf8404d3ba131162d6937e9ab8636a1492b7087": {
+  "model": "qwen2.5:7b",
+  "pair": "Starbucks + Dunkin' Donuts",
+  "reply": {
+   "follow_up_domain": "artist",
+   "probe_tags": true,
+   "reason": "artist share no taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
+   ]
+  },
+  "step": "plan"
+ },
+ "6cd43c2e7d9305fe71bd50983adaa2ec87e1043044e30c812651dd20ce1e62e0": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + Filson",
+  "reply": {
+   "rationale": [
+    {
+     "cites": [
+      "Moab",
+      "Crested Butte",
+      "Steamboat Springs"
+     ],
+     "text": "Both audiences share a taste for Moab, Crested Butte, and Steamboat Springs."
+    }
+   ],
+   "risks": [
+    {
+     "cites": [
+      "Expedition Unknown",
+      "Bahamas",
+      "The Head and the Heart"
+     ],
+     "text": "Patagonia's audience favours Expedition Unknown, Bahamas, and The Head and the Heart, but Filson's audience does not."
+    },
+    {
+     "cites": [
+      "Longmire",
+      "Sturgill Simpson",
+      "Jason Isbell"
+     ],
+     "text": "Filson's audience favours Longmire, Sturgill Simpson, and Jason Isbell, but Patagonia's audience does not."
+    },
+    {
+     "cites": [],
+     "text": "Culture clash is 54.5%, so churn risk is medium."
+    }
+   ]
+  },
+  "step": "memo"
+ },
+ "7dd1b79e6e3a521dea1fb04d00791a749eee0a073a0bbe69b9808eee46293e0d": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + Arc'teryx",
+  "reply": {
+   "follow_up_domain": null,
+   "probe_tags": false,
+   "reason": "Most domains have overlap, so no need to look for a bridge",
+   "tag_families": []
+  },
+  "step": "plan"
+ },
+ "82534aa13f867316d4758a9cb3c728155722569b395e0a5f8a7926357107d946": {
+  "model": "qwen2.5:7b",
+  "pair": "Starbucks + Taco Bell",
+  "reply": {
+   "follow_up_domain": "artist",
+   "probe_tags": true,
+   "reason": "artist share no taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
+   ]
+  },
+  "step": "plan"
+ },
+ "880f02e1f1e738728f04a17fd1e04147295644fe09a6940e452a2219918c71b5": {
+  "model": "qwen2.5:7b",
+  "pair": "Starbucks + Domino's Pizza",
+  "reply": {
+   "follow_up_domain": "place",
+   "probe_tags": true,
+   "reason": "place share no taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
+   ]
+  },
+  "step": "plan"
+ },
+ "89764d9a54aaf8239d30664e086079e041d39fd5ac5a8348271ef95932c6319f": {
+  "model": "qwen2.5:7b",
+  "pair": "Nike + Gucci",
+  "reply": {
+   "follow_up_domain": "tv_show",
+   "probe_tags": true,
+   "reason": "tv_show has no taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
+   ]
+  },
+  "step": "plan"
+ },
+ "92407e320e814f1f6230b9f33a21a2eb1e34e92b45d804f4b9d8bef9d8066605": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + Smartwool",
+  "reply": {
+   "follow_up_domain": null,
+   "probe_tags": false,
+   "reason": "most domains have overlap",
+   "tag_families": []
+  },
+  "step": "plan"
+ },
+ "a42eda3a14db556dcaf25e24e50dc699fb2952ad71e257b08158d6cb4786d441": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + The North Face",
+  "reply": {
+   "follow_up_domain": null,
+   "probe_tags": false,
+   "reason": "Most domains have overlap, no need to look for a bridge",
+   "tag_families": []
+  },
+  "step": "plan"
+ },
+ "a6e8b6b8e43f20c7478f6ae2fd236f054443ebf2b4050cfc7257a8716029087a": {
+  "model": "qwen2.5:7b",
+  "pair": "Starbucks + Dunkin' Donuts",
+  "reply": {
+   "rationale": [
+    {
+     "cites": [
+      "Crazy Ex-Girlfriend",
+      "Grace and Frankie",
+      "The Mindy Project"
+     ],
+     "text": "Both audiences share a taste for Crazy Ex-Girlfriend, Grace and Frankie, and The Mindy Project."
+    }
+   ],
+   "risks": [
+    {
+     "cites": [
+      "Kobe-shi",
+      "Gilmore Girls",
+      "Shinjuku"
+     ],
+     "text": "The audience of Starbucks favours Kobe-shi, Gilmore Girls, and Shinjuku, but the audience of Dunkin' Donuts does not."
+    },
+    {
+     "cites": [
+      "Parks and Recreation",
+      "Chili's",
+      "Baskin-Robbins"
+     ],
+     "text": "The audience of Dunkin' Donuts favours Parks and Recreation, Chili's, and Baskin-Robbins, but the audience of Starbucks does not."
+    },
+    {
+     "cites": [],
+     "text": "Culture clash is 67.7%, so churn risk is high."
+    }
+   ]
+  },
+  "step": "memo"
+ },
+ "acae2e3bed5e2cf0d6411f7a09d3eb3e6ea3d0337c4a400c1b571e8d4d9d6433": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + Arc'teryx",
+  "reply": {
+   "rationale": [
+    {
+     "cites": [
+      "The Dawn Wall",
+      "The North Face",
+      "Life Below Zero"
+     ],
+     "text": "Both audiences share a taste for The Dawn Wall, The North Face, and Life Below Zero."
+    }
+   ],
+   "risks": [
+    {
+     "cites": [
+      "The Head and the Heart",
+      "Lord Huron",
+      "Destination Truth"
+     ],
+     "text": "Patagonia's audience favours The Head and the Heart, Lord Huron, and Destination Truth, but Arc'teryx's audience does not."
+    },
+    {
+     "cites": [
+      "The Island with Bear Grylls",
+      "Revelstoke",
+      "Alone Australia"
+     ],
+     "text": "Arc'teryx's audience favours The Island with Bear Grylls, Revelstoke, and Alone Australia, but Patagonia's audience does not."
+    },
+    {
+     "cites": [],
+     "text": "Culture clash is 39.9%, so churn risk is medium."
+    }
+   ]
+  },
+  "step": "memo"
+ },
+ "d5f4db691967d489ac9f3d49e2511237249ad220d30f2fb6b89504e45a20c956": {
   "model": "qwen2.5:7b",
   "pair": "Patagonia + The North Face",
   "reply": {
@@ -372,160 +648,113 @@
   },
   "step": "memo"
  },
- "5e8bd3b7642550b6bbd52ebc8b0d23196c9f355f3465ecbd51b437345f05ca48": {
+ "ddc6b8220c9ac19b8ef22bda41d3c9dffe32744dac70ca207b285356338468d2": {
   "model": "qwen2.5:7b",
-  "pair": "Starbucks + Dunkin' Donuts",
+  "pair": "Starbucks + McDonald's",
+  "reply": {
+   "follow_up_domain": "place",
+   "probe_tags": true,
+   "reason": "place share no taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
+   ]
+  },
+  "step": "plan"
+ },
+ "dedb23ba09bedfeba192149e30f275d225e1ba36136daf1423fa5ee8248ae3a5": {
+  "model": "qwen2.5:7b",
+  "pair": "Nike + New Balance",
   "reply": {
    "rationale": [
     {
      "cites": [
-      "Crazy Ex-Girlfriend",
-      "Grace and Frankie",
-      "The Mindy Project"
+      "Adidas",
+      "Puma",
+      "La Cantina"
      ],
-     "text": "Both audiences share a taste for Crazy Ex-Girlfriend, Grace and Frankie, and The Mindy Project."
+     "text": "Both audiences share a taste for Adidas, Puma, and La Cantina."
     }
    ],
    "risks": [
     {
      "cites": [
-      "Kobe-shi",
-      "Gilmore Girls",
-      "Shinjuku"
+      "Wiz Khalifa",
+      "Jay-Z",
+      "DJ Khaled"
      ],
-     "text": "The Starbucks audience favours Kobe-shi, Gilmore Girls, and Shinjuku, but the Dunkin' Donuts audience does not."
+     "text": "The audience of Nike favours Wiz Khalifa, Jay-Z, and DJ Khaled, but the audience of New Balance does not."
     },
     {
      "cites": [
-      "Parks and Recreation",
-      "Chili's",
-      "Baskin-Robbins"
+      "Billions",
+      "Umbro",
+      "The Girlfriend Experience"
      ],
-     "text": "The Dunkin' Donuts audience favours Parks and Recreation, Chili's, and Baskin-Robbins, but the Starbucks audience does not."
+     "text": "The audience of New Balance favours Billions, Umbro, and The Girlfriend Experience, but the audience of Nike does not."
     },
     {
      "cites": [],
-     "text": "Culture clash is 67.7%, so churn risk is high."
+     "text": "Culture clash is 62.4%, so churn risk is medium."
     }
    ]
   },
   "step": "memo"
  },
- "68a8ff10b20e3d1c99d295e4a22edbd4f4cde1d601717b29f0eca75c012f922a": {
-  "model": "qwen2.5:7b",
-  "pair": "Patagonia + Gucci",
-  "reply": {
-   "probe_tags": true,
-   "reason": "no overlap in any domain"
-  },
-  "step": "plan"
- },
- "6c16e861da9cf46454a66e8377ddd5404defe6b1c87c2a02f8b4f9884a400808": {
-  "model": "qwen2.5:7b",
-  "pair": "Patagonia + Arc'teryx",
-  "reply": {
-   "probe_tags": false,
-   "reason": "all domains have some overlap"
-  },
-  "step": "plan"
- },
- "7a4f698c9151127f17a67a2ac367c83b6d0ac35b9309d184d986663f3bc91f7b": {
-  "model": "qwen2.5:7b",
-  "pair": "Patagonia + Filson",
-  "reply": {
-   "probe_tags": false,
-   "reason": "all domains have overlap"
-  },
-  "step": "plan"
- },
- "7f94be6b77ef95ac95ffac72a80d08fb28ced50e9d25d758a64368e4cbd69ae4": {
+ "e01b24b3c002f32eddfe74c82d42f953ff1f293a7f65f740bb64989b00cf7b2a": {
   "model": "qwen2.5:7b",
   "pair": "Nike + Gucci",
   "reply": {
-   "probe_tags": false,
-   "reason": "most domains have no overlap"
-  },
-  "step": "plan"
- },
- "86bbc484eeaad11ee240b8c2f78bc6a04bab12e3b8965a314753db289e78822e": {
-  "model": "qwen2.5:7b",
-  "pair": "Starbucks + Taco Bell",
-  "reply": {
-   "probe_tags": false,
-   "reason": "overlap is low and most domains have none"
-  },
-  "step": "plan"
- },
- "8977617ea87ce333747d56f4c21c413c305cfca2516c34028773de7d5f0c0b4b": {
-  "model": "qwen2.5:7b",
-  "pair": "Patagonia + Gucci",
-  "reply": {
    "rationale": [
     {
      "cites": [
-      "Patagonia",
-      "Gucci"
+      "Drake&Orson",
+      "Tommy Hilfiger",
+      "John Wick: Chapter 2"
      ],
-     "text": "Patagonia and Gucci audiences share no tastes (BCI 24.3)."
+     "text": "Both audiences share a taste for Drake&Orson, Tommy Hilfiger, and John Wick: Chapter 2."
     }
    ],
    "risks": [
     {
      "cites": [
-      "Patagonia",
-      "Gucci"
+      "Wiz Khalifa",
+      "Jay-Z",
+      "DJ Khaled"
      ],
-     "text": "Patagonia's audience favours Moab, Expedition Unknown, and Crested Butte, while Gucci's audience prefers Louis Vuitton, Versace, and Emily in Paris."
+     "text": "The audience of Nike favours Wiz Khalifa, Jay-Z, and DJ Khaled, but the audience of Gucci does not."
+    },
+    {
+     "cites": [
+      "Louis Vuitton",
+      "Versace",
+      "Emily in Paris"
+     ],
+     "text": "The audience of Gucci favours Louis Vuitton, Versace, and Emily in Paris, but the audience of Nike does not."
     },
     {
      "cites": [],
-     "text": "Culture clash is 75.7%, so churn risk is high."
+     "text": "Culture clash is 70.6%, so churn risk is high."
     }
    ]
   },
   "step": "memo"
  },
- "8fb0fdb249e959c1f36d30a2e7befcc721c1292f62e2c2e38bcb65be003551c9": {
-  "model": "qwen2.5:7b",
-  "pair": "Nike + Adidas",
-  "reply": {
-   "rationale": [
-    {
-     "cites": [
-      "The Last Dance",
-      "50 Cent",
-      "Drake&Orson"
-     ],
-     "text": "Both audiences share a taste for The Last Dance, 50 Cent, and Drake&Orson."
-    }
-   ],
-   "risks": [
-    {
-     "cites": [
-      "Rick Ross",
-      "Juicy J",
-      "The Notorious B.I.G."
-     ],
-     "text": "The Nike audience favours Rick Ross, Juicy J, and The Notorious B.I.G., while the Adidas audience does not."
-    },
-    {
-     "cites": [],
-     "text": "Culture clash is 36.6%, so churn risk is medium."
-    }
-   ]
-  },
-  "step": "memo"
- },
- "94c50737599d737395bcea0e018a302ba6641390cb58386660323d2f2136b9f9": {
+ "e41584e0881e507b448e9bb69fe245f089e90b993a727db65efa09ee944521b1": {
   "model": "qwen2.5:7b",
   "pair": "Nike + Reebok",
   "reply": {
-   "probe_tags": false,
-   "reason": "Most domains have some overlap"
+   "follow_up_domain": "place",
+   "probe_tags": true,
+   "reason": "place shares no taste, so look for a bridge",
+   "tag_families": [
+    "genre",
+    "lifestyle"
+   ]
   },
   "step": "plan"
  },
- "bd58748dbc0dc3b7543a991891d2dce838a176df5f704e841b8491f323fb9e7c": {
+ "e9655b5732613efc1a72c31d5840d47227f01660da1e44526f91c7dfe6a7a0f9": {
   "model": "qwen2.5:7b",
   "pair": "Starbucks + Taco Bell",
   "reply": {
@@ -564,56 +793,98 @@
   },
   "step": "memo"
  },
- "bf970515ef82d88519e954734838ae3c9f0ad1d692805e7b246ddb79422a8a16": {
+ "e9c1b93a8d3fc3a16054f27d8c17d48a38ecfebd8a224a81d1930867a5f7d06c": {
   "model": "qwen2.5:7b",
-  "pair": "Patagonia + Smartwool",
+  "pair": "Nike + Adidas",
   "reply": {
-   "probe_tags": false,
-   "reason": "all domains have overlap"
+   "follow_up_domain": "destination",
+   "probe_tags": true,
+   "reason": "destination shares no taste, so look for a bridge",
+   "tag_families": [
+    "lifestyle",
+    "customer_segment"
+   ]
   },
   "step": "plan"
  },
- "bfb54751c0ea55d9685df515cdbf89c507544041e4231fed27b2450b71c36604": {
+ "ede2847488f714877db9ea6e5dceef9c40426b7717895a08e94333b238f37afc": {
   "model": "qwen2.5:7b",
-  "pair": "Starbucks + Dunkin' Donuts",
-  "reply": {
-   "probe_tags": false,
-   "reason": "Most domains have no overlap"
-  },
-  "step": "plan"
- },
- "cb7a111206500030883889bca600b52444783fb0b8d962530c04046c5c130405": {
-  "model": "qwen2.5:7b",
-  "pair": "Starbucks + Domino's Pizza",
+  "pair": "Nike + Under Armour",
   "reply": {
    "rationale": [
     {
      "cites": [
-      "BTS",
-      "GOT7",
-      "Red Velvet"
+      "2pac",
+      "Ice Cube",
+      "Dr. Dre"
      ],
-     "text": "Both audiences share a taste for BTS, GOT7, and Red Velvet."
+     "text": "Both audiences share a taste for 2pac, Ice Cube, and Dr. Dre."
     }
    ],
    "risks": [
     {
      "cites": [
-      "Kobe-shi",
-      "Gilmore Girls",
-      "Shinjuku"
+      "Wiz Khalifa",
+      "DJ Khaled",
+      "Tyga"
      ],
-     "text": "The audience of Starbucks favours Kobe-shi, Gilmore Girls, and Shinjuku, but the audience of Domino's Pizza does not."
+     "text": "The audience of Nike favours Wiz Khalifa, DJ Khaled, and Tyga, but the audience of Under Armour does not."
+    },
+    {
+     "cites": [
+      "Last Chance U",
+      "Warren G",
+      "N.W.A"
+     ],
+     "text": "The audience of Under Armour favours Last Chance U, Warren G, and N.W.A, but the audience of Nike does not."
     },
     {
      "cites": [],
-     "text": "Culture clash is 60.8%, so churn risk is medium."
+     "text": "Culture clash is 44.5%, so churn risk is medium."
     }
    ]
   },
   "step": "memo"
  },
- "d474549388a09f692b1694812ee4e0b075b87332791f80764c82ebdba17fb0cd": {
+ "f594f0eacafadf5092ca78ef75f2d69b768dc8ec3ec4973fd41291daa8cefcb6": {
+  "model": "qwen2.5:7b",
+  "pair": "Patagonia + Gucci",
+  "reply": {
+   "rationale": [
+    {
+     "cites": [
+      "Patagonia",
+      "Gucci"
+     ],
+     "text": "Patagonia and Gucci audiences share no tastes (BCI 24.3)."
+    }
+   ],
+   "risks": [
+    {
+     "cites": [
+      "Gucci",
+      "Louis Vuitton",
+      "Versace"
+     ],
+     "text": "Gucci's audience favours Louis Vuitton and Versace, but Patagonia's audience does not."
+    },
+    {
+     "cites": [
+      "Patagonia",
+      "Expedition Unknown",
+      "Crested Butte"
+     ],
+     "text": "Patagonia's audience favours Expedition Unknown and Crested Butte, but Gucci's audience does not."
+    },
+    {
+     "cites": [],
+     "text": "Culture clash is 75.7%, so churn risk is high."
+    }
+   ]
+  },
+  "step": "memo"
+ },
+ "fbef991195f5baa9e8b9db964f94988cc82f6d0f91f8e3ad126ecf95cddfe6eb": {
   "model": "qwen2.5:7b",
   "pair": "Nike + Puma",
   "reply": {
@@ -637,6 +908,14 @@
      "text": "The audience for Nike favours Air Jordan Product Line, Snoop Dogg, and The Game, but Puma's audience does not."
     },
     {
+     "cites": [
+      "All or Nothing: Manchester City",
+      "All or Nothing: Tottenham Hotspur",
+      "Levi Strauss & Co."
+     ],
+     "text": "Puma's audience favours All or Nothing: Manchester City, All or Nothing: Tottenham Hotspur, and Levi Strauss & Co., but Nike's audience does not."
+    },
+    {
      "cites": [],
      "text": "Culture clash is 43.7%, so churn risk is medium."
     }
@@ -644,109 +923,14 @@
   },
   "step": "memo"
  },
- "dbaccad2113ab9c24ad4ca97cca0579e7180fee8390dfbcf29e58f2282041517": {
+ "fc5c1679fbb2180f1b2ca39a63f4fefd5bc79620c8641ba3b203e527b8069083": {
   "model": "qwen2.5:7b",
   "pair": "Nike + Puma",
   "reply": {
+   "follow_up_domain": null,
    "probe_tags": false,
-   "reason": "all domains have overlap"
-  },
-  "step": "plan"
- },
- "eb0e112bc722bdadb21edb9f6a7d1a37b2f4a24808ee8f15285653a90ee43714": {
-  "model": "qwen2.5:7b",
-  "pair": "Patagonia + Smartwool",
-  "reply": {
-   "rationale": [
-    {
-     "cites": [
-      "Moab",
-      "Crested Butte",
-      "The Head and the Heart"
-     ],
-     "text": "Both audiences share a taste for Moab, Crested Butte, and The Head and the Heart."
-    }
-   ],
-   "risks": [
-    {
-     "cites": [
-      "Lord Huron",
-      "Destination Truth",
-      "Expedition Bigfoot"
-     ],
-     "text": "Patagonia's audience favors Lord Huron, Destination Truth, and Expedition Bigfoot, but Smartwool's audience does not."
-    },
-    {
-     "cites": [
-      "Trampled by Turtles",
-      "The Wood Brothers",
-      "The Island with Bear Grylls"
-     ],
-     "text": "Smartwool's audience favors Trampled by Turtles, The Wood Brothers, and The Island with Bear Grylls, but Patagonia's audience does not."
-    },
-    {
-     "cites": [],
-     "text": "Culture clash is 35.4%, so churn risk is medium."
-    }
-   ]
-  },
-  "step": "memo"
- },
- "f48e979837f170c63bb772b99ca23e235398da80b76de4636f8ca371c13f6865": {
-  "model": "qwen2.5:7b",
-  "pair": "Starbucks + Subway",
-  "reply": {
-   "rationale": [
-    {
-     "cites": [
-      "McDonald's",
-      "New Girl",
-      "The Mindy Project"
-     ],
-     "text": "Both audiences share a taste for McDonald's, New Girl, and The Mindy Project."
-    }
-   ],
-   "risks": [
-    {
-     "cites": [
-      "Kobe-shi",
-      "Gilmore Girls",
-      "Shinjuku"
-     ],
-     "text": "Starbucks' audience favours Kobe-shi, Gilmore Girls, and Shinjuku, but Subway's audience does not."
-    },
-    {
-     "cites": [],
-     "text": "Culture clash is 65.6%, so churn risk is medium."
-    }
-   ]
-  },
-  "step": "memo"
- },
- "f55a249a0a3d112e0739c0a5ce124a7822ee51f470202422bd65df1c050acf36": {
-  "model": "qwen2.5:7b",
-  "pair": "Patagonia + The North Face",
-  "reply": {
-   "probe_tags": false,
-   "reason": "all domains have overlap"
-  },
-  "step": "plan"
- },
- "fb4579c54326221942d94884c5be7fcced3579bc466a0474b09160ccf976969f": {
-  "model": "qwen2.5:7b",
-  "pair": "Nike + New Balance",
-  "reply": {
-   "probe_tags": false,
-   "reason": "Most domains have some overlap"
-  },
-  "step": "plan"
- },
- "fe1590012818f504ccf15ec508328dfe73a2b3093d2fd882c3c20f461bb3a9a0": {
-  "model": "qwen2.5:7b",
-  "pair": "Starbucks + Domino's Pizza",
-  "reply": {
-   "probe_tags": false,
-   "reason": "Most domains show overlap, indicating a significant taste alignment."
+   "reason": "Most domains show overlap, no need to look for a bridge",
+   "tag_families": []
   },
   "step": "plan"
  }

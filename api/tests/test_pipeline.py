@@ -61,14 +61,14 @@ def test_full_report(api: TestClient, calls: list[httpx.Request]) -> None:
     for side in ("acquirer", "target"):
         assert report["demographics"][side]["age"] and report["demographics"][side]["gender"]
     assert report["memo"]["verdict"] and report["memo"]["rationale"] and report["memo"]["risks"]
-    assert len(calls) == 18  # 2 searches, 14 insights, 2 demographics
+    assert len(calls) == 21  # 2 searches, 14 insights, 2 demographics; the recorded plan adds 2 tag calls and 1 follow-up
 
 
 def test_trace_has_four_agents_in_order(api: TestClient) -> None:
     trace = diligence(api, "Nike", "Adidas")["trace"]
     assert [t["agent"] for t in trace] == AGENTS
     assert all(t["status"] == "ok" and t["ms"] >= 0 for t in trace)
-    assert [t["qloo_calls"] for t in trace] == [2, 16, 0, 0]
+    assert [t["qloo_calls"] for t in trace] == [2, 16, 3, 0]
 
 
 def test_missing_domain_counts_as_zero(api: TestClient, tmp_path: Path) -> None:

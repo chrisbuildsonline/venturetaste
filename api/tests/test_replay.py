@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -6,7 +7,7 @@ import pytest
 
 from api import llm
 from api.fixtures import fixture_handler, make_client
-from api.pipeline import MEMO_SYSTEM, PLAN_SYSTEM, Rejected, _check_memo, _check_plan, run_diligence
+from api.pipeline import MEMO_SYSTEM, PLAN_SYSTEM, Plan, Rejected, _check_memo, _check_plan, run_diligence
 from api.presets import PRESETS
 from api.qloo import QlooClient
 
@@ -130,6 +131,16 @@ def test_every_preset_replays_recorded_for_both_agents(tmp_path: Path, preset: A
     assert report["memo"]["author"] == f"recorded {llm.DEFAULT_MODEL}"
 
 
+def test_the_nike_adidas_recording_probes_and_follows_up_with_no_llm_and_no_key(tmp_path: Path) -> None:
+    """The demo shows the widened plan offline: chosen families, a scored bridge list and the follow-up's picks."""
+    report = run_diligence(client(tmp_path), "Nike", "Adidas", llm=llm.chat_json_or_replay)
+    analyst = trace_of(report, "Analyst")
+    assert report["probed_tags"] is True and analyst["qloo_calls"] == 3 and analyst["recorded"] is True
+    assert re.search(r"probed Qloo tags \([a-z_, ]+\): \d bridging tastes? → follow-up in \w+: ", analyst["decision"]), analyst["decision"]
+    assert report["bridges"] and 0 < report["bridge_potential"] <= 100
+    assert report["bridge_picks"] and {p["tag_id"] for p in report["bridge_picks"]} == {report["bridges"][0]["id"]}
+
+
 def test_the_docker_image_ships_the_replay_file() -> None:
     root = llm.REPLAY_FILE.parents[2]
     ignored = (root / ".dockerignore").read_text().split()
@@ -169,7 +180,7 @@ def test_a_reason_that_contradicts_the_overlap_counts_is_rejected(reason: str, o
     ],
 )
 def test_a_reason_that_agrees_with_the_counts_is_kept(reason: str, overlapping: int) -> None:
-    assert _check_plan({"probe_tags": False, "reason": reason}, overlapping, 7) == (False, reason)
+    assert _check_plan({"probe_tags": False, "reason": reason}, overlapping, 7) == Plan(False, (), None, reason)
 
 
 def test_a_memo_claiming_shared_tastes_is_rejected_when_the_audiences_share_none() -> None:

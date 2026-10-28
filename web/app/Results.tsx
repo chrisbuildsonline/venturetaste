@@ -198,6 +198,15 @@ export default function Results({ data }: { data: Diligence }) {
               No shared taste in any domain: the audiences don&apos;t overlap.
             </p>
           )}
+          {data.probed_tags && (
+            <div data-testid="bridge-potential" className="mt-3 rounded-lg border border-indigo-400/30 bg-indigo-400/5 px-3 py-2">
+              <p className="flex items-baseline justify-between gap-3 text-sm">
+                <span className="font-medium text-indigo-200">Bridge potential</span>
+                <span className="font-semibold tabular-nums text-white"><span data-testid="bridge-potential-value">{data.bridge_potential}</span> / 100</span>
+              </p>
+              <p className="mt-1 text-xs text-zinc-400">How strongly the Analyst&apos;s tag probe found tastes both audiences share. BCI and culture clash are unchanged.</p>
+            </div>
+          )}
           {data.bridges.length > 0 && (
             <div data-testid="bridges" className="mt-3 rounded-lg border border-indigo-400/30 bg-indigo-400/5 px-3 py-2">
               <h3 className="text-sm font-medium text-indigo-200">Bridging tastes</h3>
@@ -209,7 +218,18 @@ export default function Results({ data }: { data: Diligence }) {
                   </li>
                 ))}
               </ul>
-              <p className="mt-2 text-xs text-zinc-400">Qloo tags both audiences share, with {nameA} / {nameB} affinity. Evidence only: scores are unchanged.</p>
+              <p className="mt-2 text-xs text-zinc-400">Qloo tags both audiences share, with {nameA} / {nameB} affinity.</p>
+            </div>
+          )}
+          {data.bridge_picks.length > 0 && (
+            <div data-testid="bridge-picks" className="mt-3 rounded-lg border border-indigo-400/30 bg-indigo-400/5 px-3 py-2">
+              <h3 className="text-sm font-medium text-indigo-200">Follow-up: {label(data.bridge_picks[0].domain)} via {data.bridge_picks[0].tag_name}</h3>
+              <ul className="mt-2 space-y-1.5">
+                {data.bridge_picks.map((p) => (
+                  <li key={p.name} className="min-w-0 break-words text-sm text-zinc-100">{p.name}</li>
+                ))}
+              </ul>
+              <p className="mt-2 text-xs text-zinc-400">The Analyst&apos;s one follow-up query: entities Qloo ties to the strongest bridging tag.</p>
             </div>
           )}
           <p className="mt-3 text-xs text-zinc-400">Weighted Jaccard overlap of what each audience loves: {Object.entries(data.domain_overlap).map(([d, v]) => `${label(d)} ${pct(v)}`).join(" · ")}</p>

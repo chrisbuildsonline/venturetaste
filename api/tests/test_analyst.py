@@ -9,7 +9,7 @@ from api.fixtures import fixture_handler, make_client
 from api.main import app, get_qloo
 from api.pipeline import COLD_DOMAINS_TO_PROBE, State, build_memo, make_analyst
 from api.qloo import DOMAINS, Affinity, Demographics, Entity, Tag
-from api.scoring import BrandProfile, score
+from api.scoring import BrandProfile, bridge_potential, score
 
 DEMO = Demographics(age={"25_to_29": 0.2}, gender={"female": 0.1})
 
@@ -22,6 +22,9 @@ class FakeQloo:
     def tags(self, entity_id: str) -> list[Tag]:
         self.tag_calls.append(entity_id)
         return self.tags_by_entity[entity_id]
+
+    def tag_insights(self, tag_id: str, domain: str) -> list[Affinity]:
+        raise AssertionError("the rule never runs a follow-up query")
 
 
 def state_with_cold(cold: int) -> State:
@@ -112,7 +115,7 @@ def test_memo_names_bridges() -> None:
     s = score(state["profiles"]["acquirer"], state["profiles"]["target"])
     bridges = make_analyst(fake())(state)[0]["bridges"]
     memo = build_memo("A", "T", s, bridges, True)
-    assert "Qloo tags bridge the two audiences: t3, t4, t2." in memo["rationale"]
+    assert f"Qloo tags bridge the two audiences: t3, t4, t2 (bridge potential {bridge_potential(bridges):g}/100)." in memo["rationale"]
     assert memo["verdict"] == build_memo("A", "T", s)["verdict"]
 
 
@@ -120,7 +123,7 @@ def test_memo_is_honest_when_the_probe_found_nothing() -> None:
     state = state_with_cold(7)
     s = score(state["profiles"]["acquirer"], state["profiles"]["target"])
     rationale = build_memo("A", "T", s, [], True)["rationale"]
-    assert "Qloo tags found no bridging tastes between the two audiences." in rationale
+    assert "Qloo tags found no bridging tastes between the two audiences (bridge potential 0/100)." in rationale
     assert not any("bridge" in line for line in build_memo("A", "T", s)["rationale"])
 
 
@@ -146,14 +149,15 @@ def test_report_for_a_cold_preset_carries_the_probe(api: Any) -> None:
     assert isinstance(report["bridges"], list)
     assert set(report["bridges"][0]) == {"id", "name", "affinity_acquirer", "affinity_target"} if report["bridges"] else True
     assert analyst_of(report)["qloo_calls"] == 2
-    assert analyst_of(report)["decision"].startswith("Overlap 0 in 7/7 domains → probed Qloo tags: ")
+    assert analyst_of(report)["decision"].startswith("Overlap 0 in 7/7 domains → probed Qloo tags (genre, lifestyle): ")
+    assert report["bridge_potential"] == 0 and report["bridge_picks"] == []
     assert len(calls) == 20
 
 
 def test_report_for_a_warm_preset_has_no_probe(api: Any) -> None:
     client, calls = api
-    report = client.post("/api/diligence", json={"acquirer": "Nike", "target": "Adidas"}).json()
-    assert report["probed_tags"] is False and report["bridges"] == []
+    report = client.post("/api/diligence", json={"acquirer": "Patagonia", "target": "The North Face"}).json()
+    assert report["probed_tags"] is False and report["bridges"] == [] and report["bridge_picks"] == [] and report["bridge_potential"] == 0
     assert analyst_of(report)["qloo_calls"] == 0
     assert "no tag probe needed" in analyst_of(report)["decision"]
     assert len(calls) == 18

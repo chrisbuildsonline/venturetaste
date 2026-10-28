@@ -43,7 +43,7 @@ def names(report: dict[str, Any]) -> list[str]:
 
 
 def test_planner_says_probe_so_the_probe_runs_on_a_warm_pair(tmp_path: Path) -> None:
-    llm_ = fake({"probe_tags": True, "reason": "audiences look far apart"}, None)
+    llm_ = fake({"probe_tags": True, "tag_families": ["genre"], "follow_up_domain": None, "reason": "audiences look far apart"}, None)
     report = run_diligence(client(tmp_path), "Nike", "Adidas", llm=llm_)
     analyst = trace_of(report, "Analyst")
     assert report["probed_tags"] is True and analyst["qloo_calls"] == 2
@@ -66,7 +66,7 @@ def test_planner_gets_the_overlap_numbers_and_brand_names(tmp_path: Path) -> Non
     assert "Patagonia" in prompt and "Gucci" in prompt and "brand" in prompt and "cold" in prompt
 
 
-@pytest.mark.parametrize("garbage", [{}, {"probe_tags": "yes", "reason": "x"}, {"probe_tags": True}, {"probe_tags": True, "reason": ""}])
+@pytest.mark.parametrize("garbage", [{}, {"probe_tags": "yes", "reason": "x"}, {"probe_tags": True}, {"probe_tags": True, "reason": ""}, {"probe_tags": True, "reason": "x"}, {"probe_tags": True, "tag_families": ["nope"], "reason": "x"}])
 def test_garbage_plan_falls_back_to_the_rule(tmp_path: Path, garbage: dict[str, Any]) -> None:
     report = run_diligence(client(tmp_path), "Patagonia", "Gucci", llm=fake(garbage, None))
     analyst = trace_of(report, "Analyst")
@@ -83,7 +83,7 @@ def test_unreachable_llm_falls_back_to_the_rule(tmp_path: Path) -> None:
 
 def test_the_planner_never_changes_the_scores(tmp_path: Path) -> None:
     plain = run_diligence(client(tmp_path), "Nike", "Adidas")
-    planned = run_diligence(client(tmp_path), "Nike", "Adidas", llm=fake({"probe_tags": True, "reason": "x"}, None))
+    planned = run_diligence(client(tmp_path), "Nike", "Adidas", llm=fake({"probe_tags": True, "tag_families": ["genre"], "follow_up_domain": "movie", "reason": "x"}, None))
     assert planned["scores"] == plain["scores"] and planned["domain_overlap"] == plain["domain_overlap"]
 
 
