@@ -135,7 +135,7 @@ export default function Results({ data }: { data: Diligence }) {
   const { scores, memo, brands } = data;
   const nameA = brands.acquirer.name;
   const nameB = brands.target.name;
-  const radarData = Object.entries(data.domain_overlap).map(([d, v]) => ({ domain: label(d), overlap: Math.round(v * 100) }));
+  const radarData = Object.entries(data.domain_overlap).map(([d, v]) => ({ domain: label(d), overlap: Math.round(v * 100), baseline: 100 }));
   const noOverlap = radarData.every((r) => r.overlap === 0);
   const top = useRef<HTMLDivElement>(null);
   // the verdict and radar sit at the top of the results: bring them into view once a run finishes
@@ -183,15 +183,23 @@ export default function Results({ data }: { data: Diligence }) {
       </section>
 
         <Card title={`${nameA} × ${nameB} taste overlap`}>
-          <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="h-80 w-full lg:h-[28rem]">
+          <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="relative h-80 w-full lg:h-[28rem]">
             <ResponsiveContainer width="100%" height="100%">
               <RadarChart data={radarData} outerRadius="72%" margin={{ top: 24, right: 40, bottom: 24, left: 40 }}>
-                <PolarGrid stroke="rgba(255,255,255,0.18)" />
+                <PolarGrid stroke={noOverlap ? "rgba(255,255,255,0.35)" : "rgba(255,255,255,0.18)"} />
                 <PolarAngleAxis dataKey="domain" tick={<AxisTick values={radarData} />} />
                 <PolarRadiusAxis angle={90} domain={[0, 100]} tick={false} axisLine={false} />
+                {noOverlap && (
+                  <Radar className="radar-baseline" name="Baseline" dataKey="baseline" stroke="#fb7185" strokeDasharray="6 4" strokeOpacity={0.7} fill="none" dot={false} isAnimationActive={false} />
+                )}
                 <Radar name="Overlap" dataKey="overlap" stroke="#818cf8" fill="#818cf8" fillOpacity={0.4} dot={{ r: 3, fill: "#818cf8" }} isAnimationActive={false} />
               </RadarChart>
             </ResponsiveContainer>
+            {noOverlap && (
+              <p data-testid="radar-empty-caption" className="pointer-events-none absolute inset-x-0 top-[56%] text-center text-xs font-medium text-rose-200">
+                No shared taste in any domain
+              </p>
+            )}
           </div>
           {noOverlap && (
             <p data-testid="no-shared-taste" className="mt-3 rounded-lg border border-dashed border-rose-400/40 bg-rose-400/5 px-3 py-2 text-center text-sm text-rose-200">

@@ -35,6 +35,8 @@ test("demo: Nike + Adidas preset runs the whole diligence", async ({ page }) => 
   await expect(page.locator("[data-testid=radar] svg").first()).toBeVisible();
   await expect(page.getByTestId("radar-value")).toHaveCount(7);
   await expect(page.getByTestId("radar-value").first()).toHaveText(/^\d+%$/);
+  await expect(page.getByTestId("radar-empty-caption")).toHaveCount(0);
+  await expect(page.locator("[data-testid=radar] .radar-baseline")).toHaveCount(0);
   await expect(page.getByTestId("no-shared-taste")).toHaveCount(0);
   await expect(page.getByTestId("memo")).toBeVisible();
   await expect(page.getByTestId("memo")).toContainText("Nike + Adidas");
@@ -145,6 +147,10 @@ test("Patagonia + Gucci shows the no shared taste state and a Pass", async ({ pa
   await expect(page.getByTestId("no-shared-taste")).toHaveText(
     "No shared taste in any domain: the audiences don't overlap.",
   );
+  // the empty radar is not a bare dot: a dashed baseline ring and a caption on the chart itself
+  await expect(page.getByTestId("radar-empty-caption")).toBeVisible();
+  await expect(page.getByTestId("radar-empty-caption")).toHaveText("No shared taste in any domain");
+  await expect(page.locator("[data-testid=radar] .radar-baseline").first()).toBeAttached();
   await expect(page.getByTestId("memo")).toBeVisible();
   await page.screenshot({ path: "e2e/screenshots/no-shared-taste.png", fullPage: true });
 
