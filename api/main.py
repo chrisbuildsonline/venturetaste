@@ -19,6 +19,7 @@ from fastapi.responses import JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, StringConstraints
 
+from api.backtest import backtest
 from api.discover import discover
 from api.llm import chat_json_or_replay
 from api.pipeline import NoTasteDataError, SameBrandError, stream_diligence
@@ -178,6 +179,11 @@ def presets() -> list[dict[str, str]]:
 @app.get("/api/screens")
 def screens() -> list[dict[str, Any]]:
     return [asdict(s) for s in SCREENS]
+
+
+@app.get("/api/backtest")
+def backtest_deals() -> dict[str, Any]:
+    return backtest()
 
 
 RATE_WINDOW = 60.0

@@ -116,6 +116,8 @@ Errors are always plain sentences. When Qloo is unreachable, answers with an err
 
 `GET /api/screens` lists the target screens (`id`, `label`, `acquirer`, `targets`).
 
+`GET /api/backtest` returns `{"deals": [{acquirer_label, target_label, acquirer, target, year, outcome, outcome_class, bci, clash, churn, verdict}], "note"}`: the real deals in [Backtest on real deals](#backtest-on-real-deals), always from recorded fixtures (no key needed).
+
 `POST /api/discover` takes `{"acquirer": "Nike"}` and returns `{"acquirer", "candidates": [{"name", "affinity", "adjacency", "score", "reason"}], "source"}`: up to 5 of the acquirer's Qloo brand affinities, strategic fit first. Only consumer brands are kept, by Qloo's own `brand_type` tag: Product, Corporate, Retail and Service Brands stay; Entertainment (clubs, leagues), Media and Nonprofit Brands, and brands with no type, are dropped. The acquirer's own lines and parent are dropped from Qloo's tags: a candidate goes if the acquirer's `subsidiary` tags name it (Nike's "Jordan Brand" removes "Air Jordan Product Line"), if its own `subsidiary` tags name the acquirer, or if either name contains the other's distinctive words ("Nike SB"; generic words like brand, product line, inc, company and group are ignored). Repeats are dropped too. The rest are ranked over the whole affinity list by `score = 0.5 * affinity + 0.5 * adjacency`, where adjacency is the share of the acquirer's industry, brand-genre and product-category tags the candidate also carries (0 to 1). Ties keep Qloo's order. Each candidate's `reason` is built from the same tags, for example "Shares Footwear, Running, Sports & Fitness · affinity 0.93" (at most 3 shared names; "No shared categories" when none). The weights are `AFFINITY_WEIGHT` and `ADJACENCY_WEIGHT` in `api/discover.py`. It counts as one hit against the rate limit, uses the same friendly errors, and for Nike, Patagonia and Starbucks falls back to recorded answers (with `recorded.reason`) exactly like diligence.
 
 `GET /api/health` returns `{"ok": true, "qloo_key": true, "qloo_url": "https://hackathon.api.qloo.com", "fixtures": false}`: whether a key is set (never the key itself), the base URL actually used and whether fixture mode is on. A `QLOO_API_URL` that is empty or not an http(s) URL with a host (for example a placeholder like `set by orchestrator`) is ignored with a logged warning, and the default is used.
@@ -131,13 +133,28 @@ Errors are always plain sentences. When Qloo is unreachable, answers with an err
 - **Exclusive mass** (0..1, per domain): for each brand, the share of its positive affinity mass that sits on entities the other brand does not list at all (before the top 5 cut); the domain value is the mean of the two brands, and a brand with no positive mass in the domain is skipped. Mean over domains with data.
 - **Culture Clash %** (0..100): `100 * (0.7 * mean_exclusive_mass + 0.3 * demographic_distance)`.
 - Culture Clash is not `100 - BCI`: BCI rewards shared mass (so a shared entity with very unequal weights still lowers BCI), while clash only counts mass on entities the other audience lacks entirely, so the two can sum to more or less than 100.
-- **Why 0.7 / 0.3.** Taste overlap is the direct Qloo signal of shared audiences, so it drives both cannibalization (BCI) and clash. Demographic distance is a coarser age and gender proxy, so it gets the smaller share. Clash mirrors BCI: exclusive taste mass takes the 0.7 and demographic distance the 0.3. These weights are a judgment call, not calibrated: they have not been backtested against real deals. They are constants in `api/scoring.py` (`OVERLAP_WEIGHT`, `CLASH_TASTE_WEIGHT`, `DEMO_WEIGHT`), so anyone can retune them.
+- **Why 0.7 / 0.3.** Taste overlap is the direct Qloo signal of shared audiences, so it drives both cannibalization (BCI) and clash. Demographic distance is a coarser age and gender proxy, so it gets the smaller share. Clash mirrors BCI: exclusive taste mass takes the 0.7 and demographic distance the 0.3. These weights are a judgment call, not calibrated: a four-deal backtest (below) did not validate them. They are constants in `api/scoring.py` (`OVERLAP_WEIGHT`, `CLASH_TASTE_WEIGHT`, `DEMO_WEIGHT`), so anyone can retune them.
 - **Churn-risk band**: from Culture Clash, below 33 is `low`, below 66 is `medium`, otherwise `high` (`LOW_BELOW` and `HIGH_FROM` in `api/scoring.py`).
 - **Top shared tastes**: entities in both lists of a domain, ranked by the lower of the two affinities, top 5. **Top clashing tastes**: entities with positive affinity for one brand and absent from the other's list, ranked by affinity, top 5 per brand.
 
 Rounding: BCI and Culture Clash to 1 decimal, everything else to 4.
 
 The verdict is `Pass` when churn risk is high, otherwise `Proceed` at BCI 50 or more, otherwise `Proceed with conditions`.
+
+## Backtest on real deals
+
+Four real deals, scored with the same `score()` on the recorded Qloo fixtures (`GET /api/backtest`, also shown on the main page; `bun run backtest` prints this table):
+
+| Deal | Year | Outcome | BCI | Clash | Churn | Verdict |
+|---|---|---|---|---|---|---|
+| Nike + Converse | 2003 | Nike paid $305M; still owned 20+ years later, a ~$2B-revenue brand | 28.0 | 70.8 | high | Pass |
+| VF Corp (as Vans) + Supreme | 2020 | Sold to EssilorLuxottica in 2024 for $1.5B (paid $2.1B) | 36.5 | 57.9 | medium | Proceed with conditions |
+| Tapestry (as Coach) + Capri (as Michael Kors) | 2023 | $8.5B deal; FTC sued, a court blocked it in Oct 2024, called off in Nov 2024 | 48.2 | 43.9 | medium | Proceed with conditions |
+| Adidas + Reebok | 2006 | Paid ~$3.8B; sold to Authentic Brands in 2021 for up to EUR 2.1B | 47.4 | 46.1 | medium | Proceed with conditions |
+
+Caveat: 4 deals is a sanity check, not a calibration. Scores use today's Qloo audiences, not the audiences at deal time, and holding companies are scored through their flagship brand (VF Corp as Vans, Tapestry as Coach, Capri as Michael Kors). Weights were not tuned to this table.
+
+The scores do not separate kept from failed deals. The one deal that was kept (Nike + Converse) has the lowest BCI and the highest culture clash, so the model says Pass on it, while the three deals that were sold at a loss or blocked all get Proceed with conditions. With four deals and today's audiences this is a limit of the method as it stands, not evidence that the scores predict outcomes.
 
 ## Demo pairs
 

@@ -1,6 +1,8 @@
 """Demo brand pairs, verified live at take=50. Shared by the API, the UI and the fixture recorder."""
 
 import re
+
+from api.backtest import DEALS
 from dataclasses import dataclass
 
 
@@ -52,4 +54,5 @@ def bridge_picks_name(tag_id: str, domain: str) -> str:
 def preset_brands() -> list[str]:
     deals = {b for p in PRESETS for b in (p.acquirer, p.target)}
     screened = {b for s in SCREENS for b in (s.acquirer, *s.targets)}
-    return sorted(deals | screened | {b for a, ts in DISCOVERED.items() for b in (a, *ts)})
+    backtested = {b for d in DEALS for b in (d.acquirer, d.target)}
+    return sorted(deals | screened | backtested | {b for a, ts in DISCOVERED.items() for b in (a, *ts)})
