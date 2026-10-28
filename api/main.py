@@ -43,10 +43,8 @@ BrandName = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1
 class UnrecordedBrandError(QlooError):
     """No key and no recorded answers for this brand: the visitor can only try the recorded ones."""
 
-    def __init__(self, brands: Iterable[str]) -> None:
-        super().__init__(
-            f"No Qloo API key is set on this server, so only recorded brands work: {', '.join(brands)}. Set QLOO_API_KEY to try any brand."
-        )
+    def __init__(self, brands: Iterable[str], reason: str = "No Qloo API key is set on this server") -> None:
+        super().__init__(f"{reason}, so only recorded brands work: {', '.join(brands)}. Set QLOO_API_KEY to try any brand.")
 
 
 # QlooError subclass -> HTTP status, so every pipeline failure becomes a friendly JSON message.
@@ -88,8 +86,13 @@ def get_qloo() -> QlooClient | None:
 
 # Why a run replays recorded answers. Shown to the user next to the results.
 RECORDED_FIXTURE_MODE = "This server runs in fixture mode: recorded Qloo answers, no live calls."
-RECORDED_NO_KEY = "No Qloo API key is set on this server, so this run replays recorded Qloo answers for this preset pair."
-RECORDED_KEY_REJECTED = "Qloo rejected this server's API key, so this run replays recorded Qloo answers for this preset pair."
+FOR_PAIR, FOR_BRANDS = "for this preset pair", "for these brands"  # Compare replays one pair; Screen and Find targets replay several brands
+NO_KEY = "No Qloo API key is set on this server"
+KEY_REJECTED = "Qloo rejected this server's API key"
+RECORDED_NO_KEY = f"{NO_KEY}, so this run replays recorded Qloo answers {FOR_PAIR}."
+RECORDED_KEY_REJECTED = f"{KEY_REJECTED}, so this run replays recorded Qloo answers {FOR_PAIR}."
+RECORDED_NO_KEY_BRANDS = RECORDED_NO_KEY.replace(FOR_PAIR, FOR_BRANDS)
+RECORDED_KEY_REJECTED_BRANDS = RECORDED_KEY_REJECTED.replace(FOR_PAIR, FOR_BRANDS)
 
 
 def is_recorded_pair(body: DiligenceRequest) -> bool:
@@ -130,8 +133,10 @@ def run_events(client: QlooClient | None, body: DiligenceRequest) -> Iterator[tu
     try:
         yield from stream_diligence(client, body.acquirer, body.target, chat_json_or_replay)
     except QlooAPIError as exc:
-        if exc.status not in (401, 403) or not is_recorded_pair(body):
+        if exc.status not in (401, 403):
             raise
+        if not is_recorded_pair(body):
+            raise UnrecordedBrandError(preset_brands(), KEY_REJECTED) from exc
         logger.warning("Qloo rejected the API key (HTTP %s); replaying recorded answers", exc.status)
         yield from recorded_run(fixture_client(), body, RECORDED_KEY_REJECTED)
 
@@ -259,7 +264,7 @@ def screen_row(client: QlooClient | None, acquirer: str, target: str) -> dict[st
     row = {"target": target, "ok": True, "bci": d["scores"]["bci"], "clash": d["scores"]["culture_clash"],
            "churn": d["scores"]["churn_risk"], "verdict": d["memo"]["verdict"]}
     if "recorded" in d:
-        row["recorded"] = d["recorded"]["reason"]
+        row["recorded"] = d["recorded"]["reason"].replace(FOR_PAIR, FOR_BRANDS)
     return row
 
 
@@ -291,16 +296,18 @@ def discover_targets(body: DiscoverRequest, client: Annotated[QlooClient | None,
     if client is None:
         if not recorded:
             raise UnrecordedBrandError(DISCOVERED)
-        return {**discover(fixture_client(), body.acquirer), "recorded": {"reason": RECORDED_NO_KEY}}
+        return {**discover(fixture_client(), body.acquirer), "recorded": {"reason": RECORDED_NO_KEY_BRANDS}}
     if fixture_mode():
         return {**discover(client, body.acquirer), "recorded": {"reason": RECORDED_FIXTURE_MODE}}
     try:
         return discover(client, body.acquirer)
     except QlooAPIError as exc:
-        if exc.status not in (401, 403) or not recorded:
+        if exc.status not in (401, 403):
             raise
+        if not recorded:
+            raise UnrecordedBrandError(DISCOVERED, KEY_REJECTED) from exc
         logger.warning("Qloo rejected the API key (HTTP %s); replaying recorded answers", exc.status)
-        return {**discover(fixture_client(), body.acquirer), "recorded": {"reason": RECORDED_KEY_REJECTED}}
+        return {**discover(fixture_client(), body.acquirer), "recorded": {"reason": RECORDED_KEY_REJECTED_BRANDS}}
 
 
 def sse(event: str, data: Any) -> str:

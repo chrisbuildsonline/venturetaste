@@ -9,7 +9,7 @@ import pytest
 from fastapi.testclient import TestClient
 
 from api.fixtures import BASE, fixture_handler, make_client
-from api.main import app, get_qloo
+from api.main import RECORDED_KEY_REJECTED_BRANDS, app, get_qloo
 from api.qloo import QlooClient
 
 BODY = {"acquirer": "Nike", "target": "Adidas"}
@@ -113,16 +113,49 @@ def test_fixture_mode_marks_every_result_recorded(monkeypatch: pytest.MonkeyPatc
     assert "fixture mode" in events[-1][1]["recorded"]["reason"]
 
 
-def test_unknown_brand_with_a_rejected_key_is_the_friendly_502(reject: Callable[[int], TestClient]) -> None:
-    res = reject(401).post("/api/diligence", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"})
-    assert res.status_code == 502
-    assert res.json() == {"detail": "Taste data from Qloo is temporarily unavailable. Please try again in a moment."}
+def assert_rejected_listing(detail: str) -> None:
+    assert detail.startswith("Qloo rejected this server's API key, so only recorded brands work: ")
+    assert "No Qloo API key" not in detail and "Nike" in detail and "Patagonia" in detail
 
 
-def test_unknown_brand_with_a_rejected_key_streams_the_error(reject: Callable[[int], TestClient]) -> None:
+@pytest.mark.parametrize("status", [401, 403])
+def test_unrecorded_pair_with_a_rejected_key_is_a_422_listing_recorded_brands(reject: Callable[[int], TestClient], status: int) -> None:
+    res = reject(status).post("/api/diligence", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"})
+    assert res.status_code == 422
+    assert_rejected_listing(res.json()["detail"])
+
+
+def test_unrecorded_pair_with_a_rejected_key_streams_the_same_422(reject: Callable[[int], TestClient]) -> None:
     events = parse_sse(reject(401).post("/api/diligence/stream", json={"acquirer": "Nike", "target": "Zzqx Nonbrand"}).text)
     kind, data = events[-1]
-    assert kind == "error" and data["status"] == 502
+    assert kind == "error" and data["status"] == 422
+    assert_rejected_listing(data["detail"])
+
+
+def test_discover_with_a_rejected_key(reject: Callable[[int], TestClient]) -> None:
+    res = reject(401).post("/api/discover", json={"acquirer": "Zara"})
+    assert res.status_code == 422
+    assert_rejected_listing(res.json()["detail"])
+    res = reject(401).post("/api/discover", json={"acquirer": "Nike"})
+    assert res.status_code == 200
+    assert res.json()["recorded"]["reason"] == RECORDED_KEY_REJECTED_BRANDS
+    assert "for these brands" in RECORDED_KEY_REJECTED_BRANDS and "preset pair" not in RECORDED_KEY_REJECTED_BRANDS
+
+
+def test_screen_rows_with_a_rejected_key(reject: Callable[[int], TestClient]) -> None:
+    rows = reject(401).post("/api/screen", json={"acquirer": "Nike", "targets": ["Adidas", "Zzqx Nonbrand"]}).json()["rows"]
+    assert rows[0]["ok"] is True and rows[0]["recorded"] == RECORDED_KEY_REJECTED_BRANDS
+    assert rows[1]["ok"] is False and rows[1]["status"] == 422
+    assert_rejected_listing(rows[1]["detail"])
+
+
+def test_no_key_banners_say_brands_for_screen_and_discover_and_pair_for_compare(monkeypatch: pytest.MonkeyPatch) -> None:
+    monkeypatch.delenv("QLOO_API_KEY", raising=False)
+    api = TestClient(app)
+    assert api.post("/api/diligence", json=BODY).json()["recorded"]["reason"].endswith("for this preset pair.")
+    assert api.post("/api/discover", json={"acquirer": "Nike"}).json()["recorded"]["reason"].endswith("for these brands.")
+    rows = api.post("/api/screen", json={"acquirer": "Nike", "targets": ["Adidas", "Patagonia"]}).json()["rows"]
+    assert all(r["recorded"].endswith("for these brands.") for r in rows)
 
 
 def test_unknown_brand_with_no_key_is_422(monkeypatch: pytest.MonkeyPatch) -> None:

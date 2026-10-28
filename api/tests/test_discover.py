@@ -9,7 +9,7 @@ from fastapi.testclient import TestClient
 from api import main
 from api.discover import MAX_CANDIDATES, discover, pick_candidates
 from api.fixtures import BASE, fixture_handler, make_client
-from api.main import RECORDED_FIXTURE_MODE, RECORDED_NO_KEY, app, get_qloo
+from api.main import RECORDED_FIXTURE_MODE, RECORDED_NO_KEY_BRANDS, app, get_qloo
 from api.presets import DISCOVERED
 from api.qloo import Affinity, Entity, QlooClient, TagRef, parse_insights, parse_search
 
@@ -228,7 +228,7 @@ def test_no_key_with_a_preset_replays_recorded(monkeypatch: pytest.MonkeyPatch) 
     monkeypatch.delenv("QLOO_API_KEY", raising=False)
     res = TestClient(app).post("/api/discover", json={"acquirer": "Nike"})
     assert res.status_code == 200, res.text
-    assert res.json()["recorded"] == {"reason": RECORDED_NO_KEY}
+    assert res.json()["recorded"] == {"reason": RECORDED_NO_KEY_BRANDS}
     assert [c["name"] for c in res.json()["candidates"]] == list(DISCOVERED["Nike"])
 
 
@@ -245,11 +245,11 @@ def test_rejected_key_falls_back_for_a_preset(tmp_path: Path, status: int) -> No
     assert "rejected" in res.json()["recorded"]["reason"]
 
 
-def test_rejected_key_for_a_non_preset_is_the_friendly_502(tmp_path: Path) -> None:
+def test_rejected_key_for_a_non_preset_is_a_422_listing_recorded_brands(tmp_path: Path) -> None:
     app.dependency_overrides[get_qloo] = lambda: status_client(tmp_path, 401)
     res = TestClient(app).post("/api/discover", json={"acquirer": "Zara"})
-    assert res.status_code == 502
-    assert "temporarily unavailable" in res.json()["detail"]
+    assert res.status_code == 422
+    assert res.json()["detail"].startswith("Qloo rejected this server's API key, so only recorded brands work: ")
 
 
 def test_other_qloo_failures_do_not_fall_back(tmp_path: Path) -> None:
