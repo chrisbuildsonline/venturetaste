@@ -139,7 +139,9 @@ export default function Results({ data }: { data: Diligence }) {
   const noOverlap = radarData.every((r) => r.overlap === 0);
   const top = useRef<HTMLDivElement>(null);
   // the verdict and radar sit at the top of the results: bring them into view once a run finishes
-  useEffect(() => top.current?.scrollIntoView({ block: "start" }), []);
+  useEffect(() => {
+    top.current?.scrollIntoView({ block: "start" });
+  }, []);
 
   return (
     <div ref={top} className="scroll-mt-4 space-y-5" data-testid="results">
