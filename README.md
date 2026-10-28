@@ -56,14 +56,14 @@ Responses are cached on disk (`.cache/qloo`), and HTTP 429 is retried with backo
 
 1. **Scout** resolves both brand names to Qloo entities (2 calls).
 2. **Cartographer** fetches insights for all 7 domains plus demographics for both brands (16 calls, in parallel threads). 18 Qloo calls per run with the two searches.
-3. **Analyst** scores the pair with `api/scoring.py` (pure code) and then decides whether to probe tags. The optional LLM makes that call; without it the rule is: if at least 4 of the 7 domains have zero taste overlap, it asks Qloo for each brand's tag affinities (2 extra calls) and reports the top 5 tags both audiences share as "bridging tastes", ranked by the weaker of the two affinities. Trivial tags are dropped by Qloo tag id prefix: place attributes (`inclusivity`, `cost_description`, `credit_card`, `hotel_rating`, `specialty_dish`) and film-plot keywords (`keyword:media`), so "Identifies as women-owned" or "friendship" never count as a bridge. Bridges are evidence only and never change the BCI, clash score or verdict. Its trace item carries a `decision` string saying which way it went.
+3. **Analyst** scores the pair with `api/scoring.py` (pure code) and then plans a tag probe. The optional LLM makes the plan `{probe_tags, tag_families, follow_up_domain, reason}`: whether to probe, which Qloo tag families (the third segment of a tag id, such as `genre` or `lifestyle`) to keep bridges from, and an optional domain for one follow-up query. Without it the rule is: if at least 4 of the 7 domains have zero taste overlap, probe every non-trivial family and run no follow-up. A probe asks Qloo for each brand's tag affinities (2 extra calls) and reports the top 5 tags both audiences share, in the chosen families, as "bridging tastes", ranked by the weaker of the two affinities. If the plan names a follow-up domain and at least one bridge was kept, the Analyst makes one more Qloo call (3 in all): entities of that domain that Qloo ties to the strongest bridging tag (`signal.interests.tags`, 5 results), reported as `bridge_picks`. The follow-up is optional: if Qloo is slow or fails on it (it times out for some domains, such as places, on some tags) the run carries on without picks. The bridge potential (`bridge_potential`, 0 to 100) comes from the kept bridges: each counts the weaker of its two audience affinities (0 to 1), and five perfect bridges make 100; it is 0 when a probe found none. Trivial tags are dropped by Qloo tag id prefix: place attributes (`inclusivity`, `cost_description`, `credit_card`, `hotel_rating`, `specialty_dish`) and film-plot keywords (`keyword:media`), so "Identifies as women-owned" or "friendship" never count as a bridge. Bridges, picks and the bridge potential are a separate output: they never change the BCI, clash score or verdict, and they do not depend on the LLM beyond which families and domain it chose. Its trace item carries a `decision` string saying which way it went.
 4. **Partner** writes the deal memo: a verdict (`Proceed`, `Proceed with conditions`, `Pass`, always computed from the scores), and rationale and risks that name real Qloo entities from the data. The optional LLM writes the rationale and risks; otherwise a template does.
 
 ### Optional LLM agent
 
-The Analyst's tag-probe decision and the Partner's memo text can come from an LLM, by default a local [Ollama](https://ollama.com) model (`ollama pull qwen2.5:7b`; `bun run llm:up` starts the service). It is never required and never touches a number:
+The Analyst's plan (probe or not, tag families, follow-up domain) and the Partner's memo text can come from an LLM, by default a local [Ollama](https://ollama.com) model (`ollama pull qwen2.5:7b`; `bun run llm:up` starts the service). It is never required and never touches a number:
 
-- **Scores, verdict and headline stay deterministic.** The LLM only chooses whether to spend the two tag calls and words the rationale and risks.
+- **Scores, verdict and headline stay deterministic.** The LLM only chooses whether to spend the two tag calls, which tag families and follow-up domain to use (each checked against an allowed list, else the rule decides), and words the rationale and risks.
 - **Every cited entity is checked.** The LLM returns each memo line with the entity names it cites. A cite must match (case-insensitively) an entity Qloo returned for this pair (the two brands, shared tastes, each side's distinctive tastes, bridging tags) and appear in the line's text; a line citing nothing must quote a number. One bad cite rejects the whole LLM memo.
 - **Cold start.** Ollama unloads an idle model; the first run after that can hit the 30 s cut-off while the weights load and falls back to the template. Set `OLLAMA_KEEP_ALIVE` to keep it loaded.
 - **Fallback.** If the LLM is off, unreachable (a refused connection fails in about a second; replies are cut off after 30 s), answers bad JSON or fails the check, the rule decides and the template writes the memo. Each trace item says who decided (`planner`: `llm`, `rule` or `template`, plus `model` or `fallback` with the reason), the UI shows "Decided by qwen2.5:7b" or "Rule-based fallback", and "Memo by qwen2.5:7b" or "Template memo", and `memo.author` is the model or `template`.
@@ -84,7 +84,7 @@ With no reachable LLM (the jury sandbox, the hosted demo) a pair whose exact pro
 
 ## API
 
-`POST /api/diligence` runs the pipeline and returns one JSON report: resolved brands, scores, `domain_overlap` for all 7 domains (no data = 0), top shared and clashing tastes, demographics for both brands, `bridges` (`[{id, name, affinity_acquirer, affinity_target}]`, empty when none) and `probed_tags` (whether the Analyst probed Qloo tags), the memo, and the per-agent `trace` (the Analyst item also has a `decision`).
+`POST /api/diligence` runs the pipeline and returns one JSON report: resolved brands, scores, `domain_overlap` for all 7 domains (no data = 0), top shared and clashing tastes, demographics for both brands, `bridges` (`[{id, name, affinity_acquirer, affinity_target}]`, empty when none), `bridge_potential` (0 to 100), `bridge_picks` (`[{name, domain, tag_id, tag_name}]`, the follow-up query's entities, empty when none) and `probed_tags` (whether the Analyst probed Qloo tags), the memo, and the per-agent `trace` (the Analyst item also has a `decision`).
 
 ```
 curl -s -X POST http://127.0.0.1:8765/api/diligence \
@@ -231,6 +231,7 @@ The rate limit is in memory and per process. The SSE stream sends `X-Accel-Buffe
 - `bun run fresh-clone`: clones the committed HEAD into a temp dir and runs setup, test, typecheck and e2e:ci there, as a new user would. Needs no key.
 - `bun run record`: re-records the fixtures for the preset brands (needs a key).
 - `bun run probe`: scores candidate pairs live (needs a key).
+- `bun run probe:picks`: runs the Analyst's follow-up query (entities for a bridging tag, every domain) live for each preset (needs a key).
 
 ## Layout
 
