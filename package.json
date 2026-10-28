@@ -29,6 +29,7 @@
     "fresh-clone": "bash scripts/fresh-clone.sh",
     "e2e": "bun run build && cd web && bun run e2e",
     "start": "uv run --env-file .env uvicorn api.main:app --port 8765",
+    "start:fixtures": "VENTURETASTE_FIXTURES=1 VENTURETASTE_LLM=off VENTURETASTE_RATE_LIMIT=100000 uv run uvicorn api.main:app --port 8766",
     "dev": "uv run uvicorn api.main:app --reload --port 8765 & cd web && bun run dev"
   }
 }

@@ -34,6 +34,35 @@ test("live: Nike + Adidas runs end to end with no console errors", async ({ page
   expect(errors).toEqual([]);
 });
 
+// Gymshark and Allbirds have no recorded answers anywhere in the repo, so this can only pass against live Qloo.
+test("live: a pair with no recording (Gymshark + Allbirds) runs against live Qloo", async ({ page }) => {
+  test.setTimeout(120_000);
+  const errors: string[] = [];
+  page.on("console", (msg) => {
+    if (msg.type() === "error") errors.push(`console: ${msg.text()}`);
+  });
+  page.on("pageerror", (err) => errors.push(`pageerror: ${err.message}`));
+
+  await page.goto("/");
+  await page.getByLabel("Acquirer").fill("Gymshark");
+  await page.getByLabel("Target").fill("Allbirds");
+  await page.getByRole("button", { name: "Run diligence" }).click();
+
+  await expect(page.getByTestId("bci-value")).toBeVisible({ timeout: 90_000 });
+  await expect(page.getByTestId("recorded-banner")).toHaveCount(0);
+  await expect(page.getByTestId("verdict")).toBeVisible();
+  for (const agent of AGENTS) await expect(page.getByTestId(`agent-${agent}`)).toHaveAttribute("data-state", "done");
+
+  const scout = page.getByTestId("agent-Scout");
+  await expect(scout).toContainText(/Qloo calls?/);
+  const calls = Number((await scout.innerText()).match(/(\d+) Qloo calls?/)?.[1]);
+  expect(calls).toBeGreaterThan(0);
+
+  await page.screenshot({ path: path.resolve(__dirname, "../../docs/live-any-pair.png"), fullPage: true });
+
+  expect(errors).toEqual([]);
+});
+
 test("live: the proxy streams SSE events as they happen instead of buffering them", async ({ page }) => {
   test.setTimeout(120_000);
   await page.goto("/");
