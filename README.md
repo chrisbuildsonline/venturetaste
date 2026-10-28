@@ -94,7 +94,7 @@ curl -s -X POST http://127.0.0.1:8765/api/diligence \
 
 `recorded` is `{"reason": "..."}` when the answers are recorded Qloo data instead of live calls, and absent on live runs. It is set when `VENTURETASTE_FIXTURES=1`, and when the server has no `QLOO_API_KEY` or Qloo rejects the key (HTTP 401 or 403) and both brands are preset brands (the ones in `api/fixtures.py`); the run is then repeated on the recorded answers. The stream does the same: no `error` event, and the final `result` carries `recorded`. Other brands, and every other Qloo failure (timeouts, 429, 5xx), keep the errors below.
 
-Errors are `{"detail": "..."}` with: 422 for a bad body, an unknown brand, a brand with no taste data, or the same brand twice (checked before any Qloo call, ignoring case and punctuation); 422 when no `QLOO_API_KEY` is set and the pair is not recorded ("No Qloo API key is set on this server, so only recorded brands work: ... Set QLOO_API_KEY to try any brand."); 502 when Qloo fails or returns something unparseable.
+Errors are `{"detail": "..."}` with: 422 for a bad body, an unknown brand, a brand with no taste data, or the same brand twice (checked before any Qloo call, ignoring case and punctuation); 422 when no `QLOO_API_KEY` is set and the pair is not recorded ("No Qloo API key is set on this server, so only recorded brands work: ... Set QLOO_API_KEY to try any brand."), and the same 422 starting "Qloo rejected this server's API key, so only recorded brands work: ..." when Qloo answers 401/403 for a pair that is not recorded; 502 when Qloo fails or returns something unparseable.
 
 On a recorded run (no key, fixture mode, or a rejected key) nothing is asked of Qloo, so every trace item has `"qloo_calls": 0` and `"replayed": true`.
 
@@ -144,6 +144,8 @@ The verdict is `Pass` when churn risk is high, otherwise `Proceed` at BCI 50 or 
 ## Backtest on real deals
 
 Four real deals, scored with the same `score()` on the recorded Qloo fixtures (`GET /api/backtest`, also shown on the main page; `bun run backtest` prints this table):
+
+![The backtest panel on the main page: four real deals with their BCI, clash, churn and verdict](docs/backtest.png)
 
 | Deal | Year | Outcome | BCI | Clash | Churn | Verdict |
 |---|---|---|---|---|---|---|

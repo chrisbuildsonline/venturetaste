@@ -93,5 +93,20 @@ test("README screenshots: Patagonia + Gucci culture clash",async ({ page }) => {
   await runPreset(page, "Patagonia + Gucci");
   await expect(page.getByTestId("verdict")).toHaveText("Pass");
   await expect(page.locator("body")).not.toContainText(/women-owned|friendship|inclusivity|credit card|hotel rating/i);
+  await expect(page.getByTestId("radar-empty-caption")).toHaveText("No shared taste in any domain");
+  await expect(page.locator("[data-testid=radar] .radar-baseline").first()).toBeAttached();
   await page.screenshot({ path: "../docs/culture-clash.png", fullPage: true });
+});
+
+test("README screenshots: backtest on real deals", async ({ page }) => {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto("/");
+  const panel = page.getByTestId("backtest");
+  await expect(panel.getByRole("heading", { name: "Backtest: real deals" })).toBeVisible();
+  await expect(panel.getByTestId("backtest-row")).toHaveCount(4);
+  await expect(panel.getByTestId("backtest-row").first()).toContainText("Nike + Converse");
+  await expect(panel.getByTestId("backtest-bci").first()).toHaveText("28.0");
+  await expect(panel.getByTestId("backtest-note")).toContainText("sanity check, not a calibration");
+  await panel.scrollIntoViewIfNeeded();
+  await panel.screenshot({ path: "../docs/backtest.png" });
 });
