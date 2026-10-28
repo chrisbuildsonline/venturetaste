@@ -147,7 +147,7 @@ def tag_family(tag_id: str) -> str:
 
 def bridges(a: list[Tag], b: list[Tag], families: Collection[str] | None = None) -> list[Bridge]:
     """Tags both brands have, strongest common affinity first, minus trivial ones and (when given) outside `families`.
-    Evidence only: never part of score()."""
+    Feeds bridge_potential(), never score()."""
     theirs = {t.id: t.affinity for t in b}
     found = [
         Bridge(t.id, t.name, t.affinity, theirs[t.id])
