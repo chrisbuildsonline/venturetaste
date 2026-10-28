@@ -20,6 +20,8 @@ DEFAULT_URL = "https://hackathon.api.qloo.com"
 DEFAULT_CACHE_DIR = Path(".cache/qloo")
 DOMAINS = ("brand", "artist", "movie", "tv_show", "place", "destination", "book")
 DEFAULT_TAKE = 50  # Qloo rejects take > 50 with HTTP 400
+FOLLOW_UP_TAKE = 5  # picks the Analyst's follow-up query asks for
+FOLLOW_UP_TIMEOUT = 10.0  # seconds: tag-signalled queries in some domains (place) time out on Qloo, and the follow-up is optional
 RETRY_DELAYS = (0.5, 1.0, 2.0, 4.0)  # seconds to wait after an HTTP 429
 
 T = TypeVar("T")
@@ -251,7 +253,14 @@ class QlooClient:
         params = {"filter.type": "urn:tag", "signal.interests.entities": entity_id, "take": str(take)}
         return self._get("/v2/insights", params, parse_tags)
 
-    def _get(self, path: str, params: dict[str, str], parse: Callable[[object], T]) -> T:
+    def tag_insights(self, tag_id: str, domain: str, take: int = FOLLOW_UP_TAKE) -> list[Affinity]:
+        """Entities of one domain that Qloo ties to a taste tag (the Analyst's follow-up query)."""
+        if domain not in DOMAINS:
+            raise ValueError(f"unknown domain {domain!r}, expected one of {DOMAINS}")
+        params = {"filter.type": f"urn:entity:{domain}", "signal.interests.tags": tag_id, "take": str(take)}
+        return self._get("/v2/insights", params, parse_insights, FOLLOW_UP_TIMEOUT)
+
+    def _get(self, path: str, params: dict[str, str], parse: Callable[[object], T], timeout: float | None = None) -> T:
         cache_file = self._cache_dir / (
             hashlib.sha256(json.dumps([path, sorted(params.items())]).encode()).hexdigest() + ".json"
         )
@@ -261,7 +270,7 @@ class QlooClient:
                 return parse(cached)
             except QlooParseError:
                 pass  # stale or corrupt cache entry: refetch
-        raw = self._fetch(path, params)
+        raw = self._fetch(path, params, timeout)
         parsed = parse(raw)  # only well-formed successful responses reach the cache
         self._cache_dir.mkdir(parents=True, exist_ok=True)
         cache_file.write_text(json.dumps(raw))
@@ -278,11 +287,14 @@ class QlooClient:
         except OSError:
             pass  # a concurrent run raced us on a file; the next write prunes again
 
-    def _fetch(self, path: str, params: dict[str, str]) -> object:
+    def _fetch(self, path: str, params: dict[str, str], timeout: float | None = None) -> object:
         for delay in (*RETRY_DELAYS, None):
             try:
                 resp = self._http.get(
-                    self._base + path, params=params, headers={"X-Api-Key": str(self._key)}
+                    self._base + path,
+                    params=params,
+                    headers={"X-Api-Key": str(self._key)},
+                    timeout=httpx.USE_CLIENT_DEFAULT if timeout is None else timeout,
                 )
             except httpx.HTTPError as exc:
                 raise QlooAPIError(f"Qloo request to {path} failed: {exc!r}") from exc

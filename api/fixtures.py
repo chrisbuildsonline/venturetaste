@@ -7,7 +7,7 @@ from typing import Any
 
 import httpx
 
-from api.presets import preset_brands, slug
+from api.presets import bridge_picks_name, preset_brands, slug
 from api.qloo import QlooClient
 
 FIXTURES = Path(__file__).parent / "fixture_data"
@@ -32,8 +32,13 @@ def fixture_handler(calls: list[httpx.Request]) -> Callable[[httpx.Request], htt
             if (FIXTURES / f"search_{name}.json").exists():
                 return httpx.Response(200, json=load(f"search_{name}"))
             return httpx.Response(200, json={"results": []})
-        name = BRAND_IDS[params["signal.interests.entities"]]
         kind = params["filter.type"]
+        if "signal.interests.tags" in params:  # the Analyst's follow-up: recorded per (tag, domain), empty when not recorded
+            name = bridge_picks_name(params["signal.interests.tags"], kind.split(":")[-1])
+            if (FIXTURES / f"{name}.json").exists():
+                return httpx.Response(200, json=load(name))
+            return httpx.Response(200, json={"results": {"entities": []}})
+        name = BRAND_IDS[params["signal.interests.entities"]]
         if kind == "urn:demographics":
             return httpx.Response(200, json=load(f"demographics_{name}"))
         if kind == "urn:tag":

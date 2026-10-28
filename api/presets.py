@@ -44,6 +44,11 @@ def slug(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
 
 
+def bridge_picks_name(tag_id: str, domain: str) -> str:
+    """Fixture file stem of the Analyst's follow-up query for one bridge tag in one domain."""
+    return f"bridgepicks_{slug(tag_id)}_{domain}"
+
+
 def preset_brands() -> list[str]:
     deals = {b for p in PRESETS for b in (p.acquirer, p.target)}
     screened = {b for s in SCREENS for b in (s.acquirer, *s.targets)}
