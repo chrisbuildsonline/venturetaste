@@ -16,11 +16,11 @@ docker build -t venturetaste . && docker run -p 8765:8765 venturetaste
 
 Then open http://127.0.0.1:8765. Add `--env-file .env` with a `QLOO_API_KEY` to try any brand.
 
-The hosted demo has a valid Qloo key and calls live Qloo (18 calls per run, answers cached on disk, no recorded banner). Captured 2026-10-27:
+The hosted demo has a valid Qloo key and calls live Qloo (18 calls per run, answers cached on disk, no recorded banner). Captured 2026-10-29:
 
 ![Nike + Adidas against live Qloo](docs/live-qloo-run.png)
 
-Gymshark + Allbirds has no recorded answers anywhere in the repo, so this run can only come from live Qloo. Captured 2026-10-28:
+Gymshark + Allbirds has no recorded answers anywhere in the repo, so this run can only come from live Qloo. Captured 2026-10-29:
 
 ![Gymshark + Allbirds against live Qloo](docs/live-any-pair.png)
 
