@@ -31,6 +31,8 @@ test("demo: Nike + Adidas preset runs the whole diligence", async ({ page }) => 
   await expect(banner).toBeVisible();
   await expect(banner).toContainText("This server runs in fixture mode: recorded Qloo answers, no live calls.");
   await expect(page.getByTestId("churn-band")).toContainText(/medium/i);
+  await expect(page.getByTestId("fit-chip")).toHaveText("Fit: Overlapping");
+  await expect(page.getByTestId("fit-note")).toContainText("Shared audience");
   await expect(page.getByTestId("clash-value")).toBeVisible();
   await expect(page.locator("[data-testid=radar] svg").first()).toBeVisible();
   await expect(page.getByTestId("radar-value")).toHaveCount(7);
@@ -126,6 +128,7 @@ test("after a run the verdict and radar sit in a 1280x800 viewport and the memo 
   const text = readFileSync((await file.path())!, "utf8");
   expect(text).toContain("**Verdict:** Proceed");
   expect(text).toContain("53.9 / 100");
+  expect(text).toContain("**Fit:** Overlapping. Shared audience");
   expect(text).toContain("recorded Qloo data");
   expect(text).toContain("recorded qwen2.5:7b");
   expect(errors).toEqual([]);

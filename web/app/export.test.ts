@@ -15,6 +15,7 @@ const base: Diligence = {
   bridge_potential: 0,
   probed_tags: false,
   memo: { verdict: "Proceed", headline: "Nike + Adidas overlap a lot", rationale: ["Shared sneaker fans"], risks: ["Cannibalization"], author: "qwen2.5:7b" },
+  fit: { type: "overlapping", label: "Overlapping", note: "Shared audience: real synergy." },
   trace: [],
 };
 const date = new Date("2026-10-27T12:00:00Z");
@@ -28,6 +29,12 @@ describe("memoMarkdown", () => {
     expect(md).toContain("Nike + Adidas overlap a lot");
     expect(md).toContain("**Brand Cannibalization Index:** 53.9 / 100");
     expect(md).toContain("**Culture clash:** 41.2%");
+  });
+
+  test("has the fit line right after the verdict", () => {
+    expect(md).toContain("**Fit:** Overlapping. Shared audience: real synergy.");
+    expect(md.indexOf("**Fit:**")).toBeGreaterThan(md.indexOf("**Verdict:**"));
+    expect(md.indexOf("**Fit:**")).toBeLessThan(md.indexOf("Nike + Adidas overlap a lot"));
   });
 
   test("has the overlap table, rationale and risks", () => {

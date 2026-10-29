@@ -18,6 +18,8 @@ export function memoMarkdown(d: Diligence, now: Date = new Date()): string {
     "",
     `**Verdict:** ${memo.verdict}`,
     "",
+    `**Fit:** ${d.fit.label}. ${d.fit.note}`,
+    "",
     memo.headline,
     "",
     `- **Brand Cannibalization Index:** ${scores.bci.toFixed(1)} / 100`,

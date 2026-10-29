@@ -10,6 +10,8 @@ export type TraceStep = { agent: string; status: string; ms: number; qloo_calls:
 export type Bridge = { id: string; name: string; affinity_acquirer: number; affinity_target: number };
 export type BridgePick = { name: string; domain: string; tag_id: string; tag_name: string };
 
+export type Fit = { type: "overlapping" | "complementary" | "adjacent"; label: string; note: string };
+
 export type Diligence = {
   brands: { acquirer: Brand; target: Brand };
   scores: { bci: number; culture_clash: number; churn_risk: "low" | "medium" | "high"; demographic_distance: number };
@@ -22,6 +24,7 @@ export type Diligence = {
   bridge_potential: number;
   probed_tags: boolean;
   memo: { verdict: string; headline: string; rationale: string[]; risks: string[]; author?: string };
+  fit: Fit;
   trace: TraceStep[];
   recorded?: { reason: string } | null;
 };

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { CHURN_STYLE, VERDICT_STYLE } from "./Results";
+import type { Fit } from "./types";
 
 type Deal = {
   acquirer_label: string;
@@ -12,6 +13,7 @@ type Deal = {
   clash: number;
   churn: string;
   verdict: string;
+  fit: Fit;
 };
 
 const TH = "px-3 py-2 text-left text-xs font-semibold uppercase tracking-widest text-zinc-400";
@@ -55,11 +57,12 @@ export default function Backtest() {
               <div><dt className="text-xs uppercase tracking-widest text-zinc-400">Clash</dt><dd className="tabular-nums text-zinc-200">{d.clash.toFixed(1)}%</dd></div>
               <div><dt className="text-xs uppercase tracking-widest text-zinc-400">Churn</dt><dd className={`font-medium ${CHURN_STYLE[d.churn]}`}>{cap(d.churn)}</dd></div>
             </dl>
+            <p className="mt-3 text-sm text-zinc-300"><span className="font-semibold text-sky-200">Fit: {d.fit.label}.</span> {d.fit.note}</p>
           </li>
         ))}
       </ul>
       <div className="mt-4 hidden overflow-x-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 sm:block" role="region" aria-label="Backtest table" tabIndex={0}>
-        <table className="w-full min-w-[40rem] border-collapse text-sm">
+        <table className="w-full min-w-[56rem] border-collapse text-sm">
           <thead>
             <tr className="border-b border-white/10">
               <th scope="col" className={TH}>Deal</th>
@@ -69,6 +72,7 @@ export default function Backtest() {
               <th scope="col" className={TH}>Clash</th>
               <th scope="col" className={TH}>Churn</th>
               <th scope="col" className={TH}>Verdict</th>
+              <th scope="col" className={TH}>Fit</th>
             </tr>
           </thead>
           <tbody>
@@ -81,6 +85,10 @@ export default function Backtest() {
                 <td data-testid="backtest-clash" className={`${TD} tabular-nums text-zinc-200`}>{d.clash.toFixed(1)}%</td>
                 <td className={`${TD} font-medium ${CHURN_STYLE[d.churn]}`}>{cap(d.churn)}</td>
                 <td className={TD}>{verdict(d)}</td>
+                <td className={`${TD} min-w-[14rem]`}>
+                  <span data-testid="backtest-fit" className="font-semibold text-sky-200">{d.fit.label}</span>
+                  <p data-testid="backtest-fit-note" className="mt-1 text-xs text-zinc-300">{d.fit.note}</p>
+                </td>
               </tr>
             ))}
           </tbody>

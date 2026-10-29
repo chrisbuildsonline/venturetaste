@@ -1,6 +1,6 @@
 import { expect, test, type Page } from "@playwright/test";
 
-type Deal = { acquirer_label: string; target_label: string; year: number; bci: number; clash: number; churn: string; verdict: string };
+type Deal = { acquirer_label: string; target_label: string; year: number; bci: number; clash: number; churn: string; verdict: string; fit: { label: string; note: string } };
 
 function watchErrors(page: Page): string[] {
   const errors: string[] = [];
@@ -29,7 +29,12 @@ test("backtest panel shows every real deal with the API numbers", async ({ page,
     await expect(row.getByTestId("backtest-clash")).toHaveText(`${d.clash.toFixed(1)}%`);
     await expect(row).toContainText(d.churn, { ignoreCase: true });
     await expect(row).toContainText(d.verdict);
+    await expect(row.getByTestId("backtest-fit")).toHaveText(d.fit.label);
+    await expect(row.getByTestId("backtest-fit-note")).toHaveText(d.fit.note);
   }
+  await expect(panel.getByRole("columnheader", { name: "Fit" })).toBeVisible();
+  await expect(rows.first().getByTestId("backtest-fit")).toHaveText("Complementary");
+  await expect(rows.first()).toContainText("Nike + Converse");
   await expect(panel.getByTestId("backtest-note")).toContainText("sanity check, not a calibration");
   await expect(panel.getByTestId("backtest-note")).toContainText("holding companies");
   await panel.scrollIntoViewIfNeeded();

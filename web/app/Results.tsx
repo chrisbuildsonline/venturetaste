@@ -163,6 +163,10 @@ export default function Results({ data }: { data: Diligence }) {
             </span>
           </div>
           <div>
+            <span data-testid="fit-chip" className="inline-block rounded-full px-3 py-1 text-xs font-semibold text-sky-200 ring-1 ring-sky-300/50 bg-sky-400/10">Fit: {data.fit.label}</span>
+            <p data-testid="fit-note" className="mt-2 text-sm text-zinc-300">{data.fit.note}</p>
+          </div>
+          <div>
             <div className="flex items-baseline justify-between text-sm">
               <span className="text-zinc-300">Culture clash</span>
               <span data-testid="clash-value" className="font-semibold tabular-nums text-white">{scores.culture_clash.toFixed(1)}%</span>
