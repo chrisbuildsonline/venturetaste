@@ -73,21 +73,21 @@ try {
 
   // ---- 3. slides ----
   const CSS = `
-:root{--ink:#e4e4f0;--dim:#9a9ab5;--line:#2a2a45;--a1:#818cf8;--ok:#34d399;--hot:#fb7185}
+:root{--ink:#ededf0;--dim:#9a9aa6;--line:rgba(255,255,255,.09);--a1:#c6f135;--ok:#34d399;--hot:#fb7185}
 *{box-sizing:border-box}
-body{margin:0;height:100vh;background:#0b0b18;color:var(--ink);font:19px/1.45 Inter,system-ui,sans-serif;overflow:hidden}
-body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 85% 0%,#1e1b4b 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 0% 100%,#2e1065 0%,transparent 70%);z-index:-1}
+body{margin:0;height:100vh;background:#09090b;color:var(--ink);font:19px/1.45 Inter,system-ui,sans-serif;overflow:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 60% 50% at 12% -8%,rgba(198,241,53,.10) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 95% 100%,rgba(124,196,255,.07) 0%,transparent 70%);z-index:-1}
 .stage{position:absolute;inset:0;padding:40px 56px 56px;display:flex;flex-direction:column;animation:enter .7s cubic-bezier(.2,.7,.2,1) both}
 @keyframes enter{from{opacity:0;transform:translateY(14px)}}
 .eyebrow{font:600 13px Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--a1);margin-bottom:6px}
 h1{font:700 36px/1.15 Inter;letter-spacing:-.02em;margin:0 0 8px}
 .lead{color:var(--dim);margin:0 0 22px;font-size:18px}
-.card{background:#14142a;border:1px solid var(--line);border-radius:16px;padding:16px 20px}
+.card{background:#121214;border:1px solid var(--line);border-radius:16px;padding:16px 20px}
 .card b{font-weight:600}
 .cols{display:grid;gap:18px}
 .in{animation:enter .6s cubic-bezier(.2,.7,.2,1) both}
 .mono{font:15px/1.6 ui-monospace,'JetBrains Mono',monospace}
-.chip{display:inline-block;font:500 13px ui-monospace,monospace;background:#1e1b4b;color:#c7d2fe;border:1px solid #3730a3;border-radius:8px;padding:2px 8px;margin:4px 4px 0 0}
+.chip{display:inline-block;font:500 13px ui-monospace,monospace;background:rgba(198,241,53,.08);color:#dcf37a;border:1px solid rgba(198,241,53,.35);border-radius:8px;padding:2px 8px;margin:4px 4px 0 0}
 .dim{color:var(--dim);font-size:16px}
 .big{font:700 64px/1 Inter;letter-spacing:-.03em;color:var(--ok)}
 `;
