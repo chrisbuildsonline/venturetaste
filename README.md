@@ -145,9 +145,9 @@ Each result also carries a `fit` (`{type, label, note}`), a plain description of
 
 ## Backtest on real deals
 
-Four real deals, scored with the same `score()` on the recorded Qloo fixtures (`GET /api/backtest`, also shown on the main page; `bun run backtest` prints this table):
+11 real deals, scored with the same `score()` on the recorded Qloo fixtures (`GET /api/backtest`, also shown on the main page; `bun run backtest` prints this table):
 
-![The backtest panel on the main page: four real deals with their BCI, clash, churn, verdict and fit](docs/backtest.png)
+![The backtest panel on the main page: 11 real deals with their BCI, clash, churn, verdict and fit](docs/backtest.png)
 
 | Deal | Year | Outcome | BCI | Clash | Churn | Verdict | Fit |
 |---|---|---|---|---|---|---|---|
@@ -155,10 +155,17 @@ Four real deals, scored with the same `score()` on the recorded Qloo fixtures (`
 | VF Corp (as Vans) + Supreme | 2020 | Sold to EssilorLuxottica in 2024 for $1.5B (paid $2.1B) | 36.5 | 57.9 | medium | Proceed with conditions | Adjacent |
 | Tapestry (as Coach) + Capri (as Michael Kors) | 2023 | $8.5B deal; FTC sued, a court blocked it in Oct 2024, called off in Nov 2024 | 48.2 | 43.9 | medium | Proceed with conditions | Adjacent |
 | Adidas + Reebok | 2006 | Paid ~$3.8B; sold to Authentic Brands in 2021 for up to EUR 2.1B | 47.4 | 46.1 | medium | Proceed with conditions | Adjacent |
+| VF Corp (as Vans) + The North Face | 2000 | Bought in 2000; still VF's biggest brand 25 years later | 25.6 | 73.8 | high | Pass | Complementary |
+| Tapestry (as Coach) + Kate Spade | 2017 | Paid $2.4B; still owned by Tapestry | 41.2 | 53.6 | medium | Proceed with conditions | Adjacent |
+| Estée Lauder + Tom Ford | 2022 | Paid $2.8B for the brand; still owned | 29.0 | 67.4 | high | Pass | Complementary |
+| Nike + Umbro | 2008 | Paid ~$580M; sold to Iconix in 2012 for $225M | 35.2 | 60.4 | medium | Proceed with conditions | Adjacent |
+| Tapestry (as Coach) + Stuart Weitzman | 2015 | Paid $574M; sold to Caleres in 2025 for $105M | 36.6 | 57.1 | medium | Proceed with conditions | Adjacent |
+| Capri (as Michael Kors) + Versace | 2018 | Paid ~$2.1B; sold to Prada in 2025 for EUR 1.25B | 37.7 | 56.3 | medium | Proceed with conditions | Adjacent |
+| Walmart + Bonobos | 2017 | Paid $310M; sold in 2023 for $75M | 24.8 | 74.8 | high | Pass | Complementary |
 
-Caveat: 4 deals is a sanity check, not a calibration. Scores use today's Qloo audiences, not the audiences at deal time, and holding companies are scored through their flagship brand (VF Corp as Vans, Tapestry as Coach, Capri as Michael Kors). Weights were not tuned to this table.
+Caveat: 11 deals is a sanity check, not a calibration. Scores use today's Qloo audiences, not the audiences at deal time, and holding companies are scored through their flagship brand (VF Corp as Vans, Tapestry as Coach, Capri as Michael Kors). Weights were not tuned to this table.
 
-The verdict is about merging the two audiences; Fit says what kind of buy it is. Fit is `overlapping` at BCI 50 or more, `complementary` when churn risk is high and BCI is under 50, and `adjacent` otherwise. The BCI and the verdict alone do not separate kept from failed deals: the one kept deal (Nike + Converse) has the lowest BCI and the highest culture clash, so the verdict is Pass on it, while the three deals that were sold at a loss or blocked all get Proceed with conditions. Fit does separate them in these 4 deals: the kept buy is the only complementary one and the three that went badly are all adjacent. But 4 deals is an anecdote, not evidence that fit predicts outcomes. Fit uses the thresholds the scoring already had (BCI 50, clash 66); nothing was tuned to these deals.
+The verdict is about merging the two audiences; Fit says what kind of buy it is. Fit is `overlapping` at BCI 50 or more, `complementary` when churn risk is high and BCI is under 50, and `adjacent` otherwise. The verdict does not separate kept from failed deals in the direction you would hope: 3 of the 4 kept deals get Pass (the lowest BCI and highest culture clash, because they are the least overlapping audiences), while 6 of the 7 deals that were sold at a loss or blocked get Proceed with conditions. Fit separates them better but not perfectly: 3 of the 4 kept deals are complementary (Converse, The North Face, Tom Ford) and 6 of the 7 failed ones are adjacent. The exceptions are Coach + Kate Spade (kept, adjacent) and Walmart + Bonobos (sold at a loss, complementary). 11 deals is an anecdote, not evidence that fit predicts outcomes. Fit uses the thresholds the scoring already had (BCI 50, clash 66); nothing was tuned to these deals.
 
 ## Demo pairs
 

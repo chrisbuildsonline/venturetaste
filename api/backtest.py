@@ -1,4 +1,4 @@
-"""Four real deals scored on the recorded Qloo fixtures: a sanity check of BCI and culture clash, not a calibration."""
+"""Eleven real deals scored on the recorded Qloo fixtures: a sanity check of BCI and culture clash, not a calibration."""
 
 import threading
 from dataclasses import dataclass
@@ -25,19 +25,34 @@ DEALS = (
          "$8.5B deal; FTC sued, a court blocked it in Oct 2024, called off in Nov 2024", "blocked"),
     Deal("Adidas", "Reebok", "Adidas", "Reebok", 2006,
          "Paid ~$3.8B; sold to Authentic Brands in 2021 for up to EUR 2.1B", "sold at a loss"),
+    Deal("VF Corp (as Vans)", "The North Face", "Vans", "The North Face", 2000,
+         "Bought in 2000; still VF's biggest brand 25 years later", "kept"),
+    Deal("Tapestry (as Coach)", "Kate Spade", "Coach", "Kate Spade", 2017,
+         "Paid $2.4B; still owned by Tapestry", "kept"),
+    Deal("Estée Lauder", "Tom Ford", "Estée Lauder", "Tom Ford", 2022,
+         "Paid $2.8B for the brand; still owned", "kept"),
+    Deal("Nike", "Umbro", "Nike", "Umbro", 2008,
+         "Paid ~$580M; sold to Iconix in 2012 for $225M", "sold at a loss"),
+    Deal("Tapestry (as Coach)", "Stuart Weitzman", "Coach", "Stuart Weitzman", 2015,
+         "Paid $574M; sold to Caleres in 2025 for $105M", "sold at a loss"),
+    Deal("Capri (as Michael Kors)", "Versace", "Michael Kors", "Versace", 2018,
+         "Paid ~$2.1B; sold to Prada in 2025 for EUR 1.25B", "sold at a loss"),
+    Deal("Walmart", "Bonobos", "Walmart", "Bonobos", 2017,
+         "Paid $310M; sold in 2023 for $75M", "sold at a loss"),
 )
 
 NOTE = (
-    "4 deals is a sanity check, not a calibration. Scores use today's Qloo audiences, not the audiences at deal time, "
+    "11 deals is a sanity check, not a calibration. Scores use today's Qloo audiences, not the audiences at deal time, "
     "and holding companies are scored through their flagship brand. "
     "The verdict is about merging the two audiences; Fit says what kind of buy it is. "
-    "In these 4 deals the one kept buy is the only complementary one and the three that went badly are all adjacent, "
-    "but 4 deals is an anecdote, not evidence. Fit uses the thresholds the scoring already had (BCI 50, clash 66); "
+    "In these 11 deals 3 of the 4 kept buys are complementary and 6 of the 7 that were sold at a loss or blocked are adjacent "
+    "(Walmart + Bonobos is complementary and failed; Coach + Kate Spade is adjacent and kept), "
+    "but 11 deals is an anecdote, not evidence. Fit uses the thresholds the scoring already had (BCI 50, clash 66); "
     "nothing was tuned to these deals."
 )
 
 _cache: dict[str, Any] | None = None
-_lock = threading.Lock()  # concurrent first visitors wait for one computation instead of each running four pipelines
+_lock = threading.Lock()  # concurrent first visitors wait for one computation instead of each running every pipeline
 
 
 def backtest() -> dict[str, Any]:

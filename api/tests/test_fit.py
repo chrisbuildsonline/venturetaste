@@ -66,5 +66,12 @@ def test_backtest_fit_per_deal() -> None:
         "Vans + Supreme": "adjacent",
         "Coach + Michael Kors": "adjacent",
         "Adidas + Reebok": "adjacent",
+        "Vans + The North Face": "complementary",
+        "Coach + Kate Spade": "adjacent",
+        "Estée Lauder + Tom Ford": "complementary",
+        "Nike + Umbro": "adjacent",
+        "Coach + Stuart Weitzman": "adjacent",
+        "Michael Kors + Versace": "adjacent",
+        "Walmart + Bonobos": "complementary",
     }
     assert all(r["fit"]["label"] and r["fit"]["note"] for r in rows)

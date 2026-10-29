@@ -19,6 +19,13 @@ def profile(client: QlooClient, name: str) -> BrandProfile:
     return BrandProfile(entity.name, insights, client.demographics(entity.id))
 
 
+def test_backtest_has_at_least_eight_deals_with_the_original_four_first() -> None:
+    assert len(DEALS) >= 8
+    assert [(d.acquirer, d.target) for d in DEALS[:4]] == [
+        ("Nike", "Converse"), ("Vans", "Supreme"), ("Coach", "Michael Kors"), ("Adidas", "Reebok"),
+    ]
+
+
 def test_every_deal_brand_has_recorded_fixtures() -> None:
     for d in DEALS:
         for brand in (d.acquirer, d.target):
@@ -60,6 +67,7 @@ def test_readme_backtest_table_matches_the_api() -> None:
     section = README.split("## Backtest on real deals", 1)[1].split("\n## ", 1)[0]
     table = [[c.strip() for c in line.strip().strip("|").split("|")] for line in section.splitlines() if line.startswith("|")][2:]
     assert len(table) == len(rows)
+    assert f"{len(rows)} real deals" in section and f"{len(rows)} deals is" in section
     for cells, row in zip(table, rows, strict=True):
         assert cells == [
             f"{row['acquirer_label']} + {row['target_label']}", str(row["year"]), row["outcome"],

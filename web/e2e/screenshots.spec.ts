@@ -103,7 +103,7 @@ test("README screenshots: backtest on real deals", async ({ page }) => {
   await page.goto("/");
   const panel = page.getByTestId("backtest");
   await expect(panel.getByRole("heading", { name: "Backtest: real deals" })).toBeVisible();
-  await expect(panel.getByTestId("backtest-row")).toHaveCount(4);
+  await expect(panel.getByTestId("backtest-row")).toHaveCount(11);
   await expect(panel.getByTestId("backtest-row").first()).toContainText("Nike + Converse");
   await expect(panel.getByTestId("backtest-bci").first()).toHaveText("28.0");
   await expect(panel.getByTestId("backtest-note")).toContainText("sanity check, not a calibration");
