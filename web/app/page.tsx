@@ -255,7 +255,7 @@ export default function Home() {
       </header>
 
       <section className="relative mt-10 sm:mt-14">
-        <svg aria-hidden className="pointer-events-none absolute -right-10 -top-24 hidden h-[26rem] w-[40rem] text-lime opacity-[0.07] lg:block" viewBox="0 0 640 416" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <svg aria-hidden className="pointer-events-none absolute -right-10 -top-24 hidden h-[26rem] w-[40rem] text-lime opacity-[0.13] lg:block" viewBox="0 0 640 416" fill="none" stroke="currentColor" strokeWidth="1.5">
           <circle cx="250" cy="208" r="170" />
           <circle cx="390" cy="208" r="170" />
           <path d="M320 73a170 170 0 0 1 0 270a170 170 0 0 1 0-270z" fill="currentColor" stroke="none" />
@@ -291,7 +291,7 @@ export default function Home() {
         className="card mt-3 p-5 sm:p-6"
         noValidate
       >
-        <div className={`grid gap-4 ${mode === "pair" ? "sm:grid-cols-[1fr_auto_1fr] sm:items-end" : "sm:grid-cols-2"}`}>
+        <div className={`grid gap-4 ${mode === "pair" ? "sm:grid-cols-[1fr_auto_1fr] sm:items-end" : "sm:grid-cols-2 sm:items-start"}`}>
           <div>
             <label htmlFor="acquirer" className="eyebrow mb-2 block">Acquirer</label>
             <input id="acquirer" className="field" value={acquirer} onChange={(e) => setAcquirer(e.target.value)} placeholder="e.g. Nike" autoComplete="off" maxLength={100} />
@@ -307,10 +307,7 @@ export default function Home() {
           ) : (
             <div>
               <label htmlFor="targets" className="eyebrow mb-2 block">Candidate targets</label>
-              <textarea id="targets" className="field" rows={3} value={targetsText} onChange={(e) => setTargetsText(e.target.value)} placeholder="2 to 5 brands, comma or line separated" />
-              <button type="button" disabled={busy} onClick={() => void findTargets()} className="btn btn-ghost mt-3">
-                {finding ? "Finding targets…" : "Find targets"}
-              </button>
+              <textarea id="targets" className="field" rows={2} value={targetsText} onChange={(e) => setTargetsText(e.target.value)} placeholder="2 to 5 brands, comma or line separated" />
             </div>
           )}
         </div>
@@ -329,7 +326,12 @@ export default function Home() {
             {mode === "pair" ? (running ? "Running diligence…" : "Run diligence") : screening ? "Screening targets…" : "Screen targets"}
             {!busy && <span aria-hidden>→</span>}
           </button>
-          <span className="text-xs text-zinc-400">{mode === "pair" ? "18 Qloo calls, about 10 seconds live" : "One run per target, in parallel"}</span>
+          {mode === "screen" && (
+            <button type="button" disabled={busy} onClick={() => void findTargets()} className="btn btn-ghost min-h-13!">
+              {finding ? "Finding targets…" : "Find targets"}
+            </button>
+          )}
+          <span className="text-xs text-zinc-400">{mode === "pair" ? "18 Qloo calls, about 10 seconds live" : "Find targets asks Qloo for the closest brands, then screens them in parallel"}</span>
         </div>
         {error && (
           <p role="alert" className="mt-5 rounded-xl border border-rose-400/40 bg-rose-400/10 px-4 py-3 text-sm text-rose-200">
@@ -404,10 +406,10 @@ const STEPS = [
 
 function Empty({ testId, title, body }: { testId: string; title: string; body: string }) {
   return (
-    <div data-testid={testId} className="card rise p-6 sm:p-8">
-      <p className="display text-2xl text-white sm:text-3xl">{title}</p>
-      <p className="mt-2 max-w-3xl text-sm text-zinc-400">{body}</p>
-      <ol className="relative mt-7 grid gap-6 sm:grid-cols-4 sm:gap-4">
+    <div data-testid={testId} className="rise px-1 pt-6 sm:pt-8">
+      <p className="sr-only">{title}</p>
+      <p className="max-w-3xl text-sm text-zinc-400">{body}</p>
+      <ol className="relative mt-6 grid gap-6 sm:grid-cols-4 sm:gap-4">
         <span aria-hidden className="absolute left-3 top-3 hidden h-px w-[calc(100%-1.5rem)] bg-gradient-to-r from-lime/60 via-white/15 to-white/15 sm:block" />
         {STEPS.map(([name, role], i) => (
           <li key={name} className="relative flex gap-3 sm:block">

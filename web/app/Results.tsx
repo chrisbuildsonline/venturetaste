@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { download, memoFilename, memoMarkdown } from "./export";
 import { PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, RadarChart, ResponsiveContainer } from "recharts";
 import { label, type Clashing, type Demographics, type Diligence } from "./types";
@@ -106,7 +106,7 @@ function Bar({ value, tone }: { value: number; tone: string }) {
   const v = Math.max(-1, Math.min(1, value));
   const style = v < 0 ? { right: "50%", width: `${-v * 50}%` } : { left: "50%", width: `${v * 50}%` };
   return (
-    <div className="relative h-2.5 flex-1 rounded-full bg-white/[0.07]">
+    <div className="relative h-3 flex-1 rounded-full bg-white/[0.07]">
       <div className="absolute inset-y-[-3px] left-1/2 w-px bg-zinc-500" aria-hidden />
       <div data-testid="demo-bar" data-sign={v < 0 ? "negative" : "positive"} className={`absolute inset-y-0 ${v < 0 ? "rounded-l-full" : "rounded-r-full"} ${tone}`} style={style} />
     </div>
@@ -120,8 +120,8 @@ function DemoGroup({ title, keys, a, b, nameA, nameB }: { title: string; keys: s
       <h3 className="mb-3 text-sm font-medium text-zinc-200">{title}</h3>
       <div className="space-y-3">
         {keys.map((k) => (
-          <div key={k} className="grid grid-cols-[6.5rem_1fr] items-center gap-3 text-xs sm:grid-cols-[8rem_1fr]">
-            <span className="text-zinc-300">{k.replaceAll("_", " ")}</span>
+          <div key={k} className="grid grid-cols-[6.5rem_1fr] items-center gap-3 text-sm sm:grid-cols-[8rem_1fr]">
+            <span className="text-zinc-200">{k.replaceAll("_", " ")}</span>
             <div className="space-y-1.5">
               <div className="flex items-center gap-2">
                 <Bar value={a[k] ?? 0} tone="bg-lime" />
@@ -185,6 +185,15 @@ export default function Results({ data }: { data: Diligence }) {
   // the verdict and radar sit at the top of the results: bring them into view once a run finishes
   useEffect(() => {
     top.current?.scrollIntoView({ block: "start" });
+  }, []);
+  // a narrow viewport needs a smaller radar so the axis labels stay inside the chart
+  const [narrow, setNarrow] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 640px)");
+    const sync = () => setNarrow(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
   }, []);
 
   return (
@@ -250,9 +259,9 @@ export default function Results({ data }: { data: Diligence }) {
         </section>
 
         <Card title={`${nameA} × ${nameB} taste overlap`} aside={<span className="text-xs text-zinc-400">7 Qloo domains</span>}>
-          <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="relative h-[26rem] w-full">
+          <div data-testid="radar" role="img" aria-label={`Taste overlap by domain: ${radarData.map((r) => `${r.domain} ${r.overlap}%`).join(", ")}`} className="relative h-80 w-full sm:h-[26rem]">
             <ResponsiveContainer width="100%" height="100%">
-              <RadarChart data={radarData} outerRadius="78%" margin={{ top: 28, right: 48, bottom: 28, left: 48 }}>
+              <RadarChart data={radarData} outerRadius={narrow ? "60%" : "84%"} margin={{ top: 26, right: 56, bottom: 26, left: 56 }}>
                 <PolarGrid stroke={noOverlap ? "rgba(255,255,255,0.3)" : "rgba(255,255,255,0.12)"} />
                 <PolarAngleAxis dataKey="domain" tick={<AxisTick values={radarData} />} />
                 <PolarRadiusAxis angle={90} domain={[0, 100]} tick={false} axisLine={false} />
@@ -273,9 +282,9 @@ export default function Results({ data }: { data: Diligence }) {
               No shared taste in any domain: the audiences don&apos;t overlap.
             </p>
           )}
-          <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-2 text-xs" aria-label="Overlap by domain">
+          <ul className="mt-3 grid gap-x-6 gap-y-2 text-xs sm:grid-cols-2" aria-label="Overlap by domain">
             {radarData.map((r) => (
-              <li key={r.domain} className="grid grid-cols-[5.5rem_1fr_2.5rem] items-center gap-2">
+              <li key={r.domain} className="grid grid-cols-[6rem_1fr_2.5rem] items-center gap-2">
                 <span className="text-zinc-300">{r.domain}</span>
                 <span className="h-1.5 rounded-full bg-white/[0.06]" aria-hidden><span className="block h-full rounded-full bg-lime/80" style={{ width: `${r.overlap}%` }} /></span>
                 <span className="num text-right text-zinc-200">{r.overlap}%</span>
@@ -289,8 +298,8 @@ export default function Results({ data }: { data: Diligence }) {
         <Card title="Bridging tastes: the Analyst's tag probe" aside={<span className="text-xs text-zinc-400">Never changes BCI, clash or verdict</span>}>
           <div className="flex flex-wrap gap-3 [&>*]:min-w-[16rem] [&>*]:flex-1">
           {data.probed_tags && (
-            <div data-testid="bridge-potential" className="well px-4 py-3">
-              <p className="flex items-baseline justify-between gap-3 text-sm">
+            <div data-testid="bridge-potential" className={`well px-4 py-3 ${data.bridges.length === 0 && data.bridge_picks.length === 0 ? "flex flex-wrap items-baseline gap-x-4 gap-y-1" : ""}`}>
+              <p className="flex items-baseline gap-3 text-sm">
                 <span className="font-medium text-zinc-100">Bridge potential</span>
                 <span className="num font-semibold text-white"><span data-testid="bridge-potential-value">{data.bridge_potential}</span> / 100</span>
               </p>
@@ -340,8 +349,8 @@ export default function Results({ data }: { data: Diligence }) {
         <TasteList title={`Only ${nameB} fans`} testId="clash-target" tone="bg-rose-400/80" empty="No distinctive tastes found." items={clashItems(data.top_clashing.target)} />
       </div>
 
-      <Card title="Deal memo" testId="memo" aside={<span className="text-xs text-zinc-400">{memo.author ? `Memo by ${memo.author}` : "Template memo"}</span>}>
-        <p className="display text-2xl text-white sm:text-3xl">{memo.headline}</p>
+      <Card title="Deal memo" testId="memo" className={`bg-gradient-to-br ${VERDICT_TINT[memo.verdict] ?? VERDICT_TINT.Pass}`} aside={<span className="text-xs text-zinc-400">{memo.author ? `Memo by ${memo.author}` : "Template memo"}</span>}>
+        <p className="display text-3xl leading-tight text-white sm:text-[2.6rem]">{memo.headline}</p>
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           <div className="well p-4">
             <h3 className="eyebrow text-emerald-300/80!">Rationale</h3>
