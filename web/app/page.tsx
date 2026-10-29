@@ -24,9 +24,6 @@ function errorText(body: unknown, status: number): string {
   return `The diligence run failed (HTTP ${status}). Try again.`;
 }
 
-const INPUT =
-  "w-full rounded-xl border border-white/15 bg-black/30 px-4 py-3 text-base text-white placeholder:text-zinc-500 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400/40";
-
 export default function Home() {
   const [acquirer, setAcquirer] = useState("");
   const [target, setTarget] = useState("");
@@ -239,14 +236,39 @@ export default function Home() {
   const showProgress = mode === "pair" && (running || data !== null);
 
   return (
-    <main className="mx-auto max-w-5xl px-4 pb-20 pt-10 sm:px-6 sm:pt-16">
-      <header className="mb-8 sm:mb-10">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-indigo-300">Powered by Qloo taste data</p>
-        <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">VentureTaste</h1>
-        <p className="mt-3 max-w-2xl text-lg text-zinc-300">Taste-graph due diligence for consumer brand deals</p>
+    <main className="mx-auto max-w-6xl px-4 pb-24 pt-5 sm:px-6">
+      <header className="flex flex-wrap items-center justify-between gap-4 border-b border-white/[0.07] pb-5">
+        <div className="flex items-center gap-3">
+          <Mark />
+          <div>
+            <h1 className="text-[1.05rem] font-semibold tracking-tight text-white">VentureTaste</h1>
+            <p className="text-xs text-zinc-400">Taste-graph due diligence for consumer brand deals</p>
+          </div>
+        </div>
+        <div className="flex flex-wrap items-center gap-2 text-xs text-zinc-400">
+          <span className="pill bg-lime/10 text-lime">Powered by Qloo Taste AI</span>
+          <span className="hidden rounded-full border border-white/10 px-3 py-1.5 sm:inline">4 agents · 7 taste domains · 18 Qloo calls per run</span>
+          <a href="https://github.com/chrisbuildsonline/venturetaste" target="_blank" rel="noreferrer" className="btn btn-ghost min-h-11! px-3.5! text-xs">
+            Source
+          </a>
+        </div>
       </header>
 
-      <div role="group" aria-label="Mode" className="mb-3 inline-flex rounded-xl border border-white/15 p-1">
+      <section className="relative mt-10 sm:mt-14">
+        <svg aria-hidden className="pointer-events-none absolute -right-10 -top-24 hidden h-[26rem] w-[40rem] text-lime opacity-[0.07] lg:block" viewBox="0 0 640 416" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <circle cx="250" cy="208" r="170" />
+          <circle cx="390" cy="208" r="170" />
+          <path d="M320 73a170 170 0 0 1 0 270a170 170 0 0 1 0-270z" fill="currentColor" stroke="none" />
+        </svg>
+        <p className="display text-[2.5rem] leading-[1.02] text-white sm:text-[3.6rem]">
+          Do these customers <em className="text-lime">overlap</em>, or <em className="text-rose-300">clash</em>?
+        </p>
+        <p className="mt-4 max-w-2xl text-base text-zinc-400 sm:text-lg">
+          The spreadsheet shows revenue and margin. It does not show whether two brands&apos; audiences cannibalize each other or walk away after the deal. Four agents answer that from Qloo&apos;s cross-domain taste graph.
+        </p>
+      </section>
+
+      <div role="group" aria-label="Mode" className="mt-8 inline-flex rounded-xl border border-white/10 bg-well p-1">
         {(["pair", "screen"] as const).map((m) => (
           <button
             key={m}
@@ -254,7 +276,7 @@ export default function Home() {
             aria-pressed={mode === m}
             disabled={busy}
             onClick={() => switchMode(m)}
-            className={`min-h-11 rounded-lg px-4 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed ${mode === m ? "bg-indigo-500 text-white" : "text-zinc-300 hover:text-white"}`}
+            className={`min-h-11 rounded-lg px-4 text-sm font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-lime/60 disabled:cursor-not-allowed ${mode === m ? "bg-white/[0.08] text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]" : "text-zinc-400 hover:text-white"}`}
           >
             {m === "pair" ? "Compare a deal" : "Screen targets"}
           </button>
@@ -266,58 +288,48 @@ export default function Home() {
           e.preventDefault();
           void (mode === "pair" ? run(acquirer, target) : screen(acquirer, targetsText));
         }}
-        className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6"
+        className="card mt-3 p-5 sm:p-6"
         noValidate
       >
-        <div className="grid gap-4 sm:grid-cols-2">
+        <div className={`grid gap-4 ${mode === "pair" ? "sm:grid-cols-[1fr_auto_1fr] sm:items-end" : "sm:grid-cols-2"}`}>
           <div>
-            <label htmlFor="acquirer" className="mb-2 block text-sm font-medium text-zinc-200">Acquirer</label>
-            <input id="acquirer" className={INPUT} value={acquirer} onChange={(e) => setAcquirer(e.target.value)} placeholder="e.g. Nike" autoComplete="off" maxLength={100} />
+            <label htmlFor="acquirer" className="eyebrow mb-2 block">Acquirer</label>
+            <input id="acquirer" className="field" value={acquirer} onChange={(e) => setAcquirer(e.target.value)} placeholder="e.g. Nike" autoComplete="off" maxLength={100} />
           </div>
           {mode === "pair" ? (
-            <div>
-              <label htmlFor="target" className="mb-2 block text-sm font-medium text-zinc-200">Target</label>
-              <input id="target" className={INPUT} value={target} onChange={(e) => setTarget(e.target.value)} placeholder="e.g. Adidas" autoComplete="off" maxLength={100} />
-            </div>
+            <>
+              <div aria-hidden className="hidden h-12 w-12 items-center justify-center self-end rounded-full border border-white/10 text-lg text-zinc-500 sm:flex">×</div>
+              <div>
+                <label htmlFor="target" className="eyebrow mb-2 block">Target</label>
+                <input id="target" className="field" value={target} onChange={(e) => setTarget(e.target.value)} placeholder="e.g. Adidas" autoComplete="off" maxLength={100} />
+              </div>
+            </>
           ) : (
             <div>
-              <label htmlFor="targets" className="mb-2 block text-sm font-medium text-zinc-200">Candidate targets</label>
-              <textarea id="targets" className={INPUT} rows={3} value={targetsText} onChange={(e) => setTargetsText(e.target.value)} placeholder="2 to 5 brands, comma or line separated" />
-              <button
-                type="button"
-                disabled={busy}
-                onClick={() => void findTargets()}
-                className="mt-3 min-h-11 rounded-xl border border-indigo-300/60 px-5 text-sm font-semibold text-indigo-100 transition hover:bg-indigo-400/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-50"
-              >
+              <label htmlFor="targets" className="eyebrow mb-2 block">Candidate targets</label>
+              <textarea id="targets" className="field" rows={3} value={targetsText} onChange={(e) => setTargetsText(e.target.value)} placeholder="2 to 5 brands, comma or line separated" />
+              <button type="button" disabled={busy} onClick={() => void findTargets()} className="btn btn-ghost mt-3">
                 {finding ? "Finding targets…" : "Find targets"}
               </button>
             </div>
           )}
         </div>
-        <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <button
-            type="submit"
-            disabled={busy}
-            className="rounded-xl bg-indigo-500 px-6 py-3 text-base font-semibold text-white transition hover:bg-indigo-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-50"
-          >
+        {(mode === "pair" ? presets.length : screens.length) > 0 && (
+          <div className="mt-4 flex flex-wrap items-center gap-2" role="group" aria-label={mode === "pair" ? "Preset deals" : "Preset screens"}>
+            <span className="text-sm text-zinc-500">{mode === "pair" ? "Try a deal:" : "Try a screen:"}</span>
+            {(mode === "pair" ? presets : screens).map((p) => (
+              <button key={p.id} type="button" disabled={busy} onClick={() => ("target" in p ? pick(p) : pickScreen(p))} className="chip">
+                {p.label}
+              </button>
+            ))}
+          </div>
+        )}
+        <div className="mt-5 flex flex-wrap items-center gap-4">
+          <button type="submit" disabled={busy} className="btn btn-primary min-h-13! px-7! text-base!">
             {mode === "pair" ? (running ? "Running diligence…" : "Run diligence") : screening ? "Screening targets…" : "Screen targets"}
+            {!busy && <span aria-hidden>→</span>}
           </button>
-          {(mode === "pair" ? presets.length : screens.length) > 0 && (
-            <div className="flex flex-wrap items-center gap-2" role="group" aria-label={mode === "pair" ? "Preset deals" : "Preset screens"}>
-              <span className="text-sm text-zinc-400">{mode === "pair" ? "Try a deal:" : "Try a screen:"}</span>
-              {(mode === "pair" ? presets : screens).map((p) => (
-                <button
-                  key={p.id}
-                  type="button"
-                  disabled={busy}
-                  onClick={() => ("target" in p ? pick(p) : pickScreen(p))}
-                  className="min-h-11 rounded-full border border-white/15 px-3.5 text-sm text-zinc-200 transition hover:border-indigo-300 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-300 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  {p.label}
-                </button>
-              ))}
-            </div>
-          )}
+          <span className="text-xs text-zinc-400">{mode === "pair" ? "18 Qloo calls, about 10 seconds live" : "One run per target, in parallel"}</span>
         </div>
         {error && (
           <p role="alert" className="mt-5 rounded-xl border border-rose-400/40 bg-rose-400/10 px-4 py-3 text-sm text-rose-200">
@@ -327,26 +339,31 @@ export default function Home() {
       </form>
 
       {showProgress && (
-        <section aria-label="Agent progress" className="mt-5 rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-zinc-400">Diligence agents</h2>
+        <section aria-label="Agent progress" className="card rise mt-4 p-5 sm:p-6">
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="eyebrow">Diligence pipeline</h2>
+            <span className="text-xs text-zinc-400">{data ? "Finished" : "Running"}</span>
+          </div>
           <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {AGENTS.map((name) => {
+            {AGENTS.map((name, i) => {
               const step = trace.find((t) => t.agent === name);
               const done = Boolean(step);
               const waiting = !done && active !== name && !data;
               return (
-                <li key={name} data-testid={`agent-${name}`} data-state={done ? "done" : waiting ? "waiting" : "running"} className={`rounded-xl border border-white/10 bg-black/20 p-4 ${waiting ? "opacity-60" : ""}`}>
-                  <div className="flex items-center gap-2 text-sm font-semibold text-white">
-                    <span aria-hidden className={done ? "text-emerald-300" : waiting ? "inline-block size-2.5 rounded-full bg-zinc-600" : "inline-block size-2.5 animate-pulse rounded-full bg-indigo-400"}>{done ? "✓" : ""}</span>
-                    {name}
+                <li key={name} data-testid={`agent-${name}`} data-state={done ? "done" : waiting ? "waiting" : "running"} className={`well relative p-4 transition ${waiting ? "opacity-50" : ""}`}>
+                  <div className="flex items-center gap-2.5">
+                    <span aria-hidden className={`flex size-6 items-center justify-center rounded-full text-[0.7rem] font-bold ${done ? "bg-lime text-black" : waiting ? "border border-white/15 text-zinc-500" : "border border-lime/60 text-lime"}`}>
+                      {done ? "✓" : waiting ? i + 1 : <span className="size-2 animate-pulse rounded-full bg-lime" />}
+                    </span>
+                    <span className="text-sm font-semibold text-white">{name}</span>
                   </div>
-                  <p className="mt-1 text-xs text-zinc-400">{AGENT_ROLES[name]}</p>
-                  <p className="mt-2 text-xs tabular-nums text-zinc-300">
+                  <p className="mt-2 text-xs text-zinc-400">{AGENT_ROLES[name]}</p>
+                  <p className="num mt-2 text-xs text-zinc-300">
                     {step ? `Done · ${step.ms} ms · ${step.replayed ? "recorded answers, no live Qloo calls" : `${step.qloo_calls} Qloo ${step.qloo_calls === 1 ? "call" : "calls"}`}` : waiting ? "Waiting" : "Running…"}
                   </p>
-                  {step?.decision && <p data-testid={`decision-${name}`} className="mt-2 text-xs text-indigo-200">{step.decision}</p>}
+                  {step?.decision && <p data-testid={`decision-${name}`} className="mt-2 border-l-2 border-lime/50 pl-2 text-xs text-zinc-200">{step.decision}</p>}
                   {step?.planner && (
-                    <p data-testid={`planner-${name}`} title={step.fallback} className="mt-1 text-xs text-zinc-400">
+                    <p data-testid={`planner-${name}`} title={step.fallback} className="mt-1.5 text-xs text-zinc-400">
                       {step.planner === "llm" ? (step.recorded ? `Recorded ${step.model} run` : `${name === "Partner" ? "Memo by" : "Decided by"} ${step.model}`) : step.planner === "rule" ? "Rule-based fallback" : "Template memo"}
                     </p>
                   )}
@@ -357,29 +374,62 @@ export default function Home() {
         </section>
       )}
 
-      <div className="mt-5" aria-live="polite">
+      <div className="mt-4" aria-live="polite">
         {mode === "screen" && rows.length > 0 && <ScreenTable acquirer={screenAcquirer} rows={rows} found={found} onFull={fullDiligence} />}
         {mode === "screen" && rows.length === 0 && !error && (
-          <div data-testid="screen-empty" className="rounded-2xl border border-dashed border-white/15 px-6 py-14 text-center">
-            <p className="text-lg font-medium text-white">Which acquisition target fits best?</p>
-            <p className="mx-auto mt-2 max-w-xl text-sm text-zinc-400">
-              Enter an acquirer and 2 to 5 candidate targets. Each one gets a full taste-graph diligence, run in parallel, and the table ranks them. A whole screen counts as one run against the rate limit.
-            </p>
-          </div>
+          <Empty testId="screen-empty" title="Which acquisition target fits best?" body="Enter an acquirer and 2 to 5 candidate targets. Each one gets a full taste-graph diligence, run in parallel, and the table ranks them. A whole screen counts as one run against the rate limit." />
         )}
         {mode === "pair" && data && <Results data={data} />}
         {mode === "pair" && !data && !running && !error && (
-          <div data-testid="empty-state" className="rounded-2xl border border-dashed border-white/15 px-6 py-14 text-center">
-            <p className="text-lg font-medium text-white">Is this deal a cannibalization trap or a cross-sell win?</p>
-            <p className="mx-auto mt-2 max-w-xl text-sm text-zinc-400">
-              Enter an acquirer and a target, or pick a preset deal. Four agents compare the two audiences on Qloo&apos;s taste graph and hand back a
-              Brand Cannibalization Index, a culture clash score and a deal memo.
-            </p>
-          </div>
+          <Empty testId="empty-state" title="Is this deal a cannibalization trap or a cross-sell win?" body="Enter an acquirer and a target, or pick a preset deal. Four agents compare the two audiences on Qloo's taste graph and hand back a Brand Cannibalization Index, a culture clash score and a deal memo." />
         )}
       </div>
 
       {mode === "pair" && <Backtest />}
+
+      <footer className="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-white/[0.07] pt-5 text-xs text-zinc-400">
+        <span>Every score is computed from Qloo data with fixed formulas. The optional LLM only words the memo and is fact-checked against the data.</span>
+        <span>Built for the Qloo Agentic Hackathon · MIT</span>
+      </footer>
     </main>
+  );
+}
+
+const STEPS = [
+  ["Scout", "Resolves both brands to Qloo entities"],
+  ["Cartographer", "Pulls 7 taste domains + demographics"],
+  ["Analyst", "Scores overlap, clash and churn risk"],
+  ["Partner", "Writes the deal memo and verdict"],
+];
+
+function Empty({ testId, title, body }: { testId: string; title: string; body: string }) {
+  return (
+    <div data-testid={testId} className="card rise p-6 sm:p-8">
+      <p className="display text-2xl text-white sm:text-3xl">{title}</p>
+      <p className="mt-2 max-w-3xl text-sm text-zinc-400">{body}</p>
+      <ol className="relative mt-7 grid gap-6 sm:grid-cols-4 sm:gap-4">
+        <span aria-hidden className="absolute left-3 top-3 hidden h-px w-[calc(100%-1.5rem)] bg-gradient-to-r from-lime/60 via-white/15 to-white/15 sm:block" />
+        {STEPS.map(([name, role], i) => (
+          <li key={name} className="relative flex gap-3 sm:block">
+            <span className={`num relative z-10 flex size-6 shrink-0 items-center justify-center rounded-full border text-[0.65rem] font-bold ${i === 0 ? "border-lime bg-lime text-black" : "border-white/20 bg-panel text-zinc-400"}`}>{i + 1}</span>
+            <div className="sm:mt-3">
+              <p className="text-sm font-semibold text-white">{name}</p>
+              <p className="mt-0.5 text-xs text-zinc-400">{role}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+function Mark() {
+  return (
+    <svg aria-hidden width="36" height="36" viewBox="0 0 36 36" className="shrink-0">
+      <rect width="36" height="36" rx="10" fill="#c6f135" />
+      <circle cx="14.5" cy="18" r="7" fill="none" stroke="#0b0f00" strokeWidth="2.2" />
+      <circle cx="21.5" cy="18" r="7" fill="none" stroke="#0b0f00" strokeWidth="2.2" />
+      <path d="M18 12.1a7 7 0 0 1 0 11.8a7 7 0 0 1 0-11.8z" fill="#0b0f00" />
+    </svg>
   );
 }

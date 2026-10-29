@@ -35,6 +35,7 @@ test("backtest panel shows every real deal with the API numbers", async ({ page,
   await expect(panel.getByRole("columnheader", { name: "Fit" })).toBeVisible();
   await expect(rows.first().getByTestId("backtest-fit")).toHaveText("Complementary");
   await expect(rows.first()).toContainText("Nike + Converse");
+  await expect(panel.getByTestId("backtest-summary")).toContainText(/Kept: \d+ of \d+ complementary\. Sold at a loss or blocked: \d+ of \d+ adjacent\./);
   await expect(panel.getByTestId("backtest-note")).toContainText("sanity check, not a calibration");
   await expect(panel.getByTestId("backtest-note")).toContainText("holding companies");
   await panel.scrollIntoViewIfNeeded();

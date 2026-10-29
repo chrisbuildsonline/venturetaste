@@ -1,6 +1,154 @@
 @import "tailwindcss";
 
-body {
-  background: #0b0b10;
-  color: #ededf2;
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-serif), ui-serif, Georgia, serif;
+  --color-ink: #09090b;
+  --color-panel: #121214;
+  --color-well: #0d0d0f;
+  --color-lime: #c6f135;
+  --color-ice: #7cc4ff;
 }
+
+:root {
+  --line: rgba(255, 255, 255, 0.07);
+  --line-strong: rgba(255, 255, 255, 0.14);
+}
+
+html {
+  background: var(--color-ink);
+  color-scheme: dark;
+}
+
+body {
+  background:
+    radial-gradient(900px 420px at 12% -8%, rgba(198, 241, 53, 0.09), transparent 65%),
+    radial-gradient(700px 360px at 95% 0%, rgba(124, 196, 255, 0.06), transparent 65%),
+    var(--color-ink);
+  color: #ededf0;
+  font-feature-settings: "cv11", "ss01", "ss03";
+}
+
+@layer components {
+.card {
+  background-color: var(--color-panel);
+  border: 1px solid var(--line);
+  border-radius: 1.125rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 20px 50px -30px rgba(0, 0, 0, 0.8);
+}
+
+.well {
+  background-color: var(--color-well);
+  border: 1px solid var(--line);
+  border-radius: 0.875rem;
+}
+
+.eyebrow {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9a9aa6;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.field {
+  width: 100%;
+  min-height: 3.5rem;
+  border-radius: 0.875rem;
+  border: 1px solid var(--line-strong);
+  background: var(--color-well);
+  padding: 0.75rem 1rem;
+  color: #fff;
+  font-size: 1.125rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field::placeholder { color: #7a7a86; }
+.field:focus {
+  outline: none;
+  border-color: rgba(198, 241, 53, 0.7);
+  box-shadow: 0 0 0 3px rgba(198, 241, 53, 0.18);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  border-radius: 0.75rem;
+  padding: 0 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s, transform 0.1s;
+}
+.btn:focus { outline: none; }
+.btn:focus-visible { box-shadow: 0 0 0 3px rgba(198, 241, 53, 0.45); }
+.btn:disabled { cursor: not-allowed; opacity: 0.5; }
+.btn:active:not(:disabled) { transform: translateY(1px); }
+.btn-primary { background: var(--color-lime); color: #0b0f00; }
+.btn-primary:hover:not(:disabled) { background: #d6ff4d; }
+.btn-ghost { border: 1px solid var(--line-strong); color: #e4e4e9; background: transparent; }
+.btn-ghost:hover:not(:disabled) { border-color: rgba(198, 241, 53, 0.6); color: #fff; }
+.chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  padding: 0 0.875rem;
+  font-size: 0.8125rem;
+  color: #d4d4db;
+  background: rgba(255, 255, 255, 0.02);
+  transition: border-color 0.15s, color 0.15s, background-color 0.15s;
+}
+.chip:hover:not(:disabled) { border-color: rgba(198, 241, 53, 0.6); color: #fff; background: rgba(198, 241, 53, 0.06); }
+.chip:focus { outline: none; }
+.chip:focus-visible { box-shadow: 0 0 0 3px rgba(198, 241, 53, 0.45); }
+.chip:disabled { cursor: not-allowed; opacity: 0.5; }
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.pill::before { content: ""; width: 6px; height: 6px; border-radius: 999px; background: currentColor; }
+
+.th {
+  padding: 0.625rem 0.75rem;
+  text-align: left;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8b8b96;
+}
+.td { padding: 0.8rem 0.75rem; vertical-align: middle; }
+.row { border-bottom: 1px solid var(--line); }
+.row:last-child { border-bottom: 0; }
+.row:hover { background: rgba(255, 255, 255, 0.02); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+.rise { animation: rise 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+@media (prefers-reduced-motion: reduce) { .rise { animation: none; } }
