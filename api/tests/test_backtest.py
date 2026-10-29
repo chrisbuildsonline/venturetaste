@@ -63,6 +63,7 @@ def test_readme_backtest_table_matches_the_api() -> None:
     for cells, row in zip(table, rows, strict=True):
         assert cells == [
             f"{row['acquirer_label']} + {row['target_label']}", str(row["year"]), row["outcome"],
-            str(row["bci"]), str(row["clash"]), row["churn"], row["verdict"],
+            str(row["bci"]), str(row["clash"]), row["churn"], row["verdict"], row["fit"]["label"],
         ]
+    assert "anecdote" in section and "BCI 50, clash 66" in section
     assert "sanity check" in section and "have not been backtested" not in README

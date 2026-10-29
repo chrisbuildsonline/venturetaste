@@ -291,6 +291,22 @@ def full_overlap(s: Scores) -> dict[str, float]:
     return {d: s.domain_overlap.get(d, 0.0) for d in DOMAINS}
 
 
+FIT_NOTES = {
+    "overlapping": "Shared audience: real synergy, and the target can cannibalize the acquirer's own customers.",
+    "complementary": (
+        "Distinct audiences: little to cannibalize, but folding the brands together would clash. "
+        "Fits a standalone, house-of-brands buy; the verdict is about merging them."
+    ),
+    "adjacent": "Partly shared audience: some cannibalization and some culture clash at once, without clearly new reach.",
+}
+
+
+def fit_type(s: Scores) -> dict[str, str]:
+    """What kind of buy this is, from the thresholds the verdict already uses (BCI 50, high churn). Not fed to the LLM."""
+    kind = "overlapping" if s.bci >= PROCEED_BCI else "complementary" if s.churn_risk == "high" else "adjacent"
+    return {"type": kind, "label": kind.capitalize(), "note": FIT_NOTES[kind]}
+
+
 def build_memo(
     acquirer: str, target: str, s: Scores, found: list[Bridge] | None = None, probed: bool = False, picks: list[BridgePick] | None = None
 ) -> dict[str, Any]:
@@ -472,5 +488,6 @@ def _report(state: dict[str, Any], acquirer: str, target: str) -> dict[str, Any]
         "bridge_potential": state["bridge_potential"],
         "probed_tags": state["probed_tags"],
         "memo": state["memo"],
+        "fit": fit_type(s),
         "trace": state["trace"],
     }

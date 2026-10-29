@@ -116,7 +116,7 @@ Errors are always plain sentences. When Qloo is unreachable, answers with an err
 
 `GET /api/screens` lists the target screens (`id`, `label`, `acquirer`, `targets`).
 
-`GET /api/backtest` returns `{"deals": [{acquirer_label, target_label, acquirer, target, year, outcome, outcome_class, bci, clash, churn, verdict}], "note"}`: the real deals in [Backtest on real deals](#backtest-on-real-deals), always from recorded fixtures (no key needed).
+`GET /api/backtest` returns `{"deals": [{acquirer_label, target_label, acquirer, target, year, outcome, outcome_class, bci, clash, churn, verdict, fit}], "note"}`: the real deals in [Backtest on real deals](#backtest-on-real-deals), always from recorded fixtures (no key needed).
 
 `POST /api/discover` takes `{"acquirer": "Nike"}` and returns `{"acquirer", "candidates": [{"name", "affinity", "adjacency", "score", "reason"}], "source"}`: up to 5 of the acquirer's Qloo brand affinities, strategic fit first. Only consumer brands are kept, by Qloo's own `brand_type` tag: Product, Corporate, Retail and Service Brands stay; Entertainment (clubs, leagues), Media and Nonprofit Brands, and brands with no type, are dropped. The acquirer's own lines and parent are dropped from Qloo's tags: a candidate goes if the acquirer's `subsidiary` tags name it (Nike's "Jordan Brand" removes "Air Jordan Product Line"), if its own `subsidiary` tags name the acquirer, or if either name contains the other's distinctive words ("Nike SB"; generic words like brand, product line, inc, company and group are ignored). Repeats are dropped too. The rest are ranked over the whole affinity list by `score = 0.5 * affinity + 0.5 * adjacency`, where adjacency is the share of the acquirer's industry, brand-genre and product-category tags the candidate also carries (0 to 1). Ties keep Qloo's order. Each candidate's `reason` is built from the same tags, for example "Shares Footwear, Running, Sports & Fitness · affinity 0.93" (at most 3 shared names; "No shared categories" when none). The weights are `AFFINITY_WEIGHT` and `ADJACENCY_WEIGHT` in `api/discover.py`. It counts as one hit against the rate limit, uses the same friendly errors, and for Nike, Patagonia and Starbucks falls back to recorded answers (with `recorded.reason`) exactly like diligence.
 
@@ -141,22 +141,24 @@ Rounding: BCI and Culture Clash to 1 decimal, everything else to 4.
 
 The verdict is `Pass` when churn risk is high, otherwise `Proceed` at BCI 50 or more, otherwise `Proceed with conditions`.
 
+Each result also carries a `fit` (`{type, label, note}`), a plain description of the kind of buy that reuses those two thresholds and changes no score or verdict: `overlapping` (BCI 50 or more), `complementary` (high churn risk, BCI under 50) or `adjacent` (everything else). It is not sent to the LLM.
+
 ## Backtest on real deals
 
 Four real deals, scored with the same `score()` on the recorded Qloo fixtures (`GET /api/backtest`, also shown on the main page; `bun run backtest` prints this table):
 
-![The backtest panel on the main page: four real deals with their BCI, clash, churn and verdict](docs/backtest.png)
+![The backtest panel on the main page: four real deals with their BCI, clash, churn, verdict and fit](docs/backtest.png)
 
-| Deal | Year | Outcome | BCI | Clash | Churn | Verdict |
-|---|---|---|---|---|---|---|
-| Nike + Converse | 2003 | Nike paid $305M; still owned 20+ years later, a ~$2B-revenue brand | 28.0 | 70.8 | high | Pass |
-| VF Corp (as Vans) + Supreme | 2020 | Sold to EssilorLuxottica in 2024 for $1.5B (paid $2.1B) | 36.5 | 57.9 | medium | Proceed with conditions |
-| Tapestry (as Coach) + Capri (as Michael Kors) | 2023 | $8.5B deal; FTC sued, a court blocked it in Oct 2024, called off in Nov 2024 | 48.2 | 43.9 | medium | Proceed with conditions |
-| Adidas + Reebok | 2006 | Paid ~$3.8B; sold to Authentic Brands in 2021 for up to EUR 2.1B | 47.4 | 46.1 | medium | Proceed with conditions |
+| Deal | Year | Outcome | BCI | Clash | Churn | Verdict | Fit |
+|---|---|---|---|---|---|---|---|
+| Nike + Converse | 2003 | Nike paid $305M; still owned 20+ years later, a ~$2B-revenue brand | 28.0 | 70.8 | high | Pass | Complementary |
+| VF Corp (as Vans) + Supreme | 2020 | Sold to EssilorLuxottica in 2024 for $1.5B (paid $2.1B) | 36.5 | 57.9 | medium | Proceed with conditions | Adjacent |
+| Tapestry (as Coach) + Capri (as Michael Kors) | 2023 | $8.5B deal; FTC sued, a court blocked it in Oct 2024, called off in Nov 2024 | 48.2 | 43.9 | medium | Proceed with conditions | Adjacent |
+| Adidas + Reebok | 2006 | Paid ~$3.8B; sold to Authentic Brands in 2021 for up to EUR 2.1B | 47.4 | 46.1 | medium | Proceed with conditions | Adjacent |
 
 Caveat: 4 deals is a sanity check, not a calibration. Scores use today's Qloo audiences, not the audiences at deal time, and holding companies are scored through their flagship brand (VF Corp as Vans, Tapestry as Coach, Capri as Michael Kors). Weights were not tuned to this table.
 
-The scores do not separate kept from failed deals. The one deal that was kept (Nike + Converse) has the lowest BCI and the highest culture clash, so the model says Pass on it, while the three deals that were sold at a loss or blocked all get Proceed with conditions. With four deals and today's audiences this is a limit of the method as it stands, not evidence that the scores predict outcomes.
+The verdict is about merging the two audiences; Fit says what kind of buy it is. Fit is `overlapping` at BCI 50 or more, `complementary` when churn risk is high and BCI is under 50, and `adjacent` otherwise. The BCI and the verdict alone do not separate kept from failed deals: the one kept deal (Nike + Converse) has the lowest BCI and the highest culture clash, so the verdict is Pass on it, while the three deals that were sold at a loss or blocked all get Proceed with conditions. Fit does separate them in these 4 deals: the kept buy is the only complementary one and the three that went badly are all adjacent. But 4 deals is an anecdote, not evidence that fit predicts outcomes. Fit uses the thresholds the scoring already had (BCI 50, clash 66); nothing was tuned to these deals.
 
 ## Demo pairs
 

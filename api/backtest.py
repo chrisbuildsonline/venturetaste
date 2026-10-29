@@ -29,7 +29,11 @@ DEALS = (
 
 NOTE = (
     "4 deals is a sanity check, not a calibration. Scores use today's Qloo audiences, not the audiences at deal time, "
-    "and holding companies are scored through their flagship brand."
+    "and holding companies are scored through their flagship brand. "
+    "The verdict is about merging the two audiences; Fit says what kind of buy it is. "
+    "In these 4 deals the one kept buy is the only complementary one and the three that went badly are all adjacent, "
+    "but 4 deals is an anecdote, not evidence. Fit uses the thresholds the scoring already had (BCI 50, clash 66); "
+    "nothing was tuned to these deals."
 )
 
 _cache: dict[str, Any] | None = None
@@ -54,12 +58,13 @@ def backtest() -> dict[str, Any]:
                     "acquirer": d.acquirer, "target": d.target, "year": d.year,
                     "outcome": d.outcome, "outcome_class": d.outcome_class,
                     "bci": s["bci"], "clash": s["culture_clash"], "churn": s["churn_risk"], "verdict": r["memo"]["verdict"],
+                    "fit": r["fit"],
                 })
             _cache = {"deals": deals, "note": NOTE}
         return _cache
 
 
 if __name__ == "__main__":  # bun run backtest: the README table
-    print("| Deal | Year | Outcome | BCI | Clash | Churn | Verdict |\n|---|---|---|---|---|---|---|")
+    print("| Deal | Year | Outcome | BCI | Clash | Churn | Verdict | Fit |\n|---|---|---|---|---|---|---|---|")
     for r in backtest()["deals"]:
-        print(f"| {r['acquirer_label']} + {r['target_label']} | {r['year']} | {r['outcome']} | {r['bci']} | {r['clash']} | {r['churn']} | {r['verdict']} |")
+        print(f"| {r['acquirer_label']} + {r['target_label']} | {r['year']} | {r['outcome']} | {r['bci']} | {r['clash']} | {r['churn']} | {r['verdict']} | {r['fit']['label']} |")

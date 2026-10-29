@@ -10,6 +10,7 @@
     "test:bridges": "uv run pytest -q api/tests/test_bridge_planner.py",
     "backtest": "uv run python -m api.backtest",
     "test:backtest": "uv run pytest -q api/tests/test_backtest.py",
+    "test:fit": "uv run pytest -q api/tests/test_fit.py",
     "test:replay": "uv run pytest -q api/tests/test_replay.py",
     "test:recorded": "uv run pytest -q -vv --durations=3 api/tests/test_recorded.py",
     "test:live": "uv run --env-file .env pytest -q -m live api/tests",
